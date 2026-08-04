@@ -1,8 +1,7 @@
 import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  base: "/web-app-sample/",
-  server: {
-    open: "/web-app-sample/tests/UI/test.html",
-  },
+  plugins: [react()],
+  base: "/jee-portal/",
 });
