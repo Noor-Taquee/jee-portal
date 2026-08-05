@@ -1,0 +1,40 @@
+#app {
+  position: relative;
+
+  height: 100dvh;
+  width: 100dvw;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  &[data-orientation="horizontal"] {
+    flex-direction: row-reverse;
+  }
+
+  background-color: var(--primary-bg);
+}
+
+.panel-container {
+  height: 100%;
+  width: 100%;
+
+  overflow: hidden;
+
+  display: flex;
+
+  background-color: var(--primary-bg);
+}
+
+.app-panel {
+  position: relative;
+
+  flex-shrink: 0;
+  height: 100%;
+  width: 100%;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
