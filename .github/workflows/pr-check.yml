@@ -2,19 +2,20 @@ name: Pull Request Check
 
 on:
   pull_request:
-    paths:
-      - "public/**/*"
-      - "src/**/*"
-      - "index.html"
-      - "package.json"
-      - "package-lock.json"
-      - "tsconfig.json"
-      - "tsconfig.app.json"
-      - "tsconfig.node.json"
-      - "eslint.config.js"
-      - ".prettierrc"
-      - "vite.config.ts"
-      - ".github/workflows/*"
+    paths-ignore:
+      - .github/DISCUSSION_TEMPLATE/*
+      - .github/ISSUE_TEMPLATE/*
+      - .github/CODE_OF_CONDUCT.md
+      - .github/CODEOWNERS
+      - .github/CONTRIBUTING.md
+      - .github/dependabot.yml
+      - .github/FUNDING.yml
+      - .github/pull_request_template.md
+      - .github/SECURITY.md
+      - .github/SUPPORT.md
+      - .vscode/*
+      - LICENSE
+      - README.md
 
 permissions:
   contents: read
