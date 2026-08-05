@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+:root {
+  --primary-header-font: 800 34px "Montserrat";
+  --secondary-header-font: 900 25px "Montserrat";
+
+  --primary-text-font: 400 16px "Nunito";
+  --secondary-text-font: 400 21px "Nunito";
+
+  --large-icon: 33px;
+  --medium-icon: 24px;
+  --small-icon: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
