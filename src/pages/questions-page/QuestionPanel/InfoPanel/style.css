@@ -1,0 +1,21 @@
+#info-panel {
+  width: 100%;
+
+  border: 1px solid #afafaf;
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+}
+
+.question-info-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  > .question-box {
+    cursor: default;
+  }
+}

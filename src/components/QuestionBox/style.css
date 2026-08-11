@@ -1,0 +1,33 @@
+.question-box {
+  cursor: pointer;
+  touch-action: manipulation;
+
+  aspect-ratio: 1/1;
+  height: var(--question-box-size);
+
+  border: none;
+
+  display: grid;
+  place-items: center;
+
+  &.unread {
+    border-radius: 10px;
+    background-color: var(--unread-color);
+  }
+  &.answered {
+    --rad: calc(var(--question-box-size)/3);
+    border-radius: 0 0 var(--rad) var(--rad);
+    corner-shape: bevel;
+    background-color: var(--answered-color);
+  }
+  &.unanswered {
+    --rad: calc(var(--question-box-size)/3);
+    border-radius: var(--rad) var(--rad) 0 0;
+    corner-shape: bevel;
+    background-color: var(--unanswered-color);
+  }
+  &.marked-for-review {
+    border-radius: 50%;
+    background-color: var(--marked-for-review-color);
+  }
+}

@@ -1,0 +1,30 @@
+.option-div {
+  margin: 12px 0;
+
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.option-radio {
+  --size: 24px;
+
+  --req-space: calc((var(--gutter-width) - var(--size)) / 2);
+
+  cursor: pointer;
+  touch-action: manipulation;
+
+  aspect-ratio: 1/1;
+  width: var(--size);
+
+  margin: 0 var(--req-space);
+
+  border: 1px solid gray;
+  border-radius: 50%;
+
+  background-color: transparent;
+
+  &.selected {
+    background-color: var(--background-1);
+  }
+}
