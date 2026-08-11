@@ -7,8 +7,14 @@ export default function Header() {
         <p className="name">Noor Taquee</p>
       </div>
       <div className="picture-div">
-        <img className="login-img" alt="" />
-        <img className="login-img" alt="" />
+        <img
+          className="login-img"
+          alt=""
+        />
+        <img
+          className="login-img"
+          alt=""
+        />
       </div>
     </div>
   );

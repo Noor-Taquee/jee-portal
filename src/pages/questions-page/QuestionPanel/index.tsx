@@ -48,9 +48,9 @@ export default function QuestionPanel({ questionData, route }: MainProps) {
   const [question, setQuestion] = useState<QuestionData | null>(null);
   useEffect(() => {
     const que = questionData[questionNo - 1];
-    if (!que) setQuestion(null);
-    else setQuestion(que);
-  }, [questionNo]);
+    if (que) setQuestion(que);
+    else setQuestion(null);
+  }, [questionData, questionNo]);
 
   return (
     <div id="question-panel">
