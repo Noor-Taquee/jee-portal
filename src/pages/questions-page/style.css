@@ -1,0 +1,11 @@
+#questions-page {
+  --unread-color: #afafaf;
+  --unanswered-color: #c43003;
+  --answered-color: #009113;
+  --marked-for-review-color: #381775;
+}
+
+#questions-page {
+  display: flex;
+  flex-direction: column;
+}
