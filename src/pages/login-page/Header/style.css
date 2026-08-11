@@ -1,0 +1,24 @@
+#login-panel-header {
+  width: 100%;
+  height: fit-content;
+
+  padding: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: var(--background-1);
+}
+
+.picture-div {
+  display: flex;
+  gap: 8px;
+}
+
+.login-img {
+  aspect-ratio: 1 / 1.414;
+  width: 76px;
+
+  border: 1px solid #ffdb0f;
+}
