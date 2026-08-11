@@ -1,0 +1,23 @@
+#question-container {
+  --gutter-width: 48px;
+
+  flex-grow: 1;
+  height: 100%;
+
+  border: 1px solid #afafaf;
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#question-div {
+  padding: 12px 0;
+  display: flex;
+}
+
+#question-no {
+  width: var(--gutter-width);
+
+  text-align: center;
+}
