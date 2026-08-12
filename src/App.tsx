@@ -7,8 +7,8 @@ import "./app.css";
 
 import { getQuestions, type QuestionData } from "./core/data";
 
-import LoginPage from "./pages/login-page";
-import QuestionsPage from "./pages/questions-page";
+import LoginPage from "./pages/LoginPage";
+import QuestionsPage from "./pages/QuestionsPage";
 
 const routes = ["login", "question"];
 const defaultRoute = "question";
