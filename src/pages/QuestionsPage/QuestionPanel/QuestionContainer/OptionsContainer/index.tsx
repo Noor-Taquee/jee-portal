@@ -7,7 +7,7 @@ import OptionDiv from "./OptionDiv";
 interface OptionsContainerProps {
   options: OptionData[];
   selectedOption: number | null;
-  setOption: React.Dispatch<React.SetStateAction<number | null>>;
+  setOption: React.Dispatch<React.SetStateAction<1 | 2 | 3 | 4 | null>>;
 }
 
 /** Options container  */
