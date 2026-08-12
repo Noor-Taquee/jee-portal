@@ -7,7 +7,7 @@ export type TextPart = {
 export type TextFormat = TextPart[];
 
 export type OptionData = {
-  index: number;
+  index: 1 | 2 | 3 | 4;
   value: TextFormat;
 };
 
