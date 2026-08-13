@@ -1,3 +1,5 @@
+// oxlint-disable max-lines-per-function
+
 import { useState, useEffect } from "react";
 
 import type { QuestionData } from "../../../core/data";
@@ -17,7 +19,7 @@ interface MainProps {
 
 export default function QuestionPanel({ questionData, route }: MainProps) {
   // Response of the candidate
-  const [responseData, _setResponseData] = useState<ResponseData>(
+  const [responseData, setResponseData] = useState<ResponseData>(
     new Map(
       questionData.map((i) => {
         const res: [number, AnswerResponse] = [
@@ -54,7 +56,13 @@ export default function QuestionPanel({ questionData, route }: MainProps) {
 
   return (
     <div id="question-panel">
-      <QuestionContainer question={question} />
+      <QuestionContainer
+        questionNo={questionNo}
+        setQuestionNo={setQuestionNo}
+        question={question}
+        responseData={responseData}
+        setResponseData={setResponseData}
+      />
       <div id="question-control-panel">
         <InfoPanel />
         <QuestionTable
