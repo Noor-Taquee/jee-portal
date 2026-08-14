@@ -5,7 +5,7 @@ import type { ResponseData } from "../../../../services";
 
 import "./style.css";
 
-import QuestionDiv from "./QuestionDiv";
+import QuestionDiv from "./QuestionCard";
 import OptionsContainer from "./OptionsContainer";
 import QuestionControl from "./QuestionControl";
 
