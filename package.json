@@ -37,7 +37,7 @@
     "vite": "^8.2.0"
   },
   "dependencies": {
-    "katex": "^0.18.1",
+    "katex": "^0.18.4",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
   }
