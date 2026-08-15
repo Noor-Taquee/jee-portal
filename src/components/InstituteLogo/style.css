@@ -1,0 +1,10 @@
+.institute-logo {
+  height: fit-content;
+  width: fit-content;
+
+  margin: 4px;
+
+  > img {
+    height: 56px;
+  }
+}
