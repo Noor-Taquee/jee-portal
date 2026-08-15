@@ -1,16 +1,25 @@
 #info-panel {
-  width: 100%;
+  --question-box-size: 44px;
 
-  border: 1px solid #afafaf;
+  width: 100%;
+  height: fit-content;
+
+  padding: 12px;
+
+  border: var(--border-1);
   border-radius: 4px;
 
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  /*flex-direction: column;*/
   gap: 12px;
-  padding: 16px;
 }
 
 .question-info-box {
+  height: fit-content;
+  width: fit-content;
+
   display: flex;
   align-items: center;
   gap: 6px;

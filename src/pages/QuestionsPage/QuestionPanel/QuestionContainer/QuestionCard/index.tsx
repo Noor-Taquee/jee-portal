@@ -1,16 +1,18 @@
-import type { TextFormat } from "../../../../../core/data";
-import TextContent from "../TextContent";
+import "./style.css";
+
+import TextRenderer from "../../../../../components/TextRenderer";
 
 interface QuestionDivProps {
   index: number;
-  content: TextFormat;
+  content: string;
 }
 
-export default function QuestionDiv({ index, content }: QuestionDivProps) {
+/** The main question content being displayed. */
+export default function QuestionCard({ index, content }: QuestionDivProps) {
   return (
-    <div id="question-div">
+    <div id="question-card">
       <p id="question-no">Q{index}</p>
-      <TextContent content={content} />
+      <TextRenderer content={content} />
     </div>
   );
 }

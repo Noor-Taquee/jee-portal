@@ -17,25 +17,29 @@ export default function QuestionTable({
   setQuestionNo,
 }: QuestionTableProps) {
   const [page, setPage] = useState<1 | 2 | 3>(1);
-  const start = 0;
-  const end = 25;
+  const start = 25 * (page - 1);
+  const end = start + 25;
 
   return (
     <div id="question-table-wrapper">
-      <p>
-        {page === 1 && "Chemistry"}
-        {page === 2 && "Physics"}
-        {page === 3 && "Mathematics"}
-      </p>
+      <div id="table-subject-label">
+        <p>
+          {page === 1 && "Physics"}
+          {page === 2 && "Chemistry"}
+          {page === 3 && "Mathematics"}
+        </p>
+      </div>
       <div id="question-table">
         {[...responseData.entries()].slice(start, end).map(([i, o]) => (
           <QuestionBox
             key={`box-${i}`}
             className={
               o.visited
-                ? o.option
+                ? o.answer
                   ? o.review
-                    ? "marked-for-review"
+                    ? o.submittedAnswer
+                      ? "ans-marked-for-review"
+                      : "marked-for-review"
                     : "answered"
                   : "unanswered"
                 : "unread"

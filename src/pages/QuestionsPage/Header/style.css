@@ -1,0 +1,6 @@
+#question-panel-header {
+  width: 100%;
+
+  margin-bottom: 8px;
+  background-color: var(--background-1);
+}

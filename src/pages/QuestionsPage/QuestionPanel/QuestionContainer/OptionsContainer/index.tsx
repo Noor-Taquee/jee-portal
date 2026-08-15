@@ -3,14 +3,15 @@ import type { OptionData } from "../../../../../core/data";
 import "./style.css";
 
 import OptionDiv from "./OptionDiv";
+import type { OptionID } from "../../../../../core/data";
 
 interface OptionsContainerProps {
   options: OptionData[];
-  selectedOption: number | null;
-  setOption: React.Dispatch<React.SetStateAction<1 | 2 | 3 | 4 | null>>;
+  selectedOption: OptionID | null;
+  setOption: React.Dispatch<React.SetStateAction<OptionID | null>>;
 }
 
-/** Options container  */
+/** Options container for MCQ type questions.  */
 export default function OptionsContainer({
   options,
   selectedOption,
@@ -18,12 +19,12 @@ export default function OptionsContainer({
 }: OptionsContainerProps) {
   return (
     <div id="options-container">
-      {options.map((o, i) => (
+      {options.map((o) => (
         <OptionDiv
-          selected={selectedOption === i + 1}
-          content={o}
+          selected={selectedOption === o.id}
+          option={o}
           setOption={setOption}
-          key={o.index}
+          key={o.id}
         />
       ))}
     </div>
