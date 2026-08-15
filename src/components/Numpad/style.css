@@ -1,0 +1,60 @@
+#numpad-container {
+  --key-height: 44px;
+  --key-width: 64px;
+
+  --font: 400 16px Arial;
+
+  height: fit-content;
+  width: fit-content;
+
+  margin: 32px auto auto;
+  padding: 4px;
+
+  border: 1px solid #afafaf;
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#numpad-input {
+  touch-action: none;
+  pointer-events: none;
+
+  flex-shrink: 1;
+  height: var(--key-height);
+  width: 100%;
+
+  padding: 0 4px;
+
+  outline: none;
+  border: 1px solid #afafaf;
+  border-radius: 4px;
+
+  font: var(--font);
+}
+
+#numpad {
+  background-color: transparent;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: row;
+  gap: 4px;
+}
+
+.numpad-key {
+  cursor: pointer;
+  touch-action: manipulation;
+
+  height: var(--key-height);
+  width: var(--key-width);
+
+  border: 1px solid #afafaf;
+  border-radius: 4px;
+
+  > p {
+    font: var(--font);
+  }
+}
