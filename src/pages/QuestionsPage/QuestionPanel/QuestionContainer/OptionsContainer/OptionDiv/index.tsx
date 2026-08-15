@@ -1,17 +1,17 @@
-import type { OptionData } from "../../../../../../core/data";
+import type { OptionData, OptionID } from "../../../../../../core/data";
 
 import "./style.css";
 
-import TextContent from "../../TextContent";
+import TextRenderer from "../../../../../../components/TextRenderer";
 
 interface OptionDivProps {
-  content: OptionData;
+  option: OptionData;
   selected: boolean;
-  setOption: React.Dispatch<React.SetStateAction<1 | 2 | 3 | 4 | null>>;
+  setOption: React.Dispatch<React.SetStateAction<OptionID | null>>;
 }
 
 export default function OptionDiv({
-  content,
+  option,
   selected,
   setOption,
 }: OptionDivProps) {
@@ -19,9 +19,9 @@ export default function OptionDiv({
     <div className="option-div">
       <div
         className={`option-radio ${selected ? "selected" : ""}`}
-        onClick={() => setOption(content.index)}
+        onClick={() => setOption(option.id)}
       ></div>
-      <TextContent content={content.value} />
+      <TextRenderer content={option.content} />
     </div>
   );
 }

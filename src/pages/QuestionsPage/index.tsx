@@ -4,7 +4,6 @@ import type { QuestionData } from "../../core/data";
 
 import "./style.css";
 
-import Header from "./Header";
 import QuestionPanel from "./QuestionPanel";
 
 interface QuestionPanelProps {
@@ -25,7 +24,6 @@ export default function QuestionsPage({
       className="app-panel"
       id="questions-page"
     >
-      <Header />
       <QuestionPanel
         route={route}
         questionData={questionData}

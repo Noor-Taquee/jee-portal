@@ -4,6 +4,8 @@
 
   padding: 6px;
 
+  border-top: var(--border-1);
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,13 +18,16 @@
 }
 
 .question-control-btn {
+  cursor: pointer;
+  touch-action: manipulation;
+
   height: 36px;
   width: fit-content;
   min-width: 80px;
 
   padding: 4px;
 
-  border: 1px solid #afafaf;
+  border: var(--border-1);
   border-radius: 4px;
 
   display: flex;

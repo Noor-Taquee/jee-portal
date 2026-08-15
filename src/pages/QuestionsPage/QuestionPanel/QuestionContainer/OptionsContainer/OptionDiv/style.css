@@ -4,6 +4,10 @@
   display: flex;
   align-items: center;
   gap: 0;
+
+  p {
+    font: var(--question-font);
+  }
 }
 
 .option-radio {
@@ -19,7 +23,7 @@
 
   margin: 0 var(--req-space);
 
-  border: 1px solid gray;
+  border: var(--border-1);
   border-radius: 50%;
 
   background-color: transparent;

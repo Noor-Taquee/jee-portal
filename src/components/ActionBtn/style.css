@@ -1,0 +1,12 @@
+.action-btn {
+  height: 36px;
+  width: 80px;
+
+  border: 1px solid #afafaf;
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}

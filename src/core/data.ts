@@ -1,24 +1,38 @@
-export type TextPart = {
-  type: "text" | "image" | "equation";
-  place?: "inline" | "standalone";
+export type OptionID = "A" | "B" | "C" | "D";
+
+export type OptionData = {
+  id: OptionID;
   content: string;
 };
 
-export type TextFormat = TextPart[];
+export interface BaseQuestion {
+  id: number;
+  subject: "Chemistry" | "Physics" | "Mathematics";
+  question: string;
+}
 
-export type OptionData = {
-  index: 1 | 2 | 3 | 4;
-  value: TextFormat;
-};
-
-export type QuestionData = {
-  index: number;
-  question: TextFormat;
+export interface MultipleChoiceQuestion extends BaseQuestion {
+  type: "multiple-choice";
   options: OptionData[];
-};
+  correctOption: OptionID[];
+}
+
+export interface SingleChoiceQuestions extends BaseQuestion {
+  type: "single-choice";
+  options: OptionData[];
+  correctOption: OptionID;
+}
+
+interface NumericalTypeQuestion extends BaseQuestion {
+  type: "numerical";
+  correctAnswer: string;
+}
+
+export type QuestionData =
+  SingleChoiceQuestions | MultipleChoiceQuestion | NumericalTypeQuestion;
 
 export async function getQuestions() {
-  const res = await fetch(`${import.meta.env.BASE_URL}data/example.json`);
-  const data: { questions: QuestionData[] } = await res.json();
-  return data.questions;
+  const res = await fetch(`${import.meta.env.BASE_URL}data/data.json`);
+  const data: QuestionData[] = await res.json();
+  return data;
 }

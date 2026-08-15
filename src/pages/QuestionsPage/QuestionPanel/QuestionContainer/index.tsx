@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 
-import type { QuestionData } from "../../../../core/data";
+import type { OptionID, QuestionData } from "../../../../core/data";
 import type { ResponseData } from "../../../../services";
 
 import "./style.css";
 
-import QuestionDiv from "./QuestionCard";
+import QuestionCard from "./QuestionCard";
 import OptionsContainer from "./OptionsContainer";
 import QuestionControl from "./QuestionControl";
+import Numpad from "../../../../components/Numpad";
+import Header from "./Header";
 
 interface QuestionContainerProps {
   questionNo: number;
@@ -25,32 +27,42 @@ export default function QuestionContainer({
   responseData,
   setResponseData,
 }: QuestionContainerProps) {
-  const [selectedOption, setSelectedOption] = useState<1 | 2 | 3 | 4 | null>(
-    null
-  );
+  const [answer, setAnswer] = useState<string | string[] | null>(null);
   useEffect(() => {
     const s = responseData.get(questionNo);
     if (!s) return;
-    setSelectedOption(s.option);
+    setAnswer(s.answer);
   }, [questionNo, responseData]);
 
   if (!question) return <div id="question-container"></div>;
 
   return (
     <div id="question-container">
-      <QuestionDiv
-        index={question.index}
+      <Header question={question} />
+      <QuestionCard
+        index={question.id}
         content={question.question}
       />
-      <OptionsContainer
-        selectedOption={selectedOption}
-        options={question.options}
-        setOption={setSelectedOption}
-      />
+      {question.type === "single-choice" && (
+        <OptionsContainer
+          selectedOption={answer as OptionID}
+          options={question.options}
+          setOption={
+            setAnswer as React.Dispatch<React.SetStateAction<OptionID | null>>
+          }
+        />
+      )}
+      {question.type === "numerical" && (
+        <Numpad
+          answer={answer as string}
+          setAnswer={setAnswer}
+        />
+      )}
       <QuestionControl
         questionNo={questionNo}
         setQuestionNo={setQuestionNo}
-        selectedOption={selectedOption}
+        answer={answer as OptionID | null}
+        setAnswer={setAnswer}
         responseData={responseData}
         setResponseData={setResponseData}
       />

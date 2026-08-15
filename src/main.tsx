@@ -4,6 +4,8 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import "./styles/colors.css";
 
+import "katex/dist/katex.min.css";
+
 import App from "./App";
 
 const root = document.getElementById("root") as HTMLDivElement | null;

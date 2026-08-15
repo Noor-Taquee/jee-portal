@@ -1,0 +1,21 @@
+#question-card {
+  width: 100%;
+
+  padding: 12px 0;
+
+  display: flex;
+
+  p {
+    font: var(--question-font);
+  }
+}
+
+#question-no {
+  flex-shrink: 0;
+  width: var(--gutter-width);
+  height: fit-content;
+
+  text-align: center;
+
+  font-weight: 900 !important;
+}

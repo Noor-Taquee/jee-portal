@@ -23,8 +23,14 @@ export default function QuestionPanel({ questionData, route }: MainProps) {
     new Map(
       questionData.map((i) => {
         const res: [number, AnswerResponse] = [
-          i.index,
-          { visited: false, option: null, review: false },
+          i.id,
+          {
+            type: i.type,
+            visited: false,
+            answer: null,
+            review: false,
+            submittedAnswer: null,
+          },
         ];
         return res;
       })

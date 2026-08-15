@@ -1,23 +1,15 @@
 #question-container {
-  --gutter-width: 48px;
+  --gutter-width: 64px;
+
+  --question-font: 400 20px/1.9 "KaTeX_Main";
 
   flex-grow: 1;
+  width: 100%;
   height: 100%;
 
-  border: 1px solid #afafaf;
+  border: var(--border-1);
   border-radius: 4px;
 
   display: flex;
   flex-direction: column;
-}
-
-#question-div {
-  padding: 12px 0;
-  display: flex;
-}
-
-#question-no {
-  width: var(--gutter-width);
-
-  text-align: center;
 }

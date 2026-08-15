@@ -2,6 +2,7 @@
   --question-box-size: 48px;
 
   flex-grow: 1;
+  min-height: 0;
   width: 100%;
 
   padding: 4px;
@@ -11,7 +12,10 @@
 }
 
 #question-control-panel {
+  width: fit-content;
   height: 100%;
+
+  overflow: hidden;
 
   display: flex;
   flex-direction: column;

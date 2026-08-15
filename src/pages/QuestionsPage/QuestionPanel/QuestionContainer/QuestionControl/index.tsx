@@ -1,13 +1,21 @@
 // oxlint-disable max-lines-per-function
 
+import type { OptionID } from "../../../../../core/data";
 import type { ResponseData } from "../../../../../services";
 
 import "./style.css";
 
+import AMFRBtn from "./AMFRBtn";
+import ClearBtn from "./ClearBtn";
+import MFRBtn from "./MFRBtn";
+import PreviousBtn from "./PreviousBtn";
+import SaveBtn from "./SaveBtn";
+
 interface QuestionControlProps {
   questionNo: number;
   setQuestionNo: React.Dispatch<React.SetStateAction<number>>;
-  selectedOption: 1 | 2 | 3 | 4 | null;
+  answer: OptionID | OptionID[] | null;
+  setAnswer: React.Dispatch<React.SetStateAction<string | string[] | null>>;
   responseData: ResponseData;
   setResponseData: React.Dispatch<React.SetStateAction<ResponseData>>;
 }
@@ -15,61 +23,45 @@ interface QuestionControlProps {
 export default function QuestionControl({
   questionNo,
   setQuestionNo,
-  selectedOption,
+  answer,
+  setAnswer,
   responseData,
   setResponseData,
 }: QuestionControlProps) {
   return (
     <div id="question-control">
-      <button
-        className={`question-control-btn ${questionNo <= 1 ? "disabled" : ""}`}
-        onClick={() => {
-          if (questionNo <= 1) return;
-          setQuestionNo((p) => p - 1);
-        }}
-      >
-        <i className="ph-bold ph-caret-left"></i>
-        <p>{"Previous"}</p>
-      </button>
-
+      <PreviousBtn
+        questionNo={questionNo}
+        setQuestionNo={setQuestionNo}
+      />
       <div id="separator-div">
-        <button
-          className={`question-control-btn ${selectedOption ? "" : ""}`}
-          onClick={() => {
-            if (!selectedOption) return;
-
-            const key = questionNo;
-            const res = responseData.get(key);
-            if (res) {
-              res.visited = true;
-              res.option = selectedOption;
-              res.review = true;
-              responseData.set(key, res);
-              setResponseData(responseData);
-            }
-          }}
-        >
-          <p>{"Mark for review"}</p>
-        </button>
-        <button
-          className={`question-control-btn ${questionNo >= 75 ? "" : ""}`}
-          onClick={() => {
-            const key = questionNo;
-            const res = responseData.get(key);
-            if (res) {
-              res.visited = true;
-              res.option = selectedOption;
-              responseData.set(key, res);
-              setResponseData(responseData);
-            }
-
-            if (questionNo >= 75) return;
-            setQuestionNo((p) => p + 1);
-          }}
-        >
-          <i className="ph-bold ph-caret-right"></i>
-          <p>{questionNo === 75 ? "Save" : "Save & Next"}</p>
-        </button>
+        <ClearBtn
+          questionNo={questionNo}
+          setAnswer={setAnswer}
+          responseData={responseData}
+          setResponseData={setResponseData}
+        />
+        <AMFRBtn
+          questionNo={questionNo}
+          setQuestionNo={setQuestionNo}
+          answer={answer}
+          responseData={responseData}
+          setResponseData={setResponseData}
+        />
+        <MFRBtn
+          questionNo={questionNo}
+          setQuestionNo={setQuestionNo}
+          answer={answer}
+          responseData={responseData}
+          setResponseData={setResponseData}
+        />
+        <SaveBtn
+          questionNo={questionNo}
+          setQuestionNo={setQuestionNo}
+          answer={answer}
+          responseData={responseData}
+          setResponseData={setResponseData}
+        />
       </div>
     </div>
   );
