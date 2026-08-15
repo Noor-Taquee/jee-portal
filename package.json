@@ -29,6 +29,7 @@
     "@types/node": "^26.1.2",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
+    "@types/react-katex": "^3.0.4",
     "@vitejs/plugin-react": "^6.0.5",
     "globals": "^17.8.0",
     "oxlint": "^1.77.0",
@@ -37,8 +38,11 @@
     "vite": "^8.2.0"
   },
   "dependencies": {
-    "katex": "^0.18.1",
+    "katex": "^0.18.4",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "react-markdown": "^10.1.0",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0"
   }
 }
