@@ -26,3 +26,11 @@ body,
   height: 100%;
   width: 100%;
 }
+
+.disabled {
+  cursor: ns-resize !important;
+  touch-action: none !important;
+  pointer-events: none !important;
+
+  opacity: 0.7 !important;
+}
