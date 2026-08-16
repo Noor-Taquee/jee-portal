@@ -7,29 +7,27 @@ export default function ButtonWrapper({ page, setPage }: ButtonWrapperProps) {
   return (
     <div id="q-t-button-wrapper">
       <button
+        className={page === 1 ? "disabled" : ""}
         onClick={() => {
           if (page === 1) return;
           const p = (page - 1) as 1 | 2 | 3;
           setPage(p);
         }}
       >
-        <i
-          className={`ph-bold ph-caret-left ${page === 1 ? "unavailable" : ""}`}
-        ></i>
-        <p>Previous</p>
+        <i className={"ph-bold ph-caret-left"}></i>
+        <p>{"Previous"}</p>
       </button>
 
       <button
+        className={page === 3 ? "disabled" : ""}
         onClick={() => {
           if (page === 3) return;
           const p = (page + 1) as 1 | 2 | 3;
           setPage(p);
         }}
       >
-        <i
-          className={`ph-bold ph-caret-right ${page === 3 ? "unavailable" : ""}`}
-        ></i>
-        <p>Next</p>
+        <i className={"ph-bold ph-caret-right"}></i>
+        <p>{"Next"}</p>
       </button>
     </div>
   );
