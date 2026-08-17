@@ -9,6 +9,7 @@ import { getQuestions, type QuestionData } from "./core/data";
 
 import LoginPage from "./pages/LoginPage";
 import QuestionsPage from "./pages/QuestionsPage";
+import { useOrientation } from "./hooks/useOrientation.js";
 
 const routes = ["login", "question"];
 const defaultRoute = "question";
@@ -51,23 +52,7 @@ export default function App() {
     };
   }, []);
 
-  const [orientation, setOrientation] = useState<Orientation>("portrait");
-  // MARK: Orientation
-  useEffect(() => {
-    function checkOrientation() {
-      setOrientation(
-        window.innerHeight > window.innerWidth ? "portrait" : "landscape"
-      );
-    }
-
-    window.addEventListener("load", checkOrientation);
-    window.addEventListener("resize", checkOrientation);
-
-    return () => {
-      window.removeEventListener("load", checkOrientation);
-      window.removeEventListener("resize", checkOrientation);
-    };
-  }, []);
+  const orientation = useOrientation();
 
   return (
     <div
