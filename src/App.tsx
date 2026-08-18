@@ -1,5 +1,6 @@
 // oxlint-disable max-lines-per-function
 import { useEffect, useState } from "react";
+import { useOrientation } from "./hooks/useOrientation.js";
 
 import { changeHash, normalize } from "./utils/hash-handler.js";
 
@@ -12,8 +13,6 @@ import QuestionsPage from "./pages/QuestionsPage";
 
 const routes = ["login", "question"];
 const defaultRoute = "question";
-
-type Orientation = "portrait" | "landscape";
 
 export default function App() {
   const [questionData, setQuestionData] = useState<QuestionData[] | null>(null);
@@ -51,23 +50,7 @@ export default function App() {
     };
   }, []);
 
-  const [orientation, setOrientation] = useState<Orientation>("portrait");
-  // MARK: Orientation
-  useEffect(() => {
-    function checkOrientation() {
-      setOrientation(
-        window.innerHeight > window.innerWidth ? "portrait" : "landscape"
-      );
-    }
-
-    window.addEventListener("load", checkOrientation);
-    window.addEventListener("resize", checkOrientation);
-
-    return () => {
-      window.removeEventListener("load", checkOrientation);
-      window.removeEventListener("resize", checkOrientation);
-    };
-  }, []);
+  const orientation = useOrientation();
 
   return (
     <div
