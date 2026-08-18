@@ -1,5 +1,6 @@
 // oxlint-disable max-lines-per-function
 import { useEffect, useState } from "react";
+import { useOrientation } from "./hooks/useOrientation.js";
 
 import { changeHash, normalize } from "./utils/hash-handler.js";
 
@@ -9,12 +10,9 @@ import { getQuestions, type QuestionData } from "./core/data";
 
 import LoginPage from "./pages/LoginPage";
 import QuestionsPage from "./pages/QuestionsPage";
-import { useOrientation } from "./hooks/useOrientation.js";
 
 const routes = ["login", "question"];
 const defaultRoute = "question";
-
-type Orientation = "portrait" | "landscape";
 
 export default function App() {
   const [questionData, setQuestionData] = useState<QuestionData[] | null>(null);
