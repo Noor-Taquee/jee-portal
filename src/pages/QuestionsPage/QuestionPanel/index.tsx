@@ -45,11 +45,11 @@ export default function QuestionPanel({ questionData, route }: MainProps) {
       const [key, value] = attr.split("=");
       if (key && value && key === "question") {
         const num = Number(value);
-        if (num > 0 && num < 76) setQuestionNo(num);
+        if (num > 0 && num < 76 && num !== questionNo) setQuestionNo(num);
         else setQuestionNo((p) => p);
       }
     }
-  }, [route]);
+  }, [route, questionNo]);
 
   // MARK: get question
   // Question to be displayed on the screen.
