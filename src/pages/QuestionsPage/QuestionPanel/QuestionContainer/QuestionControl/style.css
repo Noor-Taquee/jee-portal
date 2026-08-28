@@ -22,23 +22,6 @@
 }
 
 .question-control-btn {
-  cursor: pointer;
-  touch-action: manipulation;
-
-  height: 36px;
-  width: fit-content;
-  min-width: 80px;
-
-  padding: 4px;
-
-  border: var(--border-1);
-  border-radius: 4px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-
   &:last-child {
     flex-direction: row-reverse;
   }

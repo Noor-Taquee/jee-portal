@@ -59,20 +59,6 @@
   justify-content: space-between;
 
   > button {
-    cursor: pointer;
-    touch-action: manipulation;
-
-    height: 36px;
-    width: 80px;
-
-    border: var(--border-1);
-    border-radius: 4px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-
     &:last-child {
       flex-direction: row-reverse;
     }
