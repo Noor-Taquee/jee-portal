@@ -1,3 +1,5 @@
+// oxlint-disable max-lines-per-function
+
 import "./style.css";
 
 import QuestionBox from "../../../../components/QuestionBox";
