@@ -1,19 +1,24 @@
 import "./style.css";
 
 interface ActionBtnProps {
-  icon: string;
-  text: string;
-  onClick: () => void;
+  onClick?: () => void;
+  id?: string;
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default function ActionBtn({ icon, text, onClick }: ActionBtnProps) {
+/** Basic horizontal button. */
+export default function ActionBtn({
+  className,
+  onClick,
+  children,
+}: ActionBtnProps) {
   return (
     <button
-      className={"action-btn"}
+      className={`action-btn ${className}`}
       onClick={onClick}
     >
-      <i className={`ph-bold ph-${icon}`} />
-      <p>{text}</p>
+      {children}
     </button>
   );
 }

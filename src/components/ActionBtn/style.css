@@ -1,12 +1,20 @@
 .action-btn {
-  height: 36px;
-  width: 80px;
+  cursor: pointer;
+  touch-action: manipulation;
 
-  border: 1px solid #afafaf;
+  height: 36px;
+  width: fit-content;
+  min-width: 80px;
+
+  padding: 4px;
+
+  border: var(--border-1);
   border-radius: 4px;
 
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
+
+  background-color: var(--background-p-2);
 }
