@@ -1,6 +1,19 @@
 #question-panel-header {
-  width: 100%;
+  flex-grow: 1;
+  height: fit-content;
 
-  margin-bottom: 8px;
+  overflow: hidden;
+
+  margin: 4px;
+
+  padding: 6px;
+
+  border: var(--border-1);
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   background-color: var(--background-1);
 }

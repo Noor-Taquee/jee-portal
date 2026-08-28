@@ -6,7 +6,7 @@
 
   margin: auto;
 
-  border: 1px solid #afafaf;
+  border: var(--border-1);
   border-radius: 12px;
 }
 
@@ -38,18 +38,18 @@
 }
 
 .input-div {
-  --border: 1px solid #afafaf;
-  height: 56px;
+  --height: 56px;
+
+  height: var(--height);
   width: 90%;
 
   overflow: hidden;
 
-  border: var(--border);
+  border: var(--border-1);
   border-radius: 8px;
 
   display: flex;
   align-items: center;
-  gap: 4px;
 
   i {
     width: 10%;
@@ -60,10 +60,16 @@
     text-align: center;
 
     &.leading {
-      border-right: var(--border);
+      touch-action: none;
+      pointer-events: none;
+
+      border-right: var(--border-1);
     }
     &.trailing {
-      border-left: var(--border);
+      cursor: pointer;
+      touch-action: manipulation;
+
+      border-left: var(--border-1);
     }
   }
 
