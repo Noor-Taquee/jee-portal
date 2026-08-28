@@ -17,4 +17,8 @@
   gap: 6px;
 
   background-color: var(--background-p-2);
+
+  p {
+    font: var(--text-1);
+  }
 }

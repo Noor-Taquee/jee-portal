@@ -14,7 +14,8 @@
 
   > p {
     color: #ffffff;
-    font: 600 18px Arial;
+    font: var(--text-1);
+    font-size: 20px;
   }
 
   &.unread {

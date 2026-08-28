@@ -1,8 +1,8 @@
 #numpad-container {
   --key-height: 44px;
-  --key-width: 64px;
+  --key-width: 71px;
 
-  --font: 400 16px Arial;
+  --font: var(--text-1);
 
   height: fit-content;
   width: fit-content;
@@ -25,6 +25,9 @@
   flex-shrink: 1;
   height: var(--key-height);
   width: 100%;
+  min-width: 0;
+
+  overflow: hidden;
 
   padding: 0 4px;
 
@@ -38,6 +41,9 @@
 }
 
 #numpad {
+  height: fit-content;
+  width: 100%;
+
   background-color: var(--background-p-1);
 
   display: grid;
