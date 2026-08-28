@@ -1,3 +1,5 @@
+import ActionBtn from "../../../../components/ActionBtn";
+
 interface ButtonWrapperProps {
   page: 1 | 2 | 3;
   setPage: React.Dispatch<React.SetStateAction<1 | 2 | 3>>;
@@ -6,7 +8,7 @@ interface ButtonWrapperProps {
 export default function ButtonWrapper({ page, setPage }: ButtonWrapperProps) {
   return (
     <div id="q-t-button-wrapper">
-      <button
+      <ActionBtn
         className={page === 1 ? "disabled" : ""}
         onClick={() => {
           if (page === 1) return;
@@ -16,9 +18,9 @@ export default function ButtonWrapper({ page, setPage }: ButtonWrapperProps) {
       >
         <i className={"ph-bold ph-caret-left"}></i>
         <p>{"Previous"}</p>
-      </button>
+      </ActionBtn>
 
-      <button
+      <ActionBtn
         className={page === 3 ? "disabled" : ""}
         onClick={() => {
           if (page === 3) return;
@@ -28,7 +30,7 @@ export default function ButtonWrapper({ page, setPage }: ButtonWrapperProps) {
       >
         <i className={"ph-bold ph-caret-right"}></i>
         <p>{"Next"}</p>
-      </button>
+      </ActionBtn>
     </div>
   );
 }

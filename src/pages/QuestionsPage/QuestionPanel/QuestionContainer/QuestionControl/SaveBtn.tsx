@@ -1,6 +1,8 @@
 import type { OptionID } from "../../../../../core/data";
 import type { ResponseData } from "../../../../../services";
 
+import ActionBtn from "../../../../../components/ActionBtn";
+
 interface SaveBtnProps {
   questionNo: number;
   setQuestionNo: React.Dispatch<React.SetStateAction<number>>;
@@ -19,7 +21,7 @@ export default function SaveBtn({
   const lastQuestion = questionNo >= 75;
 
   return (
-    <button
+    <ActionBtn
       className={`question-control-btn ${questionNo >= 75 ? "" : ""}`}
       onClick={() => {
         const key = questionNo;
@@ -38,6 +40,6 @@ export default function SaveBtn({
     >
       {!lastQuestion && <i className="ph-bold ph-caret-right"></i>}
       <p>{lastQuestion ? "Save" : "Save & Next"}</p>
-    </button>
+    </ActionBtn>
   );
 }
