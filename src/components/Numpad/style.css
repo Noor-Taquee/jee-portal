@@ -8,9 +8,9 @@
   width: fit-content;
 
   margin: 32px auto auto;
-  padding: 4px;
+  padding: 6px;
 
-  border: 1px solid #afafaf;
+  border: var(--border-1);
   border-radius: 4px;
 
   display: flex;
@@ -29,14 +29,16 @@
   padding: 0 4px;
 
   outline: none;
-  border: 1px solid #afafaf;
+  border: var(--border-1);
   border-radius: 4px;
+
+  background-color: var(--background-p-2);
 
   font: var(--font);
 }
 
 #numpad {
-  background-color: transparent;
+  background-color: var(--background-p-1);
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -51,8 +53,10 @@
   height: var(--key-height);
   width: var(--key-width);
 
-  border: 1px solid #afafaf;
+  border: var(--border-1);
   border-radius: 4px;
+
+  background-color: var(--background-p-2);
 
   > p {
     font: var(--font);
