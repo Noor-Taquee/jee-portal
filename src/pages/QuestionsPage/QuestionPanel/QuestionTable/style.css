@@ -21,6 +21,10 @@
   padding: 6px;
 
   border-bottom: var(--border-1);
+
+  p {
+    font: var(--header-2);
+  }
 }
 
 #question-table {
