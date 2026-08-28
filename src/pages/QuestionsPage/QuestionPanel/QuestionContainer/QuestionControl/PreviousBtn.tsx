@@ -1,3 +1,5 @@
+import ActionBtn from "../../../../../components/ActionBtn";
+
 interface PreviousBtnProps {
   questionNo: number;
   setQuestionNo: React.Dispatch<React.SetStateAction<number>>;
@@ -8,7 +10,7 @@ export default function PreviousBtn({
   setQuestionNo,
 }: PreviousBtnProps) {
   return (
-    <button
+    <ActionBtn
       className={`question-control-btn ${questionNo <= 1 ? "disabled" : ""}`}
       onClick={() => {
         if (questionNo <= 1) return;
@@ -17,6 +19,6 @@ export default function PreviousBtn({
     >
       <i className="ph-bold ph-caret-left"></i>
       <p>{"Previous"}</p>
-    </button>
+    </ActionBtn>
   );
 }

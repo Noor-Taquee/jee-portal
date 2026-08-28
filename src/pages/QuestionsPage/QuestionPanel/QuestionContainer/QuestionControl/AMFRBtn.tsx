@@ -1,6 +1,8 @@
 import type { OptionID } from "../../../../../core/data";
 import type { ResponseData } from "../../../../../services";
 
+import ActionBtn from "../../../../../components/ActionBtn";
+
 interface AMFRBtnProps {
   questionNo: number;
   setQuestionNo: React.Dispatch<React.SetStateAction<number>>;
@@ -20,7 +22,7 @@ export default function AMFRBtn({
   const lastQuestion = questionNo >= 75;
 
   return (
-    <button
+    <ActionBtn
       className={`question-control-btn ${answer ? "" : ""}`}
       onClick={() => {
         if (!answer) return;
@@ -41,6 +43,6 @@ export default function AMFRBtn({
       }}
     >
       <p>{"Save & Mark for review"}</p>
-    </button>
+    </ActionBtn>
   );
 }

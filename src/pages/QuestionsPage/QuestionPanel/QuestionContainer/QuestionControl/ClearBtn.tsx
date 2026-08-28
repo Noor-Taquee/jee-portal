@@ -1,3 +1,4 @@
+import ActionBtn from "../../../../../components/ActionBtn";
 import type { ResponseData } from "../../../../../services";
 
 interface ClearBtnProps {
@@ -15,7 +16,7 @@ export default function ClearBtn({
   setResponseData,
 }: ClearBtnProps) {
   return (
-    <button
+    <ActionBtn
       className="question-control-btn"
       onClick={() => {
         const key = questionNo;
@@ -33,6 +34,6 @@ export default function ClearBtn({
       }}
     >
       <p>{"Clear Response"}</p>
-    </button>
+    </ActionBtn>
   );
 }

@@ -1,6 +1,8 @@
 import type { OptionID } from "../../../../../core/data";
 import type { ResponseData } from "../../../../../services";
 
+import ActionBtn from "../../../../../components/ActionBtn";
+
 interface MFRBtnProps {
   questionNo: number;
   setQuestionNo: React.Dispatch<React.SetStateAction<number>>;
@@ -20,7 +22,7 @@ export default function MFRBtn({
   const lastQuestion = questionNo >= 75;
 
   return (
-    <button
+    <ActionBtn
       className={`question-control-btn ${answer ? "" : ""}`}
       onClick={() => {
         if (!answer) return;
@@ -40,6 +42,6 @@ export default function MFRBtn({
       }}
     >
       <p>{lastQuestion ? "Mark for review" : "Mark for review & Next"}</p>
-    </button>
+    </ActionBtn>
   );
 }
