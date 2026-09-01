@@ -39,25 +39,27 @@ export default function QuestionContainer({
   return (
     <div id="question-container">
       <Header question={question} />
-      <QuestionCard
-        index={question.id}
-        content={question.question}
-      />
-      {question.type === "single-choice" && (
-        <OptionsContainer
-          selectedOption={answer as OptionID}
-          options={question.options}
-          setOption={
-            setAnswer as React.Dispatch<React.SetStateAction<OptionID | null>>
-          }
+      <div id="question-area">
+        <QuestionCard
+          index={question.id}
+          content={question.question}
         />
-      )}
-      {question.type === "numerical" && (
-        <Numpad
-          answer={answer as string}
-          setAnswer={setAnswer}
-        />
-      )}
+        {question.type === "single-choice" && (
+          <OptionsContainer
+            selectedOption={answer as OptionID}
+            options={question.options}
+            setOption={
+              setAnswer as React.Dispatch<React.SetStateAction<OptionID | null>>
+            }
+          />
+        )}
+        {question.type === "numerical" && (
+          <Numpad
+            answer={answer as string}
+            setAnswer={setAnswer}
+          />
+        )}
+      </div>
       <QuestionControl
         questionNo={questionNo}
         setQuestionNo={setQuestionNo}
