@@ -15,5 +15,14 @@
   align-items: center;
   justify-content: space-between;
 
-  background-color: var(--background-1);
+  background-color: var(--background-p-1);
+}
+
+#timer {
+  color: var(--color-1);
+  font: var(--header-2);
+
+  .less span {
+    color: var(--inc-color-1) !important;
+  }
 }
