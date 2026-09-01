@@ -1,3 +1,5 @@
+// oxlint-disable max-lines-per-function
+
 import { useEffect, useState } from "react";
 
 import type { OptionID, QuestionData } from "../../../../core/data";
