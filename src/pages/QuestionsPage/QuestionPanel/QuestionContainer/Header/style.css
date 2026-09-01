@@ -46,7 +46,7 @@
 
     margin: 0 -2px;
 
-    background-color: #afafaf;
+    background-color: var(--background-s-2);
   }
 }
 
@@ -59,15 +59,15 @@
   border: none;
   border-radius: 2px;
 
-  font: 400 14px Arial;
+  font: var(--text-1);
   letter-spacing: 2px;
 
   &.positive {
-    color: #009900;
-    background-color: #00ff0020;
+    color: var(--cor-color-1);
+    background-color: var(--cor-color-2);
   }
   &.negative {
-    color: #ad0000;
-    background-color: #ff000020;
+    color: var(--inc-color-1);
+    background-color: var(--inc-color-2);
   }
 }
