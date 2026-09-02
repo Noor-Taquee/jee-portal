@@ -1,9 +1,9 @@
 // oxlint-disable max-lines-per-function
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import type { QuestionData } from "../../../core/data";
-import type { AnswerResponse, ResponseData } from "../../../services";
+import type { ResponseData } from "../../../services";
 import type { InnerRoute } from "../../../utils/hash-handler";
 
 import "./style.css";
@@ -14,28 +14,17 @@ import QuestionTable from "./QuestionTable";
 
 interface MainProps {
   questionData: QuestionData[];
+  responseData: ResponseData;
+  setResponseData: React.Dispatch<React.SetStateAction<ResponseData>>;
+
+  route?: InnerRoute;
 }
 
-export default function QuestionPanel({ questionData }: MainProps) {
-  // Response of the candidate
-  const [responseData, setResponseData] = useState<ResponseData>(
-    new Map(
-      questionData.map((i) => {
-        const res: [number, AnswerResponse] = [
-          i.id,
-          {
-            type: i.type,
-            visited: false,
-            answer: null,
-            review: false,
-            submittedAnswer: null,
-          },
-        ];
-        return res;
-      })
-    )
-  );
-
+export default function QuestionPanel({
+  questionData,
+  responseData,
+  setResponseData,
+}: MainProps) {
   // Question No
   const [questionNo, setQuestionNo] = useState<number>(1);
 

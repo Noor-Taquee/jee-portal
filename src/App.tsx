@@ -1,54 +1,50 @@
 // oxlint-disable max-lines-per-function
-import { useEffect, useState } from "react";
-import { useOrientation } from "./hooks/useOrientation.js";
-
-import { changeHash, normalize } from "./utils/hash-handler.js";
 
 import "./app.css";
 
+import { useEffect, useState } from "react";
+import { useOrientation } from "./hooks/useOrientation.js";
+
 import { getQuestions, type QuestionData } from "./core/data";
+import type { AnswerResponse, ResponseData } from "./services/index.js";
 
 import LoginPage from "./pages/LoginPage";
 import QuestionsPage from "./pages/QuestionsPage";
-
-const routes = ["login", "question"];
-const defaultRoute = "question";
+import ResultPage from "./pages/ResultPage/index.js";
+import { useHash } from "./hooks/useHash.js";
 
 export default function App() {
   const [questionData, setQuestionData] = useState<QuestionData[] | null>(null);
+  // Response of the candidate
+  const [responseData, setResponseData] = useState<ResponseData>(new Map());
+
   useEffect(() => {
-    getQuestions().then((data) => setQuestionData(data));
+    getQuestions().then((data) => {
+      setQuestionData(data.questions);
+      setResponseData(
+        new Map(
+          data.questions.map((question) => {
+            const res: [number, AnswerResponse] = [
+              question.id,
+              {
+                type: question.type,
+                visited: false,
+                answer: null,
+                review: false,
+                submittedAnswer: null,
+              },
+            ];
+            return res;
+          })
+        )
+      );
+    });
   }, []);
 
-  const [panel, setPanel] = useState<string>("home");
+  let panel = useHash();
 
-  const [innerRoute, setInnerRoute] = useState<[string[], string[]]>([[], []]);
-  // MARK: Hash
-  useEffect(() => {
-    function handleHashChange() {
-      const rawHash = window.location.hash;
-      const [location, attributes] = normalize(rawHash);
-
-      const currentLocation = location[0];
-
-      if (currentLocation && routes.includes(currentLocation)) {
-        setPanel(currentLocation);
-        setInnerRoute([location.slice(1), attributes]);
-        return;
-      }
-
-      changeHash(defaultRoute);
-      setPanel(defaultRoute);
-    }
-
-    window.addEventListener("hashchange", handleHashChange);
-    window.addEventListener("load", handleHashChange);
-
-    return () => {
-      window.removeEventListener("hashchange", handleHashChange);
-      window.removeEventListener("load", handleHashChange);
-    };
-  }, []);
+  const [startTime, setStartTime] = useState<Date | undefined>();
+  const [testDuration, _setTestDuration] = useState<number>(10800000);
 
   const orientation = useOrientation();
 
@@ -59,11 +55,20 @@ export default function App() {
       data-orientation={orientation}
     >
       <div className="panel-container">
-        {panel === "login" && <LoginPage />}
+        {panel === "login" && <LoginPage setStartTime={setStartTime} />}
         {panel === "question" && (
           <QuestionsPage
+            testDuration={testDuration}
+            startTime={startTime || new Date()}
             questionData={questionData}
-            route={innerRoute}
+            responseData={responseData}
+            setResponseData={setResponseData}
+          />
+        )}
+        {panel === "result" && (
+          <ResultPage
+            questionData={questionData}
+            responseData={responseData}
           />
         )}
       </div>
