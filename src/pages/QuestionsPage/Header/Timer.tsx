@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { changeHash } from "../../../utils/hash-handler";
 
 interface TimerProps {
   startTime: Date;
@@ -17,6 +18,7 @@ export default function Timer({ startTime, testDuration }: TimerProps) {
       if (remaining <= 0) {
         setLeftTime(0);
         clearInterval(timerInterval);
+        changeHash("result");
       } else {
         setLeftTime(remaining);
       }

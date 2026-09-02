@@ -1,6 +1,6 @@
 // oxlint-disable max-lines-per-function
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import type { OptionID, QuestionData } from "../../../../core/data";
 import type { ResponseData } from "../../../../services";
@@ -29,12 +29,9 @@ export default function QuestionContainer({
   responseData,
   setResponseData,
 }: QuestionContainerProps) {
-  const [answer, setAnswer] = useState<string | string[] | null>(null);
-  useEffect(() => {
-    const s = responseData.get(questionNo);
-    if (!s) return;
-    setAnswer(s.answer);
-  }, [questionNo, responseData]);
+  const [answer, setAnswer] = useState<string | string[] | null>(
+    responseData.get(questionNo)?.answer || null
+  );
 
   if (!question) return <div id="question-container"></div>;
 
