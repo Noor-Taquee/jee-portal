@@ -16,7 +16,7 @@ import Header from "./Header";
 interface QuestionContainerProps {
   questionNo: number;
   setQuestionNo: React.Dispatch<React.SetStateAction<number>>;
-  question: QuestionData | null;
+  question: QuestionData | undefined;
   responseData: ResponseData;
   setResponseData: React.Dispatch<React.SetStateAction<ResponseData>>;
 }
