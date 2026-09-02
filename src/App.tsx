@@ -10,7 +10,6 @@ import type { AnswerResponse, ResponseData } from "./services/index.js";
 
 import LoginPage from "./pages/LoginPage";
 import QuestionsPage from "./pages/QuestionsPage";
-import ResultPage from "./pages/ResultPage/index.js";
 import { useHash } from "./hooks/useHash.js";
 
 export default function App() {
@@ -63,12 +62,6 @@ export default function App() {
             questionData={questionData}
             responseData={responseData}
             setResponseData={setResponseData}
-          />
-        )}
-        {panel === "result" && (
-          <ResultPage
-            questionData={questionData}
-            responseData={responseData}
           />
         )}
       </div>
