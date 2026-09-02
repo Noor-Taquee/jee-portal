@@ -13,11 +13,10 @@ import QuestionContainer from "./QuestionContainer";
 import QuestionTable from "./QuestionTable";
 
 interface MainProps {
-  route: InnerRoute;
   questionData: QuestionData[];
 }
 
-export default function QuestionPanel({ questionData, route }: MainProps) {
+export default function QuestionPanel({ questionData }: MainProps) {
   // Response of the candidate
   const [responseData, setResponseData] = useState<ResponseData>(
     new Map(
@@ -39,26 +38,13 @@ export default function QuestionPanel({ questionData, route }: MainProps) {
 
   // Question No
   const [questionNo, setQuestionNo] = useState<number>(1);
-  useEffect(() => {
-    const attributes = route[1];
-    for (let attr of attributes) {
-      const [key, value] = attr.split("=");
-      if (key && value && key === "question") {
-        const num = Number(value);
-        if (num > 0 && num < 76 && num !== questionNo) setQuestionNo(num);
-        else setQuestionNo((p) => p);
-      }
-    }
-  }, [route, questionNo]);
 
-  // MARK: get question
   // Question to be displayed on the screen.
-  const [question, setQuestion] = useState<QuestionData | null>(null);
-  useEffect(() => {
-    const que = questionData[questionNo - 1];
-    if (que) setQuestion(que);
-    else setQuestion(null);
-  }, [questionData, questionNo]);
+  let question = questionData[questionNo - 1];
+  useEffect(
+    () => (question = questionData[questionNo - 1]),
+    [questionData, questionNo]
+  );
 
   return (
     <div id="question-panel">
