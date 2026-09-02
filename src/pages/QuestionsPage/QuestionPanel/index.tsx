@@ -16,7 +16,7 @@ interface MainProps {
   questionData: QuestionData[];
 }
 
-export default function QuestionPanel({ questionData, route }: MainProps) {
+export default function QuestionPanel({ questionData }: MainProps) {
   // Response of the candidate
   const [responseData, setResponseData] = useState<ResponseData>(
     new Map(
