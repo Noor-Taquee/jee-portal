@@ -40,11 +40,7 @@ export default function QuestionPanel({ questionData }: MainProps) {
   const [questionNo, setQuestionNo] = useState<number>(1);
 
   // Question to be displayed on the screen.
-  let question = questionData[questionNo - 1];
-  useEffect(
-    () => (question = questionData[questionNo - 1]),
-    [questionData, questionNo]
-  );
+  const question = questionData[questionNo - 1];
 
   return (
     <div id="question-panel">
