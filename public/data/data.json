@@ -1,923 +1,930 @@
-[
-  {
-    "id": 1,
-    "subject": "Physics",
-    "type": "single-choice",
-    "question": "A body of mass $m = 2\\text{ kg}$ is projected at an angle of $45^{\\circ}$ to the horizontal with an initial speed of $20\\text{ m/s}$. The angular momentum of the projectile about the point of projection when it is at its maximum height is (take $g = 10\\text{ m/s}^2$):",
-    "options": [
-      {
-        "id": "A",
-        "content": "$100\\sqrt{2}\\text{ kg}\\cdot\\text{m}^2/\\text{s}$"
-      },
-      { "id": "B", "content": "$200\\text{ kg}\\cdot\\text{m}^2/\\text{s}$" },
-      { "id": "C", "content": "$100\\text{ kg}\\cdot\\text{m}^2/\\text{s}$" },
-      {
-        "id": "D",
-        "content": "$50\\sqrt{2}\\text{ kg}\\cdot\\text{m}^2/\\text{s}$"
-      }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 2,
-    "subject": "Physics",
-    "type": "single-choice",
-    "question": "A particle moves in a straight line with velocity $v(t) = 3t^2 - 6t\\text{ m/s}$. The total distance traveled by the particle in the first $3\\text{ seconds}$ is:",
-    "options": [
-      { "id": "A", "content": "$0\\text{ m}$" },
-      { "id": "B", "content": "$4\\text{ m}$" },
-      { "id": "C", "content": "$8\\text{ m}$" },
-      { "id": "D", "content": "$12\\text{ m}$" }
-    ],
-    "correctOption": "C"
-  },
-  {
-    "id": 3,
-    "subject": "Physics",
-    "type": "single-choice",
-    "question": "A block of mass $m = 5\\text{ kg}$ rests on a rough horizontal surface with coefficient of static friction $\\mu_s = 0.4$. A horizontal force of $15\\text{ N}$ is applied to the block. The magnitude of the friction force acting on the block is (take $g = 10\\text{ m/s}^2$):",
-    "options": [
-      { "id": "A", "content": "$20\\text{ N}$" },
-      { "id": "B", "content": "$15\\text{ N}$" },
-      { "id": "C", "content": "$5\\text{ N}$" },
-      { "id": "D", "content": "$0\\text{ N}$" }
-    ],
-    "correctOption": "B"
-  },
-  {
-    "id": 4,
-    "subject": "Physics",
-    "type": "single-choice",
-    "question": "Two point charges $+q$ and $+4q$ are separated by a distance $L$. A third charge $Q$ is placed on the line joining them such that the entire system is in equilibrium. The position and magnitude of $Q$ are:",
-    "options": [
-      {
-        "id": "A",
-        "content": "At distance $\\frac{L}{3}$ from $+q$, $Q = -\\frac{4}{9}q$"
-      },
-      {
-        "id": "B",
-        "content": "At distance $\\frac{L}{2}$ from $+q$, $Q = -\\frac{q}{4}$"
-      },
-      {
-        "id": "C",
-        "content": "At distance $\\frac{2L}{3}$ from $+q$, $Q = -\\frac{4}{9}q$"
-      },
-      {
-        "id": "D",
-        "content": "At distance $\\frac{L}{3}$ from $+q$, $Q = +\\frac{4}{9}q$"
-      }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 5,
-    "subject": "Physics",
-    "type": "single-choice",
-    "question": "A parallel plate capacitor with plate area $A$ and separation $d$ is filled with two dielectrics of constants $K_1$ and $K_2$, each occupying half the distance $d/2$. The effective capacitance is:",
-    "options": [
-      {
-        "id": "A",
-        "content": "$\\frac{\\epsilon_0 A}{d} \\frac{K_1 K_2}{K_1 + K_2}$"
-      },
-      {
-        "id": "B",
-        "content": "$\\frac{2\\epsilon_0 A}{d} \\frac{K_1 K_2}{K_1 + K_2}$"
-      },
-      { "id": "C", "content": "$\\frac{\\epsilon_0 A}{2d} (K_1 + K_2)$" },
-      { "id": "D", "content": "$\\frac{\\epsilon_0 A}{d} (K_1 + K_2)$" }
-    ],
-    "correctOption": "B"
-  },
-  {
-    "id": 6,
-    "subject": "Physics",
-    "type": "single-choice",
-    "question": "An ideal gas undergoes a thermodynamic process according to $P V^2 = C$ (constant). The molar heat capacity of the gas if its adiabatic exponent is $\\gamma$ is:",
-    "options": [
-      { "id": "A", "content": "$C_v + R$" },
-      { "id": "B", "content": "$C_v - R$" },
-      { "id": "C", "content": "$\\frac{R}{\\gamma - 1} + R$" },
-      { "id": "D", "content": "$C_v - 2R$" }
-    ],
-    "correctOption": "B"
-  },
-  {
-    "id": 7,
-    "subject": "Physics",
-    "type": "single-choice",
-    "question": "A simple pendulum has time period $T_1$ on the Earth's surface. Its time period becomes $T_2$ when taken to a height $R$ above the Earth's surface ($R$ = radius of Earth). The ratio $T_2 / T_1$ is:",
-    "options": [
-      { "id": "A", "content": "$1$" },
-      { "id": "B", "content": "$2$" },
-      { "id": "C", "content": "$\\sqrt{2}$" },
-      { "id": "D", "content": "$4$" }
-    ],
-    "correctOption": "B"
-  },
-  {
-    "id": 8,
-    "subject": "Physics",
-    "type": "single-choice",
-    "question": "A wire of resistance $R$ is stretched uniformly to double its original length. The new resistance of the wire is:",
-    "options": [
-      { "id": "A", "content": "$2R$" },
-      { "id": "B", "content": "$4R$" },
-      { "id": "C", "content": "$R/2$" },
-      { "id": "D", "content": "$R/4$" }
-    ],
-    "correctOption": "B"
-  },
-  {
-    "id": 9,
-    "subject": "Physics",
-    "type": "single-choice",
-    "question": "In Young's double slit experiment, if the slit separation is halved and the distance to the screen is doubled, the fringe width becomes:",
-    "options": [
-      { "id": "A", "content": "Unchanged" },
-      { "id": "B", "content": "Doubled" },
-      { "id": "C", "content": "Four times" },
-      { "id": "D", "content": "Half" }
-    ],
-    "correctOption": "C"
-  },
-  {
-    "id": 10,
-    "subject": "Physics",
-    "type": "single-choice",
-    "question": "The work function of a metal surface is $2.0\\text{ eV}$. Light of wavelength $400\\text{ nm}$ falls on it. The maximum kinetic energy of the emitted photoelectrons is approximately (use $h c = 1240\\text{ eV}\\cdot\\text{nm}$):",
-    "options": [
-      { "id": "A", "content": "$1.1\\text{ eV}$" },
-      { "id": "B", "content": "$2.0\\text{ eV}$" },
-      { "id": "C", "content": "$3.1\\text{ eV}$" },
-      { "id": "D", "content": "$5.1\\text{ eV}$" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 11,
-    "subject": "Physics",
-    "type": "single-choice",
-    "question": "A uniform circular disc of mass $M$ and radius $R$ has a concentric circular hole of radius $r$. Its moment of inertia about an axis passing through its center and perpendicular to its plane is:",
-    "options": [
-      { "id": "A", "content": "$\\frac{1}{2} M (R^2 + r^2)$" },
-      { "id": "B", "content": "$\\frac{1}{2} M (R^2 - r^2)$" },
-      { "id": "C", "content": "$\\frac{1}{4} M (R^2 + r^2)$" },
-      { "id": "D", "content": "$M (R^2 + r^2)$" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 12,
-    "subject": "Physics",
-    "type": "single-choice",
-    "question": "A long straight solenoid of length $L$ and total turns $N$ carries current $I$. The magnetic field inside near the center is $B$. If $N$ is doubled and $L$ is doubled keeping $I$ constant, the new magnetic field is:",
-    "options": [
-      { "id": "A", "content": "$B$" },
-      { "id": "B", "content": "$2B$" },
-      { "id": "C", "content": "$4B$" },
-      { "id": "D", "content": "$B/2$" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 13,
-    "subject": "Physics",
-    "type": "single-choice",
-    "question": "An $LC$ circuit contains a $20\\text{ mH}$ inductor and a $50\\mu\\text{F}$ capacitor. The natural frequency of oscillation of the circuit in $\\text{Hz}$ is approximately:",
-    "options": [
-      { "id": "A", "content": "$159\\text{ Hz}$" },
-      { "id": "B", "content": "$50\\text{ Hz}$" },
-      { "id": "C", "content": "$1000\\text{ Hz}$" },
-      { "id": "D", "content": "$318\\text{ Hz}$" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 14,
-    "subject": "Physics",
-    "type": "single-choice",
-    "question": "A convex lens of focal length $20\\text{ cm}$ is placed in contact with a concave lens of focal length $10\\text{ cm}$. The power of the combination is:",
-    "options": [
-      { "id": "A", "content": "$+5\\text{ D}$" },
-      { "id": "B", "content": "$-5\\text{ D}$" },
-      { "id": "C", "content": "$+15\\text{ D}$" },
-      { "id": "D", "content": "$-10\\text{ D}$" }
-    ],
-    "correctOption": "B"
-  },
-  {
-    "id": 15,
-    "subject": "Physics",
-    "type": "single-choice",
-    "question": "In a Hydrogen atom, the radius of the $n$-th Bohr orbit is proportional to:",
-    "options": [
-      { "id": "A", "content": "$n$" },
-      { "id": "B", "content": "$n^2$" },
-      { "id": "C", "content": "$1/n$" },
-      { "id": "D", "content": "$1/n^2$" }
-    ],
-    "correctOption": "B"
-  },
-  {
-    "id": 16,
-    "subject": "Physics",
-    "type": "single-choice",
-    "question": "The half-life of a radioactive isotope is $10\\text{ days}$. The fraction of initial nuclei remaining undecayed after $30\\text{ days}$ is:",
-    "options": [
-      { "id": "A", "content": "$1/3$" },
-      { "id": "B", "content": "$1/6$" },
-      { "id": "C", "content": "$1/8$" },
-      { "id": "D", "content": "$1/16$" }
-    ],
-    "correctOption": "C"
-  },
-  {
-    "id": 17,
-    "subject": "Physics",
-    "type": "single-choice",
-    "question": "In an unbiased p-n junction diode, the depletion layer is formed by:",
-    "options": [
-      { "id": "A", "content": "Drift of minority charge carriers" },
-      { "id": "B", "content": "Diffusion of majority charge carriers" },
-      { "id": "C", "content": "Application of external voltage" },
-      { "id": "D", "content": "Thermal generation of electron-hole pairs" }
-    ],
-    "correctOption": "B"
-  },
-  {
-    "id": 18,
-    "subject": "Physics",
-    "type": "single-choice",
-    "question": "Dimensional formula for the universal gravitational constant $G$ is:",
-    "options": [
-      { "id": "A", "content": "$[M^{-1} L^3 T^{-2}]$" },
-      { "id": "B", "content": "$[M^1 L^2 T^{-2}]$" },
-      { "id": "C", "content": "$[M^{-1} L^2 T^{-1}]$" },
-      { "id": "D", "content": "$[M^0 L^3 T^{-2}]$" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 19,
-    "subject": "Physics",
-    "type": "single-choice",
-    "question": "A body cools from $80^{\\circ}\\text{C}$ to $60^{\\circ}\\text{C}$ in $10\\text{ minutes}$ in surroundings at $30^{\\circ}\\text{C}$. The time taken to cool from $60^{\\circ}\\text{C}$ to $40^{\\circ}\\text{C}$ in the same surroundings according to Newton's law of cooling is:",
-    "options": [
-      { "id": "A", "content": "$10\\text{ minutes}$" },
-      { "id": "B", "content": "$15\\text{ minutes}$" },
-      { "id": "C", "content": "$20\\text{ minutes}$" },
-      { "id": "D", "content": "$12\\text{ minutes}$" }
-    ],
-    "correctOption": "B"
-  },
-  {
-    "id": 20,
-    "subject": "Physics",
-    "type": "single-choice",
-    "question": "A transverse progressive wave is described by $y = 0.05 \\sin(2\\pi(100t - 2x))$ where $x, y$ are in meters and $t$ is in seconds. The wave speed is:",
-    "options": [
-      { "id": "A", "content": "$50\\text{ m/s}$" },
-      { "id": "B", "content": "$100\\text{ m/s}$" },
-      { "id": "C", "content": "$200\\text{ m/s}$" },
-      { "id": "D", "content": "$25\\text{ m/s}$" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 21,
-    "subject": "Physics",
-    "type": "numerical",
-    "question": "A sphere of mass $2\\text{ kg}$ collides head-on elastically with another sphere of mass $1\\text{ kg}$ at rest. The velocity of the $2\\text{ kg}$ sphere before collision was $6\\text{ m/s}$. Find its velocity (in $\\text{m/s}$) after collision.",
-    "correctAnswer": "2"
-  },
-  {
-    "id": 22,
-    "subject": "Physics",
-    "type": "numerical",
-    "question": "A bullet of mass $20\\text{ g}$ enters a fixed wooden block with speed $100\\text{ m/s}$ and stops after penetrating $20\\text{ cm}$. The average resistive force exerted by the block on the bullet is $F\\text{ N}$. Find the value of $F$.",
-    "correctAnswer": "500"
-  },
-  {
-    "id": 23,
-    "subject": "Physics",
-    "type": "numerical",
-    "question": "A force $\\vec{F} = (3\\hat{i} + 4\\hat{j})\\text{ N}$ acts on a particle during its displacement from $(0,0)$ to $(2\\text{ m}, 3\\text{ m})$. The total work done by the force is $W\\text{ Joules}$. Find $W$.",
-    "correctAnswer": "18"
-  },
-  {
-    "id": 24,
-    "subject": "Physics",
-    "type": "numerical",
-    "question": "Two resistors $R_1 = 6\\,\\Omega$ and $R_2 = 3\\,\\Omega$ are connected in parallel across a $12\\text{ V}$ ideal battery. The current drawn from the battery is $I\\text{ A}$. Find $I$.",
-    "correctAnswer": "6"
-  },
-  {
-    "id": 25,
-    "subject": "Physics",
-    "type": "numerical",
-    "question": "A light ray enters a glass slab of refractive index $n = 1.5$ at an angle of incidence $i = 0^{\\circ}$. The angle of refraction $r$ in degrees is:",
-    "correctAnswer": "0"
-  },
-  {
-    "id": 26,
-    "subject": "Chemistry",
-    "type": "single-choice",
-    "question": "Which of the following quantum numbers set is NOT permissible for an electron in a hydrogen atom?",
-    "options": [
-      { "id": "A", "content": "$n = 3, l = 2, m_l = -2, m_s = +1/2$" },
-      { "id": "B", "content": "$n = 2, l = 2, m_l = 0, m_s = -1/2$" },
-      { "id": "C", "content": "$n = 4, l = 0, m_l = 0, m_s = +1/2$" },
-      { "id": "D", "content": "$n = 1, l = 0, m_l = 0, m_s = -1/2$" }
-    ],
-    "correctOption": "B"
-  },
-  {
-    "id": 27,
-    "subject": "Chemistry",
-    "type": "single-choice",
-    "question": "The IUPAC name of the compound $\\text{CH}_3-\\text{CH}(\\text{OH})-\\text{CH}_2-\\text{CHO}$ is:",
-    "options": [
-      { "id": "A", "content": "3-hydroxybutanal" },
-      { "id": "B", "content": "2-hydroxybutanal" },
-      { "id": "C", "content": "3-hydroxybutanone" },
-      { "id": "D", "content": "4-hydroxybutan-2-one" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 28,
-    "subject": "Chemistry",
-    "type": "single-choice",
-    "question": "The pH of a $10^{-8}\\text{ M } \\text{HCl}$ aqueous solution at $25^{\\circ}\\text{C}$ is:",
-    "options": [
-      { "id": "A", "content": "Exactly $8$" },
-      { "id": "B", "content": "Slightly less than $7$" },
-      { "id": "C", "content": "Slightly greater than $7$" },
-      { "id": "D", "content": "Exactly $6$" }
-    ],
-    "correctOption": "B"
-  },
-  {
-    "id": 29,
-    "subject": "Chemistry",
-    "type": "single-choice",
-    "question": "Among the following molecules, which one has a zero dipole moment?",
-    "options": [
-      { "id": "A", "content": "$\\text{NH}_3$" },
-      { "id": "B", "content": "$\\text{NF}_3$" },
-      { "id": "C", "content": "$\\text{BF}_3$" },
-      { "id": "D", "content": "$\\text{H}_2\\text{O}$" }
-    ],
-    "correctOption": "C"
-  },
-  {
-    "id": 30,
-    "subject": "Chemistry",
-    "type": "single-choice",
-    "question": "The hybridization of Xe in $\\text{XeF}_4$ and its geometric shape are respectively:",
-    "options": [
-      { "id": "A", "content": "$sp^3d$, See-saw" },
-      { "id": "B", "content": "$sp^3d^2$, Square planar" },
-      { "id": "C", "content": "$sp^3d^2$, Tetrahedral" },
-      { "id": "D", "content": "$sp^3$, Square planar" }
-    ],
-    "correctOption": "B"
-  },
-  {
-    "id": 31,
-    "subject": "Chemistry",
-    "type": "single-choice",
-    "question": "The order of reactivity of alkyl halides towards $S_N2$ reaction is:",
-    "options": [
-      { "id": "A", "content": "Primary > Secondary > Tertiary" },
-      { "id": "B", "content": "Tertiary > Secondary > Primary" },
-      { "id": "C", "content": "Secondary > Primary > Tertiary" },
-      { "id": "D", "content": "Primary > Tertiary > Secondary" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 32,
-    "subject": "Chemistry",
-    "type": "single-choice",
-    "question": "Which of the following metal ions has maximum paramagnetic character?",
-    "options": [
-      { "id": "A", "content": "$\\text{Fe}^{3+}$" },
-      { "id": "B", "content": "$\\text{Cu}^{2+}$" },
-      { "id": "C", "content": "$\\text{Zn}^{2+}$" },
-      { "id": "D", "content": "$\\text{Sc}^{3+}$" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 33,
-    "subject": "Chemistry",
-    "type": "single-choice",
-    "question": "Standard reduction potentials of three metals $X, Y, Z$ are $-1.2\\text{ V}, +0.5\\text{ V}$, and $-3.0\\text{ V}$ respectively. Their reducing power order is:",
-    "options": [
-      { "id": "A", "content": "$Y > X > Z$" },
-      { "id": "B", "content": "$Z > X > Y$" },
-      { "id": "C", "content": "$X > Y > Z$" },
-      { "id": "D", "content": "$Z > Y > X$" }
-    ],
-    "correctOption": "B"
-  },
-  {
-    "id": 34,
-    "subject": "Chemistry",
-    "type": "single-choice",
-    "question": "For a first-order chemical reaction, the time required for $99\\%$ completion is approximately equal to how many half-lives ($t_{1/2}$)?",
-    "options": [
-      { "id": "A", "content": "$3.32 \\times t_{1/2}$" },
-      { "id": "B", "content": "$6.64 \\times t_{1/2}$" },
-      { "id": "C", "content": "$10 \\times t_{1/2}$" },
-      { "id": "D", "content": "$2 \\times t_{1/2}$" }
-    ],
-    "correctOption": "B"
-  },
-  {
-    "id": 35,
-    "subject": "Chemistry",
-    "type": "single-choice",
-    "question": "Ozonolysis of 2-methylbut-2-ene gives:",
-    "options": [
-      { "id": "A", "content": "Propanone and Ethanal" },
-      { "id": "B", "content": "Propanal and Ethanal" },
-      { "id": "C", "content": "Methanal and Propanone" },
-      { "id": "D", "content": "Butanone and Methanal" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 36,
-    "subject": "Chemistry",
-    "type": "single-choice",
-    "question": "Which alkali metal carbonate is thermally least stable and decomposes on mild heating?",
-    "options": [
-      { "id": "A", "content": "$\\text{Li}_2\\text{CO}_3$" },
-      { "id": "B", "content": "$\\text{Na}_2\\text{CO}_3$" },
-      { "id": "C", "content": "$\\text{K}_2\\text{CO}_3$" },
-      { "id": "D", "content": "$\\text{Cs}_2\\text{CO}_3$" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 37,
-    "subject": "Chemistry",
-    "type": "single-choice",
-    "question": "Phenol reacts with chloroform in the presence of aqueous $\\text{NaOH}$ to form salicylaldehyde. This reaction is known as:",
-    "options": [
-      { "id": "A", "content": "Kolbe's Reaction" },
-      { "id": "B", "content": "Reimer-Tiemann Reaction" },
-      { "id": "C", "content": "Friedel-Crafts Reaction" },
-      { "id": "D", "content": "Cannizzaro Reaction" }
-    ],
-    "correctOption": "B"
-  },
-  {
-    "id": 38,
-    "subject": "Chemistry",
-    "type": "single-choice",
-    "question": "The oxidation state of Fe in potassium ferricyanide $K_3[Fe(CN)_6]$ is:",
-    "options": [
-      { "id": "A", "content": "+2" },
-      { "id": "B", "content": "+3" },
-      { "id": "C", "content": "+4" },
-      { "id": "D", "content": "0" }
-    ],
-    "correctOption": "B"
-  },
-  {
-    "id": 39,
-    "subject": "Chemistry",
-    "type": "single-choice",
-    "question": "Which monomer pair is used to prepare Nylon 6,6 polymer?",
-    "options": [
-      { "id": "A", "content": "Adipic acid and Hexamethylenediamine" },
-      { "id": "B", "content": "Caprolactam" },
-      { "id": "C", "content": "Terephthalic acid and Ethylene glycol" },
-      { "id": "D", "content": "Melamine and Formaldehyde" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 40,
-    "subject": "Chemistry",
-    "type": "single-choice",
-    "question": "The gas evolved when sodium metal reacts with ethanol is:",
-    "options": [
-      { "id": "A", "content": "$\\text{O}_2$" },
-      { "id": "B", "content": "$\\text{H}_2$" },
-      { "id": "C", "content": "$\\text{CO}_2$" },
-      { "id": "D", "content": "$\\text{CH}_4$" }
-    ],
-    "correctOption": "B"
-  },
-  {
-    "id": 41,
-    "subject": "Chemistry",
-    "type": "single-choice",
-    "question": "Which colloid type is represented by fog?",
-    "options": [
-      { "id": "A", "content": "Liquid dispersed in Gas" },
-      { "id": "B", "content": "Gas dispersed in Liquid" },
-      { "id": "C", "content": "Solid dispersed in Gas" },
-      { "id": "D", "content": "Liquid dispersed in Liquid" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 42,
-    "subject": "Chemistry",
-    "type": "single-choice",
-    "question": "Glucose on reaction with concentrated $\\text{HNO}_3$ yields:",
-    "options": [
-      { "id": "A", "content": "Gluconic acid" },
-      { "id": "B", "content": "Saccharic acid" },
-      { "id": "C", "content": "Sorbitol" },
-      { "id": "D", "content": "n-hexane" }
-    ],
-    "correctOption": "B"
-  },
-  {
-    "id": 43,
-    "subject": "Chemistry",
-    "type": "single-choice",
-    "question": "The molarity of pure water at $4^{\\circ}\\text{C}$ (density $= 1\\text{ g/mL}$) is approximately:",
-    "options": [
-      { "id": "A", "content": "$18\\text{ M}$" },
-      { "id": "B", "content": "$55.5\\text{ M}$" },
-      { "id": "C", "content": "$100\\text{ M}$" },
-      { "id": "D", "content": "$1\\text{ M}$" }
-    ],
-    "correctOption": "B"
-  },
-  {
-    "id": 44,
-    "subject": "Chemistry",
-    "type": "single-choice",
-    "question": "Which nitrogen oxide is neutral towards litmus solution?",
-    "options": [
-      { "id": "A", "content": "$\\text{N}_2\\text{O}_5$" },
-      { "id": "B", "content": "$\\text{NO}_2$" },
-      { "id": "C", "content": "$\\text{N}_2\\text{O}$" },
-      { "id": "D", "content": "$\\text{N}_2\\text{O}_3$" }
-    ],
-    "correctOption": "C"
-  },
-  {
-    "id": 45,
-    "subject": "Chemistry",
-    "type": "single-choice",
-    "question": "Aniline reacts with nitrous acid ($\\text{NaNO}_2 + \\text{HCl}$) at $0-5^{\\circ}\\text{C}$ to form:",
-    "options": [
-      { "id": "A", "content": "Phenol" },
-      { "id": "B", "content": "Benzene diazonium chloride" },
-      { "id": "C", "content": "Nitrobenzene" },
-      { "id": "D", "content": "Chlorobenzene" }
-    ],
-    "correctOption": "B"
-  },
-  {
-    "id": 46,
-    "subject": "Chemistry",
-    "type": "numerical",
-    "question": "Find the total number of unpaired electrons present in gaseous $\\text{Fe}^{3+}$ ion (Atomic number of Fe $= 26$).",
-    "correctAnswer": "5"
-  },
-  {
-    "id": 47,
-    "subject": "Chemistry",
-    "type": "numerical",
-    "question": "How many optical isomers are possible for lactic acid $\\text{CH}_3\\text{CH(OH)} \\text{COOH}$?",
-    "correctAnswer": "2"
-  },
-  {
-    "id": 48,
-    "subject": "Chemistry",
-    "type": "numerical",
-    "question": "Calculate the oxidation state of sulfur in peroxodisulfuric acid (Marshall's acid, $\\text{H}_2\\text{S}_2\\text{O}_8$).",
-    "correctAnswer": "6"
-  },
-  {
-    "id": 49,
-    "subject": "Chemistry",
-    "type": "numerical",
-    "question": "The total number of lone pairs on the central atom of $\\text{XeF}_2$ molecule is:",
-    "correctAnswer": "3"
-  },
-  {
-    "id": 50,
-    "subject": "Chemistry",
-    "type": "numerical",
-    "question": "What is the Coordination Number of an atom in a body-centered cubic (BCC) crystal lattice structure?",
-    "correctAnswer": "8"
-  },
-  {
-    "id": 51,
-    "subject": "Mathematics",
-    "type": "single-choice",
-    "question": "If $\\alpha$ and $\\beta$ are the roots of the quadratic equation $x^2 - 5x + 6 = 0$, then the value of $\\alpha^3 + \\beta^3$ is:",
-    "options": [
-      { "id": "A", "content": "$35$" },
-      { "id": "B", "content": "$125$" },
-      { "id": "C", "content": "$65$" },
-      { "id": "D", "content": "$215$" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 52,
-    "subject": "Mathematics",
-    "type": "single-choice",
-    "question": "The limit $\\lim_{x \\to 0} \\frac{\\sin(3x)}{x \\cos x}$ is equal to:",
-    "options": [
-      { "id": "A", "content": "$0$" },
-      { "id": "B", "content": "$1$" },
-      { "id": "C", "content": "$3$" },
-      { "id": "D", "content": "Does not exist" }
-    ],
-    "correctOption": "C"
-  },
-  {
-    "id": 53,
-    "subject": "Mathematics",
-    "type": "single-choice",
-    "question": "The principal value of $\\sin^{-1}\\left(\\sin\\left(\\frac{2\\pi}{3}\\right)\\right)$ is:",
-    "options": [
-      { "id": "A", "content": "$\\frac{2\\pi}{3}$" },
-      { "id": "B", "content": "$\\frac{\\pi}{3}$" },
-      { "id": "C", "content": "$-\\frac{\\pi}{3}$" },
-      { "id": "D", "content": "$\\frac{4\\pi}{3}$" }
-    ],
-    "correctOption": "B"
-  },
-  {
-    "id": 54,
-    "subject": "Mathematics",
-    "type": "single-choice",
-    "question": "The derivative of $y = \\tan^{-1}\\left(\\frac{1-x^2}{1+x^2}\\right)$ with respect to $x$ is:",
-    "options": [
-      { "id": "A", "content": "$\\frac{-2}{1+x^2}$" },
-      { "id": "B", "content": "$\\frac{2}{1+x^2}$" },
-      { "id": "C", "content": "$\\frac{-1}{1+x^4}$" },
-      { "id": "D", "content": "$\\frac{-2x}{1+x^4}$" }
-    ],
-    "correctOption": "D"
-  },
-  {
-    "id": 55,
-    "subject": "Mathematics",
-    "type": "single-choice",
-    "question": "The area bounded by the parabola $y = x^2$ and the line $y = 4$ is:",
-    "options": [
-      { "id": "A", "content": "$\\frac{16}{3}$" },
-      { "id": "B", "content": "$\\frac{32}{3}$" },
-      { "id": "C", "content": "$\\frac{8}{3}$" },
-      { "id": "D", "content": "$16$" }
-    ],
-    "correctOption": "B"
-  },
-  {
-    "id": 56,
-    "subject": "Mathematics",
-    "type": "single-choice",
-    "question": "The maximum value of $f(x) = 3\\sin x + 4\\cos x$ on $\\mathbb{R}$ is:",
-    "options": [
-      { "id": "A", "content": "$5$" },
-      { "id": "B", "content": "$7$" },
-      { "id": "C", "content": "$1$" },
-      { "id": "D", "content": "$\\sqrt{7}$" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 57,
-    "subject": "Mathematics",
-    "type": "single-choice",
-    "question": "The number of terms in the expansion of $(1 + 2x + x^2)^{10}$ is:",
-    "options": [
-      { "id": "A", "content": "$11$" },
-      { "id": "B", "content": "$21$" },
-      { "id": "C", "content": "$20$" },
-      { "id": "D", "content": "$10$" }
-    ],
-    "correctOption": "B"
-  },
-  {
-    "id": 58,
-    "subject": "Mathematics",
-    "type": "single-choice",
-    "question": "If $\\vec{a} = \\hat{i} + 2\\hat{j} - \\hat{k}$ and $\\vec{b} = 2\\hat{i} + \\hat{j} + 3\\hat{k}$, then $\\vec{a} \\cdot \\vec{b}$ is:",
-    "options": [
-      { "id": "A", "content": "$1$" },
-      { "id": "B", "content": "$3$" },
-      { "id": "C", "content": "$7$" },
-      { "id": "D", "content": "$0$" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 59,
-    "subject": "Mathematics",
-    "type": "single-choice",
-    "question": "The distance of the point $(1, 2, 3)$ from the plane $2x + 3y - 6z + 5 = 0$ is:",
-    "options": [
-      { "id": "A", "content": "$\\frac{5}{7}$" },
-      { "id": "B", "content": "$\\frac{3}{7}$" },
-      { "id": "C", "content": "$1$" },
-      { "id": "D", "content": "$\\frac{1}{7}$" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 60,
-    "subject": "Mathematics",
-    "type": "single-choice",
-    "question": "The value of the definite integral $\\int_{-\\pi/2}^{\\pi/2} \\sin^5(x) \\, dx$ is:",
-    "options": [
-      { "id": "A", "content": "$0$" },
-      { "id": "B", "content": "$\\pi$" },
-      { "id": "C", "content": "$2$" },
-      { "id": "D", "content": "$\\pi/2$" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 61,
-    "subject": "Mathematics",
-    "type": "single-choice",
-    "question": "If matrix $A = \\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$, then $A^n$ for $n \\in \\mathbb{N}$ is:",
-    "options": [
-      {
-        "id": "A",
-        "content": "$\\begin{pmatrix} 1 & 2n \\\\ 0 & 1 \\end{pmatrix}$"
-      },
-      {
-        "id": "B",
-        "content": "$\\begin{pmatrix} 1 & 2^n \\\\ 0 & 1 \\end{pmatrix}$"
-      },
-      {
-        "id": "C",
-        "content": "$\\begin{pmatrix} n & 2n \\\\ 0 & n \\end{pmatrix}$"
-      },
-      {
-        "id": "D",
-        "content": "$\\begin{pmatrix} 1 & n \\\\ 0 & 1 \\end{pmatrix}$"
-      }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 62,
-    "subject": "Mathematics",
-    "type": "single-choice",
-    "question": "The eccentricity of the hyperbola $\\frac{x^2}{16} - \\frac{y^2}{9} = 1$ is:",
-    "options": [
-      { "id": "A", "content": "$\\frac{5}{4}$" },
-      { "id": "B", "content": "$\\frac{5}{3}$" },
-      { "id": "C", "content": "$\\frac{4}{3}$" },
-      { "id": "D", "content": "$\\frac{\\sqrt{7}}{4}$" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 63,
-    "subject": "Mathematics",
-    "type": "single-choice",
-    "question": "The sum of the infinite geometric series $1 + \\frac{1}{3} + \\frac{1}{9} + \\frac{1}{27} + \\dots$ is:",
-    "options": [
-      { "id": "A", "content": "$\\frac{3}{2}$" },
-      { "id": "B", "content": "$2$" },
-      { "id": "C", "content": "$\\frac{4}{3}$" },
-      { "id": "D", "content": "$\\frac{5}{3}$" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 64,
-    "subject": "Mathematics",
-    "type": "single-choice",
-    "question": "The differential equation representing the family of curves $y = c x$ where $c$ is an arbitrary constant is:",
-    "options": [
-      { "id": "A", "content": "$x \\frac{dy}{dx} - y = 0$" },
-      { "id": "B", "content": "$\\frac{dy}{dx} + y = 0$" },
-      { "id": "C", "content": "$y \\frac{dy}{dx} - x = 0$" },
-      { "id": "D", "content": "$\\frac{d^2y}{dx^2} = 0$" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 65,
-    "subject": "Mathematics",
-    "type": "single-choice",
-    "question": "Two dice are thrown simultaneously. The probability of getting a total score of $7$ is:",
-    "options": [
-      { "id": "A", "content": "$\\frac{1}{6}$" },
-      { "id": "B", "content": "$\\frac{1}{12}$" },
-      { "id": "C", "content": "$\\frac{5}{36}$" },
-      { "id": "D", "content": "$\\frac{7}{36}$" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 66,
-    "subject": "Mathematics",
-    "type": "single-choice",
-    "question": "The locus of points equidistant from the points $(1, 2)$ and $(3, 4)$ is the straight line:",
-    "options": [
-      { "id": "A", "content": "$x + y = 5$" },
-      { "id": "B", "content": "$x - y = 1$" },
-      { "id": "C", "content": "$2x + 2y = 7$" },
-      { "id": "D", "content": "$x + y = 3$" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 67,
-    "subject": "Mathematics",
-    "type": "single-choice",
-    "question": "If $\\int e^x (\\tan x + \\sec^2 x) \\, dx = f(x) + C$, then $f(x)$ equals:",
-    "options": [
-      { "id": "A", "content": "$e^x \\tan x$" },
-      { "id": "B", "content": "$e^x \\sec^2 x$" },
-      { "id": "C", "content": "$e^x \\sec x$" },
-      { "id": "D", "content": "$\\tan x$" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 68,
-    "subject": "Mathematics",
-    "type": "single-choice",
-    "question": "If $A$ and $B$ are events such that $P(A) = 0.4$, $P(B) = 0.8$, and $P(B|A) = 0.6$, then $P(A \\cup B)$ is:",
-    "options": [
-      { "id": "A", "content": "$0.96$" },
-      { "id": "B", "content": "$0.84$" },
-      { "id": "C", "content": "$0.76$" },
-      { "id": "D", "content": "$0.60$" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 69,
-    "subject": "Mathematics",
-    "type": "single-choice",
-    "question": "The radius of the circle $x^2 + y^2 - 4x + 6y - 12 = 0$ is:",
-    "options": [
-      { "id": "A", "content": "$5$" },
-      { "id": "B", "content": "$25$" },
-      { "id": "C", "content": "$\\sqrt{13}$" },
-      { "id": "D", "content": "$7$" }
-    ],
-    "correctOption": "A"
-  },
-  {
-    "id": 70,
-    "subject": "Mathematics",
-    "type": "single-choice",
-    "question": "If the vectors $2\\hat{i} - \\hat{j} + \\hat{k}$, $\\hat{i} + 2\\hat{j} - 3\\hat{k}$, and $3\\hat{i} + a\\hat{j} + 5\\hat{k}$ are coplanar, then $a$ equals:",
-    "options": [
-      { "id": "A", "content": "$-4$" },
-      { "id": "B", "content": "$-18$" },
-      { "id": "C", "content": "$4$" },
-      { "id": "D", "content": "$2$" }
-    ],
-    "correctOption": "B"
-  },
-  {
-    "id": 71,
-    "subject": "Mathematics",
-    "type": "numerical",
-    "question": "Find the remainder when $2^{100}$ is divided by $7$.",
-    "correctAnswer": "2"
-  },
-  {
-    "id": 72,
-    "subject": "Mathematics",
-    "type": "numerical",
-    "question": "If $\\vec{a}$ and $\\vec{b}$ are unit vectors inclined at an angle of $60^{\\circ}$, calculate the scalar product $\\vec{a} \\cdot \\vec{b}$ as a decimal value.",
-    "correctAnswer": "0.5"
-  },
-  {
-    "id": 73,
-    "subject": "Mathematics",
-    "type": "numerical",
-    "question": "Find the value of the determinant $\\begin{vmatrix} 1 & 2 & 3 \\\\ 0 & 4 & 5 \\\\ 0 & 0 & 6 \\end{vmatrix}$.",
-    "correctAnswer": "24"
-  },
-  {
-    "id": 74,
-    "subject": "Mathematics",
-    "type": "numerical",
-    "question": "How many distinct real roots does the polynomial equation $x^3 - 3x + 2 = 0$ have?",
-    "correctAnswer": "2"
-  },
-  {
-    "id": 75,
-    "subject": "Mathematics",
-    "type": "numerical",
-    "question": "Calculate the slope of the tangent line to the curve $y = x^3 - 2x + 5$ at the point $x = 2$.",
-    "correctAnswer": "10"
-  }
-]
+{
+  "metadata": {
+    "year": 2026,
+    "month": "January",
+    "shift": 1
+  },
+  "questions": [
+    {
+      "id": 1,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A body of mass $m = 2\\text{ kg}$ is projected at an angle of $45^{\\circ}$ to the horizontal with an initial speed of $20\\text{ m/s}$. The angular momentum of the projectile about the point of projection when it is at its maximum height is (take $g = 10\\text{ m/s}^2$):",
+      "options": [
+        {
+          "id": "A",
+          "content": "$100\\sqrt{2}\\text{ kg}\\cdot\\text{m}^2/\\text{s}$"
+        },
+        { "id": "B", "content": "$200\\text{ kg}\\cdot\\text{m}^2/\\text{s}$" },
+        { "id": "C", "content": "$100\\text{ kg}\\cdot\\text{m}^2/\\text{s}$" },
+        {
+          "id": "D",
+          "content": "$50\\sqrt{2}\\text{ kg}\\cdot\\text{m}^2/\\text{s}$"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 2,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A particle moves in a straight line with velocity $v(t) = 3t^2 - 6t\\text{ m/s}$. The total distance traveled by the particle in the first $3\\text{ seconds}$ is:",
+      "options": [
+        { "id": "A", "content": "$0\\text{ m}$" },
+        { "id": "B", "content": "$4\\text{ m}$" },
+        { "id": "C", "content": "$8\\text{ m}$" },
+        { "id": "D", "content": "$12\\text{ m}$" }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": 3,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A block of mass $m = 5\\text{ kg}$ rests on a rough horizontal surface with coefficient of static friction $\\mu_s = 0.4$. A horizontal force of $15\\text{ N}$ is applied to the block. The magnitude of the friction force acting on the block is (take $g = 10\\text{ m/s}^2$):",
+      "options": [
+        { "id": "A", "content": "$20\\text{ N}$" },
+        { "id": "B", "content": "$15\\text{ N}$" },
+        { "id": "C", "content": "$5\\text{ N}$" },
+        { "id": "D", "content": "$0\\text{ N}$" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": 4,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Two point charges $+q$ and $+4q$ are separated by a distance $L$. A third charge $Q$ is placed on the line joining them such that the entire system is in equilibrium. The position and magnitude of $Q$ are:",
+      "options": [
+        {
+          "id": "A",
+          "content": "At distance $\\frac{L}{3}$ from $+q$, $Q = -\\frac{4}{9}q$"
+        },
+        {
+          "id": "B",
+          "content": "At distance $\\frac{L}{2}$ from $+q$, $Q = -\\frac{q}{4}$"
+        },
+        {
+          "id": "C",
+          "content": "At distance $\\frac{2L}{3}$ from $+q$, $Q = -\\frac{4}{9}q$"
+        },
+        {
+          "id": "D",
+          "content": "At distance $\\frac{L}{3}$ from $+q$, $Q = +\\frac{4}{9}q$"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 5,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A parallel plate capacitor with plate area $A$ and separation $d$ is filled with two dielectrics of constants $K_1$ and $K_2$, each occupying half the distance $d/2$. The effective capacitance is:",
+      "options": [
+        {
+          "id": "A",
+          "content": "$\\frac{\\epsilon_0 A}{d} \\frac{K_1 K_2}{K_1 + K_2}$"
+        },
+        {
+          "id": "B",
+          "content": "$\\frac{2\\epsilon_0 A}{d} \\frac{K_1 K_2}{K_1 + K_2}$"
+        },
+        { "id": "C", "content": "$\\frac{\\epsilon_0 A}{2d} (K_1 + K_2)$" },
+        { "id": "D", "content": "$\\frac{\\epsilon_0 A}{d} (K_1 + K_2)$" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": 6,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "An ideal gas undergoes a thermodynamic process according to $P V^2 = C$ (constant). The molar heat capacity of the gas if its adiabatic exponent is $\\gamma$ is:",
+      "options": [
+        { "id": "A", "content": "$C_v + R$" },
+        { "id": "B", "content": "$C_v - R$" },
+        { "id": "C", "content": "$\\frac{R}{\\gamma - 1} + R$" },
+        { "id": "D", "content": "$C_v - 2R$" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": 7,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A simple pendulum has time period $T_1$ on the Earth's surface. Its time period becomes $T_2$ when taken to a height $R$ above the Earth's surface ($R$ = radius of Earth). The ratio $T_2 / T_1$ is:",
+      "options": [
+        { "id": "A", "content": "$1$" },
+        { "id": "B", "content": "$2$" },
+        { "id": "C", "content": "$\\sqrt{2}$" },
+        { "id": "D", "content": "$4$" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": 8,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A wire of resistance $R$ is stretched uniformly to double its original length. The new resistance of the wire is:",
+      "options": [
+        { "id": "A", "content": "$2R$" },
+        { "id": "B", "content": "$4R$" },
+        { "id": "C", "content": "$R/2$" },
+        { "id": "D", "content": "$R/4$" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": 9,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "In Young's double slit experiment, if the slit separation is halved and the distance to the screen is doubled, the fringe width becomes:",
+      "options": [
+        { "id": "A", "content": "Unchanged" },
+        { "id": "B", "content": "Doubled" },
+        { "id": "C", "content": "Four times" },
+        { "id": "D", "content": "Half" }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": 10,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "The work function of a metal surface is $2.0\\text{ eV}$. Light of wavelength $400\\text{ nm}$ falls on it. The maximum kinetic energy of the emitted photoelectrons is approximately (use $h c = 1240\\text{ eV}\\cdot\\text{nm}$):",
+      "options": [
+        { "id": "A", "content": "$1.1\\text{ eV}$" },
+        { "id": "B", "content": "$2.0\\text{ eV}$" },
+        { "id": "C", "content": "$3.1\\text{ eV}$" },
+        { "id": "D", "content": "$5.1\\text{ eV}$" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 11,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A uniform circular disc of mass $M$ and radius $R$ has a concentric circular hole of radius $r$. Its moment of inertia about an axis passing through its center and perpendicular to its plane is:",
+      "options": [
+        { "id": "A", "content": "$\\frac{1}{2} M (R^2 + r^2)$" },
+        { "id": "B", "content": "$\\frac{1}{2} M (R^2 - r^2)$" },
+        { "id": "C", "content": "$\\frac{1}{4} M (R^2 + r^2)$" },
+        { "id": "D", "content": "$M (R^2 + r^2)$" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 12,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A long straight solenoid of length $L$ and total turns $N$ carries current $I$. The magnetic field inside near the center is $B$. If $N$ is doubled and $L$ is doubled keeping $I$ constant, the new magnetic field is:",
+      "options": [
+        { "id": "A", "content": "$B$" },
+        { "id": "B", "content": "$2B$" },
+        { "id": "C", "content": "$4B$" },
+        { "id": "D", "content": "$B/2$" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 13,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "An $LC$ circuit contains a $20\\text{ mH}$ inductor and a $50\\mu\\text{F}$ capacitor. The natural frequency of oscillation of the circuit in $\\text{Hz}$ is approximately:",
+      "options": [
+        { "id": "A", "content": "$159\\text{ Hz}$" },
+        { "id": "B", "content": "$50\\text{ Hz}$" },
+        { "id": "C", "content": "$1000\\text{ Hz}$" },
+        { "id": "D", "content": "$318\\text{ Hz}$" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 14,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A convex lens of focal length $20\\text{ cm}$ is placed in contact with a concave lens of focal length $10\\text{ cm}$. The power of the combination is:",
+      "options": [
+        { "id": "A", "content": "$+5\\text{ D}$" },
+        { "id": "B", "content": "$-5\\text{ D}$" },
+        { "id": "C", "content": "$+15\\text{ D}$" },
+        { "id": "D", "content": "$-10\\text{ D}$" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": 15,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "In a Hydrogen atom, the radius of the $n$-th Bohr orbit is proportional to:",
+      "options": [
+        { "id": "A", "content": "$n$" },
+        { "id": "B", "content": "$n^2$" },
+        { "id": "C", "content": "$1/n$" },
+        { "id": "D", "content": "$1/n^2$" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": 16,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "The half-life of a radioactive isotope is $10\\text{ days}$. The fraction of initial nuclei remaining undecayed after $30\\text{ days}$ is:",
+      "options": [
+        { "id": "A", "content": "$1/3$" },
+        { "id": "B", "content": "$1/6$" },
+        { "id": "C", "content": "$1/8$" },
+        { "id": "D", "content": "$1/16$" }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": 17,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "In an unbiased p-n junction diode, the depletion layer is formed by:",
+      "options": [
+        { "id": "A", "content": "Drift of minority charge carriers" },
+        { "id": "B", "content": "Diffusion of majority charge carriers" },
+        { "id": "C", "content": "Application of external voltage" },
+        { "id": "D", "content": "Thermal generation of electron-hole pairs" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": 18,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Dimensional formula for the universal gravitational constant $G$ is:",
+      "options": [
+        { "id": "A", "content": "$[M^{-1} L^3 T^{-2}]$" },
+        { "id": "B", "content": "$[M^1 L^2 T^{-2}]$" },
+        { "id": "C", "content": "$[M^{-1} L^2 T^{-1}]$" },
+        { "id": "D", "content": "$[M^0 L^3 T^{-2}]$" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 19,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A body cools from $80^{\\circ}\\text{C}$ to $60^{\\circ}\\text{C}$ in $10\\text{ minutes}$ in surroundings at $30^{\\circ}\\text{C}$. The time taken to cool from $60^{\\circ}\\text{C}$ to $40^{\\circ}\\text{C}$ in the same surroundings according to Newton's law of cooling is:",
+      "options": [
+        { "id": "A", "content": "$10\\text{ minutes}$" },
+        { "id": "B", "content": "$15\\text{ minutes}$" },
+        { "id": "C", "content": "$20\\text{ minutes}$" },
+        { "id": "D", "content": "$12\\text{ minutes}$" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": 20,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A transverse progressive wave is described by $y = 0.05 \\sin(2\\pi(100t - 2x))$ where $x, y$ are in meters and $t$ is in seconds. The wave speed is:",
+      "options": [
+        { "id": "A", "content": "$50\\text{ m/s}$" },
+        { "id": "B", "content": "$100\\text{ m/s}$" },
+        { "id": "C", "content": "$200\\text{ m/s}$" },
+        { "id": "D", "content": "$25\\text{ m/s}$" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 21,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "A sphere of mass $2\\text{ kg}$ collides head-on elastically with another sphere of mass $1\\text{ kg}$ at rest. The velocity of the $2\\text{ kg}$ sphere before collision was $6\\text{ m/s}$. Find its velocity (in $\\text{m/s}$) after collision.",
+      "correctAnswer": "2"
+    },
+    {
+      "id": 22,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "A bullet of mass $20\\text{ g}$ enters a fixed wooden block with speed $100\\text{ m/s}$ and stops after penetrating $20\\text{ cm}$. The average resistive force exerted by the block on the bullet is $F\\text{ N}$. Find the value of $F$.",
+      "correctAnswer": "500"
+    },
+    {
+      "id": 23,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "A force $\\vec{F} = (3\\hat{i} + 4\\hat{j})\\text{ N}$ acts on a particle during its displacement from $(0,0)$ to $(2\\text{ m}, 3\\text{ m})$. The total work done by the force is $W\\text{ Joules}$. Find $W$.",
+      "correctAnswer": "18"
+    },
+    {
+      "id": 24,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "Two resistors $R_1 = 6\\,\\Omega$ and $R_2 = 3\\,\\Omega$ are connected in parallel across a $12\\text{ V}$ ideal battery. The current drawn from the battery is $I\\text{ A}$. Find $I$.",
+      "correctAnswer": "6"
+    },
+    {
+      "id": 25,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "A light ray enters a glass slab of refractive index $n = 1.5$ at an angle of incidence $i = 0^{\\circ}$. The angle of refraction $r$ in degrees is:",
+      "correctAnswer": "0"
+    },
+    {
+      "id": 26,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Which of the following quantum numbers set is NOT permissible for an electron in a hydrogen atom?",
+      "options": [
+        { "id": "A", "content": "$n = 3, l = 2, m_l = -2, m_s = +1/2$" },
+        { "id": "B", "content": "$n = 2, l = 2, m_l = 0, m_s = -1/2$" },
+        { "id": "C", "content": "$n = 4, l = 0, m_l = 0, m_s = +1/2$" },
+        { "id": "D", "content": "$n = 1, l = 0, m_l = 0, m_s = -1/2$" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": 27,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The IUPAC name of the compound $\\text{CH}_3-\\text{CH}(\\text{OH})-\\text{CH}_2-\\text{CHO}$ is:",
+      "options": [
+        { "id": "A", "content": "3-hydroxybutanal" },
+        { "id": "B", "content": "2-hydroxybutanal" },
+        { "id": "C", "content": "3-hydroxybutanone" },
+        { "id": "D", "content": "4-hydroxybutan-2-one" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 28,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The pH of a $10^{-8}\\text{ M } \\text{HCl}$ aqueous solution at $25^{\\circ}\\text{C}$ is:",
+      "options": [
+        { "id": "A", "content": "Exactly $8$" },
+        { "id": "B", "content": "Slightly less than $7$" },
+        { "id": "C", "content": "Slightly greater than $7$" },
+        { "id": "D", "content": "Exactly $6$" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": 29,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Among the following molecules, which one has a zero dipole moment?",
+      "options": [
+        { "id": "A", "content": "$\\text{NH}_3$" },
+        { "id": "B", "content": "$\\text{NF}_3$" },
+        { "id": "C", "content": "$\\text{BF}_3$" },
+        { "id": "D", "content": "$\\text{H}_2\\text{O}$" }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": 30,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The hybridization of Xe in $\\text{XeF}_4$ and its geometric shape are respectively:",
+      "options": [
+        { "id": "A", "content": "$sp^3d$, See-saw" },
+        { "id": "B", "content": "$sp^3d^2$, Square planar" },
+        { "id": "C", "content": "$sp^3d^2$, Tetrahedral" },
+        { "id": "D", "content": "$sp^3$, Square planar" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": 31,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The order of reactivity of alkyl halides towards $S_N2$ reaction is:",
+      "options": [
+        { "id": "A", "content": "Primary > Secondary > Tertiary" },
+        { "id": "B", "content": "Tertiary > Secondary > Primary" },
+        { "id": "C", "content": "Secondary > Primary > Tertiary" },
+        { "id": "D", "content": "Primary > Tertiary > Secondary" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 32,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Which of the following metal ions has maximum paramagnetic character?",
+      "options": [
+        { "id": "A", "content": "$\\text{Fe}^{3+}$" },
+        { "id": "B", "content": "$\\text{Cu}^{2+}$" },
+        { "id": "C", "content": "$\\text{Zn}^{2+}$" },
+        { "id": "D", "content": "$\\text{Sc}^{3+}$" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 33,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Standard reduction potentials of three metals $X, Y, Z$ are $-1.2\\text{ V}, +0.5\\text{ V}$, and $-3.0\\text{ V}$ respectively. Their reducing power order is:",
+      "options": [
+        { "id": "A", "content": "$Y > X > Z$" },
+        { "id": "B", "content": "$Z > X > Y$" },
+        { "id": "C", "content": "$X > Y > Z$" },
+        { "id": "D", "content": "$Z > Y > X$" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": 34,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "For a first-order chemical reaction, the time required for $99\\%$ completion is approximately equal to how many half-lives ($t_{1/2}$)?",
+      "options": [
+        { "id": "A", "content": "$3.32 \\times t_{1/2}$" },
+        { "id": "B", "content": "$6.64 \\times t_{1/2}$" },
+        { "id": "C", "content": "$10 \\times t_{1/2}$" },
+        { "id": "D", "content": "$2 \\times t_{1/2}$" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": 35,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Ozonolysis of 2-methylbut-2-ene gives:",
+      "options": [
+        { "id": "A", "content": "Propanone and Ethanal" },
+        { "id": "B", "content": "Propanal and Ethanal" },
+        { "id": "C", "content": "Methanal and Propanone" },
+        { "id": "D", "content": "Butanone and Methanal" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 36,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Which alkali metal carbonate is thermally least stable and decomposes on mild heating?",
+      "options": [
+        { "id": "A", "content": "$\\text{Li}_2\\text{CO}_3$" },
+        { "id": "B", "content": "$\\text{Na}_2\\text{CO}_3$" },
+        { "id": "C", "content": "$\\text{K}_2\\text{CO}_3$" },
+        { "id": "D", "content": "$\\text{Cs}_2\\text{CO}_3$" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 37,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Phenol reacts with chloroform in the presence of aqueous $\\text{NaOH}$ to form salicylaldehyde. This reaction is known as:",
+      "options": [
+        { "id": "A", "content": "Kolbe's Reaction" },
+        { "id": "B", "content": "Reimer-Tiemann Reaction" },
+        { "id": "C", "content": "Friedel-Crafts Reaction" },
+        { "id": "D", "content": "Cannizzaro Reaction" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": 38,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The oxidation state of Fe in potassium ferricyanide $K_3[Fe(CN)_6]$ is:",
+      "options": [
+        { "id": "A", "content": "+2" },
+        { "id": "B", "content": "+3" },
+        { "id": "C", "content": "+4" },
+        { "id": "D", "content": "0" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": 39,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Which monomer pair is used to prepare Nylon 6,6 polymer?",
+      "options": [
+        { "id": "A", "content": "Adipic acid and Hexamethylenediamine" },
+        { "id": "B", "content": "Caprolactam" },
+        { "id": "C", "content": "Terephthalic acid and Ethylene glycol" },
+        { "id": "D", "content": "Melamine and Formaldehyde" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 40,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The gas evolved when sodium metal reacts with ethanol is:",
+      "options": [
+        { "id": "A", "content": "$\\text{O}_2$" },
+        { "id": "B", "content": "$\\text{H}_2$" },
+        { "id": "C", "content": "$\\text{CO}_2$" },
+        { "id": "D", "content": "$\\text{CH}_4$" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": 41,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Which colloid type is represented by fog?",
+      "options": [
+        { "id": "A", "content": "Liquid dispersed in Gas" },
+        { "id": "B", "content": "Gas dispersed in Liquid" },
+        { "id": "C", "content": "Solid dispersed in Gas" },
+        { "id": "D", "content": "Liquid dispersed in Liquid" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 42,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Glucose on reaction with concentrated $\\text{HNO}_3$ yields:",
+      "options": [
+        { "id": "A", "content": "Gluconic acid" },
+        { "id": "B", "content": "Saccharic acid" },
+        { "id": "C", "content": "Sorbitol" },
+        { "id": "D", "content": "n-hexane" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": 43,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The molarity of pure water at $4^{\\circ}\\text{C}$ (density $= 1\\text{ g/mL}$) is approximately:",
+      "options": [
+        { "id": "A", "content": "$18\\text{ M}$" },
+        { "id": "B", "content": "$55.5\\text{ M}$" },
+        { "id": "C", "content": "$100\\text{ M}$" },
+        { "id": "D", "content": "$1\\text{ M}$" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": 44,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Which nitrogen oxide is neutral towards litmus solution?",
+      "options": [
+        { "id": "A", "content": "$\\text{N}_2\\text{O}_5$" },
+        { "id": "B", "content": "$\\text{NO}_2$" },
+        { "id": "C", "content": "$\\text{N}_2\\text{O}$" },
+        { "id": "D", "content": "$\\text{N}_2\\text{O}_3$" }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": 45,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Aniline reacts with nitrous acid ($\\text{NaNO}_2 + \\text{HCl}$) at $0-5^{\\circ}\\text{C}$ to form:",
+      "options": [
+        { "id": "A", "content": "Phenol" },
+        { "id": "B", "content": "Benzene diazonium chloride" },
+        { "id": "C", "content": "Nitrobenzene" },
+        { "id": "D", "content": "Chlorobenzene" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": 46,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "Find the total number of unpaired electrons present in gaseous $\\text{Fe}^{3+}$ ion (Atomic number of Fe $= 26$).",
+      "correctAnswer": "5"
+    },
+    {
+      "id": 47,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "How many optical isomers are possible for lactic acid $\\text{CH}_3\\text{CH(OH)} \\text{COOH}$?",
+      "correctAnswer": "2"
+    },
+    {
+      "id": 48,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "Calculate the oxidation state of sulfur in peroxodisulfuric acid (Marshall's acid, $\\text{H}_2\\text{S}_2\\text{O}_8$).",
+      "correctAnswer": "6"
+    },
+    {
+      "id": 49,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "The total number of lone pairs on the central atom of $\\text{XeF}_2$ molecule is:",
+      "correctAnswer": "3"
+    },
+    {
+      "id": 50,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "What is the Coordination Number of an atom in a body-centered cubic (BCC) crystal lattice structure?",
+      "correctAnswer": "8"
+    },
+    {
+      "id": 51,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If $\\alpha$ and $\\beta$ are the roots of the quadratic equation $x^2 - 5x + 6 = 0$, then the value of $\\alpha^3 + \\beta^3$ is:",
+      "options": [
+        { "id": "A", "content": "$35$" },
+        { "id": "B", "content": "$125$" },
+        { "id": "C", "content": "$65$" },
+        { "id": "D", "content": "$215$" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 52,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The limit $\\lim_{x \\to 0} \\frac{\\sin(3x)}{x \\cos x}$ is equal to:",
+      "options": [
+        { "id": "A", "content": "$0$" },
+        { "id": "B", "content": "$1$" },
+        { "id": "C", "content": "$3$" },
+        { "id": "D", "content": "Does not exist" }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": 53,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The principal value of $\\sin^{-1}\\left(\\sin\\left(\\frac{2\\pi}{3}\\right)\\right)$ is:",
+      "options": [
+        { "id": "A", "content": "$\\frac{2\\pi}{3}$" },
+        { "id": "B", "content": "$\\frac{\\pi}{3}$" },
+        { "id": "C", "content": "$-\\frac{\\pi}{3}$" },
+        { "id": "D", "content": "$\\frac{4\\pi}{3}$" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": 54,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The derivative of $y = \\tan^{-1}\\left(\\frac{1-x^2}{1+x^2}\\right)$ with respect to $x$ is:",
+      "options": [
+        { "id": "A", "content": "$\\frac{-2}{1+x^2}$" },
+        { "id": "B", "content": "$\\frac{2}{1+x^2}$" },
+        { "id": "C", "content": "$\\frac{-1}{1+x^4}$" },
+        { "id": "D", "content": "$\\frac{-2x}{1+x^4}$" }
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": 55,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The area bounded by the parabola $y = x^2$ and the line $y = 4$ is:",
+      "options": [
+        { "id": "A", "content": "$\\frac{16}{3}$" },
+        { "id": "B", "content": "$\\frac{32}{3}$" },
+        { "id": "C", "content": "$\\frac{8}{3}$" },
+        { "id": "D", "content": "$16$" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": 56,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The maximum value of $f(x) = 3\\sin x + 4\\cos x$ on $\\mathbb{R}$ is:",
+      "options": [
+        { "id": "A", "content": "$5$" },
+        { "id": "B", "content": "$7$" },
+        { "id": "C", "content": "$1$" },
+        { "id": "D", "content": "$\\sqrt{7}$" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 57,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The number of terms in the expansion of $(1 + 2x + x^2)^{10}$ is:",
+      "options": [
+        { "id": "A", "content": "$11$" },
+        { "id": "B", "content": "$21$" },
+        { "id": "C", "content": "$20$" },
+        { "id": "D", "content": "$10$" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": 58,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If $\\vec{a} = \\hat{i} + 2\\hat{j} - \\hat{k}$ and $\\vec{b} = 2\\hat{i} + \\hat{j} + 3\\hat{k}$, then $\\vec{a} \\cdot \\vec{b}$ is:",
+      "options": [
+        { "id": "A", "content": "$1$" },
+        { "id": "B", "content": "$3$" },
+        { "id": "C", "content": "$7$" },
+        { "id": "D", "content": "$0$" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 59,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The distance of the point $(1, 2, 3)$ from the plane $2x + 3y - 6z + 5 = 0$ is:",
+      "options": [
+        { "id": "A", "content": "$\\frac{5}{7}$" },
+        { "id": "B", "content": "$\\frac{3}{7}$" },
+        { "id": "C", "content": "$1$" },
+        { "id": "D", "content": "$\\frac{1}{7}$" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 60,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The value of the definite integral $\\int_{-\\pi/2}^{\\pi/2} \\sin^5(x) \\, dx$ is:",
+      "options": [
+        { "id": "A", "content": "$0$" },
+        { "id": "B", "content": "$\\pi$" },
+        { "id": "C", "content": "$2$" },
+        { "id": "D", "content": "$\\pi/2$" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 61,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If matrix $A = \\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$, then $A^n$ for $n \\in \\mathbb{N}$ is:",
+      "options": [
+        {
+          "id": "A",
+          "content": "$\\begin{pmatrix} 1 & 2n \\\\ 0 & 1 \\end{pmatrix}$"
+        },
+        {
+          "id": "B",
+          "content": "$\\begin{pmatrix} 1 & 2^n \\\\ 0 & 1 \\end{pmatrix}$"
+        },
+        {
+          "id": "C",
+          "content": "$\\begin{pmatrix} n & 2n \\\\ 0 & n \\end{pmatrix}$"
+        },
+        {
+          "id": "D",
+          "content": "$\\begin{pmatrix} 1 & n \\\\ 0 & 1 \\end{pmatrix}$"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 62,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The eccentricity of the hyperbola $\\frac{x^2}{16} - \\frac{y^2}{9} = 1$ is:",
+      "options": [
+        { "id": "A", "content": "$\\frac{5}{4}$" },
+        { "id": "B", "content": "$\\frac{5}{3}$" },
+        { "id": "C", "content": "$\\frac{4}{3}$" },
+        { "id": "D", "content": "$\\frac{\\sqrt{7}}{4}$" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 63,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The sum of the infinite geometric series $1 + \\frac{1}{3} + \\frac{1}{9} + \\frac{1}{27} + \\dots$ is:",
+      "options": [
+        { "id": "A", "content": "$\\frac{3}{2}$" },
+        { "id": "B", "content": "$2$" },
+        { "id": "C", "content": "$\\frac{4}{3}$" },
+        { "id": "D", "content": "$\\frac{5}{3}$" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 64,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The differential equation representing the family of curves $y = c x$ where $c$ is an arbitrary constant is:",
+      "options": [
+        { "id": "A", "content": "$x \\frac{dy}{dx} - y = 0$" },
+        { "id": "B", "content": "$\\frac{dy}{dx} + y = 0$" },
+        { "id": "C", "content": "$y \\frac{dy}{dx} - x = 0$" },
+        { "id": "D", "content": "$\\frac{d^2y}{dx^2} = 0$" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 65,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Two dice are thrown simultaneously. The probability of getting a total score of $7$ is:",
+      "options": [
+        { "id": "A", "content": "$\\frac{1}{6}$" },
+        { "id": "B", "content": "$\\frac{1}{12}$" },
+        { "id": "C", "content": "$\\frac{5}{36}$" },
+        { "id": "D", "content": "$\\frac{7}{36}$" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 66,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The locus of points equidistant from the points $(1, 2)$ and $(3, 4)$ is the straight line:",
+      "options": [
+        { "id": "A", "content": "$x + y = 5$" },
+        { "id": "B", "content": "$x - y = 1$" },
+        { "id": "C", "content": "$2x + 2y = 7$" },
+        { "id": "D", "content": "$x + y = 3$" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 67,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If $\\int e^x (\\tan x + \\sec^2 x) \\, dx = f(x) + C$, then $f(x)$ equals:",
+      "options": [
+        { "id": "A", "content": "$e^x \\tan x$" },
+        { "id": "B", "content": "$e^x \\sec^2 x$" },
+        { "id": "C", "content": "$e^x \\sec x$" },
+        { "id": "D", "content": "$\\tan x$" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 68,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If $A$ and $B$ are events such that $P(A) = 0.4$, $P(B) = 0.8$, and $P(B|A) = 0.6$, then $P(A \\cup B)$ is:",
+      "options": [
+        { "id": "A", "content": "$0.96$" },
+        { "id": "B", "content": "$0.84$" },
+        { "id": "C", "content": "$0.76$" },
+        { "id": "D", "content": "$0.60$" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 69,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The radius of the circle $x^2 + y^2 - 4x + 6y - 12 = 0$ is:",
+      "options": [
+        { "id": "A", "content": "$5$" },
+        { "id": "B", "content": "$25$" },
+        { "id": "C", "content": "$\\sqrt{13}$" },
+        { "id": "D", "content": "$7$" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": 70,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If the vectors $2\\hat{i} - \\hat{j} + \\hat{k}$, $\\hat{i} + 2\\hat{j} - 3\\hat{k}$, and $3\\hat{i} + a\\hat{j} + 5\\hat{k}$ are coplanar, then $a$ equals:",
+      "options": [
+        { "id": "A", "content": "$-4$" },
+        { "id": "B", "content": "$-18$" },
+        { "id": "C", "content": "$4$" },
+        { "id": "D", "content": "$2$" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": 71,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "Find the remainder when $2^{100}$ is divided by $7$.",
+      "correctAnswer": "2"
+    },
+    {
+      "id": 72,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "If $\\vec{a}$ and $\\vec{b}$ are unit vectors inclined at an angle of $60^{\\circ}$, calculate the scalar product $\\vec{a} \\cdot \\vec{b}$ as a decimal value.",
+      "correctAnswer": "0.5"
+    },
+    {
+      "id": 73,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "Find the value of the determinant $\\begin{vmatrix} 1 & 2 & 3 \\\\ 0 & 4 & 5 \\\\ 0 & 0 & 6 \\end{vmatrix}$.",
+      "correctAnswer": "24"
+    },
+    {
+      "id": 74,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "How many distinct real roots does the polynomial equation $x^3 - 3x + 2 = 0$ have?",
+      "correctAnswer": "2"
+    },
+    {
+      "id": 75,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "Calculate the slope of the tangent line to the curve $y = x^3 - 2x + 5$ at the point $x = 2$.",
+      "correctAnswer": "10"
+    }
+  ]
+}
