@@ -1,0 +1,12 @@
+#result-card {
+  flex-grow: 1;
+
+  overflow: hidden;
+
+  border: var(--border-1);
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
