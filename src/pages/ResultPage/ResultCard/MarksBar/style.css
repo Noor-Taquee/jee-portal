@@ -1,0 +1,39 @@
+#marks-bar {
+  height: 45px;
+  width: 90%;
+
+  margin: 0 auto;
+
+  background-color: var(--background-p-2);
+}
+
+@property --width {
+  syntax: "<percentage>";
+  initial-value: 0%;
+  inherits: true;
+}
+
+@keyframes fill-bar {
+  from {
+    --width: 0%;
+  }
+}
+
+.subject-progress {
+  display: inline-block;
+
+  height: 100%;
+  width: var(--width);
+
+  animation: fill-bar 800ms ease-out forwards;
+
+  &:nth-child(1) {
+    background-color: var(--background-s-2);
+  }
+  &:nth-child(2) {
+    background-color: var(--color-1);
+  }
+  &:nth-child(3) {
+    background-color: var(--background-s-2);
+  }
+}
