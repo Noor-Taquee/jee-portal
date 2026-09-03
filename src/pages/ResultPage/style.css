@@ -1,0 +1,6 @@
+#result-page {
+  padding: 6px;
+
+  flex-direction: row;
+  gap: 8px;
+}
