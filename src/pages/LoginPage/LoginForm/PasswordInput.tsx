@@ -25,6 +25,7 @@ export default function PaswwordInput({
         id="password"
         autoComplete="off"
         value={password}
+        placeholder={"01/01/2001"}
         onChange={onChange}
       />
       <i

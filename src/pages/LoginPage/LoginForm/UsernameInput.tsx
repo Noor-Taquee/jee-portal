@@ -23,6 +23,7 @@ export default function UsernameInput({
         id="username"
         autoComplete="off"
         value={username}
+        placeholder={"Noor Taquee"}
         onChange={onChange}
       />
     </div>
