@@ -4,6 +4,7 @@ import "./app.css";
 
 import { useEffect, useState } from "react";
 import { useOrientation } from "./hooks/useOrientation.js";
+import { useHash } from "./hooks/useHash.js";
 
 import { getQuestions, type QuestionData } from "./core/data";
 import type { AnswerResponse, ResponseData } from "./services/index.js";
