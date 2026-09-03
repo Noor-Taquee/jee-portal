@@ -1,0 +1,54 @@
+#subject-chart {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@property --max {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: true;
+}
+
+@keyframes fill-chart {
+  from {
+    --max: 0deg;
+  }
+}
+
+.pie-chart {
+  --chart-size: 160px;
+  --chart-width: 30px;
+
+  position: relative;
+
+  aspect-ratio: 1 / 1;
+  width: var(--chart-size);
+
+  border-radius: 50%;
+
+  background-color: var(--background-p-2);
+
+  background: conic-gradient(
+    var(--color-1) 0deg var(--max),
+    var(--background-p-2) var(--max) 360deg
+  );
+
+  animation: fill-chart 800ms ease-out forwards;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    margin: var(--chart-width);
+
+    border-radius: 50%;
+
+    aspect-ratio: 1 / 1;
+    width: calc(var(--chart-size) - 2 * var(--chart-width));
+    background-color: var(--background-p-1);
+  }
+}
