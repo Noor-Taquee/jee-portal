@@ -2,7 +2,12 @@ import { useEffect, useState } from "react";
 
 type Orientation = "portrait" | "landscape";
 
-/** Hook for device orientation */
+/**
+ * Hook for device orientation
+ * | horizontal | vertical|
+ * | :-------: | :------: |
+ * | landscape | portrait |
+ */
 export function useOrientation() {
   const [orientation, setOrientation] = useState<Orientation>("portrait");
 

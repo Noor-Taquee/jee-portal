@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react";
+// oxlint-disable max-lines-per-function
+
+import { useState } from "react";
 
 import type { OptionID, QuestionData } from "../../../../core/data";
 import type { ResponseData } from "../../../../services";
@@ -14,7 +16,7 @@ import Header from "./Header";
 interface QuestionContainerProps {
   questionNo: number;
   setQuestionNo: React.Dispatch<React.SetStateAction<number>>;
-  question: QuestionData | null;
+  question: QuestionData | undefined;
   responseData: ResponseData;
   setResponseData: React.Dispatch<React.SetStateAction<ResponseData>>;
 }
@@ -27,37 +29,36 @@ export default function QuestionContainer({
   responseData,
   setResponseData,
 }: QuestionContainerProps) {
-  const [answer, setAnswer] = useState<string | string[] | null>(null);
-  useEffect(() => {
-    const s = responseData.get(questionNo);
-    if (!s) return;
-    setAnswer(s.answer);
-  }, [questionNo, responseData]);
+  const [answer, setAnswer] = useState<string | string[] | null>(
+    responseData.get(questionNo)?.answer || null
+  );
 
   if (!question) return <div id="question-container"></div>;
 
   return (
     <div id="question-container">
       <Header question={question} />
-      <QuestionCard
-        index={question.id}
-        content={question.question}
-      />
-      {question.type === "single-choice" && (
-        <OptionsContainer
-          selectedOption={answer as OptionID}
-          options={question.options}
-          setOption={
-            setAnswer as React.Dispatch<React.SetStateAction<OptionID | null>>
-          }
+      <div id="question-area">
+        <QuestionCard
+          index={question.id}
+          content={question.question}
         />
-      )}
-      {question.type === "numerical" && (
-        <Numpad
-          answer={answer as string}
-          setAnswer={setAnswer}
-        />
-      )}
+        {question.type === "single-choice" && (
+          <OptionsContainer
+            selectedOption={answer as OptionID}
+            options={question.options}
+            setOption={
+              setAnswer as React.Dispatch<React.SetStateAction<OptionID | null>>
+            }
+          />
+        )}
+        {question.type === "numerical" && (
+          <Numpad
+            answer={answer as string}
+            setAnswer={setAnswer}
+          />
+        )}
+      </div>
       <QuestionControl
         questionNo={questionNo}
         setQuestionNo={setQuestionNo}
