@@ -1,9 +1,10 @@
 // oxlint-disable max-lines-per-function
-import { useState } from "react";
 
 import "./style.css";
 
+import { useState } from "react";
 import type { UserData } from "../data";
+import { changeHash } from "../../../hooks/useHash";
 
 import PaswwordInput from "./PasswordInput";
 import UsernameInput from "./UsernameInput";
@@ -12,9 +13,10 @@ import Keyboard from "../Keyboard";
 interface LoginFormProps {
   userData: UserData;
   setData: React.Dispatch<React.SetStateAction<UserData>>;
+  setStartTime: React.Dispatch<React.SetStateAction<Date | undefined>>;
 }
 
-export default function LoginForm({ setData }: LoginFormProps) {
+export default function LoginForm({ setData, setStartTime }: LoginFormProps) {
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [keyboard, setKeyboard] = useState<boolean>(false);
@@ -45,6 +47,8 @@ export default function LoginForm({ setData }: LoginFormProps) {
             } else if (!password) {
             }
             setData({ name: username, password: password });
+            setStartTime(new Date());
+            changeHash("question");
           }}
         >
           <p>Login</p>
