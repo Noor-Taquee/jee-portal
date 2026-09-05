@@ -42,7 +42,7 @@ const defaultRoute = "login";
 
 /** Hook to bind app state with the url hash.  */
 export function useHash() {
-  const [panel, setPanel] = useState<string | undefined>();
+  const [panel, setPanel] = useState<string>(defaultRoute);
 
   useEffect(() => {
     function handleHashChange() {
@@ -53,6 +53,8 @@ export function useHash() {
 
       if (currentLocation && routes.includes(currentLocation)) {
         setPanel(currentLocation);
+      } else {
+        changeHash(defaultRoute);
       }
     }
 
@@ -65,5 +67,5 @@ export function useHash() {
     };
   }, []);
 
-  return panel || defaultRoute;
+  return panel;
 }
