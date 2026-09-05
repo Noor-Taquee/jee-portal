@@ -37,12 +37,12 @@
     "vite": "^8.2.2"
   },
   "dependencies": {
-    "katex": "^0.18.4",
+    "katex": "^0.18.5",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-markdown": "^10.1.0",
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0",
-    "zod": "^4.4.3"
+    "zod": "^4.5.4"
   }
 }
