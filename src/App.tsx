@@ -29,18 +29,18 @@ export default function App() {
     >
       <div className="panel-container">
         {panel === "login" && <LoginPage setStartTime={setStartTime} />}
-        {panel === "question" && startTime && (
+        {panel === "question" && (
           <QuestionsPage
             testDuration={testDuration}
             startTime={startTime}
-            questionData={questionData}
+            questionData={questionData ? questionData.questions : null}
             responseData={responseData}
             setResponseData={setResponseData}
           />
         )}
         {panel === "result" && (
           <ResultPage
-            questionData={questionData}
+            questionData={questionData ? questionData.questions : null}
             responseData={responseData}
           />
         )}
