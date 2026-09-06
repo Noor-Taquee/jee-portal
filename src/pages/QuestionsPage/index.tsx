@@ -7,6 +7,7 @@ import "./style.css";
 
 import QuestionPanel from "./QuestionPanel";
 import Header from "./Header";
+import { changeHash } from "../../hooks/useHash";
 
 interface QuestionPanelProps {
   questionData: QuestionData[] | null;
@@ -14,7 +15,7 @@ interface QuestionPanelProps {
   responseData: ResponseData;
   setResponseData: React.Dispatch<React.SetStateAction<ResponseData>>;
 
-  startTime: Date;
+  startTime: Date | undefined;
   /** Test Duration in _Milliseconds_ */
   testDuration: number;
   route?: InnerRoute;
@@ -27,6 +28,11 @@ export default function QuestionsPage({
   startTime,
   testDuration,
 }: QuestionPanelProps) {
+  if (!startTime) {
+    changeHash("login");
+  }
+  startTime = startTime as Date;
+
   if (!questionData) {
     return <div>Loading...</div>;
   }

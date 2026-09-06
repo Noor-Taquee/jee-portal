@@ -55,10 +55,10 @@ const fileDataSchema = z.object({
   questions: z.array(QuestionDataSchema),
 });
 
-type FileData = z.infer<typeof fileDataSchema>;
+export type ExamData = z.infer<typeof fileDataSchema>;
 
 export async function getQuestions() {
   const res = await fetch(`${import.meta.env.BASE_URL}data/data.json`);
-  const data: FileData = await res.json();
+  const data: ExamData = await res.json();
   return data;
 }
