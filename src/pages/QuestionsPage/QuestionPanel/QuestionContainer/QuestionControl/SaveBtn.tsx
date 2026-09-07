@@ -22,6 +22,7 @@ export default function SaveBtn({
 
   return (
     <ActionBtn
+      title={lastQuestion ? "Save" : "Save & Next"}
       className={`question-control-btn ${questionNo >= 75 ? "" : ""}`}
       onClick={() => {
         const key = questionNo;

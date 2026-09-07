@@ -9,6 +9,7 @@ export default function ButtonWrapper({ page, setPage }: ButtonWrapperProps) {
   return (
     <div id="q-t-button-wrapper">
       <ActionBtn
+        title="To previous pane"
         className={page === 1 ? "disabled" : ""}
         onClick={() => {
           if (page === 1) return;
@@ -21,6 +22,7 @@ export default function ButtonWrapper({ page, setPage }: ButtonWrapperProps) {
       </ActionBtn>
 
       <ActionBtn
+        title="To Next pane"
         className={page === 3 ? "disabled" : ""}
         onClick={() => {
           if (page === 3) return;

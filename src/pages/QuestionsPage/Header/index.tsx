@@ -22,6 +22,7 @@ export default function Header({ startTime, testDuration }: HeaderProps) {
         testDuration={testDuration}
       />
       <ActionBtn
+        title="End test and submit response"
         className="submit-btn"
         onClick={() => {
           changeHash("result");
