@@ -23,6 +23,7 @@ export default function MFRBtn({
 
   return (
     <ActionBtn
+      title={lastQuestion ? "Mark for review" : "Mark for review & Next"}
       className={`question-control-btn ${answer ? "" : ""}`}
       onClick={() => {
         if (!answer) return;

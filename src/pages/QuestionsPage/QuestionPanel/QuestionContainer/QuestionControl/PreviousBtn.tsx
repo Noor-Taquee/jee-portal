@@ -11,6 +11,7 @@ export default function PreviousBtn({
 }: PreviousBtnProps) {
   return (
     <ActionBtn
+      title="Previous question"
       className={`question-control-btn ${questionNo <= 1 ? "disabled" : ""}`}
       onClick={() => {
         if (questionNo <= 1) return;

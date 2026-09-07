@@ -17,6 +17,7 @@ export default function ClearBtn({
 }: ClearBtnProps) {
   return (
     <ActionBtn
+      title="Clear Response"
       className="question-control-btn"
       onClick={() => {
         const key = questionNo;
