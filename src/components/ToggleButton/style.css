@@ -1,0 +1,18 @@
+.toggle-button {
+  cursor: pointer;
+  touch-action: manipulation;
+
+  --size: 42px;
+  aspect-ratio: 1 / 1;
+  width: var(--size);
+
+  border-radius: 6px;
+  border: var(--border-1);
+
+  background-color: var(--background-p-2);
+
+  i {
+    color: var(--color-1);
+    font-size: 22px;
+  }
+}
