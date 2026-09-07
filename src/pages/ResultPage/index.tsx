@@ -10,7 +10,7 @@ import ResultQuestionTable from "./ResultQuestionTable";
 
 interface ResultPageProps {
   responseData: ResponseData;
-  questionData: QuestionData[] | null;
+  questionData: QuestionData[] | undefined;
 }
 
 export default function ResultPage({
