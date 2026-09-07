@@ -6,12 +6,14 @@ import { useState } from "react";
 import { useOrientation } from "./hooks/useOrientation.js";
 import { useHash } from "./hooks/useHash.js";
 import { useQuestionData } from "./hooks/useQuestionData.js";
+import { useSettings } from "./hooks/useSettings.js";
 
 import LoginPage from "./pages/LoginPage";
 import QuestionsPage from "./pages/QuestionsPage";
 import ResultPage from "./pages/ResultPage/index.js";
 
 export default function App() {
+  const appSettings = useSettings();
   const [questionData, responseData, setResponseData] = useQuestionData();
 
   let panel = useHash();
@@ -24,8 +26,9 @@ export default function App() {
   return (
     <div
       id="app"
-      data-theme="light"
+      data-theme={appSettings.theme}
       data-orientation={orientation}
+      className={appSettings.simpleMode ? "original-ui" : ""}
     >
       <div className="panel-container">
         {panel === "login" && <LoginPage setStartTime={setStartTime} />}
