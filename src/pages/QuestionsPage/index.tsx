@@ -10,7 +10,7 @@ import Header from "./Header";
 import { changeHash } from "../../hooks/useHash";
 
 interface QuestionPanelProps {
-  questionData: QuestionData[] | null;
+  questionData: QuestionData[] | undefined;
 
   responseData: ResponseData;
   setResponseData: React.Dispatch<React.SetStateAction<ResponseData>>;

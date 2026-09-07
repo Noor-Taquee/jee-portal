@@ -36,14 +36,14 @@ export default function App() {
           <QuestionsPage
             testDuration={testDuration}
             startTime={startTime}
-            questionData={questionData ? questionData.questions : null}
+            questionData={questionData?.questions}
             responseData={responseData}
             setResponseData={setResponseData}
           />
         )}
         {panel === "result" && (
           <ResultPage
-            questionData={questionData ? questionData.questions : null}
+            questionData={questionData?.questions}
             responseData={responseData}
           />
         )}
