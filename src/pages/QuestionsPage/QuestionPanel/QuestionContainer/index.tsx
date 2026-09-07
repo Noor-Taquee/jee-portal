@@ -1,6 +1,7 @@
 // oxlint-disable max-lines-per-function
 
 import { useState } from "react";
+import { useSettings } from "../../../../hooks/useSettings";
 
 import type { OptionID, QuestionData } from "../../../../core/data";
 import type { ResponseData } from "../../../../services";
@@ -29,6 +30,8 @@ export default function QuestionContainer({
   responseData,
   setResponseData,
 }: QuestionContainerProps) {
+  const appSettings = useSettings();
+
   const [answer, setAnswer] = useState<string | string[] | null>(
     responseData.get(questionNo)?.answer || null
   );
@@ -36,7 +39,12 @@ export default function QuestionContainer({
   if (!question) return <div id="question-container"></div>;
 
   return (
-    <div id="question-container">
+    <div
+      id="question-container"
+      style={
+        { "--text-size": `${appSettings.textSize}px` } as React.CSSProperties
+      }
+    >
       <Header question={question} />
       <div id="question-area">
         <QuestionCard
