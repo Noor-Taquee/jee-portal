@@ -45,17 +45,21 @@ export const QuestionDataSchema = z.discriminatedUnion("type", [
 
 export type QuestionData = z.infer<typeof QuestionDataSchema>;
 
-const fileDataSchema = z.object({
-  metadata: z.object({
-    year: z.number(),
-    month: z.number(),
-    date: z.number(),
-    shift: z.number(),
-  }),
+const MetadataSchema = z.object({
+  year: z.number(),
+  month: z.string(),
+  date: z.number(),
+  shift: z.number(),
+});
+
+export type Metadata = z.infer<typeof MetadataSchema>;
+
+const ExamDataSchema = z.object({
+  metadata: MetadataSchema,
   questions: z.array(QuestionDataSchema),
 });
 
-export type ExamData = z.infer<typeof fileDataSchema>;
+export type ExamData = z.infer<typeof ExamDataSchema>;
 
 export async function getQuestions() {
   const res = await fetch(`${import.meta.env.BASE_URL}data/data.json`);
