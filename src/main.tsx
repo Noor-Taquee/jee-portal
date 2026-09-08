@@ -6,8 +6,8 @@ import "katex/dist/katex.min.css";
 import { createRoot } from "react-dom/client";
 import { StrictMode } from "react";
 
-import SettingsProvider from "./context/SettingsContext";
 import App from "./App";
+import SettingsProvider from "./context/SettingsContext/SettingsProvider";
 
 const root = document.getElementById("root") as HTMLDivElement | null;
 
