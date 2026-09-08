@@ -11,8 +11,11 @@
 
   background-color: var(--background-p-2);
 
+  display: grid;
+  place-items: center;
+
   i {
     color: var(--color-1);
-    font-size: 22px;
+    font-size: 18px;
   }
 }
