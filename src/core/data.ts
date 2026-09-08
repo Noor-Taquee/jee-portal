@@ -1,21 +1,21 @@
 import { z } from "zod";
 
-const OptionIDSchema = z.enum(["A", "B", "C", "D"]);
+export const OptionIDSchema = z.enum(["A", "B", "C", "D"]);
 export type OptionID = z.infer<typeof OptionIDSchema>;
 
-const OptionDataSchema = z.object({
+export const OptionDataSchema = z.object({
   id: OptionIDSchema,
   content: z.string(),
 });
 export type OptionData = z.infer<typeof OptionDataSchema>;
 
-const BaseQuestionSchema = z.object({
+export const BaseQuestionSchema = z.object({
   id: z.number(),
   subject: z.enum(["Chemistry", "Physics", "Mathematics"]),
   question: z.string(),
 });
 
-const MultipleChoiceQuestionSchema = BaseQuestionSchema.extend({
+export const MultipleChoiceQuestionSchema = BaseQuestionSchema.extend({
   type: z.literal("multiple-choice"),
   options: z.array(OptionDataSchema),
   correctAnswer: z.array(OptionIDSchema),
@@ -24,7 +24,7 @@ export type MultipleChoiceQuestion = z.infer<
   typeof MultipleChoiceQuestionSchema
 >;
 
-const SingleChoiceQuestionSchema = BaseQuestionSchema.extend({
+export const SingleChoiceQuestionSchema = BaseQuestionSchema.extend({
   type: z.literal("single-choice"),
   options: z.array(OptionDataSchema),
   correctAnswer: OptionIDSchema,
@@ -45,7 +45,7 @@ export const QuestionDataSchema = z.discriminatedUnion("type", [
 
 export type QuestionData = z.infer<typeof QuestionDataSchema>;
 
-const MetadataSchema = z.object({
+export const MetadataSchema = z.object({
   year: z.number(),
   month: z.string(),
   date: z.number(),
@@ -54,7 +54,7 @@ const MetadataSchema = z.object({
 
 export type Metadata = z.infer<typeof MetadataSchema>;
 
-const ExamDataSchema = z.object({
+export const ExamDataSchema = z.object({
   metadata: MetadataSchema,
   questions: z.array(QuestionDataSchema),
 });
