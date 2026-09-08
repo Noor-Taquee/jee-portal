@@ -1,26 +1,5 @@
-import { createContext, useState } from "react";
-
-type AppTheme = "light" | "dark";
-
-type AppSettings = {
-  theme: AppTheme;
-  changeTheme: () => void;
-  textSize: number;
-  changeTextSize: (val: number) => void;
-  simpleMode: boolean;
-  toggleSimpleMode: () => void;
-};
-
-const defaultSettings: AppSettings = {
-  theme: "dark",
-  changeTheme: () => {},
-  textSize: 16,
-  changeTextSize: () => {},
-  simpleMode: false,
-  toggleSimpleMode: () => {},
-};
-
-export const SettingsContext = createContext(defaultSettings);
+import { useState } from "react";
+import { type AppTheme, defaultSettings, SettingsContext } from ".";
 
 interface SettingsProviderProps {
   children: React.ReactNode;
