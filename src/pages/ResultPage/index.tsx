@@ -1,25 +1,25 @@
 import "./style.css";
 
-import type { QuestionData } from "../../core/data";
-import type { ResponseData } from "../../services";
+import { useExamSession } from "../../hooks/useExamData";
 
+import { changeHash } from "../../hooks/useHash";
 import { calculateResult } from "../../services/result";
 
 import ResultCard from "./ResultCard";
 import ResultQuestionTable from "./ResultQuestionTable";
 
-interface ResultPageProps {
-  responseData: ResponseData;
-  questionData: QuestionData[] | undefined;
-}
+export default function ResultPage() {
+  const examSession = useExamSession();
 
-export default function ResultPage({
-  responseData,
-  questionData,
-}: ResultPageProps) {
-  if (!questionData) return <div className="app-panel"></div>;
+  if (!examSession.examData || !examSession.candidateResponse) {
+    changeHash("login");
+    return <div className="app-panel"></div>;
+  }
 
-  const resultData = calculateResult(responseData, questionData);
+  const resultData = calculateResult(
+    examSession.candidateResponse,
+    examSession.examData.questions
+  );
 
   return (
     <div
