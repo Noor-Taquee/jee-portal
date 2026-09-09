@@ -1,39 +1,19 @@
-import type { InnerRoute } from "../../utils/hash-handler";
-
-import type { QuestionData } from "../../core/data";
-import type { ResponseData } from "../../services";
-
 import "./style.css";
+
+import { changeHash } from "../../hooks/useHash";
+import { useExamSession } from "../../hooks/useExamData";
 
 import QuestionPanel from "./QuestionPanel";
 import Header from "./Header";
-import { changeHash } from "../../hooks/useHash";
 
-interface QuestionPanelProps {
-  questionData: QuestionData[] | undefined;
+export default function QuestionsPage() {
+  const examSession = useExamSession();
 
-  responseData: ResponseData;
-  setResponseData: React.Dispatch<React.SetStateAction<ResponseData>>;
-
-  startTime: Date | undefined;
-  /** Test Duration in _Milliseconds_ */
-  testDuration: number;
-  route?: InnerRoute;
-}
-
-export default function QuestionsPage({
-  questionData,
-  responseData,
-  setResponseData,
-  startTime,
-  testDuration,
-}: QuestionPanelProps) {
-  if (!startTime) {
+  if (!examSession.startedAt) {
     changeHash("login");
   }
-  startTime = startTime as Date;
 
-  if (!questionData) {
+  if (!examSession.examData) {
     return <div>Loading...</div>;
   }
 
@@ -42,15 +22,8 @@ export default function QuestionsPage({
       className="app-panel"
       id="questions-page"
     >
-      <Header
-        startTime={startTime}
-        testDuration={testDuration}
-      />
-      <QuestionPanel
-        questionData={questionData}
-        responseData={responseData}
-        setResponseData={setResponseData}
-      />
+      <Header />
+      <QuestionPanel />
     </div>
   );
 }
