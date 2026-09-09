@@ -8,7 +8,7 @@ interface ClearBtnProps {
   setResponseData: React.Dispatch<React.SetStateAction<ResponseData>>;
 }
 
-/** Clears the selected and submitted answer */
+/** Clears the selected & submitted answer */
 export default function ClearBtn({
   questionNo,
   setAnswer,
