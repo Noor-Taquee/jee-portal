@@ -1,24 +1,24 @@
-import { useState } from "react";
-import type { ResponseData } from "../../../../services";
-
 import "./style.css";
+
+import { useState } from "react";
+import { useExamSession } from "../../../../hooks/useExamData";
 
 import QuestionBox from "../../../../components/QuestionBox";
 import ButtonWrapper from "./ButtonWrapper";
 
 interface QuestionTableProps {
-  responseData: ResponseData;
   setQuestionNo: React.Dispatch<React.SetStateAction<number>>;
 }
 
 /** The panel which shows the questions */
-export default function QuestionTable({
-  responseData,
-  setQuestionNo,
-}: QuestionTableProps) {
+export default function QuestionTable({ setQuestionNo }: QuestionTableProps) {
+  const examSession = useExamSession();
+
   const [page, setPage] = useState<1 | 2 | 3>(1);
   const start = 25 * (page - 1);
   const end = start + 25;
+
+  if (!examSession.candidateResponse) return <div></div>;
 
   return (
     <div id="question-table-wrapper">
@@ -30,24 +30,26 @@ export default function QuestionTable({
         </p>
       </div>
       <div id="question-table">
-        {[...responseData.entries()].slice(start, end).map(([i, o]) => (
-          <QuestionBox
-            key={`box-${i}`}
-            className={
-              o.visited
-                ? o.answer
-                  ? o.review
-                    ? o.submittedAnswer
-                      ? "ans-marked-for-review"
-                      : "marked-for-review"
-                    : "answered"
-                  : "unanswered"
-                : "unread"
-            }
-            number={i}
-            onClick={() => setQuestionNo(i)}
-          />
-        ))}
+        {[...examSession.candidateResponse.entries()]
+          .slice(start, end)
+          .map(([i, o]) => (
+            <QuestionBox
+              key={`box-${i}`}
+              className={
+                o.visited
+                  ? o.answer
+                    ? o.review
+                      ? o.submittedAnswer
+                        ? "ans-marked-for-review"
+                        : "marked-for-review"
+                      : "answered"
+                    : "unanswered"
+                  : "unread"
+              }
+              number={i}
+              onClick={() => setQuestionNo(i)}
+            />
+          ))}
       </div>
       <ButtonWrapper
         page={page}
