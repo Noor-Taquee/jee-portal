@@ -11,7 +11,7 @@ interface AMFRBtnProps {
   setResponseData: React.Dispatch<React.SetStateAction<ResponseData>>;
 }
 
-/** Submits the answer and mar  */
+/** Submits the answer and marks for review  */
 export default function AMFRBtn({
   questionNo,
   setQuestionNo,
