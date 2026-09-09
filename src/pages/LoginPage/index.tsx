@@ -9,11 +9,7 @@ import Header from "./Header";
 import LoginForm from "./LoginForm";
 import InstituteLogo from "../../components/InstituteLogo";
 
-interface LoginPageProps {
-  setStartTime: React.Dispatch<React.SetStateAction<Date | undefined>>;
-}
-
-export default function LoginPage({ setStartTime }: LoginPageProps) {
+export default function LoginPage() {
   const [userData, setUserData] = useState<UserData>({
     name: null,
     password: null,
@@ -31,7 +27,6 @@ export default function LoginPage({ setStartTime }: LoginPageProps) {
       <LoginForm
         userData={userData}
         setData={setUserData}
-        setStartTime={setStartTime}
       />
     </div>
   );

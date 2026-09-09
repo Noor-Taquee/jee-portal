@@ -3,7 +3,11 @@
 import "./style.css";
 
 import { useState } from "react";
+import { useExamSession } from "../../../hooks/useExamData";
+
 import type { UserData } from "../data";
+import { getQuestions } from "../../../core/data";
+import { generateResponse } from "../../../services";
 import { changeHash } from "../../../hooks/useHash";
 
 import PaswwordInput from "./PasswordInput";
@@ -13,10 +17,16 @@ import Keyboard from "../Keyboard";
 interface LoginFormProps {
   userData: UserData;
   setData: React.Dispatch<React.SetStateAction<UserData>>;
-  setStartTime: React.Dispatch<React.SetStateAction<Date | undefined>>;
 }
 
-export default function LoginForm({ setData, setStartTime }: LoginFormProps) {
+export default function LoginForm({ setData }: LoginFormProps) {
+  const examSession = useExamSession();
+
+  getQuestions().then((data) => {
+    examSession.setExamData(data);
+    examSession.setCandidateResponse(generateResponse(data.questions));
+  });
+
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [keyboard, setKeyboard] = useState<boolean>(false);
@@ -47,7 +57,8 @@ export default function LoginForm({ setData, setStartTime }: LoginFormProps) {
             } else if (!password) {
             }
             setData({ name: username, password: password });
-            setStartTime(new Date());
+            if (!examSession.examData) return;
+            examSession.setStartedAt(new Date());
             changeHash("question");
           }}
         >
