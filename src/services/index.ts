@@ -1,4 +1,4 @@
-import type { OptionID } from "../core/data";
+import type { OptionID, QuestionData } from "../core/data";
 
 export type ResponseData = Map<number, AnswerResponse>;
 
@@ -37,4 +37,22 @@ interface MultipleChoiceResponse extends BaseResponse {
   type: "multiple-choice";
   answer: OptionID[] | null;
   submittedAnswer: OptionID[] | null;
+}
+
+export function generateResponse(questionData: QuestionData[]) {
+  return new Map(
+    questionData.map((question) => {
+      const res: [number, AnswerResponse] = [
+        question.id,
+        {
+          type: question.type,
+          visited: false,
+          answer: null,
+          review: false,
+          submittedAnswer: null,
+        },
+      ];
+      return res;
+    })
+  );
 }

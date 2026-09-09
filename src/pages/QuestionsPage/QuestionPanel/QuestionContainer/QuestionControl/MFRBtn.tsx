@@ -1,14 +1,12 @@
 import type { OptionID } from "../../../../../core/data";
-import type { ResponseData } from "../../../../../services";
 
 import ActionBtn from "../../../../../components/ActionBtn";
+import { useExamSession } from "../../../../../hooks/useExamData";
 
 interface MFRBtnProps {
   questionNo: number;
   setQuestionNo: React.Dispatch<React.SetStateAction<number>>;
   answer: OptionID | OptionID[] | null;
-  responseData: ResponseData;
-  setResponseData: React.Dispatch<React.SetStateAction<ResponseData>>;
 }
 
 /** "Marked for review" */
@@ -16,33 +14,35 @@ export default function MFRBtn({
   questionNo,
   setQuestionNo,
   answer,
-  responseData,
-  setResponseData,
 }: MFRBtnProps) {
-  const lastQuestion = questionNo >= 75;
+  const examSession = useExamSession();
+
+  const isLastQuestion = questionNo >= 75;
 
   return (
     <ActionBtn
-      title={lastQuestion ? "Mark for review" : "Mark for review & Next"}
+      title={isLastQuestion ? "Mark for review" : "Mark for review & Next"}
       className={`question-control-btn ${answer ? "" : ""}`}
       onClick={() => {
-        if (!answer) return;
+        if (!answer || !examSession.candidateResponse) return;
 
         const key = questionNo;
-        const res = responseData.get(key);
+        const res = examSession.candidateResponse.get(key);
         if (res) {
           res.visited = true;
           res.answer = answer;
           res.review = true;
-          responseData.set(key, res);
-          setResponseData(new Map(responseData));
+          examSession.candidateResponse.set(key, res);
+          examSession.setCandidateResponse(
+            new Map(examSession.candidateResponse)
+          );
         }
 
-        if (lastQuestion) return;
+        if (isLastQuestion) return;
         setQuestionNo((p) => p + 1);
       }}
     >
-      <p>{lastQuestion ? "Mark for review" : "Mark for review & Next"}</p>
+      <p>{isLastQuestion ? "Mark for review" : "Mark for review & Next"}</p>
     </ActionBtn>
   );
 }

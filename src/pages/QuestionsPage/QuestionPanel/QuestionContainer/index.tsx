@@ -1,12 +1,12 @@
 // oxlint-disable max-lines-per-function
 
+import "./style.css";
+
 import { useState } from "react";
 import { useSettings } from "../../../../hooks/useSettings";
+import { useExamSession } from "../../../../hooks/useExamData";
 
 import type { OptionID, QuestionData } from "../../../../core/data";
-import type { ResponseData } from "../../../../services";
-
-import "./style.css";
 
 import QuestionCard from "./QuestionCard";
 import OptionsContainer from "./OptionsContainer";
@@ -18,8 +18,6 @@ interface QuestionContainerProps {
   questionNo: number;
   setQuestionNo: React.Dispatch<React.SetStateAction<number>>;
   question: QuestionData | undefined;
-  responseData: ResponseData;
-  setResponseData: React.Dispatch<React.SetStateAction<ResponseData>>;
 }
 
 /** Question container */
@@ -27,14 +25,15 @@ export default function QuestionContainer({
   questionNo,
   setQuestionNo,
   question,
-  responseData,
-  setResponseData,
 }: QuestionContainerProps) {
   const appSettings = useSettings();
+  const examSession = useExamSession();
 
   const [answer, setAnswer] = useState<string | string[] | null>(
-    responseData.get(questionNo)?.answer || null
+    examSession.candidateResponse?.get(questionNo)?.answer || null
   );
+
+  if (!examSession.candidateResponse) return <div></div>;
 
   if (!question) return <div id="question-container"></div>;
 
@@ -72,8 +71,6 @@ export default function QuestionContainer({
         setQuestionNo={setQuestionNo}
         answer={answer as OptionID | null}
         setAnswer={setAnswer}
-        responseData={responseData}
-        setResponseData={setResponseData}
       />
     </div>
   );

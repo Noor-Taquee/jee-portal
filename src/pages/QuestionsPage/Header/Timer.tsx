@@ -1,20 +1,29 @@
+// oxlint-disable max-lines-per-function
+
 import { useEffect, useState } from "react";
-import { changeHash } from "../../../utils/hash-handler";
+import { useExamSession } from "../../../hooks/useExamData";
 
-interface TimerProps {
-  startTime: Date;
+import { changeHash } from "../../../hooks/useHash";
 
-  /** Test Duration in _Milliseconds_ */
-  testDuration: number;
-}
+export default function Timer() {
+  const examSession = useExamSession();
 
-export default function Timer({ startTime, testDuration }: TimerProps) {
-  const [leftTime, setLeftTime] = useState<number>(testDuration);
+  const [leftTime, setLeftTime] = useState<number>(
+    examSession.examData?.metadata.duration as number
+  );
 
   useEffect(() => {
     const timerInterval = setInterval(() => {
-      const ellapsedTime = Date.now() - startTime.getTime();
-      const remaining = testDuration - ellapsedTime;
+      if (!examSession.startedAt) {
+        setLeftTime(0);
+        clearInterval(timerInterval);
+        return;
+      }
+
+      const ellapsedTime = Date.now() - examSession.startedAt.getTime();
+      const remaining =
+        (examSession.examData?.metadata.duration as number) - ellapsedTime;
+
       if (remaining <= 0) {
         setLeftTime(0);
         clearInterval(timerInterval);
@@ -27,14 +36,16 @@ export default function Timer({ startTime, testDuration }: TimerProps) {
     return () => {
       clearInterval(timerInterval);
     };
-  }, [startTime, testDuration]);
+  }, [examSession]);
 
   const totalSeconds = Math.floor(leftTime / 1000);
   const hours = Math.floor(totalSeconds / 3600);
   const minutes = Math.floor((totalSeconds % 3600) / 60);
   const seconds = totalSeconds % 60;
 
-  const pad = (num: number) => String(num).padStart(2, "0");
+  function pad(num: number) {
+    return String(num).padStart(2, "0");
+  }
 
   return (
     <div id="timer">
