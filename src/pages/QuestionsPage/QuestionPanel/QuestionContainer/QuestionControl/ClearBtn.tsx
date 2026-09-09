@@ -1,34 +1,34 @@
+import { useExamSession } from "../../../../../hooks/useExamData";
+
 import ActionBtn from "../../../../../components/ActionBtn";
-import type { ResponseData } from "../../../../../services";
 
 interface ClearBtnProps {
   questionNo: number;
   setAnswer: React.Dispatch<React.SetStateAction<string | string[] | null>>;
-  responseData: ResponseData;
-  setResponseData: React.Dispatch<React.SetStateAction<ResponseData>>;
 }
 
 /** Clears the selected & submitted answer */
-export default function ClearBtn({
-  questionNo,
-  setAnswer,
-  responseData,
-  setResponseData,
-}: ClearBtnProps) {
+export default function ClearBtn({ questionNo, setAnswer }: ClearBtnProps) {
+  const examSession = useExamSession();
+
   return (
     <ActionBtn
       title="Clear Response"
       className="question-control-btn"
       onClick={() => {
+        if (!examSession.candidateResponse) return;
+
         const key = questionNo;
-        const res = responseData.get(key);
+        const res = examSession.candidateResponse.get(key);
         if (res) {
           res.visited = true;
           res.answer = null;
           res.submittedAnswer = null;
           res.review = false;
-          responseData.set(key, res);
-          setResponseData(new Map(responseData));
+          examSession.candidateResponse.set(key, res);
+          examSession.setCandidateResponse(
+            new Map(examSession.candidateResponse)
+          );
         }
 
         setAnswer(null);

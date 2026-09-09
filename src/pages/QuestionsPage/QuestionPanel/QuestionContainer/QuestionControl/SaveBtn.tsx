@@ -1,23 +1,21 @@
 import type { OptionID } from "../../../../../core/data";
-import type { ResponseData } from "../../../../../services";
 
 import ActionBtn from "../../../../../components/ActionBtn";
+import { useExamSession } from "../../../../../hooks/useExamData";
 
 interface SaveBtnProps {
   questionNo: number;
   setQuestionNo: React.Dispatch<React.SetStateAction<number>>;
   answer: OptionID | OptionID[] | null;
-  responseData: ResponseData;
-  setResponseData: React.Dispatch<React.SetStateAction<ResponseData>>;
 }
 
 export default function SaveBtn({
   questionNo,
   setQuestionNo,
   answer,
-  responseData,
-  setResponseData,
 }: SaveBtnProps) {
+  const examSession = useExamSession();
+
   const lastQuestion = questionNo >= 75;
 
   return (
@@ -25,14 +23,18 @@ export default function SaveBtn({
       title={lastQuestion ? "Save" : "Save & Next"}
       className={`question-control-btn ${questionNo >= 75 ? "" : ""}`}
       onClick={() => {
+        if (!examSession.candidateResponse) return;
+
         const key = questionNo;
-        const res = responseData.get(key);
+        const res = examSession.candidateResponse.get(key);
         if (res) {
           res.visited = true;
           res.answer = answer;
           res.submittedAnswer = answer;
-          responseData.set(key, res);
-          setResponseData(new Map(responseData));
+          examSession.candidateResponse.set(key, res);
+          examSession.setCandidateResponse(
+            new Map(examSession.candidateResponse)
+          );
         }
 
         if (questionNo >= 75) return;
