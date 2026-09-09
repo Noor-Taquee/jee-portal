@@ -6,7 +6,6 @@ import InstituteLogo from "../../../components/InstituteLogo";
 import ActionBtn from "../../../components/ActionBtn";
 
 import Timer from "./Timer";
-import { changeHash } from "../../../hooks/useHash";
 
 export default function Header() {
   return (
