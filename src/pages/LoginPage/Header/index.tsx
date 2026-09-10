@@ -2,7 +2,7 @@
 
 import "./style.css";
 
-import { useExamSession } from "../../../hooks/useExamData";
+import { useExamSession } from "../../../hooks/useExamSession";
 
 export default function Header() {
   const examSession = useExamSession();

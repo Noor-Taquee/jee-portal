@@ -4,7 +4,7 @@ import "./style.css";
 
 import { useState } from "react";
 import { useSettings } from "../../../../hooks/useSettings";
-import { useExamSession } from "../../../../hooks/useExamData";
+import { useExamSession } from "../../../../hooks/useExamSession";
 
 import type { OptionID, QuestionData } from "../../../../core/data";
 

@@ -3,7 +3,7 @@
 import "./style.css";
 
 import { useState } from "react";
-import { useExamSession } from "../../../hooks/useExamData";
+import { useExamSession } from "../../../hooks/useExamSession";
 
 import type { UserData } from "../data";
 import { getQuestions } from "../../../core/data";

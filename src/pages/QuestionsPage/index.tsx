@@ -1,7 +1,7 @@
 import "./style.css";
 
 import { changeHash } from "../../hooks/useHash";
-import { useExamSession } from "../../hooks/useExamData";
+import { useExamSession } from "../../hooks/useExamSession";
 
 import QuestionPanel from "./QuestionPanel";
 import Header from "./Header";
