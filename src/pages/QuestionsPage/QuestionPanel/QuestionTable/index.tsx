@@ -1,7 +1,7 @@
 import "./style.css";
 
 import { useState } from "react";
-import { useExamSession } from "../../../../hooks/useExamData";
+import { useExamSession } from "../../../../hooks/useExamSession";
 
 import QuestionBox from "../../../../components/QuestionBox";
 import ButtonWrapper from "./ButtonWrapper";

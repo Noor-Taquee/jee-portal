@@ -1,4 +1,4 @@
-import { useExamSession } from "../../../../../hooks/useExamData";
+import { useExamSession } from "../../../../../hooks/useExamSession";
 
 import type { OptionID } from "../../../../../core/data";
 

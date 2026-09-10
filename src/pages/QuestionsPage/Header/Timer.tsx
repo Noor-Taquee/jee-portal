@@ -1,7 +1,7 @@
 // oxlint-disable max-lines-per-function
 
 import { useEffect, useState } from "react";
-import { useExamSession } from "../../../hooks/useExamData";
+import { useExamSession } from "../../../hooks/useExamSession";
 
 import { changeHash } from "../../../hooks/useHash";
 

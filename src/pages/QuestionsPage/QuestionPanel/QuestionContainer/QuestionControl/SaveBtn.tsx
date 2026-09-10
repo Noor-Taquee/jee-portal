@@ -1,7 +1,7 @@
 import type { OptionID } from "../../../../../core/data";
 
 import ActionBtn from "../../../../../components/ActionBtn";
-import { useExamSession } from "../../../../../hooks/useExamData";
+import { useExamSession } from "../../../../../hooks/useExamSession";
 
 interface SaveBtnProps {
   questionNo: number;
