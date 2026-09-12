@@ -52,6 +52,7 @@ export default function LoginForm({ setData }: LoginFormProps) {
 
         <button
           id="login-btn"
+          className={examSession.examData ? "" : "inactive"}
           onClick={() => {
             if (!username) {
             } else if (!password) {
@@ -62,7 +63,7 @@ export default function LoginForm({ setData }: LoginFormProps) {
             changeHash("question");
           }}
         >
-          <p>Login</p>
+          <p>Start Test</p>
         </button>
 
         <p id="test-time">00:00:00</p>
