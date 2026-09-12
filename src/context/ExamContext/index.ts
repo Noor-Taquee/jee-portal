@@ -1,4 +1,4 @@
-import { createContext, type Context } from "react";
+import { createContext } from "react";
 
 import type { ExamData } from "../../core/data";
 import type { ResponseData } from "../../services";
@@ -28,4 +28,4 @@ export const defaultTestData: ExamSession = {
   setCandidateResponse: () => {},
 };
 
-export const ExamContext: Context<ExamSession> = createContext(defaultTestData);
+export const ExamContext = createContext<ExamSession>(defaultTestData);
