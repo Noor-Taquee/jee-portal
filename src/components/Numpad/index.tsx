@@ -1,5 +1,6 @@
-import NumpadKey from "./NumpadKey";
 import "./style.css";
+
+import NumpadKey from "./NumpadKey";
 
 const struc = [
   ["1", "2", "3"],
