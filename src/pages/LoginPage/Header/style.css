@@ -1,14 +1,18 @@
 #login-panel-header {
-  width: 100%;
-  height: fit-content;
+  flex-grow: 1;
+  max-height: fit-content;
 
   padding: 12px;
+  margin: 0 6px;
+
+  border: var(--border-1);
+  border-radius: 4px;
 
   display: flex;
   align-items: center;
   gap: 12px;
 
-  background-color: var(--background-1);
+  background-color: var(--background-p-2);
 }
 
 #info {
@@ -33,13 +37,13 @@
 }
 
 .label-1 {
-  color: var(--accent-1);
-  font: 400 28px status-bar;
+  color: var(--color-1);
+  font: 400 28px "Inter";
 }
 
 .label-2 {
-  color: var(--accent-1);
-  font: 400 18px status-bar;
+  color: var(--color-1);
+  font: 400 18px "Inter";
 }
 
 #picture-div {
@@ -56,6 +60,8 @@
   aspect-ratio: 1 / 1.414;
   width: 76px;
 
-  border: 1px solid var(--accent-1);
-  background-color: var(--accent-1);
+  border: var(--border-1);
+  border-radius: 4px;
+
+  background-color: var(--background-p-1);
 }
