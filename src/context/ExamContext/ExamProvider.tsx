@@ -10,7 +10,7 @@ interface ExamProviderProps {
 }
 
 export default function ExamProvider({ children }: ExamProviderProps) {
-  const [startedAt, setStartTime] = useState<Date | undefined>(undefined);
+  const [startedAt, setStartedAt] = useState<Date | undefined>(undefined);
 
   const [examData, setExamData] = useState<ExamData | undefined>(undefined);
 
@@ -20,7 +20,7 @@ export default function ExamProvider({ children }: ExamProviderProps) {
 
   const value: ExamSession = {
     startedAt: startedAt,
-    setStartedAt: setStartTime,
+    setStartedAt: setStartedAt,
     examData: examData,
     setExamData: setExamData,
     candidateResponse: responseData,
