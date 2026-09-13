@@ -16,13 +16,13 @@
   justify-content: center;
   gap: 6px;
 
-  background-color: var(--background-p-2);
+  background-color: var(--bg-p-2);
 
   p {
     font: var(--text-1);
   }
 
   &:hover {
-    background-color: var(--background-p-1);
+    background-color: var(--bg-p-1);
   }
 }

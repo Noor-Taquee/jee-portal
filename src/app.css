@@ -12,7 +12,7 @@
     flex-direction: row-reverse;
   }
 
-  background-color: var(--background-p-1);
+  background-color: var(--bg-p-1);
 }
 
 .panel-container {
@@ -23,7 +23,7 @@
 
   display: flex;
 
-  background-color: var(--background-p-1);
+  background-color: var(--bg-p-1);
 }
 
 .app-panel {
@@ -38,5 +38,5 @@
   display: flex;
   flex-direction: column;
 
-  background-color: var(--background-p-1);
+  background-color: var(--bg-p-1);
 }

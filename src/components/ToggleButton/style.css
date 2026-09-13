@@ -9,7 +9,7 @@
   border-radius: 6px;
   border: var(--border-1);
 
-  background-color: var(--background-p-2);
+  background-color: var(--bg-p-2);
 
   display: grid;
   place-items: center;

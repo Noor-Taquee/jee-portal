@@ -23,7 +23,7 @@
   border: var(--border-1);
   border-radius: 4px;
 
-  background-color: var(--background-p-2);
+  background-color: var(--bg-p-2);
 
   opacity: 0.8;
 }
@@ -46,7 +46,7 @@
 
     margin: 0 -2px;
 
-    background-color: var(--background-s-2);
+    background-color: var(--bg-s-2);
   }
 }
 

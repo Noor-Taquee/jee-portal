@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: space-between;
 
-  background-color: var(--background-p-1);
+  background-color: var(--bg-p-1);
 }
 
 #timer {

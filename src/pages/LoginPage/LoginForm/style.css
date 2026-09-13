@@ -9,7 +9,7 @@
   border: var(--border-1);
   border-radius: 12px;
 
-  background-color: var(--background-p-1);
+  background-color: var(--bg-p-1);
 }
 
 .form-header {
@@ -18,7 +18,7 @@
 
   padding: 12px;
 
-  background-color: var(--background-p-2);
+  background-color: var(--bg-p-2);
 
   p {
     font: var(--header-1);
@@ -53,7 +53,7 @@
   display: flex;
   align-items: center;
 
-  background-color: var(--background-p-1);
+  background-color: var(--bg-p-1);
 
   i {
     width: 10%;
@@ -106,7 +106,7 @@
   border: var(--border-1);
   border-radius: 8px;
 
-  background-color: var(--background-p-2);
+  background-color: var(--bg-p-2);
 
   p {
     font: var(--text-1);
@@ -115,7 +115,7 @@
   }
 
   &:hover {
-    background-color: var(--background-p-1);
+    background-color: var(--bg-p-1);
   }
 }
 

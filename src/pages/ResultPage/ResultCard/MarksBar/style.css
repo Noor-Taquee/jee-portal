@@ -4,7 +4,7 @@
 
   margin: 0 auto;
 
-  background-color: var(--background-p-2);
+  background-color: var(--bg-p-2);
 }
 
 @property --width {
@@ -28,12 +28,12 @@
   animation: fill-bar 800ms ease-out forwards;
 
   &:nth-child(1) {
-    background-color: var(--background-s-2);
+    background-color: var(--bg-s-2);
   }
   &:nth-child(2) {
     background-color: var(--color-1);
   }
   &:nth-child(3) {
-    background-color: var(--background-s-2);
+    background-color: var(--bg-s-2);
   }
 }
