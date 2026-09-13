@@ -6,16 +6,16 @@ import type { ResponseData } from "../../services";
 export type ExamSession = {
   /** Timestamp of the instance when exam started. */
   startedAt: Date | undefined;
-  setStartedAt: React.Dispatch<React.SetStateAction<Date | undefined>>;
+  setStartedAt: React.Dispatch<React.SetStateAction<ExamSession["startedAt"]>>;
 
   /** Question data and metadata for the current exam. */
   examData: ExamData | undefined;
-  setExamData: React.Dispatch<React.SetStateAction<ExamData | undefined>>;
+  setExamData: React.Dispatch<React.SetStateAction<ExamSession["examData"]>>;
 
   /** Response of the candidate. */
   candidateResponse: ResponseData | undefined;
   setCandidateResponse: React.Dispatch<
-    React.SetStateAction<ResponseData | undefined>
+    React.SetStateAction<ExamSession["candidateResponse"]>
   >;
 };
 
