@@ -9,3 +9,30 @@
   display: flex;
   flex-direction: column;
 }
+
+.dialogue-box {
+  height: 100%;
+  width: 100%;
+
+  margin: auto;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  background: radial-gradient(
+    circle,
+    var(--background-p-2),
+    var(--background-p-1) 40%
+  );
+
+  .dialogue-header {
+    font: var(--header-1);
+  }
+  .dialogue-text {
+    font: var(--text-1);
+  }
+}
