@@ -21,4 +21,8 @@
   p {
     font: var(--text-1);
   }
+
+  &:hover {
+    background-color: var(--background-p-1);
+  }
 }
