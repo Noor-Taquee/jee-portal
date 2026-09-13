@@ -1,3 +1,5 @@
+<!-- This pull_request_template was copied from the 'zed-industries/zed' repository -->
+
 # Objective
 
 - Describe the objective or issue this PR addresses.
