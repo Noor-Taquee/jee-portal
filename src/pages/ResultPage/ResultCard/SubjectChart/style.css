@@ -27,11 +27,11 @@
 
   border-radius: 50%;
 
-  background-color: var(--background-p-2);
+  background-color: var(--bg-p-2);
 
   background: conic-gradient(
     var(--color-1) 0deg var(--max),
-    var(--background-p-2) var(--max) 360deg
+    var(--bg-p-2) var(--max) 360deg
   );
 
   animation: fill-chart 800ms ease-out forwards;
@@ -49,6 +49,6 @@
 
     aspect-ratio: 1 / 1;
     width: calc(var(--chart-size) - 2 * var(--chart-width));
-    background-color: var(--background-p-1);
+    background-color: var(--bg-p-1);
   }
 }

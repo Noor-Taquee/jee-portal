@@ -23,11 +23,7 @@
   align-items: center;
   gap: 16px;
 
-  background: radial-gradient(
-    circle,
-    var(--background-p-2),
-    var(--background-p-1) 40%
-  );
+  background: radial-gradient(circle, var(--bg-p-2), var(--bg-p-1) 40%);
 
   .dialogue-header {
     font: var(--header-1);

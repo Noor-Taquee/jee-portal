@@ -12,7 +12,7 @@
   align-items: center;
   gap: 12px;
 
-  background-color: var(--background-p-2);
+  background-color: var(--bg-p-2);
 }
 
 #info {
@@ -63,5 +63,5 @@
   border: var(--border-1);
   border-radius: 4px;
 
-  background-color: var(--background-p-1);
+  background-color: var(--bg-p-1);
 }
