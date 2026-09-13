@@ -37,12 +37,18 @@ function normalize(rawHash: string): NormalizedHash {
   return [location, attributes];
 }
 
-const routes = ["login", "question", "result"];
-const defaultRoute = "login";
+const routes = ["login", "question", "result"] as const;
+const defaultRoute: Route = "login";
+
+export type Route = (typeof routes)[number];
+
+function isRoute(value: any): value is Route {
+  return routes.includes(value);
+}
 
 /** Hook to bind app state with the url hash.  */
-export function useHash() {
-  const [panel, setPanel] = useState<string>(defaultRoute);
+export function useHash(): Route {
+  const [panel, setPanel] = useState<Route>(defaultRoute);
 
   useEffect(() => {
     function handleHashChange() {
@@ -51,7 +57,7 @@ export function useHash() {
 
       const currentLocation = location[0];
 
-      if (currentLocation && routes.includes(currentLocation)) {
+      if (currentLocation && isRoute(currentLocation)) {
         setPanel(currentLocation);
       } else {
         changeHash(defaultRoute);
