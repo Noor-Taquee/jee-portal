@@ -8,6 +8,7 @@ import { StrictMode } from "react";
 
 import App from "./App";
 import SettingsProvider from "./context/SettingsContext/SettingsProvider";
+import UserProvider from "./context/UserContext/Provider";
 
 const root = document.getElementById("root") as HTMLDivElement | null;
 
@@ -16,7 +17,9 @@ if (!root) throw ReferenceError("Root not found!");
 createRoot(root).render(
   <StrictMode>
     <SettingsProvider>
-      <App />
+      <UserProvider>
+        <App />
+      </UserProvider>
     </SettingsProvider>
   </StrictMode>
 );
