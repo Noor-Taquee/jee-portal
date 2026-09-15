@@ -62,6 +62,9 @@
   border: var(--border-1);
   border-radius: 4px;
 
+  display: grid;
+  place-items: center;
+
   background-color: var(--bg-p-2);
 
   > p {

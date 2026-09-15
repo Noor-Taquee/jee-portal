@@ -1,4 +1,5 @@
 import ActionBtn from "../../../../../components/ActionBtn";
+import { ChevronLeft } from "lucide-react";
 
 interface PreviousBtnProps {
   questionNo: number;
@@ -18,7 +19,7 @@ export default function PreviousBtn({
         setQuestionNo((p) => p - 1);
       }}
     >
-      <i className="ph-bold ph-caret-left"></i>
+      <ChevronLeft />
       <p>{"Previous"}</p>
     </ActionBtn>
   );

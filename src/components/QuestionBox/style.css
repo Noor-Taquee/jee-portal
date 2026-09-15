@@ -52,7 +52,7 @@
   &.ans-marked-for-review {
     border-radius: 50%;
 
-    > i {
+    > .lucide {
       --size: calc(var(--question-box-size) / 3);
       --margin: calc(var(--question-box-size) - var(--size));
 
@@ -60,16 +60,12 @@
       top: var(--margin);
       left: var(--margin);
 
-      aspect-ratio: 1/1;
-      height: var(--size);
-
       border: none;
       border-radius: 50%;
 
-      font-size: 0;
-      color: transparent;
+      stroke: transparent;
 
-      background-color: #0b8000;
+      background-color: var(--cor-color-1);
     }
   }
 }
@@ -129,19 +125,14 @@
       top: var(--margin);
       left: var(--margin);
 
-      aspect-ratio: 1/1;
-      height: var(--size);
-
       border: none;
       border-radius: 50%;
 
       display: grid;
       place-items: center;
 
-      font-size: 16px;
-
-      color: #ffffff;
-      background-color: #00ff00;
+      stroke: #ffffff;
+      background-color: var(--cor-color-1);
     }
   }
 }

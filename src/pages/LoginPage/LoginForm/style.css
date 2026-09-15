@@ -55,14 +55,16 @@
 
   background-color: var(--bg-p-1);
 
-  i {
+  .icon-holder {
     width: 10%;
     height: 100%;
 
-    font-size: 24px;
-
     display: grid;
     place-items: center;
+
+    .lucide {
+      --size: 22px;
+    }
 
     &.leading {
       touch-action: none;

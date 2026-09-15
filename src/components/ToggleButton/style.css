@@ -14,8 +14,8 @@
   display: grid;
   place-items: center;
 
-  i {
+  .lucide {
     color: var(--color-1);
-    font-size: 18px;
+    --size: 22px;
   }
 }

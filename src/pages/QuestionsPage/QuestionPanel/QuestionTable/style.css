@@ -63,6 +63,9 @@
   justify-content: space-between;
 
   > button {
+    .lucide {
+      --size: 22px;
+    }
     &:last-child {
       flex-direction: row-reverse;
     }
