@@ -1,6 +1,8 @@
+// oxlint-disable max-lines-per-function
 import "./style.css";
 
 import NumpadKey from "./NumpadKey";
+import { DeleteIcon } from "lucide-react";
 
 const struc = [
   ["1", "2", "3"],
@@ -26,17 +28,17 @@ export default function Numpad({ answer, setAnswer }: NumpadProps) {
       />
       <div id="numpad">
         {struc.map((row, rowNo) => {
-          return row.map((key, columnNo) => {
-            return (
-              <NumpadKey
-                text={key}
-                key={`numpad-${rowNo}-${columnNo}`}
-                onClick={() => {
-                  setAnswer((p) => (p ? p + key : key));
-                }}
-              />
-            );
-          });
+          return row.map((key, columnNo) => (
+            <button
+              className="numpad-key"
+              key={`numpad-${rowNo}-${columnNo}`}
+              onClick={() => {
+                setAnswer((p) => (p ? p + key : key));
+              }}
+            >
+              <p>{key}</p>
+            </button>
+          ));
         })}
         <NumpadKey
           key={"numpad-3-0"}
@@ -52,14 +54,15 @@ export default function Numpad({ answer, setAnswer }: NumpadProps) {
             setAnswer((p) => (p ? p + "0" : "0"));
           }}
         />
-        <NumpadKey
-          key={"numpad-3-2"}
-          text={"ph-fill ph-backspace"}
-          icon={true}
+        <button
+          className="numpad-key"
           onClick={() => {
             setAnswer((p) => (p ? p.slice(0, p.length - 1) : ""));
           }}
-        />
+          key={"numpad-3-2"}
+        >
+          <DeleteIcon />
+        </button>
       </div>
     </div>
   );

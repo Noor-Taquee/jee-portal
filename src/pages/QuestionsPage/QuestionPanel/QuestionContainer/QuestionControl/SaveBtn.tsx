@@ -1,7 +1,9 @@
+import { useExamSession } from "../../../../../hooks/useExamSession";
+
 import type { OptionID } from "../../../../../core/data";
 
 import ActionBtn from "../../../../../components/ActionBtn";
-import { useExamSession } from "../../../../../hooks/useExamSession";
+import { ChevronRight } from "lucide-react";
 
 interface SaveBtnProps {
   questionNo: number;
@@ -41,7 +43,7 @@ export default function SaveBtn({
         setQuestionNo((p) => p + 1);
       }}
     >
-      {!lastQuestion && <i className="ph-bold ph-caret-right"></i>}
+      {!lastQuestion && <ChevronRight />}
       <p>{lastQuestion ? "Save" : "Save & Next"}</p>
     </ActionBtn>
   );

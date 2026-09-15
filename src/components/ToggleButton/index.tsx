@@ -1,19 +1,19 @@
 import "./style.css";
 
 interface ToggleButtonProps {
-  icon: string;
   className?: string;
   id?: string;
   title?: string;
   onClick?: (...props: any) => any;
+  children: React.ReactNode;
 }
 
 export default function ToggleButton({
-  icon,
-  onClick,
-  className,
-  id,
   title,
+  id,
+  className,
+  onClick,
+  children,
 }: ToggleButtonProps) {
   return (
     <button
@@ -22,7 +22,7 @@ export default function ToggleButton({
       title={title}
       onClick={onClick}
     >
-      <i className={icon}></i>
+      {children}
     </button>
   );
 }

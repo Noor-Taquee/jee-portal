@@ -22,6 +22,9 @@
 }
 
 .question-control-btn {
+  .lucide {
+    --size: 22px;
+  }
   &:last-child {
     flex-direction: row-reverse;
   }

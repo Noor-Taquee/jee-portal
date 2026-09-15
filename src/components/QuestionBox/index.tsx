@@ -1,3 +1,4 @@
+import { SquareText } from "lucide-react";
 import "./style.css";
 
 interface QuestionBoxProps {
@@ -27,9 +28,7 @@ export default function QuestionBox({
       onClick={onClick}
       aria-hidden={ariaHidden ? "true" : "false"}
     >
-      {className === "ans-marked-for-review" && (
-        <i className="ph-bold ph-article"></i>
-      )}
+      {className === "ans-marked-for-review" && <SquareText />}
       <p>{number}</p>
     </button>
   );

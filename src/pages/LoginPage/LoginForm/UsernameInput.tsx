@@ -1,3 +1,5 @@
+import { UserIcon } from "lucide-react";
+
 interface UsernameInputProps {
   username: string;
   setUsername: React.Dispatch<React.SetStateAction<string>>;
@@ -16,7 +18,9 @@ export default function UsernameInput({
       id="username"
       className="input-div"
     >
-      <i className="ph-fill ph-user leading"></i>
+      <span className="icon-holder leading">
+        <UserIcon />
+      </span>
       <input
         type="text"
         name="username"

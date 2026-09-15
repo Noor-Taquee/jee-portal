@@ -1,4 +1,5 @@
 import ActionBtn from "../../../../components/ActionBtn";
+import { ChevronsLeft, ChevronsRight } from "lucide-react";
 
 interface ButtonWrapperProps {
   page: 1 | 2 | 3;
@@ -17,7 +18,7 @@ export default function ButtonWrapper({ page, setPage }: ButtonWrapperProps) {
           setPage(p);
         }}
       >
-        <i className={"ph-bold ph-caret-left"}></i>
+        <ChevronsLeft />
         <p>{"Previous"}</p>
       </ActionBtn>
 
@@ -30,7 +31,7 @@ export default function ButtonWrapper({ page, setPage }: ButtonWrapperProps) {
           setPage(p);
         }}
       >
-        <i className={"ph-bold ph-caret-right"}></i>
+        <ChevronsRight />
         <p>{"Next"}</p>
       </ActionBtn>
     </div>
