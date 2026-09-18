@@ -25,4 +25,30 @@
   &:hover {
     background-color: var(--bg-p-1);
   }
+
+  &:active {
+    border-width: 2px;
+    scale: 0.95;
+  }
+
+  transition:
+    background-color 100ms ease-out,
+    border-width 100ms ease-out,
+    scale 100ms ease-out;
+}
+
+.action-btn.sec {
+  border-color: var(--accent-1);
+
+  p {
+    color: var(--accent-1);
+  }
+
+  &:hover {
+    background-color: var(--accent-1);
+    p {
+      color: var(--bg-p-1);
+      font-weight: 400;
+    }
+  }
 }
