@@ -1,0 +1,23 @@
+#dialogue-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  background: radial-gradient(circle, var(--bg-p-2), var(--bg-p-1) 40%);
+
+  .dialogue-header {
+    font: var(--header-1);
+  }
+  .dialogue-text {
+    font: var(--text-1);
+  }
+}
+
+#dialogue-box-btns {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
