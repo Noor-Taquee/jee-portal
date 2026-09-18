@@ -3,17 +3,24 @@
 import "./style.css";
 
 import { useExamSession } from "../../../hooks/useExamSession";
+import { useUser } from "../../../hooks/useUser";
 
 export default function Header() {
+  const { user } = useUser();
+
   const examSession = useExamSession();
 
   const metadata = examSession.examData?.metadata;
+
+  if (!user) {
+    return <div />;
+  }
 
   return (
     <div id="login-panel-header">
       <div id="info">
         <div className="info-card">
-          <p className="label-1">Noor Taquee</p>
+          <p className="label-1">{user.name}</p>
           <p
             id="course-label"
             className="label-2"
@@ -32,7 +39,7 @@ export default function Header() {
             id="date-label"
             className="label-1"
           >
-            {metadata && `${metadata.date} ${metadata.month}`}
+            {metadata && `${metadata.day} ${metadata.month}`}
           </p>
           <p
             id="yaer-label"

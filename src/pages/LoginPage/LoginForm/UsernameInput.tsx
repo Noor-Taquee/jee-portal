@@ -1,3 +1,5 @@
+import { useUser } from "../../../hooks/useUser";
+
 import { UserIcon } from "lucide-react";
 
 interface UsernameInputProps {
@@ -9,6 +11,8 @@ export default function UsernameInput({
   username,
   setUsername,
 }: UsernameInputProps) {
+  const { user } = useUser();
+
   function onChange(e: React.ChangeEvent<HTMLInputElement, HTMLInputElement>) {
     setUsername(e.target.value);
   }
@@ -27,7 +31,7 @@ export default function UsernameInput({
         id="username"
         autoComplete="off"
         value={username}
-        placeholder={"Noor Taquee"}
+        placeholder={user?.name}
         onChange={onChange}
       />
     </div>
