@@ -1,0 +1,45 @@
+#account-button {
+  cursor: pointer;
+
+  width: 100%;
+  height: fit-content;
+
+  margin: auto auto 0;
+  padding: 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  p {
+    font: var(--text-2);
+    font-weight: 400;
+  }
+
+  &:hover {
+    background-color: var(--bg-p-1);
+  }
+}
+
+#user-icon-holder {
+  aspect-ratio: 1 / 1;
+  width: 24px;
+
+  overflow: hidden;
+
+  border: none;
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background-color: var(--color-1);
+
+  > span {
+    color: var(--bg-p-1);
+    font: var(--text-2);
+  }
+}
