@@ -5,7 +5,6 @@ import "./style.css";
 import { useState } from "react";
 import { useExamSession } from "../../../hooks/useExamSession";
 
-import type { UserData } from "../data";
 import { getQuestions } from "../../../core/data";
 import { generateResponse } from "../../../services";
 import { changeHash } from "../../../hooks/useHash";
@@ -14,12 +13,7 @@ import PaswwordInput from "./PasswordInput";
 import UsernameInput from "./UsernameInput";
 import Keyboard from "../Keyboard";
 
-interface LoginFormProps {
-  userData: UserData;
-  setData: React.Dispatch<React.SetStateAction<UserData>>;
-}
-
-export default function LoginForm({ setData }: LoginFormProps) {
+export default function LoginForm() {
   const examSession = useExamSession();
 
   getQuestions().then((data) => {
@@ -54,10 +48,6 @@ export default function LoginForm({ setData }: LoginFormProps) {
           id="login-btn"
           className={examSession.examData ? "" : "inactive"}
           onClick={() => {
-            if (!username) {
-            } else if (!password) {
-            }
-            setData({ name: username, password: password });
             if (!examSession.examData) return;
             examSession.setStartedAt(new Date());
             changeHash("question");

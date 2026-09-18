@@ -18,7 +18,7 @@ export const BaseQuestionSchema = z.object({
 export const MultipleChoiceQuestionSchema = BaseQuestionSchema.extend({
   type: z.literal("multiple-choice"),
   options: z.array(OptionDataSchema),
-  correctAnswer: z.array(OptionIDSchema),
+  answer: z.array(OptionIDSchema),
 });
 export type MultipleChoiceQuestion = z.infer<
   typeof MultipleChoiceQuestionSchema
@@ -27,13 +27,13 @@ export type MultipleChoiceQuestion = z.infer<
 export const SingleChoiceQuestionSchema = BaseQuestionSchema.extend({
   type: z.literal("single-choice"),
   options: z.array(OptionDataSchema),
-  correctAnswer: OptionIDSchema,
+  answer: OptionIDSchema,
 });
 export type SingleChoiceQuestions = z.infer<typeof SingleChoiceQuestionSchema>;
 
 export const NumericalTypeQuestionSchema = BaseQuestionSchema.extend({
   type: z.literal("numerical"),
-  correctAnswer: z.string(),
+  answer: z.string(),
 });
 export type NumericalTypeQuestion = z.infer<typeof NumericalTypeQuestionSchema>;
 
@@ -48,8 +48,9 @@ export type QuestionData = z.infer<typeof QuestionDataSchema>;
 export const MetadataSchema = z.object({
   year: z.number(),
   month: z.string(),
-  date: z.number(),
+  day: z.number(),
   shift: z.number(),
+  duration: z.number(),
 });
 
 export type Metadata = z.infer<typeof MetadataSchema>;
