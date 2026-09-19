@@ -2,7 +2,8 @@
 import "./style.css";
 
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+
+import AnimatedDigit from "./AnimatedDigit";
 
 interface TimeLeft {
   days: string[];
@@ -12,50 +13,6 @@ interface TimeLeft {
 }
 
 const TARGET_DATE = new Date("2027-01-20T00:00:00").getTime();
-
-// Variants for sliding digits upward
-const digitVariants = {
-  initial: {
-    y: "100%",
-    opacity: 0,
-  },
-  animate: {
-    y: "0%",
-    opacity: 1,
-  },
-  exit: {
-    y: "-100%",
-    opacity: 0,
-  },
-};
-
-/** Renders an individual animated digit card */
-function AnimatedDigit({ digit }: { digit: string }) {
-  return (
-    <span className="digit-card">
-      <AnimatePresence
-        mode="popLayout"
-        initial={false}
-      >
-        <motion.span
-          key={digit}
-          variants={digitVariants}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          transition={{
-            y: { type: "spring", stiffness: 200, damping: 30 },
-            opacity: { duration: 0.15 },
-            filter: { duration: 0.15 },
-          }}
-          className="digit-value"
-        >
-          {digit}
-        </motion.span>
-      </AnimatePresence>
-    </span>
-  );
-}
 
 export default function ExamCountdown() {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
@@ -93,7 +50,7 @@ export default function ExamCountdown() {
 
   return (
     <div id="exam-countdown-box">
-      <p>Remaining time</p>
+      <p className="header">Remaining time</p>
       <div id="exam-countdown">
         <div
           id="days"
