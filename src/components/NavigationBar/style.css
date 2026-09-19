@@ -1,0 +1,27 @@
+#navigation-bar {
+  height: 100%;
+  width: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  background-color: var(--bg-p-2);
+
+  transition: width 100ms ease-out;
+  will-change: width;
+
+  &.expanded {
+    width: 220px;
+    padding: 12px;
+  }
+  &.collapsed {
+    width: 52px;
+    padding: 12px 4px;
+    align-items: center;
+
+    #user-icon-holder {
+      margin: auto auto 12px;
+    }
+  }
+}

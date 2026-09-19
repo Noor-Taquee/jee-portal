@@ -1,0 +1,64 @@
+#navigation-btn-div {
+  height: fit-content;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.navigation-button {
+  width: 100%;
+  height: fit-content;
+
+  border: none;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: transparent;
+
+  .lucide {
+    --size: 22px;
+  }
+
+  &:hover:not(.active) {
+    background-color: var(--bg-p-1);
+  }
+
+  &.active {
+    background-color: var(--bg-s-1);
+    p {
+      color: var(--accent-1);
+    }
+    .lucide {
+      stroke: var(--accent-1);
+    }
+  }
+}
+
+.expanded .navigation-button {
+  padding: 10px;
+  gap: 8px;
+
+  p {
+    font: var(--text-1);
+    text-transform: capitalize;
+    font-weight: 400;
+  }
+}
+
+.collapsed .navigation-button {
+  width: fit-content;
+  padding: 4px 6px;
+
+  flex-direction: column;
+
+  p {
+    font: var(--text-3);
+    text-transform: capitalize;
+    font-weight: 400;
+  }
+}
