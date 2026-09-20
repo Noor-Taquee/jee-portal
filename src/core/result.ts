@@ -1,5 +1,5 @@
-import type { ResponseData } from ".";
-import type { QuestionData } from "../core/data";
+import type { ResponseData } from "./response";
+import type { QuestionData } from "./data";
 
 export type AnswerResult = {
   id: number;
@@ -12,6 +12,21 @@ export type AnswerResult = {
 
 export type ResultData = AnswerResult[];
 
+export interface TestResult {
+  paperId: number;
+  paperTitle: string;
+  completedAt: number;
+  totalMarks: number;
+  maxMarks: number;
+  timeTakenSeconds: number;
+  subjectScores: {
+    physics: number;
+    chemistry: number;
+    maths: number;
+  };
+  responses: AnswerResult[];
+}
+
 export function calculateResult(
   responseData: ResponseData,
   questionData: QuestionData[]
@@ -20,7 +35,7 @@ export function calculateResult(
     const answerResult: AnswerResult = {
       id: question.id,
       subject: question.subject,
-      correctAnswer: question.correctAnswer,
+      correctAnswer: question.answer,
       submittedAnswer: "",
       status: "na",
       marks: 0,
@@ -31,7 +46,7 @@ export function calculateResult(
       answerResult.submittedAnswer = response.submittedAnswer || "";
 
       answerResult.status = response.submittedAnswer
-        ? response.submittedAnswer === question.correctAnswer
+        ? response.submittedAnswer === question.answer
           ? "cor"
           : "inc"
         : "na";

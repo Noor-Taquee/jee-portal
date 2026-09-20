@@ -1,7 +1,7 @@
 import { createContext } from "react";
 
 import type { ExamData } from "../../core/data";
-import type { ResponseData } from "../../services";
+import type { ResponseData } from "../../core/response";
 
 export type ExamSession = {
   /** Timestamp of the instance when exam started. */

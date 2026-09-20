@@ -1,6 +1,6 @@
 import "./style.css";
 
-import type { ResultMarks } from "../../../../services/result";
+import type { ResultMarks } from "../../../../core/result";
 
 import VerticalTable from "../../../../components/VerticalTable";
 

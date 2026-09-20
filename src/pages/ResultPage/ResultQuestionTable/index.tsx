@@ -1,6 +1,6 @@
 import "./style.css";
 
-import type { ResultData } from "../../../services/result";
+import type { ResultData } from "../../../core/result";
 
 import VerticalTable from "../../../components/VerticalTable";
 import TableRow from "./TableRow";

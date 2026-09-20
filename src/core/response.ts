@@ -1,4 +1,4 @@
-import type { OptionID, QuestionData } from "../core/data";
+import type { OptionID, QuestionData } from "./data";
 
 export type ResponseData = Map<number, AnswerResponse>;
 
