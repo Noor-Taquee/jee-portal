@@ -1,4 +1,4 @@
-import type { AnswerResult } from "../../../services/result";
+import type { AnswerResult } from "../../../core/result";
 
 interface TableRowProps {
   answerResult: AnswerResult;

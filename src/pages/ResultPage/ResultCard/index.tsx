@@ -1,4 +1,4 @@
-import { calculateMarks, type ResultData } from "../../../services/result";
+import { calculateMarks, type ResultData } from "../../../core/result";
 import "./style.css";
 
 import ResultSubjectTable from "./ResultSubjectTable";

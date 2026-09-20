@@ -3,7 +3,7 @@ import "./style.css";
 import { useExamSession } from "../../hooks/useExamSession";
 
 import { changeHash } from "../../hooks/useHash";
-import { calculateResult } from "../../services/result";
+import { calculateResult } from "../../core/result";
 
 import ResultCard from "./ResultCard";
 import ResultQuestionTable from "./ResultQuestionTable";

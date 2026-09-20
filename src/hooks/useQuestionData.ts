@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getQuestions, type ExamData } from "../core/data";
-import type { AnswerResponse, ResponseData } from "../services";
+import type { AnswerResponse, ResponseData } from "../core/response";
 
 export function useQuestionData(): [
   typeof questionData,

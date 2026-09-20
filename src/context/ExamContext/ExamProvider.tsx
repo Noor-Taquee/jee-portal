@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { ExamContext, type ExamSession } from ".";
 
-import type { ResponseData } from "../../services";
+import type { ResponseData } from "../../core/response";
 import type { ExamData } from "../../core/data";
 
 interface ExamProviderProps {
