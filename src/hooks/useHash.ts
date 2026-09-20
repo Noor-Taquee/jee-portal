@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 /** Changes the URL hash. ` "#" ` is automatically prepended if not present. */
-export function changeHash(newHash: string) {
+export function changeHash(newHash: Route) {
   window.location.hash = newHash.startsWith("#") ? newHash : "#" + newHash;
 }
 
