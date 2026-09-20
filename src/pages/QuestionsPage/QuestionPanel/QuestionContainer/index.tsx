@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useSettings } from "../../../../hooks/useSettings";
 import { useExamSession } from "../../../../hooks/useExamSession";
 
-import type { OptionID, QuestionData } from "../../../../core/data";
+import type { OptionID, QuestionData } from "../../../../core/question";
 
 import QuestionCard from "./QuestionCard";
 import OptionsContainer from "./OptionsContainer";

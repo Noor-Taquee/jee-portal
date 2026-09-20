@@ -1,5 +1,5 @@
 import type { ResponseData } from "./response";
-import type { QuestionData } from "./data";
+import type { QuestionData } from "./question";
 
 export type AnswerResult = {
   id: number;

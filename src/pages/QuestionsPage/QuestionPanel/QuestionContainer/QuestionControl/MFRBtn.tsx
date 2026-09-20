@@ -1,4 +1,4 @@
-import type { OptionID } from "../../../../../core/data";
+import type { OptionID } from "../../../../../core/question";
 
 import ActionBtn from "../../../../../components/ActionBtn";
 import { useExamSession } from "../../../../../hooks/useExamSession";

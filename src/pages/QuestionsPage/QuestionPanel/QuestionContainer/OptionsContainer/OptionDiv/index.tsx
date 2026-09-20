@@ -1,4 +1,4 @@
-import type { OptionData, OptionID } from "../../../../../../core/data";
+import type { OptionData, OptionID } from "../../../../../../core/question";
 
 import "./style.css";
 

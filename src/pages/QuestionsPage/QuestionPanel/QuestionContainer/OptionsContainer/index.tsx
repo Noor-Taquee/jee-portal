@@ -1,9 +1,9 @@
-import type { OptionData } from "../../../../../core/data";
+import type { OptionData } from "../../../../../core/question";
 
 import "./style.css";
 
 import OptionDiv from "./OptionDiv";
-import type { OptionID } from "../../../../../core/data";
+import type { OptionID } from "../../../../../core/question";
 
 interface OptionsContainerProps {
   options: OptionData[];
