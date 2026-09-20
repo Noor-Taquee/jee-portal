@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getQuestions, type ExamData } from "../core/data";
+import { getQuestions, type ExamData } from "../core/question";
 import type { AnswerResponse, ResponseData } from "../core/response";
 
 export function useQuestionData(): [

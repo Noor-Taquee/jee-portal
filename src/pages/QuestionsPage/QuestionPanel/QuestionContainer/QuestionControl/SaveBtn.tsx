@@ -1,6 +1,6 @@
 import { useExamSession } from "../../../../../hooks/useExamSession";
 
-import type { OptionID } from "../../../../../core/data";
+import type { OptionID } from "../../../../../core/question";
 
 import ActionBtn from "../../../../../components/ActionBtn";
 import { ChevronRight } from "lucide-react";

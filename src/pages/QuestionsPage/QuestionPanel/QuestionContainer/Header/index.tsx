@@ -1,4 +1,4 @@
-import type { QuestionData } from "../../../../../core/data";
+import type { QuestionData } from "../../../../../core/question";
 
 import "./style.css";
 

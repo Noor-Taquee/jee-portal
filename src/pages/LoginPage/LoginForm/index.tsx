@@ -5,7 +5,7 @@ import "./style.css";
 import { useState } from "react";
 import { useExamSession } from "../../../hooks/useExamSession";
 
-import { getQuestions } from "../../../core/data";
+import { getQuestions } from "../../../core/question";
 import { generateResponse } from "../../../core/response";
 import { changeHash } from "../../../hooks/useHash";
 

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { ExamContext, type ExamSession } from ".";
 
 import type { ResponseData } from "../../core/response";
-import type { ExamData } from "../../core/data";
+import type { ExamData } from "../../core/question";
 
 interface ExamProviderProps {
   children: React.ReactNode;

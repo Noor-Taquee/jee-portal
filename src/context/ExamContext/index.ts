@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-import type { ExamData } from "../../core/data";
+import type { ExamData } from "../../core/question";
 import type { ResponseData } from "../../core/response";
 
 export type ExamSession = {
