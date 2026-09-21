@@ -1,3 +1,4 @@
+// oxlint-disable max-lines-per-function
 import type { ResponseData } from "./response";
 import type { QuestionData } from "./question";
 
@@ -27,11 +28,26 @@ export interface TestResult {
   responses: AnswerResult[];
 }
 
-export function calculateResult(
-  responseData: ResponseData,
-  questionData: QuestionData[]
-): ResultData {
-  return questionData.map((question) => {
+export function getResult(
+  questionData: QuestionData[],
+  responseData: ResponseData
+) {
+  const testResult: TestResult = {
+    paperId: 0,
+    paperTitle: "",
+    completedAt: 0,
+    timeTakenSeconds: 0,
+    totalMarks: 0,
+    maxMarks: 300,
+    subjectScores: {
+      physics: 0,
+      chemistry: 0,
+      maths: 0,
+    },
+    responses: [],
+  };
+
+  questionData.forEach((question) => {
     const answerResult: AnswerResult = {
       id: question.id,
       subject: question.subject,
@@ -56,10 +72,24 @@ export function calculateResult(
           ? 0
           : answerResult.status === "cor"
             ? 4
-            : -1;
+            : question.type === "numerical"
+              ? 0
+              : -1;
     }
-    return answerResult;
+
+    testResult.totalMarks += answerResult.marks;
+    if (answerResult.subject === "Physics") {
+      testResult.subjectScores.physics += answerResult.marks;
+    } else if (answerResult.subject === "Mathematics") {
+      testResult.subjectScores.maths += answerResult.marks;
+    } else if (answerResult.subject === "Chemistry") {
+      testResult.subjectScores.chemistry += answerResult.marks;
+    }
+
+    testResult.responses.push(answerResult);
   });
+
+  return testResult;
 }
 
 export type ResultMarks = [
@@ -68,15 +98,3 @@ export type ResultMarks = [
   MathsMarks: number,
   TotalMarks: number,
 ];
-
-export function calculateMarks(resultData: ResultData): ResultMarks {
-  let [p, c, m] = [0, 0, 0];
-
-  resultData.forEach((res) => {
-    if (res.subject === "Physics") p += res.marks;
-    else if (res.subject === "Chemistry") c += res.marks;
-    else if (res.subject === "Mathematics") m += res.marks;
-  });
-
-  return [p, c, m, p + c + m];
-}

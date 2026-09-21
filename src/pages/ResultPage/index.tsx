@@ -3,7 +3,7 @@ import "./style.css";
 import { useExamSession } from "../../hooks/useExamSession";
 
 import { changeHash } from "../../hooks/useHash";
-import { calculateResult } from "../../core/result";
+import { getResult } from "../../core/result";
 
 import ResultCard from "./ResultCard";
 import ResultQuestionTable from "./ResultQuestionTable";
@@ -16,9 +16,9 @@ export default function ResultPage() {
     return <div className="app-panel"></div>;
   }
 
-  const resultData = calculateResult(
-    examSession.candidateResponse,
-    examSession.examData.questions
+  const testResult = getResult(
+    examSession.examData.questions,
+    examSession.candidateResponse
   );
 
   return (
@@ -26,8 +26,8 @@ export default function ResultPage() {
       className="app-panel"
       id="result-page"
     >
-      <ResultCard resultData={resultData} />
-      <ResultQuestionTable resultData={resultData} />
+      <ResultCard testResult={testResult} />
+      <ResultQuestionTable testResult={testResult} />
     </div>
   );
 }
