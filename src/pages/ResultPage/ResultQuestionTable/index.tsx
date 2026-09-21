@@ -1,17 +1,15 @@
 import "./style.css";
 
-import type { ResultData } from "../../../core/result";
+import type { TestResult } from "../../../core/result";
 
 import VerticalTable from "../../../components/VerticalTable";
 import TableRow from "./TableRow";
 
-interface ResultQuestionTableProps {
-  resultData: ResultData;
+interface Props {
+  testResult: TestResult;
 }
 
-export default function ResultQuestionTable({
-  resultData,
-}: ResultQuestionTableProps) {
+export default function ResultQuestionTable({ testResult }: Props) {
   return (
     <div id="result-question-table-wrapper">
       <VerticalTable id="result-question-table">
@@ -22,7 +20,7 @@ export default function ResultQuestionTable({
           <span className="correct-col table-col">Correct Answer</span>
           <span className="marks-col table-col">Marks</span>
         </div>
-        {resultData.map((answerResult) => (
+        {testResult.responses.map((answerResult) => (
           <TableRow
             answerResult={answerResult}
             key={`result-${answerResult.id}`}
