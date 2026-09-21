@@ -28,10 +28,7 @@ export default function NavigationBar({ panel }: NavigationBarProps) {
         expanded={expanded}
         setExpanded={setExpanded}
       />
-      <ButtonContainer
-        expanded={expanded}
-        panel={panel}
-      />
+      <ButtonContainer panel={panel} />
       {user && (expanded ? <AccountButton /> : <Avatar />)}
     </div>
   );

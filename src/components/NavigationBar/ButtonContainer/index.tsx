@@ -8,12 +8,11 @@ import { HomeIcon } from "lucide-react";
 const navButtons: [text: string, route: Route, icon: () => React.ReactNode][] =
   [["home", "home", () => <HomeIcon />]];
 
-interface ButtonContainerProps {
-  expanded: boolean;
+type Props = {
   panel: Route;
-}
+};
 
-export default function ButtonContainer({ panel }: ButtonContainerProps) {
+export default function ButtonContainer({ panel }: Props) {
   return (
     <div id="navigation-btn-div">
       {navButtons.map((stack) => (
