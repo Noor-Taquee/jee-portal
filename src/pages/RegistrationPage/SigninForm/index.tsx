@@ -80,12 +80,13 @@ export default function SigninForm() {
               if (usernameError) setUsernameError("");
             }}
           />
-          <span
-            className="icon-holder trailing"
+          <button
+            type="button"
+            className="in-input-btn"
             onClick={() => setShowPass((p) => !p)}
           >
             {showPass ? <EyeIcon /> : <EyeOffIcon />}
-          </span>
+          </button>
         </InputArea>
 
         <button
