@@ -1,0 +1,41 @@
+#register-button {
+  cursor: pointer;
+  touch-action: manipulation;
+
+  width: fit-content;
+  height: fit-content;
+
+  margin: auto auto 0;
+  padding: 12px;
+
+  border: 1px solid var(--accent-1);
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  transition: background-color 200ms ease-out;
+
+  p {
+    font: var(--text-1);
+    font-weight: 400;
+    color: var(--accent-1);
+  }
+  .lucide {
+    stroke: var(--accent-1);
+    stroke-width: 1.4;
+    --size: 22px;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: var(--accent-1);
+    p {
+      color: var(--bg-p-1);
+    }
+    .lucide {
+      stroke: var(--bg-p-1);
+    }
+  }
+}
