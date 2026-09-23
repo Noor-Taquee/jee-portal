@@ -1,0 +1,16 @@
+#no-user-content {
+  justify-content: center;
+  align-items: center;
+
+  #exam-countdown-box {
+    zoom: 1.4;
+
+    > .header {
+      margin: 0 auto;
+    }
+  }
+
+  #register-button {
+    margin: 48px auto;
+  }
+}
