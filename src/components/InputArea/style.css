@@ -1,18 +1,27 @@
 .input-area {
+  --innner-height: 44px;
+
   position: relative;
+
+  min-width: 0;
 
   display: flex;
   flex-direction: column;
+  gap: 4px;
 
   > .label {
-    margin: 6px;
+    margin: 4px;
     font: var(--text-1);
+    font-weight: 400;
   }
 
   > .error-text {
-    margin: 4px;
     font: var(--text-2);
     color: var(--inc-color-1);
+  }
+
+  &:has(.error-text) .input-box {
+    border-color: var(--inc-color-1);
   }
 }
 
@@ -20,7 +29,7 @@
   position: relative;
 
   width: 100%;
-  height: 44px;
+  height: var(--innner-height);
 
   border: var(--border-1);
   border-width: 2px;
@@ -29,7 +38,11 @@
   display: flex;
   align-items: center;
 
-  .icon-holder {
+  &:focus-within {
+    border-color: var(--color-1);
+  }
+
+  > .icon-holder {
     flex-shrink: 0;
     width: 10%;
 
@@ -39,21 +52,50 @@
     .lucide {
       --size: 22px;
     }
-
-    &.trailing {
-      cursor: pointer;
-    }
   }
 
   input {
     flex-grow: 1;
+    width: 100%;
+    min-width: 0;
     height: 100%;
 
     outline: none;
+    border: none;
 
     background-color: transparent;
     color: var(--color-1);
 
     font: var(--text-1);
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0px 1000px var(--bg-p-1) inset !important;
+      -webkit-text-fill-color: var(--color-1) !important;
+    }
+  }
+
+  > .in-input-btn {
+    --margin: 6px;
+
+    cursor: pointer;
+    touch-action: manipulation;
+
+    aspect-ratio: 1 / 1;
+    height: calc(var(--innner-height) - (2 * var(--margin)) - 4px);
+
+    margin: var(--margin);
+
+    border-radius: 4px;
+
+    display: grid;
+    place-items: center;
+
+    &:focus,
+    &:hover {
+      background-color: var(--bg-p-2);
+    }
   }
 }
