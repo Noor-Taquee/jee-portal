@@ -37,8 +37,14 @@ function normalize(rawHash: string): NormalizedHash {
   return [location, attributes];
 }
 
-const routes = ["login", "question", "result"] as const;
-const defaultRoute: Route = "login";
+export const routes = [
+  "home",
+  "registration",
+  "login",
+  "question",
+  "result",
+] as const;
+const defaultRoute: Route = "registration";
 
 export type Route = (typeof routes)[number];
 
