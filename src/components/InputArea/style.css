@@ -10,6 +10,7 @@
   }
 
   > .error-text {
+    margin: 4px;
     font: var(--text-2);
     color: var(--inc-color-1);
   }

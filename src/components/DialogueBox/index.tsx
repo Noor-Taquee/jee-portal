@@ -19,7 +19,7 @@ export default function DialogueBox({
       <p className="dialogue-header">{header}</p>
       <p className="dialogue-text">
         {texts.map((message, i) => (
-          <p key={`message-${i}`}>{message}</p>
+          <span key={`message-${i}`}>{message}</span>
         ))}
       </p>
       <div id="dialogue-box-btns">{children}</div>
