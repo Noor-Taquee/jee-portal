@@ -1,0 +1,31 @@
+#analytics-panel {
+  width: 100%;
+  height: fit-content;
+
+  margin: 24px 0;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.analytics-card {
+  width: 180px;
+  height: 84px;
+
+  padding: 8px;
+
+  border: var(--border-1);
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: var(--bg-p-2);
+
+  > .header {
+    font: var(--text-1);
+    font-weight: 400;
+  }
+}
