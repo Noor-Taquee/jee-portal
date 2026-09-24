@@ -36,30 +36,22 @@ export default function RegistrationPage() {
       className="app-panel"
     >
       {method === "signin" ? <SigninForm /> : <SignupForm />}
-      {method === "signin" && (
-        <div className="change-method-container">
-          <p className="change-method-text">{"Don't have an account?"}</p>
-          <button
-            className="change-method-button"
-            onClick={() => setMethod("signup")}
-          >
-            <span>Create Account</span>
-            <ArrowRight />
-          </button>
-        </div>
-      )}
-      {method === "signup" && (
-        <div className="change-method-container">
-          <p className="change-method-text">Already have an account?</p>
-          <button
-            className="change-method-button"
-            onClick={() => setMethod("signin")}
-          >
-            <span>Sign in</span>
-            <ArrowRight />
-          </button>
-        </div>
-      )}
+      <div className="change-method-container">
+        <p className="change-method-text">
+          {method === "signin"
+            ? "Don't have an account?"
+            : "Already have an account?"}
+        </p>
+        <button
+          className="change-method-button"
+          onClick={() =>
+            setMethod((p) => (p === "signup" ? "signin" : "signup"))
+          }
+        >
+          <span>{method === "signin" ? "Create Account" : "Sign in"}</span>
+          <ArrowRight />
+        </button>
+      </div>
     </div>
   );
 }
