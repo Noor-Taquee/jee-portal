@@ -8,6 +8,12 @@ export type ExamSession = {
   startedAt: Date | undefined;
   setStartedAt: React.Dispatch<React.SetStateAction<ExamSession["startedAt"]>>;
 
+  /** Timestamp of the instance when exam completed. */
+  completedAt: Date | undefined;
+  setCompletedAt: React.Dispatch<
+    React.SetStateAction<ExamSession["completedAt"]>
+  >;
+
   /** Question data and metadata for the current exam. */
   examData: ExamData | undefined;
   setExamData: React.Dispatch<React.SetStateAction<ExamSession["examData"]>>;
@@ -22,6 +28,8 @@ export type ExamSession = {
 export const defaultTestData: ExamSession = {
   startedAt: undefined,
   setStartedAt: () => {},
+  completedAt: undefined,
+  setCompletedAt: () => {},
   examData: undefined,
   setExamData: () => {},
   candidateResponse: undefined,
