@@ -50,12 +50,7 @@ export default function RegistrationPage() {
       )}
       {method === "signup" && (
         <div className="change-method-container">
-          <p
-            className="change-method-text"
-            onClick={() => setMethod("signup")}
-          >
-            Already have an account?
-          </p>
+          <p className="change-method-text">Already have an account?</p>
           <button
             className="change-method-button"
             onClick={() => setMethod("signin")}
