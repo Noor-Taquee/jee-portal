@@ -13,7 +13,7 @@
     "preview": "vite preview",
     "format:check": "prettier --check src/",
     "format:fix": "prettier --write src/",
-    "lint:check": "oxlint",
+    "lint:check": "tsc -b --noEmit && oxlint",
     "lint:fix": "oxlint --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
