@@ -14,9 +14,9 @@ import QuestionControl from "./QuestionControl";
 import Numpad from "../../../../components/Numpad";
 import Header from "./Header";
 
-interface QuestionContainerProps {
+interface Props {
   questionNo: number;
-  setQuestionNo: React.Dispatch<React.SetStateAction<number>>;
+  setQuestionNo: (n: number) => void;
   question: QuestionData | undefined;
 }
 
@@ -25,7 +25,7 @@ export default function QuestionContainer({
   questionNo,
   setQuestionNo,
   question,
-}: QuestionContainerProps) {
+}: Props) {
   const appSettings = useSettings();
   const examSession = useExamSession();
 
