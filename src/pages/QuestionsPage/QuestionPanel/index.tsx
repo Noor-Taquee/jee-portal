@@ -8,7 +8,7 @@ import QuestionTable from "./QuestionTable";
 
 interface Props {
   questionNo: number;
-  setQuestionNo: React.Dispatch<React.SetStateAction<Props["questionNo"]>>;
+  setQuestionNo: (n: number) => void;
 }
 
 export default function QuestionPanel({ questionNo, setQuestionNo }: Props) {

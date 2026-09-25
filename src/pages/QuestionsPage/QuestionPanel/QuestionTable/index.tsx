@@ -1,3 +1,4 @@
+// oxlint-disable max-lines-per-function
 import "./style.css";
 
 import { useState } from "react";
@@ -7,7 +8,7 @@ import QuestionBox from "../../../../components/QuestionBox";
 import ButtonWrapper from "./ButtonWrapper";
 
 interface QuestionTableProps {
-  setQuestionNo: React.Dispatch<React.SetStateAction<number>>;
+  setQuestionNo: (n: number) => void;
 }
 
 /** The panel which shows the questions */
@@ -44,7 +45,9 @@ export default function QuestionTable({ setQuestionNo }: QuestionTableProps) {
                         : "marked-for-review"
                       : "answered"
                     : "unanswered"
-                  : "unread"
+                  : i === 1
+                    ? "unanswered"
+                    : "unread"
               }
               number={i}
               onClick={() => setQuestionNo(i)}
