@@ -1,18 +1,15 @@
 import ActionBtn from "../../../components/ActionBtn";
-import { useExamSession } from "../../../hooks/useExamSession";
-import { changeHash } from "../../../hooks/useHash";
 
-export default function SubmitButton() {
-  const examSession = useExamSession();
+interface Props {
+  submitExam: () => void;
+}
 
+export default function SubmitButton({ submitExam }: Props) {
   return (
     <ActionBtn
       title="End test and submit response"
       className="submit-btn"
-      onClick={() => {
-        examSession.setCompletedAt(new Date());
-        changeHash("result");
-      }}
+      onClick={submitExam}
     >
       <p>Submit</p>
     </ActionBtn>

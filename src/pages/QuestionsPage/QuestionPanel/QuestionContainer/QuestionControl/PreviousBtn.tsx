@@ -3,7 +3,7 @@ import { ChevronLeft } from "lucide-react";
 
 interface PreviousBtnProps {
   questionNo: number;
-  setQuestionNo: React.Dispatch<React.SetStateAction<number>>;
+  setQuestionNo: (n: number) => void;
 }
 
 export default function PreviousBtn({
@@ -16,7 +16,7 @@ export default function PreviousBtn({
       className={`question-control-btn ${questionNo <= 1 ? "disabled" : ""}`}
       onClick={() => {
         if (questionNo <= 1) return;
-        setQuestionNo((p) => p - 1);
+        setQuestionNo(questionNo - 1);
       }}
     >
       <ChevronLeft />

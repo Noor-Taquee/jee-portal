@@ -5,12 +5,16 @@ import InstituteLogo from "../../../components/InstituteLogo";
 import Timer from "./Timer";
 import SubmitButton from "./SubmitButton";
 
-export default function Header() {
+interface Props {
+  submitExam: () => void;
+}
+
+export default function Header({ submitExam }: Props) {
   return (
     <div id="question-panel-header">
       <InstituteLogo />
       <Timer />
-      <SubmitButton />
+      <SubmitButton submitExam={submitExam} />
     </div>
   );
 }
