@@ -1,16 +1,18 @@
 import "./style.css";
 
-import { useState } from "react";
 import { useExamSession } from "../../../hooks/useExamSession";
 
 import InfoPanel from "./InfoPanel";
 import QuestionContainer from "./QuestionContainer";
 import QuestionTable from "./QuestionTable";
 
-export default function QuestionPanel() {
-  const examSession = useExamSession();
+interface Props {
+  questionNo: number;
+  setQuestionNo: React.Dispatch<React.SetStateAction<Props["questionNo"]>>;
+}
 
-  const [questionNo, setQuestionNo] = useState<number>(1);
+export default function QuestionPanel({ questionNo, setQuestionNo }: Props) {
+  const examSession = useExamSession();
 
   if (!examSession.examData) return <div></div>;
 

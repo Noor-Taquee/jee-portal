@@ -1,5 +1,6 @@
 import "./style.css";
 
+import { useState } from "react";
 import { changeHash } from "../../hooks/useHash";
 import { useExamSession } from "../../hooks/useExamSession";
 
@@ -8,6 +9,8 @@ import Header from "./Header";
 
 export default function QuestionsPage() {
   const examSession = useExamSession();
+
+  const [questionNo, setQuestionNo] = useState<number>(1);
 
   if (!examSession.examData || !examSession.startedAt) {
     return (
@@ -45,7 +48,10 @@ export default function QuestionsPage() {
       id="questions-page"
     >
       <Header />
-      <QuestionPanel />
+      <QuestionPanel
+        questionNo={questionNo}
+        setQuestionNo={setQuestionNo}
+      />
     </div>
   );
 }
