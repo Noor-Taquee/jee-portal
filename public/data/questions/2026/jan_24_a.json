@@ -1,0 +1,951 @@
+{
+  "$schema": "../../schema.json",
+  "metadata": {
+    "year": 2026,
+    "month": "January",
+    "day": 24,
+    "shift": 1,
+    "duration": 10800000
+  },
+  "questions": [
+    {
+      "id": 1,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If $\\cot x = \\frac{12}{5}$, for $x \\in \\left(\\pi, \\frac{3\\pi}{2}\\right)$, then $\\sin 7x \\left( \\cos \\frac{1}{2} 3x + \\sin \\frac{1}{2} 3x \\right) + \\cos 7x \\left( \\cos \\frac{13x}{2} - \\sin \\frac{13x}{2} \\right)$ is equal to",
+      "options": [
+        { "id": "A", "content": "$\\frac{13}{26}$" },
+        { "id": "B", "content": "$\\frac{1}{13}$" },
+        { "id": "C", "content": "$\\frac{5}{26}$" },
+        { "id": "D", "content": "$\\frac{6}{26}$" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 2,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $S = \\frac{1}{25!} + \\frac{1}{3!23!} + \\frac{1}{5!21!} + \\dots$ up to 13 terms[cite: 4]. If $13!S = \\frac{2^k}{n!+k}$, $k \\in \\mathbb{N}$, then $n+k$ is equal to",
+      "options": [
+        { "id": "A", "content": "49" },
+        { "id": "B", "content": "51" },
+        { "id": "C", "content": "50" },
+        { "id": "D", "content": "52" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 3,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let each of the two ellipses $E_1 : \\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1, (a > b)$ and $E_2 : \\frac{x^2}{A^2} + \\frac{y^2}{B^2} = 1, (A < B)$ have eccentricity $\\frac{1}{5}$[cite: 4]. Let the lengths of the latus recta of $E_1$ and $E_2$ be $l_1$ and $l_2$, respectively, such that $2l_1^2 = 9l_2$[cite: 4]. If the distance between the foci of $E_1$ is 8, then the distance between the foci of $E_2$ is",
+      "options": [
+        { "id": "A", "content": "$\\frac{5}{8}$" },
+        { "id": "B", "content": "$\\frac{5}{32}$" },
+        { "id": "C", "content": "$\\frac{5}{16}$" },
+        { "id": "D", "content": "$\\frac{5}{96}$" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 4,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If the domain of the function $f(x) = \\log_{(18x^2 - 11x + 1)} (10x^2 - 17x + 7)$ is $(-\\infty, a) \\cup (b, c) \\cup (d, \\infty) - \\{e\\}$, then $90(a + b + c + d + e)$ equals:",
+      "options": [
+        { "id": "A", "content": "307" },
+        { "id": "B", "content": "177" },
+        { "id": "C", "content": "170" },
+        { "id": "D", "content": "316" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 5,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The value of $(\\cos 20^\\circ \\cos 40^\\circ \\cos 60^\\circ \\cos 80^\\circ) (\\sqrt{3} \\csc 20^\\circ - \\sec 20^\\circ)$ is equal to",
+      "options": [
+        { "id": "A", "content": "64" },
+        { "id": "B", "content": "16" },
+        { "id": "C", "content": "12" },
+        { "id": "D", "content": "32" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 6,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $A(1, 0)$, $B(2, -1)$ and $C\\left(\\frac{7}{3}, \\frac{4}{3}\\right)$ be three points. If the equation of the bisector of the angle $\\angle ABC$ is $\\alpha x + \\beta y = 5$, then the value of $\\alpha^2 + \\beta^2$ is ($\\alpha, \\beta \\in \\mathbb{R}$)",
+      "options": [
+        { "id": "A", "content": "5" },
+        { "id": "B", "content": "10" },
+        { "id": "C", "content": "13" },
+        { "id": "D", "content": "8" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 7,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $\\alpha, \\beta \\in \\mathbb{R}$ be such that the function $f(x) = \\begin{cases} 2\\alpha(x - 2)^2 + 2\\beta x^2, & x < 1 \\\\ (\\alpha + 3)x + (\\alpha - \\beta), & x \\ge 1 \\end{cases}$ be differentiable at all $x \\in \\mathbb{R}$. Then $34(\\alpha + \\beta)$ is equal to",
+      "options": [
+        { "id": "A", "content": "24" },
+        { "id": "B", "content": "84" },
+        { "id": "C", "content": "36" },
+        { "id": "D", "content": "48" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 8,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $S = \\left\\{z \\in \\mathbb{C} : \\left|\\frac{z-2i}{z+2i}\\right| = 1, \\left|\\frac{z-6i}{z-8+2i}\\right| = \\frac{5}{3}\\right\\}$. Then $\\sum_{z \\in S} |z|^2$ is equal to",
+      "options": [
+        { "id": "A", "content": "413" },
+        { "id": "B", "content": "398" },
+        { "id": "C", "content": "423" },
+        { "id": "D", "content": "385" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 9,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Consider an A.P.: $a_1, a_2, \\dots, a_n$; $a_1 > 0$[cite: 4]. If $a_2 - a_1 = 4$, $\\sum_{i=1}^{n} a_i^2 = 525$, and $\\sum_{i=1}^{17} a_i = 107$, then $a_4$ is equal to",
+      "options": [
+        { "id": "A", "content": "952" },
+        { "id": "B", "content": "476" },
+        { "id": "C", "content": "238" },
+        { "id": "D", "content": "136" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 10,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If the function $f(x) = \\frac{e^{\\tan x - x} - 1 + \\log(\\sec x + \\tan x) - x}{x(\\tan x - x)e^x}$ is continuous at $x = 0$, then the value of $f(0)$ is equal to",
+      "options": [
+        { "id": "A", "content": "$\\frac{1}{2}$" },
+        { "id": "B", "content": "2" },
+        { "id": "C", "content": "$\\frac{3}{2}$" },
+        { "id": "D", "content": "$\\frac{2}{3}$" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 11,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "From a lot containing 10 defective and 90 non-defective bulbs, 8 bulbs are selected one by one with replacement[cite: 4]. Then the probability of getting at least 7 defective bulbs is",
+      "options": [
+        { "id": "A", "content": "$\\frac{73}{10^8}$" },
+        { "id": "B", "content": "$\\frac{108}{10^8}$" },
+        { "id": "C", "content": "$\\frac{81}{10^8}$" },
+        { "id": "D", "content": "$\\frac{67}{10^8}$" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 12,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The number of the real solutions of the equation $x |x + 3| + |x - 1| - 2 = 0$ is",
+      "options": [
+        { "id": "A", "content": "4" },
+        { "id": "B", "content": "2" },
+        { "id": "C", "content": "3" },
+        { "id": "D", "content": "5" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 13,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let the lines $L_1 : \\vec{r} = \\hat{i} + 2\\hat{j} + 3\\hat{k} + \\lambda(2\\hat{i} + 3\\hat{j} + 4\\hat{k}), \\lambda \\in \\mathbb{R}$ and $L_2 : \\vec{r} = (4\\hat{i} + \\hat{j}) + \\mu(5\\hat{i} + 2\\hat{j} + \\hat{k}), \\mu \\in \\mathbb{R}$ intersect at the point R[cite: 4]. Let P and Q be the points lying on lines $L_1$ and $L_2$, respectively, such that $|PR| = 2$ and $|PQ| = 3$[cite: 4]. If the point P lies in the first octant, then $27(QR)^2$ is equal to",
+      "options": [
+        { "id": "A", "content": "320" },
+        { "id": "B", "content": "340" },
+        { "id": "C", "content": "360" },
+        { "id": "D", "content": "348" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 14,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $\\vec{a} = 2\\hat{i} + \\hat{j} - 2\\hat{k}$, $\\vec{b} = \\hat{i} + \\hat{j}$ and $\\vec{c} = \\vec{a} \\times \\vec{b}$[cite: 4]. Let $\\vec{d}$ be a vector such that $|\\vec{d} - \\vec{a}| = 11$, $|\\vec{c} \\times \\vec{d}| = 3|\\vec{c}|$ and the angle between $\\vec{c}$ and $\\vec{d}$ is $\\frac{\\pi}{4}$[cite: 4]. Then $\\vec{a} \\cdot \\vec{d}$ is equal to",
+      "options": [
+        { "id": "A", "content": "1" },
+        { "id": "B", "content": "0" },
+        { "id": "C", "content": "11" },
+        { "id": "D", "content": "3" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 15,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $729, 81, 9, 1, \\dots$ be a sequence and denote $P_n$ the product of the first $n$ terms of this sequence[cite: 4]. If $\\sum_{n=1}^{40} P_n = \\frac{1}{3^\\alpha} (3^\\beta - 1)$ and $\\gcd(\\alpha, \\beta) = 1$, then $\\alpha + \\beta$ is equal to",
+      "options": [
+        { "id": "A", "content": "76" },
+        { "id": "B", "content": "73" },
+        { "id": "C", "content": "74" },
+        { "id": "D", "content": "75" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 16,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $R$ be a relation defined on the set $\\{1, 2, 3, 4\\} \\times \\{1, 2, 3, 4\\}$ by $R = \\{((a, b), (c, d)) : 2a + 3b = 3c + 4d\\}$[cite: 4]. Then the number of elements in $R$ is",
+      "options": [
+        { "id": "A", "content": "6" },
+        { "id": "B", "content": "15" },
+        { "id": "C", "content": "18" },
+        { "id": "D", "content": "12" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 17,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $A_1$ be the bounded area enclosed by the curves $y = x^2 + 2$, $x + y = 8$, and $y$-axis that lies in the first quadrant[cite: 4]. Let $A_2$ be the bounded area enclosed by the curves $y = x^2 + 2$, $y^2 = x$, $x = 2$, and $y$-axis that lies in the first quadrant[cite: 4]. Then $A_1 - A_2$ is equal to",
+      "options": [
+        { "id": "A", "content": "$\\frac{1}{3}(1 + 2\\sqrt{2})$" },
+        { "id": "B", "content": "$\\frac{1}{3}(3 + 2\\sqrt{2})$" },
+        { "id": "C", "content": "$\\frac{1}{3}(4 + 2\\sqrt{2})$" },
+        { "id": "D", "content": "$\\frac{1}{3}(2 + 2\\sqrt{2})$" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 18,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $f(t) = \\int \\left( \\frac{e^t - \\cos(\\log_e t)}{e^t - \\sin(\\log_e t)} \\right) dt$, for $t > 1$[cite: 4]. If $f(e^{\\pi/2}) = -e^{\\pi/2}$ and $f(e^{\\pi/4}) = \\alpha e^{\\pi/4}$, then find the value of $\\alpha$[cite: 4].",
+      "options": [
+        { "id": "A", "content": "$-1 - 2\\sqrt{2}$" },
+        { "id": "B", "content": "$-1 + \\sqrt{2}$" },
+        { "id": "C", "content": "$1 + \\sqrt{2}$" },
+        { "id": "D", "content": "$-1 - \\sqrt{2}$" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 19,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let a circle of radius 4 pass through the origin $O$, the points $A(-3a, 0)$ and $B(0, -2b)$, where $a$ and $b$ are real parameters and $ab \\neq 0$[cite: 4]. Then the locus of the centroid of $\\Delta OAB$ is a circle of radius",
+      "options": [
+        { "id": "A", "content": "$\\frac{3}{7}$" },
+        { "id": "B", "content": "$\\frac{5}{3}$" },
+        { "id": "C", "content": "$\\frac{8}{3}$" },
+        { "id": "D", "content": "$\\frac{11}{3}$" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 20,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The mean and variance of a data of 10 observations are 10 and 2, respectively[cite: 4]. If an observation in this data $\\alpha$ is replaced by $\\beta$, then the mean and variance become 10.2 and 1.99, respectively[cite: 4]. Then $\\alpha + \\beta$ equals",
+      "options": [
+        { "id": "A", "content": "15" },
+        { "id": "B", "content": "5" },
+        { "id": "C", "content": "20" },
+        { "id": "D", "content": "10" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 21,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "Let a differentiable function $f$ satisfy the equation $\\int_0^x f(t) dt = \\left(\\frac{36}{tx}\\right) 4\\alpha f(x)$[cite: 4]. If $y = f(x)$ is a standard parabola passing through the points $(2, 1)$ and $(-4, \\beta)$, then $\\frac{\\beta}{\\alpha}$ is equal to ____[cite: 4].",
+      "answer": 16
+    },
+    {
+      "id": 22,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "Let $(2\\alpha, \\alpha)$ be the largest interval in which the function $f(t) = t^2, t < 0$, is strictly decreasing[cite: 4]. Then the local maximum value of the function $g(x) = 2\\log_e|x-2| + \\frac{\\alpha x^2 + 4x - \\alpha}{|t+1|}, x > 2$, is ____[cite: 4]",
+      "answer": 1
+    },
+    {
+      "id": 23,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "Let a line $L$ passing through the point $P(1, 1, 1)$ be perpendicular to the lines $\\frac{x-4}{1} = \\frac{y-1}{1} = \\frac{z-1}{1}$ and $\\frac{x-17}{1} = \\frac{y-71}{0} = \\frac{z}{4}$[cite: 4]. Let the line $L$ intersect the $yz$-plane at the point $Q$[cite: 4]. Another line parallel to $L$ and passing through the point $S(1, 0, -1)$ intersects the $yz$-plane at the point $R$[cite: 4]. Then the square of the area of the parallelogram $PQRS$ is equal to ____[cite: 4].",
+      "answer": 14
+    },
+    {
+      "id": 24,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "The number of numbers greater than 5000, less than 9000 and divisible by 3, that can be formed using the digits $0, 1, 2, 5, 9$, if the repetition of the digits is allowed, is ____[cite: 4]",
+      "answer": 83
+    },
+    {
+      "id": 25,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "The number of matrices $A$ of size $3 \\times 2$, which can be formed using the elements of the set $\\{-2, -1, 0, 1, 2\\}$ such that the sum of all the diagonal elements of $A^T A$ is 5, is ____[cite: 4]",
+      "answer": 90
+    },
+    {
+      "id": 26,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A boy throws a ball into air at $45^\\circ$ from the horizontal to land it on a roof of a building of height $H$[cite: 4]. If the ball attains maximum height in 2 s and lands on the building in 3 s after launch, then value of $H$ is ______ m ($g = 10\\text{ m/s}^2$)[cite: 4].",
+      "options": [
+        { "id": "A", "content": "15" },
+        { "id": "B", "content": "10" },
+        { "id": "C", "content": "25" },
+        { "id": "D", "content": "20" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 27,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "The electrostatic potential in a charged spherical region of radius $r$ varies as $V = ar^3 + b$, where $a$ and $b$ are constants[cite: 4]. The total charge in the sphere of unit radius is $\\alpha \\times \\pi a \\epsilon_0$[cite: 4]. The value of $\\alpha$ is ____ .(permittivity of vacuum is $\\epsilon_0$)[cite: 4]",
+      "options": [
+        { "id": "A", "content": "-9" },
+        { "id": "B", "content": "-6" },
+        { "id": "C", "content": "-12" },
+        { "id": "D", "content": "-8" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 28,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Two electrons are moving in orbits of two hydrogen like atoms with speeds $3 \\times 10^5\\text{ m/s}$ and $2.5 \\times 10^5\\text{ m/s}$ respectively[cite: 4]. If the radii of these orbits are nearly same then the possible order of energy states are $n_1$ and $n_2$ respectively[cite: 4].",
+      "options": [
+        { "id": "A", "content": "8 and 10" },
+        { "id": "B", "content": "9 and 8" },
+        { "id": "C", "content": "10 and 12" },
+        { "id": "D", "content": "6 and 5" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 29,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "The exit surface of a prism with refractive index $\\sqrt{2}$ is coated with a material having refractive index $\\sqrt{3}$[cite: 4]. When this prism is set for minimum angle of deviation, it exactly meets the condition of critical angle[cite: 4]. The prism angle is ____[cite: 4].",
+      "options": [
+        { "id": "A", "content": "$60^\\circ$" },
+        { "id": "B", "content": "$45^\\circ$" },
+        { "id": "C", "content": "$15^\\circ$" },
+        { "id": "D", "content": "$30^\\circ$" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 30,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "For the series LCR circuit connected with a.c source as shown in the figure ($X_L = 70\\,\\Omega$, $X_C = 150\\,\\Omega$, $R = 60\\,\\Omega$, $V = 220\\text{ V}, 50\\text{ Hz}$), the power factor is $\\frac{\\alpha}{10}$[cite: 4]. The value of $\\alpha$ is ____[cite: 4].",
+      "options": [
+        { "id": "A", "content": "8" },
+        { "id": "B", "content": "10" },
+        { "id": "C", "content": "4" },
+        { "id": "D", "content": "6" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 31,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Match the following lists:\nList-I:\nA. Radio-wave\nB. Micro-wave\nC. Infrared-wave\nD. X-ray\n\nList-II:\nI. is produced by Magnetron valve\nII. due to change in the vibrational modes of atoms\nIII. due to inner shell electrons moving from higher energy level to lower energy level\nIV. due to rapid acceleration of electrons\n\nChoose the correct answer from the options given below:",
+      "options": [
+        { "id": "A", "content": "A-IV, B-I, C-II, D-III" },
+        { "id": "B", "content": "A-IV, B-II, C-I, D-III" },
+        { "id": "C", "content": "A-IV, B-III, C-I, D-II" },
+        { "id": "D", "content": "A-II, B-IV, C-III, D-I" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 32,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Match the LIST-I with LIST-II:\nList-I:\nA. Magnetic induction\nB. Magnetic flux\nC. Magnetic permeability\nD. Self inductance\n\nList-II:\nI. $[MLT^{-2}A^{-2}]$\nII. $[ML^2T^{-2}A^{-2}]$\nIII. $[ML^0T^{-2}A^{-1}]$\nIV. $[ML^2T^{-2}A^{-1}]$\n\nChoose the correct answer from the options given below:",
+      "options": [
+        { "id": "A", "content": "A-IV, B-III, C-I, D-II" },
+        { "id": "B", "content": "A-III, B-IV, C-I, D-II" },
+        { "id": "C", "content": "A-I, B-III, C-IV, D-II" },
+        { "id": "D", "content": "A-III, B-IV, C-II, D-I" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 33,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A brass wire of length 2 m and radius 1 mm at $27^\\circ\\text{C}$ is held taut between two rigid supports[cite: 4]. Initially it was cooled to a temperature of $-43^\\circ\\text{C}$ creating a tension $T$ in the wire[cite: 4]. The temperature to which the wire has to be cooled in order to increase the tension in it to $1.4T$, is ____ $^\\circ\\text{C}$[cite: 4].",
+      "options": [
+        { "id": "A", "content": "-80" },
+        { "id": "B", "content": "-86" },
+        { "id": "C", "content": "-71" },
+        { "id": "D", "content": "-65" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 34,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "There are three co-centric conducting spherical shells A, B and C of radii $a, b$ and $c$ respectively ($c > b > a$) and they are charged with charges $q_1, q_2$ and $q_3$ respectively[cite: 4]. The potentials of the spheres A, B and C respectively, are:",
+      "options": [
+        {
+          "id": "A",
+          "content": "$\\frac{1}{4\\pi\\epsilon_0}\\left(\\frac{q_1+q_2+q_3}{a}\\right), \\frac{1}{4\\pi\\epsilon_0}\\left(\\frac{q_1+q_2+q_3}{b}\\right), \\frac{1}{4\\pi\\epsilon_0}\\left(\\frac{q_1+q_2+q_3}{c}\\right)$"
+        },
+        {
+          "id": "B",
+          "content": "$\\frac{1}{4\\pi\\epsilon_0}\\left(\\frac{q_1}{a} + \\frac{q_2}{b} + \\frac{q_3}{c}\\right), \\frac{1}{4\\pi\\epsilon_0}\\left(\\frac{q_1+q_2}{b} + \\frac{q_3}{c}\\right), \\frac{1}{4\\pi\\epsilon_0}\\left(\\frac{q_1+q_2+q_3}{c}\\right)$"
+        },
+        {
+          "id": "C",
+          "content": "$\\frac{1}{4\\pi\\epsilon_0}\\left(\\frac{q_1}{a} + \\frac{q_2}{b} + \\frac{q_3}{c}\\right), \\frac{1}{4\\pi\\epsilon_0}\\left(\\frac{q_1+q_2+q_3}{b}\\right), \\frac{1}{4\\pi\\epsilon_0}\\left(\\frac{q_1+q_2+q_3}{c}\\right)$"
+        },
+        {
+          "id": "D",
+          "content": "$\\frac{1}{4\\pi\\epsilon_0}\\left(\\frac{q_1+q_2+q_3}{a}\\right), \\frac{1}{4\\pi\\epsilon_0}\\left(\\frac{q_1+q_2}{b} + \\frac{q_3}{c}\\right), \\frac{1}{4\\pi\\epsilon_0}\\left(\\frac{q_1}{a} + \\frac{q_2}{b} + \\frac{q_3}{c}\\right)$"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 35,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "An unpolarised light is incident at an interface of two dielectric media having refractive indices of 2 (incident medium) and $2\\sqrt{3}$ (medium) respectively[cite: 4]. To satisfy the condition that reflected and refracted rays are perpendicular to each other, the angle of incidence is ______[cite: 4].",
+      "options": [
+        { "id": "A", "content": "30" },
+        { "id": "B", "content": "$60^\\circ$" },
+        { "id": "C", "content": "$45^\\circ$" },
+        { "id": "D", "content": "$10^\\circ$" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 36,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Density of water at $4^\\circ\\text{C}$ and $20^\\circ\\text{C}$ are $1000\\text{ kg/m}^3$ and $998\\text{ kg/m}^3$ respectively[cite: 4]. The increase in internal energy of 4 kg of water when it is heated from $4^\\circ\\text{C}$ to $20^\\circ\\text{C}$ is ____ J[cite: 4]. (specific heat capacity of water $= 4.2\\text{ J/kg}^\\circ\\text{C}$ and 1 atmospheric pressure $= 10^5\\text{ Pa}$)[cite: 4]",
+      "options": [
+        { "id": "A", "content": "234699.2" },
+        { "id": "B", "content": "268799.2" },
+        { "id": "C", "content": "258700.8" },
+        { "id": "D", "content": "315826.2" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 37,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A spring of force constant $15\\text{ N/m}$ is cut into two pieces[cite: 4]. If the ratio of their length is $1 : 3$, then the force constant of smaller piece is ____ N/m[cite: 4].",
+      "options": [
+        { "id": "A", "content": "20" },
+        { "id": "B", "content": "60" },
+        { "id": "C", "content": "15" },
+        { "id": "D", "content": "45" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 38,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Two masses 400 g and 350 g are suspended from the ends of a light string passing over a heavy pulley of radius 10 cm[cite: 4]. When released from rest the heavier mass is observed to fall 81 cm in 9 s[cite: 4]. The rotational inertia of the pulley is ____ $\\text{kg}\\cdot\\text{m}^2$ ($g = 9.8\\text{ m/s}^2$)[cite: 4].",
+      "options": [
+        { "id": "A", "content": "$4.75 \\times 10^{-3}$" },
+        { "id": "B", "content": "$8.3 \\times 10^{-3}$" },
+        { "id": "C", "content": "$9.7 \\times 10^{-3}$" },
+        { "id": "D", "content": "$1.86 \\times 10^{-2}$" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 39,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Given below are two statements:\nStatement I: For all elements, greater the mass of the nucleus, greater is the binding energy per nucleon[cite: 4].\nStatement II: For all elements, nuclei with less binding energy per nucleon transforms to nuclei with greater binding energy per nucleon[cite: 4].\nIn the light of the above statements, choose the correct answer from the options given below.",
+      "options": [
+        {
+          "id": "A",
+          "content": "Statement I is true but Statement II is false"
+        },
+        { "id": "B", "content": "Both Statement I and Statement II are false" },
+        {
+          "id": "C",
+          "content": "Statement I is false but Statement II is true"
+        },
+        { "id": "D", "content": "Both Statement I and Statement II are true" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 40,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Two resistors $2\\,\\Omega$ and $3\\,\\Omega$ are connected in the gaps of bridge as shown in figure[cite: 4]. The null point is obtained with the contact of jockey at some point on wire $XY$[cite: 4]. When an unknown resistor is connected in parallel with $3\\,\\Omega$ resistor, the null point is shifted by 22.5 cm toward $Y$[cite: 4]. The resistance of unknown resistor is ____ $\\Omega$[cite: 4].",
+      "options": [
+        { "id": "A", "content": "1" },
+        { "id": "B", "content": "3" },
+        { "id": "C", "content": "4" },
+        { "id": "D", "content": "2" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 41,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "In a microscope of tube length 10 cm two convex lenses are arranged with focal length of 2 cm and 5 cm[cite: 4]. Total magnification obtained with this system for normal adjustment is $(5)^k$[cite: 4]. The value of k is",
+      "options": [
+        { "id": "A", "content": "4" },
+        { "id": "B", "content": "5" },
+        { "id": "C", "content": "2" },
+        { "id": "D", "content": "3.5" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 42,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Two resistors of $1000\\,\\Omega$ each are connected in series with a 9 V battery[cite: 4]. A voltmeter of $4000\\,\\Omega$ resistance is connected to measure the voltage drop across one of the resistors[cite: 4]. The voltmeter reading is ____ V[cite: 4].",
+      "options": [
+        { "id": "A", "content": "4.5" },
+        { "id": "B", "content": "2" },
+        { "id": "C", "content": "4" },
+        { "id": "D", "content": "3" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 43,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Three masses 200 kg, 300 kg and 400 kg are placed at the vertices of an equilateral triangle with sides 20 m[cite: 4]. They are rearranged on the vertices of a bigger triangle of side 25 m and with the same centre[cite: 4]. The work done in this process is ____ J[cite: 4]. (Gravitational constant $G=6.7\\times 10^{-11}\\text{ N m}^2/\\text{kg}^2$)[cite: 4]",
+      "options": [
+        { "id": "A", "content": "$1.74\\times10^{-7}$" },
+        { "id": "B", "content": "$4.77\\times10^{-7}$" },
+        { "id": "C", "content": "$9.86\\times10^{-6}$" },
+        { "id": "D", "content": "$2.85\\times10^{-7}$" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 44,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A cylindrical block of mass M and area of cross section A is floating in a liquid of density $\\rho$ and with its axis vertical[cite: 4]. When depressed a little and released the block starts oscillating[cite: 4]. The period of oscillation is",
+      "options": [
+        { "id": "A", "content": "$2\\pi\\sqrt{\\frac{\\rho A}{Mg}}$" },
+        { "id": "B", "content": "$\\pi\\sqrt{\\frac{\\rho A}{Mg}}$" },
+        { "id": "C", "content": "$2\\pi\\sqrt{\\frac{M}{\\rho Ag}}$" },
+        { "id": "D", "content": "$\\pi\\sqrt{\\frac{2M}{\\rho Ag}}$" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 45,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Three charges $+2q$, $+3q$ and $-4q$ are situated at $(0, -3a)$, $(2a, 0)$ and $(-2a, 0)$ respectively in the $xy$ plane[cite: 4]. The resultant dipole moment about origin is",
+      "options": [
+        { "id": "A", "content": "$2qa(3\\hat{j}-7\\hat{i})$" },
+        { "id": "B", "content": "$2qa(3\\hat{i}-7\\hat{j})$" },
+        { "id": "C", "content": "$2qa(3\\hat{j}-\\hat{i})$" },
+        { "id": "D", "content": "$2qa(7\\hat{i}-3\\hat{j})$" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 46,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "Sixty four rain drops of radius 1 mm each falling down with a terminal velocity of $10\\text{ cm/s}$ coalesce to form a bigger drop[cite: 4]. The terminal velocity of bigger drop is ____ cm/s[cite: 4].",
+      "answer": 160
+    },
+    {
+      "id": 47,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "In the given figure the blocks A, B and C weigh 4 kg, 6 kg and 8 kg respectively[cite: 4]. The co-efficient of sliding friction between any two surfaces is 0.5[cite: 4]. The force $\\vec{F}$ required to slide the block C with constant speed is ____ N. (Use $g=10\\text{ m/s}^2$)[cite: 4]",
+      "answer": 200
+    },
+    {
+      "id": 48,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "A short bar magnet placed with its axis at $30^\\circ$ with an external field of 800 Gauss, experiences a torque 0.016 N.m[cite: 4]. The work done in moving it from most stable to most unstable position is $a\\times10^{-3}\\text{ J}$[cite: 4]. The value of $a$ is ____[cite: 4].",
+      "answer": 64
+    },
+    {
+      "id": 49,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "A voltage regulating circuit consisting of Zener diode having break-down voltage of 10 V and maximum power dissipation of 0.4 W, is operated at 15 V[cite: 4]. The approximate value of protective resistance in this circuit is ____ $\\Omega$[cite: 4].",
+      "answer": 125
+    },
+    {
+      "id": 50,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "A gas of certain mass filled in a closed cylinder at a pressure of 3.23 kPa has temperature $50^\\circ\\text{C}$[cite: 4]. The gas is now heated to double its temperature[cite: 4]. The modified pressure is ____ Pa[cite: 4].",
+      "answer": 6460
+    },
+    {
+      "id": 51,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Consider three metal chlorides $x$, $y$ and $z$, where $x$ is water soluble at room temperature, $y$ is sparingly soluble in water at room temperature and $z$ is soluble in hot water[cite: 4]. $x$, $y$ and $z$ are respectively",
+      "options": [
+        {
+          "id": "A",
+          "content": "$\\text{AgCl}$, $\\text{Hg}_2\\text{Cl}_2$ and $\\text{PbCl}_2$"
+        },
+        {
+          "id": "B",
+          "content": "$\\text{MgCl}_2$, $\\text{AgCl}$ and $\\text{AlCl}_3$"
+        },
+        {
+          "id": "C",
+          "content": "$\\text{CuCl}_2$, $\\text{AgCl}$ and $\\text{PbCl}_2$"
+        },
+        {
+          "id": "D",
+          "content": "$\\text{AlCl}_3$, $\\text{PbCl}_2$ and $\\text{BaCl}_2$"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 52,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The correct stability order of the following diazonium salts is: (A) $p-\\text{OCH}_3-\\text{C}_6\\text{H}_4-\\text{N}_2^+\\text{Cl}^-$, (B) $p-\\text{NO}_2-\\text{C}_6\\text{H}_4-\\text{N}_2^+\\text{Cl}^-$, (C) $p-\\text{CN}-\\text{C}_6\\text{H}_4-\\text{N}_2^+\\text{Cl}^-$, (D) $\\text{C}_6\\text{H}_5-\\text{N}_2^+\\text{Cl}^-$",
+      "options": [
+        { "id": "A", "content": "A > C > D > B" },
+        { "id": "B", "content": "C > D > B > A" },
+        { "id": "C", "content": "A > B > C > D" },
+        { "id": "D", "content": "C > A > D > B" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 53,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "A student is given one compound among the following compounds that gives positive test with Tollen's reagent[cite: 4]. The compound is :",
+      "options": [
+        { "id": "A", "content": "B" },
+        { "id": "B", "content": "C" },
+        { "id": "C", "content": "A" },
+        { "id": "D", "content": "D" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 54,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "A solution is prepared by dissolving 0.3 g of a non-volatile non-electrolyte solute 'A' of molar mass $60\\text{ g mol}^{-1}$ and 0.9 g of a non-volatile non-electrolyte solute 'B' of molar mass $180\\text{ g mol}^{-1}$ in $100\\text{ mL H}_2\\text{O}$ at $27^\\circ\\text{C}$[cite: 4]. Osmotic pressure of the solution will be [Given: $R = 0.082\\text{ L atm K}^{-1}\\text{ mol}^{-1}$][cite: 4]",
+      "options": [
+        { "id": "A", "content": "0.82 atm" },
+        { "id": "B", "content": "1.47 atm" },
+        { "id": "C", "content": "2.46 atm" },
+        { "id": "D", "content": "1.23 atm" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 55,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given below are two statements:\nStatement I: $\\text{K} > \\text{Mg} > \\text{Al} > \\text{B}$ is the correct order in terms of metallic character[cite: 4].\nStatement II: Atomic radius is always greater than the ionic radius for any element[cite: 4].\nIn the light of the above statements, choose the correct answer from the options given below",
+      "options": [
+        { "id": "A", "content": "Both Statement I and Statement II are false" },
+        {
+          "id": "B",
+          "content": "Statement I is true but Statement II is false"
+        },
+        {
+          "id": "C",
+          "content": "Statement I is false but Statement II is true"
+        },
+        { "id": "D", "content": "Both Statement I and Statement II are true" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 56,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given below are statements about some molecules/ions[cite: 4]. Identify the CORRECT statements[cite: 4].\nA. The dipole moment value of $\\text{NF}_3$ is higher than that of $\\text{NH}_3$[cite: 4].\nB. The dipole moment value of $\\text{BeH}_2$ is zero[cite: 4].\nC. The bond order of $\\text{O}_2^{2-}$ and $\\text{F}_2$ is same[cite: 4].\nD. The formal charge on the central oxygen atom of ozone is -1[cite: 4].\nE. In $\\text{NO}_2$, all the three atoms satisfy the octet rule, hence it is very stable[cite: 4].",
+      "options": [
+        { "id": "A", "content": "A, C & D Only" },
+        { "id": "B", "content": "B & C Only" },
+        { "id": "C", "content": "A, B, C, D & E" },
+        { "id": "D", "content": "B, C & D Only" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 57,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Consider a mixture 'X' which is made by dissolving 0.4 mol of $[\\text{Co}(\\text{NH}_3)_5\\text{SO}_4]\\text{Br}$ and 0.4 mol of $[\\text{Co}(\\text{NH}_3)_5\\text{Br}]\\text{SO}_4$ in water to make 4 L of solution[cite: 4]. When 2 L of mixture 'X' is allowed to react with excess of $\\text{AgNO}_3$, it forms precipitate 'Y'[cite: 4]. The rest 2 L of mixture 'X' reacts with excess $\\text{BaCl}_2$ to form precipitate 'Z'[cite: 4]. Which of the following statements is CORRECT?",
+      "options": [
+        { "id": "A", "content": "0.1 mol of 'Y' is formed." },
+        { "id": "B", "content": "'Y' is $\\text{BaSO}_4$ and 'Z' is AgBr." },
+        { "id": "C", "content": "0.4 mol of 'Z' is formed." },
+        { "id": "D", "content": "0.2 mol of 'Z' is formed." }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 58,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Arrange the following carbanions in the decreasing order of stability[cite: 4].\nI. $p-\\text{Br}-\\text{C}_6\\text{H}_4-\\bar{\\text{C}}\\text{H}_2$\nII. $\\text{C}_6\\text{H}_5-\\bar{\\text{C}}\\text{H}_2$\nIII. $p-\\text{CH}_3\\text{O}-\\text{C}_6\\text{H}_4-\\bar{\\text{C}}\\text{H}_2$\nIV. $p-\\text{CHO}-\\text{C}_6\\text{H}_4-\\bar{\\text{C}}\\text{H}_2$\nV. $p-\\text{CH}_3-\\text{C}_6\\text{H}_4-\\bar{\\text{C}}\\text{H}_2$",
+      "options": [
+        { "id": "A", "content": "IV > I > II > V > III" },
+        { "id": "B", "content": "I > IV > II > V > III" },
+        { "id": "C", "content": "IV > II > I > III > V" },
+        { "id": "D", "content": "I > II > IV > V > III" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 59,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Among the following, the CORRECT combinations are:\nA. T-shaped ($\\text{IF}_3 \\rightarrow sp^3d$)\nB. Square pyramidal ($\\text{IF}_5 \\rightarrow sp^3d^2$)\nC. Pentagonal bipyramidal ($\\text{IF}_7 \\rightarrow sp^3d^3$)\nD. Square planar ($\\text{ClO}_4^- \\rightarrow sp^3$)",
+      "options": [
+        { "id": "A", "content": "A and B Only" },
+        { "id": "B", "content": "B, C and D Only" },
+        { "id": "C", "content": "A, B and C Only" },
+        { "id": "D", "content": "A and D" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 60,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "'W' g of a non-volatile electrolyte solid solute of molar mass 'M' when dissolved in 100 mL water, decreases vapour pressure of water from 640 mm Hg to 600 mm Hg[cite: 4]. If aqueous solution of the electrolyte boils at 375 K and $K_b$ for water is $0.52\\text{ K kg mol}^{-1}$, then the mole fraction of the electrolyte solute ($x_2$) in the solution can be expressed as: (Given : density of water $= 1\\text{ g/mL}$ and boiling point of water $= 373\\text{ K}$)",
+      "options": [
+        { "id": "A", "content": "$\\frac{8 \\times 1.3}{M/W}$" },
+        { "id": "B", "content": "$\\frac{16 \\times 2.6}{W/M}$" },
+        { "id": "C", "content": "$\\frac{8 \\times 1.3}{W/M}$" },
+        { "id": "D", "content": "$\\frac{2.6 \\times 16}{M/W}$" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 61,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given below are two statements:\nStatement I: 'C - Cl' bond is stronger in $\\text{CH}_2 = \\text{CH} - \\text{Cl}$ than '$\\text{CH}_3 - \\text{CH}_2 - \\text{Cl}$'[cite: 4].\nStatement II: The given optically active molecule on hydrolysis gives a solution that can rotate the plane polarized light[cite: 4].\nIn the light of the above statements, choose the correct answer from the options given below",
+      "options": [
+        { "id": "A", "content": "Both Statement I and Statement II are true" },
+        {
+          "id": "B",
+          "content": "Statement I is true but Statement II is false"
+        },
+        {
+          "id": "C",
+          "content": "Statement I is false but Statement II is true"
+        },
+        { "id": "D", "content": "Both Statement I and Statement II are false" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 62,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given below are two statements:\nStatement I: The number of paramagnetic species among $[\\text{CoF}_6]^{3-}, [\\text{TiF}_6]^{3-}, \\text{V}_2\\text{O}_5$ and $[\\text{Fe}(\\text{CN})_6]^{3-}$ is 3[cite: 4].\nStatement II: $\\text{K}_4[\\text{Fe}(\\text{CN})_6] < \\text{K}_3[\\text{Fe}(\\text{CN})_6] < [\\text{Fe}(\\text{H}_2\\text{O})_6]\\text{SO}_4\\cdot\\text{H}_2\\text{O} < [\\text{Fe}(\\text{H}_2\\text{O})_6]\\text{Cl}_3$ is the correct order in terms of number of unpaired electron(s) present in the complexes[cite: 4].\nIn the light of the above statements, choose the correct answer from the options given below.",
+      "options": [
+        {
+          "id": "A",
+          "content": "Statement I is false but Statement II is true"
+        },
+        {
+          "id": "B",
+          "content": "Statement I is true but Statement II is false"
+        },
+        { "id": "C", "content": "Both Statement I and Statement II are false" },
+        { "id": "D", "content": "Both Statement I and Statement II are true" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 63,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "$A \\rightarrow D$ is an endothermic reaction occurring in three steps (elementary)[cite: 4].\n(i) $A \\rightarrow B, \\Delta H_i = +\\text{ve}$\n(ii) $B \\rightarrow C, \\Delta H_{ii} = -\\text{ve}$\n(iii) $C \\rightarrow D, \\Delta H_{iii} = -\\text{ve}$\nWhich of the following graphs between potential energy (y-axis) vs reaction coordinate (x-axis) correctly represents the reaction profile of $A \\rightarrow D$?",
+      "options": [
+        { "id": "A", "content": "Graph 1" },
+        { "id": "B", "content": "Graph 2" },
+        { "id": "C", "content": "Graph 3" },
+        { "id": "D", "content": "Graph 4" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 64,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Arrange the following alkenes in decreasing order of stability[cite: 4]: I. 2,3-dimethyl-2-butene, II. 2-methyl-2-butene, III. trans-2-butene, IV. cis-2-butene[cite: 4].",
+      "options": [
+        { "id": "A", "content": "I > II > III > IV" },
+        { "id": "B", "content": "I > III > IV > II" },
+        { "id": "C", "content": "I > III > II > IV" },
+        { "id": "D", "content": "III > II > I > IV" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 65,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Consider the following two reactions A and B:\n(A) Phenol + Na -> Main Product + gas (x)\n(B) Benzoic acid + NaHCO3 -> Main Product + gas (y)\nNumerical value of [molar mass of x + molar mass of y] is",
+      "options": [
+        { "id": "A", "content": "88" },
+        { "id": "B", "content": "160" },
+        { "id": "C", "content": "46" },
+        { "id": "D", "content": "4" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 66,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Match the List-I with List-II:\nList-I (Chloro derivative):\nA. Vinyl Chloride\nB. Benzyl Chloride\nC. Alkyl Chloride\nD. Allyl Chloride\n\nList-II (Example):\nI. $\\text{C}_6\\text{H}_5\\text{CH(Cl)CH}_3$\nII. $\\text{CH}_2=\\text{CH}-\\text{CH}_2\\text{Cl}$\nIII. $\\text{CH}_2=\\text{CHCl}$\nIV. $\\text{CH}_3-\\text{CH(Cl)CH}_3$\n\nChoose the correct answer from the options given below:",
+      "options": [
+        { "id": "A", "content": "A-IV, B-I, C-III, D-II" },
+        { "id": "B", "content": "A-I, B-II, C-IV, D-III" },
+        { "id": "C", "content": "A-III, B-IV, C-II, D-I" },
+        { "id": "D", "content": "A-III, B-I, C-IV, D-II" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 67,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given below are two statements:\nStatement I: Hybridisation, shape and spin only magnetic moment of $\\text{K}_3[\\text{Co}(\\text{CO}_3)_3]$ is $sp^3d^2$, octahedral and 4.9 BM respectively[cite: 4].\nStatement II: Geometry, hybridisation and spin only magnetic moment values of the ions $[\\text{Ni(CN)}_4]^{2-}, [\\text{MnBr}_4]^{2-}$ and $[\\text{CoF}_6]^{3-}$ respectively are square planar, tetrahedral, octahedral; $dsp^2, sp^3, sp^3d^2$ and 0, 5.9, 4.9[cite: 4].\nIn the light of the above statements, choose the correct answer from the options given below",
+      "options": [
+        {
+          "id": "A",
+          "content": "Statement I is false but Statement II is true"
+        },
+        { "id": "B", "content": "Both Statement I and Statement II are true" },
+        { "id": "C", "content": "Both Statement I and Statement II are false" },
+        {
+          "id": "D",
+          "content": "Statement I is true but Statement II is false"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 68,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "At $27^\\circ\\text{C}$ in presence of a catalyst, activation energy of reaction is lowered by $10\\text{ kJ mol}^{-1}$[cite: 4]. The logarithm of ratio of $\\frac{k(\\text{catalysed})}{k(\\text{uncatalysed})}$ is.... (Consider that the frequency factor for both the reaction is same)",
+      "options": [
+        { "id": "A", "content": "0.1741" },
+        { "id": "B", "content": "3.482" },
+        { "id": "C", "content": "17.41" },
+        { "id": "D", "content": "1.741" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 69,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Match the LIST-I with LIST-II:\nList-I (Isothermal process for ideal gas system):\nA. Reversible expansion\nB. Free expansion\nC. Irreversible expansion\nD. Irreversible compression\n\nList-II (Work done ($w$)):\nI. $w = -nRT \\ln \\frac{V_f}{V_i}$\nII. $w = 0$\nIII. $w = -p_{ex} (V_f - V_i)$\nIV. $w = -p_{ex} (V_i - V_f)$\n\nChoose the correct answer from the options given below",
+      "options": [
+        { "id": "A", "content": "A-IV, B-II, C-III, D-I" },
+        { "id": "B", "content": "A-IV, B-I, C-III, D-II" },
+        { "id": "C", "content": "A-I, B-II, C-III, D-IV" },
+        { "id": "D", "content": "A-II, B-I, C-III, D-IV" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 70,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "A hydroxy compound (X) with molar mass $122\\text{ g mol}^{-1}$ is acetylated with acetic anhydride, using a large excess of the reagent ensuring complete acetylation of all hydroxyl groups[cite: 4]. The product obtained has a molar mass of $290\\text{ g mol}^{-1}$[cite: 4]. The number of hydroxyl groups present in compound (X) is:",
+      "options": [
+        { "id": "A", "content": "3" },
+        { "id": "B", "content": "4" },
+        { "id": "C", "content": "5" },
+        { "id": "D", "content": "2" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 71,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "Electricity is passed through an acidic solution of $\\text{Cu}^{2+}$ till all the $\\text{Cu}^{2+}$ was exhausted, leading to the deposition of 300 mg of Cu metal[cite: 4]. However, a current of 600 mA was continued to pass through the same solution for another 28 minutes by keeping the total volume of the solution fixed at 200 mL[cite: 4]. The total volume of oxygen evolved at STP during the entire process is _____ mL[cite: 4]. (Nearest integer)\n[Given: Molar mass of $\\text{Cu} = 63.54\\text{ g mol}^{-1}$, Molar mass of $\\text{O}_2 = 32\\text{ g mol}^{-1}$, Faraday Constant $= 96500\\text{ C mol}^{-1}$, Molar volume at $\\text{STP} = 22.4\\text{ L}$][cite: 4]",
+      "answer": 111
+    },
+    {
+      "id": 72,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "The hydrogen spectrum consists of several spectral lines in Lyman series ($L_1, L_2, L_3 \\dots; L_1$ has lowest energy among Lyman series)[cite: 4]. Similarly it consists of several spectral lines in Balmer series ($B_1, B_2, B_3 \\dots; B_1$ has lowest energy among Balmer lines)[cite: 4]. The energy of $L_1$ is $x \\times 10^{-1}$ times the energy of $B_1$[cite: 4]. The value of $x$ is ______ (Nearest integer)",
+      "answer": 54
+    },
+    {
+      "id": 73,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "In Dumas method for estimation of nitrogen, 0.50 g of an organic compound gave 70 mL of nitrogen collected at 300 K and 715 mm pressure[cite: 4]. The percentage of nitrogen in the organic compound is ____ %[cite: 4]. (Aqueous tension at 300 K is 15 mm)[cite: 4].",
+      "answer": 15
+    },
+    {
+      "id": 74,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "Consider two Group IV metal ions $X^{2+}$ and $Y^{2+}$[cite: 4]. A solution containing $0.01\\text{ M } X^{2+}$ and $0.01\\text{ M } Y^{2+}$ is saturated with $\\text{H}_2\\text{S}$[cite: 4]. The pH at which the metal sulphide YS will form as a precipitate is ____[cite: 4]. (Nearest integer)\n(Given: $K_{sp}(XS) = 1 \\times 10^{-22}$ at $25^\\circ\\text{C}$, $K_{sp}(YS) = 4 \\times 10^{-16}$ at $25^\\circ\\text{C}$, in solution $[\\text{H}_2\\text{S}] = 0.1\\text{M}$, $K_{a1} \\times K_{a2}(\\text{H}_2\\text{S}) = 1.0 \\times 10^{-21}$, $\\log 2 = 0.30$, $\\log 3 = 0.48$, $\\log 5 = 0.70$)[cite: 4]",
+      "answer": 4
+    },
+    {
+      "id": 75,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "X and Y are the number of electrons involved, respectively during the oxidation of $\\text{I}^-$ to $\\text{I}_2$ and $\\text{S}^{2-}$ to S by acidified $\\text{K}_2\\text{Cr}_2\\text{O}_7$[cite: 4]. The value of $X + Y$ is ____[cite: 4].",
+      "answer": 4
+    }
+  ]
+}

@@ -1,0 +1,1023 @@
+{
+  "$schema": "../../schema.json",
+  "metadata": {
+    "year": 2026,
+    "month": "January",
+    "day": 22,
+    "shift": 1,
+    "duration": 10800000
+  },
+  "questions": [
+    {
+      "id": 1,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If the image of the point $P(1,2,a)$ in the line $\\frac{x-6}{3}=\\frac{y-7}{2}=\\frac{7-z}{2}$ is $Q(5,b,c)$, then $a^{2}+b^{2}+c^{2}$ is equal to",
+      "options": [
+        { "id": "A", "content": "264" },
+        { "id": "B", "content": "293" },
+        { "id": "C", "content": "298" },
+        { "id": "D", "content": "283" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 2,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $\\vec{AB}=2\\hat{i}+4\\hat{j}-5\\hat{k}$ and $\\vec{AD}=\\hat{i}+2\\hat{j}+\\lambda\\hat{k},\\lambda\\in R.$ Let the projection of the vector $\\vec{v}=\\hat{i}+\\hat{j}+\\hat{k}$ on the diagonal $\\vec{AC}$ of the parallelogram ABCD be of length one unit. If $\\alpha, \\beta$, where $\\alpha>\\beta$ be the roots of the equation $\\lambda^{2}x^{2}-6\\lambda x+5=0$ then $2\\alpha-\\beta$ is equal to:",
+      "options": [
+        { "id": "A", "content": "3" },
+        { "id": "B", "content": "6" },
+        { "id": "C", "content": "1" },
+        { "id": "D", "content": "4" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 3,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If the sum of the first four terms of an A.P. is 6 and the sum of its first six terms is 4, then the sum of its first twelve terms is",
+      "options": [
+        { "id": "A", "content": "-22" },
+        { "id": "B", "content": "-26" },
+        { "id": "C", "content": "-20" },
+        { "id": "D", "content": "-24" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 4,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If the line $\\alpha x+2y=1$, where $\\alpha\\in R$ does not meet the hyperbola $x^{2}-9y^{2}=9$, then a possible value of $\\alpha$ is:",
+      "options": [
+        { "id": "A", "content": "0.7" },
+        { "id": "B", "content": "0.6" },
+        { "id": "C", "content": "0.5" },
+        { "id": "D", "content": "0.8" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 5,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If the chord joining the points $P_{1}(x_{1},y_{1})$ and $P_{2}(x_{2},y_{2})$ on the parabola $y^{2}=12x$ subtends a right angle at the vertex of the parabola, then $x_{1}x_{2}-y_{1}y_{2}$ is equal to",
+      "options": [
+        { "id": "A", "content": "292" },
+        { "id": "B", "content": "288" },
+        { "id": "C", "content": "280" },
+        { "id": "D", "content": "284" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 6,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let the line $x=-1$ divide the area of the region $\\{(x,y):1+x^{2}\\le y\\le3-x\\}$ in the ratio $m:n$ where $gcd(m,n)=1$. Then $m+n$ is equal to",
+      "options": [
+        { "id": "A", "content": "26" },
+        { "id": "B", "content": "25" },
+        { "id": "C", "content": "27" },
+        { "id": "D", "content": "28" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 7,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let the relation R on the set $M=\\{1,2,3,...,16\\}$ be given by $R=\\{(x,y):4y=5x-3,x,y\\in M\\}$. Then the minimum number of elements required to be added in R, in order to make the relation symmetric, is equal to",
+      "options": [
+        { "id": "A", "content": "25" },
+        { "id": "B", "content": "21" },
+        { "id": "C", "content": "24" },
+        { "id": "D", "content": "20" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 8,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The value of $\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(\\frac{1}{[x]+4}\\right)dx$, where $[\\cdot]$ denotes the greatest integer function, is",
+      "options": [
+        { "id": "A", "content": "\\frac{1}{60}(\\pi-7)" },
+        { "id": "B", "content": "\\frac{1}{60}(21\\pi-1)" },
+        { "id": "C", "content": "\\frac{7}{60}(3\\pi-1)" },
+        { "id": "D", "content": "\\frac{7}{60}(\\pi-3)" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 9,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If a random variable X has the probability distribution:\n$x$: 0, 1, 2, 3, 4, 5, 6, 7\n$P(x)$: 0, $2k$, $k$, $3k$, $k^2$, $2k^2$, $k^2+k$, $7k^2+k$\nthen $P(3<x\\le6)$ is equal to",
+      "options": [
+        { "id": "A", "content": "0.33" },
+        { "id": "B", "content": "0.34" },
+        { "id": "C", "content": "0.22" },
+        { "id": "D", "content": "0.64" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 10,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Two distinct numbers a and b are selected at random from $1,2,3,...,50$. The probability that their product ab is divisible by 3 is",
+      "options": [
+        { "id": "A", "content": "\\frac{272}{1225}" },
+        { "id": "B", "content": "\\frac{8}{25}" },
+        { "id": "C", "content": "\\frac{664}{1225}" },
+        { "id": "D", "content": "\\frac{561}{1225}" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 11,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $P(\\alpha,\\beta,\\gamma)$ be the point on the line $\\frac{x-1}{2}=\\frac{y+1}{-3}=z$ at a distance $4\\sqrt{14}$ from the point (1, -1,0) and nearer to the origin. Then the shortest distance between the lines $\\frac{x-\\alpha}{1}=\\frac{y-\\beta}{2}=\\frac{z-\\gamma}{3}$ and $\\frac{x+5}{2}=\\frac{y-10}{1}=\\frac{z-3}{1}$ is equal to",
+      "options": [
+        { "id": "A", "content": "4\\sqrt{\\frac{7}{5}}" },
+        { "id": "B", "content": "4\\sqrt{\\frac{5}{7}}" },
+        { "id": "C", "content": "7\\sqrt{\\frac{5}{4}}" },
+        { "id": "D", "content": "2\\sqrt{\\frac{7}{4}}" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 12,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If $A=\\begin{bmatrix}2&3\\\\ 3&5\\end{bmatrix}$, then the determinant of the matrix $(A^{2025}-3A^{2024}+A^{2023})$ is",
+      "options": [
+        { "id": "A", "content": "28" },
+        { "id": "B", "content": "24" },
+        { "id": "C", "content": "16" },
+        { "id": "D", "content": "12" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 13,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let the solution curve of the differential equation $x~dy - y~dx = \\sqrt{x^{2}+y^{2}}~dx, x>0, y(1)=0,$ be $y=y(x)$. Then $y(3)$ is equal to",
+      "options": [
+        { "id": "A", "content": "6" },
+        { "id": "B", "content": "1" },
+        { "id": "C", "content": "2" },
+        { "id": "D", "content": "4" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 14,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $f(x)=x^{2025}-x^{2000}, x\\in[0,1]$ and the minimum value of the function $f(x)$ in the interval [0, 1] be $(80)^{80}(n)^{-81}$. Then n is equal to",
+      "options": [
+        { "id": "A", "content": "-41" },
+        { "id": "B", "content": "-81" },
+        { "id": "C", "content": "-80" },
+        { "id": "D", "content": "-40" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 15,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let the set of all values of r, for which the circles $(x+1)^{2}+(y+4)^{2}=r^{2}$ and $x^{2}+y^{2}-4x-2y-4=0$ intersect at two distinct points be the interval $(\\alpha, \\beta)$. Then $\\alpha\\beta$ is equal to",
+      "options": [
+        { "id": "A", "content": "4" },
+        { "id": "B", "content": "1" },
+        { "id": "C", "content": "3" },
+        { "id": "D", "content": "2" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 16,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $f:[1,\\infty)\\rightarrow R$ be a differentiable function. If $\\int_{1}^{x} 6 f(t)dt = 3xf(x)+x^{3}-4$ for all $x\\ge1$ then the value of $f(2)-f(3)$ is",
+      "options": [
+        { "id": "A", "content": "3" },
+        { "id": "B", "content": "4" },
+        { "id": "C", "content": "-3" },
+        { "id": "D", "content": "-4" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 17,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If the domain of the function $f(x)=\\sin^{-1}\\left(\\frac{5-x}{3+2x}\\right)+\\log_{e}(10-x)$ is $(-\\infty,\\alpha]\\cup[\\beta,\\gamma)-\\{\\delta\\}$, then $6(\\alpha+\\beta+\\gamma+\\delta)$ is equal to",
+      "options": [
+        { "id": "A", "content": "70" },
+        { "id": "B", "content": "67" },
+        { "id": "C", "content": "68" },
+        { "id": "D", "content": "66" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 18,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The coefficient of $x^{48}$ in $(1+x)+2(1+x)^{2}+3(1+x)^{3}+...+100(1+x)^{100}$ is equal to",
+      "options": [
+        { "id": "A", "content": "100\\cdot^{100}C_{49}-^{100}C_{50}" },
+        { "id": "B", "content": "{}^{100}C_{50}+{}^{101}C_{49}" },
+        { "id": "C", "content": "100\\cdot{}^{101}C_{49}-{}^{101}C_{50}" },
+        { "id": "D", "content": "100\\cdot{}^{100}C_{49}-{}^{100}C_{48}" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 19,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The number of solutions of $\\tan^{-1}4x+\\tan^{-1}6x=\\frac{\\pi}{6},$ where $-\\frac{1}{2\\sqrt{6}}<x<\\frac{1}{2\\sqrt{6}}$ is equal to",
+      "options": [
+        { "id": "A", "content": "2" },
+        { "id": "B", "content": "3" },
+        { "id": "C", "content": "1" },
+        { "id": "D", "content": "0" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 20,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The number of distinct real solutions of the equation $x|x+4|+3|x+2|+10=0$ is",
+      "options": [
+        { "id": "A", "content": "3" },
+        { "id": "B", "content": "1" },
+        { "id": "C", "content": "2" },
+        { "id": "D", "content": "0" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 21,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "Let A be a $3\\times3$ matrix such that $A+A^{T}=O$. If $A\\begin{bmatrix}1\\\\ -1\\\\ 0\\end{bmatrix}=\\begin{bmatrix}3\\\\ 3\\\\ 2\\end{bmatrix}$, $A^{2}\\begin{bmatrix}1\\\\ -1\\\\ 0\\end{bmatrix}=\\begin{bmatrix}-3\\\\ 19\\\\ -24\\end{bmatrix}$ and $\\det(\\text{adj}(2~\\text{adj}(A+I)))=(2)^{\\alpha}\\cdot(3)^{\\beta}\\cdot(11)^{\\gamma}$, where $\\alpha, \\beta, \\gamma$ are non-negative integers, then $\\alpha+\\beta+\\gamma$ is equal to",
+      "answer": 16
+    },
+    {
+      "id": 22,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "Let ABC be a triangle. Consider four points $P_{1}, P_{2}, P_{3}, P_{4}$ on the side AB, five points $P_{5}, P_{6}, P_{7}, P_{8}, P_{9}$ on the side BC, and four points $P_{10}, P_{11}, P_{12}, P_{13}$ on the side AC. None of these points is a vertex of the triangle ABC. Then the total number of pentagons that can be formed by taking all the vertices from the points $P_{1},P_{2},...,P_{13}$ is",
+      "answer": 715
+    },
+    {
+      "id": 23,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "Let $\\alpha=\\frac{-1+i\\sqrt{3}}{2}$ and $\\beta=\\frac{-1-i\\sqrt{3}}{2}$, $i=\\sqrt{-1}$. If $(7-7\\alpha+9\\beta)^{20}+(9+7\\alpha-7\\beta)^{20}+(-7+9\\alpha+7\\beta)^{20}=(14)^m$, then m is",
+      "answer": 20
+    },
+    {
+      "id": 24,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "If $\\frac{\\cos^{2}48^{\\circ}-\\sin^{2}12^{\\circ}}{\\sin^{2}24^{\\circ}-\\sin^{2}6^{\\circ}}=\\frac{\\alpha+\\beta\\sqrt{5}}{2},$ where $\\alpha, \\beta\\in N,$ then $\\alpha+\\beta$ is equal to",
+      "answer": 2
+    },
+    {
+      "id": 25,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "If $\\int(\\sin x)^{-\\frac{1}{2}}(\\cos x)^{-\\frac{11}{2}}dx=-\\frac{p_{1}}{q_{1}}(\\cot x)^{\\frac{9}{2}}-\\frac{p_{2}}{q_{2}}(\\cot x)^{\\frac{5}{2}}-\\frac{p_{3}}{q_{3}}(\\cot x)^{\\frac{1}{2}}+\\frac{p_{4}}{q_{4}}(\\cot x)^{-\frac{3}{2}}+C,$ where $p_{i}$ and $q_{i}$ are positive integers with $gcd(p_{i},q_{i})=1$ for $i=1,2,3,4$ and C is the constant of integration, then $\\frac{15p_{1}p_{2}p_{3}p_{4}}{q_{1}q_{2}q_{3}q_{4}}$ is equal to",
+      "answer": 1
+    },
+    {
+      "id": 26,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A meter bridge with two resistances $R_{1}$ and $R_{2}$ as shown in figure was balanced (null point) at 40 cm from the point P. The null point changed to 50 cm from the point P, when $16\\Omega$ resistance is connected in parallel to $R_{2}$. The values of resistances $R_{1}$ and $R_{2}$ are",
+      "options": [
+        { "id": "A", "content": "$R_{2}=4\\Omega, R_{1}=\\frac{4}{3}\\Omega$" },
+        {
+          "id": "B",
+          "content": "$R_{2}=16\\Omega, R_{1}=\\frac{16}{3}\\Omega$"
+        },
+        {
+          "id": "C",
+          "content": "$R_{2}=8\\Omega, R_{1}=\\frac{16}{3}\\Omega$"
+        },
+        {
+          "id": "D",
+          "content": "$R_{2}=12\\Omega, R_{1}=\\frac{12}{3}\\Omega$"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 27,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Six point charges are kept $60^{\\circ}$ apart from each other on the circumference of a circle of radius R as shown in figure. The net electric field at the center of the circle is ($\\epsilon_{0}$ is permittivity of free space)",
+      "options": [
+        {
+          "id": "A",
+          "content": "$-\\frac{Q}{4\\pi\\epsilon_{0}R^{2}}(\\sqrt{3}\\hat{i}-\\hat{j})$"
+        },
+        {
+          "id": "B",
+          "content": "$-\\left(\\frac{5Q}{8\\pi\\epsilon_{0}R^{2}}\\right)(\\hat{i}-3\\hat{j})$"
+        },
+        {
+          "id": "C",
+          "content": "$\\frac{Q}{4\\pi\\epsilon_{0}R^{2}}(\\sqrt{3}\\hat{i}-\\hat{j})$"
+        },
+        {
+          "id": "D",
+          "content": "$-\\frac{5Q}{8\\pi\\epsilon_{0}R^{2}}(\\hat{i}+\\sqrt{3}\\hat{j})$"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 28,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Rods x and y of equal dimensions but of different materials are joined as shown in figure. Temperatures of end points A and F are maintained at $100^{\\circ}C$ and $40^{\\circ}C$ respectively. Given the thermal conductivity of rod x is three times of that of rod y, the temperature at junction points B and E are (close to):",
+      "options": [
+        {
+          "id": "A",
+          "content": "$80^{\\circ}C$ and $60^{\\circ}C$ respectively"
+        },
+        {
+          "id": "B",
+          "content": "$80^{\\circ}C$ and $70^{\\circ}C$ respectively"
+        },
+        {
+          "id": "C",
+          "content": "$89^{\\circ}C$ and $73^{\\circ}C$ respectively"
+        },
+        {
+          "id": "D",
+          "content": "$60^{\\circ}C$ and $45^{\\circ}C$ respectively"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 29,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A thin convex lens of focal length 5 cm and a thin concave lens of focal length 4 cm are combined together (without any gap) and this combination has magnification $m_{1}$ when an object is placed 10 cm before the convex lens. Keeping the positions of convex lens and object undisturbed a gap of 1 cm is introduced between the lenses by moving the concave lens away, which lead to a change in magnification of total lens system to $m_{2}$. The value of $|\\frac{m_{1}}{m_{2}}|$ is",
+      "options": [
+        { "id": "A", "content": "\\frac{5}{27}" },
+        { "id": "B", "content": "\\frac{25}{27}" },
+        { "id": "C", "content": "\\frac{5}{9}" },
+        { "id": "D", "content": "\\frac{3}{2}" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 30,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Given below are two statements:\nStatement I: Pressure of a fluid is exerted only on a solid surface in contact as the fluid-pressure does not exist everywhere in a still fluid.\nStatement II: Excess potential energy of the molecules on the surface of a liquid, when compared to interior, results in surface tension.\nIn the light of the above statements, choose the correct answer from the options given below",
+      "options": [
+        { "id": "A", "content": "Both Statement I and Statement II are true" },
+        {
+          "id": "B",
+          "content": "Statement I is false but Statement II is true"
+        },
+        { "id": "C", "content": "Both Statement I and Statement II are false" },
+        {
+          "id": "D",
+          "content": "Statement I is true but Statement II is false"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 31,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Consider an equilateral prism (refractive index $\\sqrt{2}$). A ray of light is incident on its one surface at a certain angle i. If the emergent ray is found to graze along the other surface then the angle of refraction at the incident surface is close to",
+      "options": [
+        { "id": "A", "content": "40^{\\circ}" },
+        { "id": "B", "content": "20^{\\circ}" },
+        { "id": "C", "content": "30^{\\circ}" },
+        { "id": "D", "content": "15^{\\circ}" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 32,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Three identical coils $C_{1}$, $C_{2}$ and $C_{3}$ are closely placed such that they share a common axis. $C_{2}$ is exactly midway. $C_{1}$ carries current I in anti-clockwise direction while $C_{3}$ carries current I in clockwise direction. An induced current flows through $C_{2}$ will be in clockwise direction when",
+      "options": [
+        {
+          "id": "A",
+          "content": "$C_{1}$ moves away from $C_{2}$ and $C_{3}$ moves towards $C_{2}$"
+        },
+        {
+          "id": "B",
+          "content": "$C_{1}$ and $C_{3}$ move with equal speeds towards $C_{2}$"
+        },
+        {
+          "id": "C",
+          "content": "$C_{1}$ moves towards $C_{2}$ and $C_{3}$ moves away from $C_{2}$"
+        },
+        {
+          "id": "D",
+          "content": "$C_{1}$ and $C_{3}$ move with equal speeds away from $C_{2}$"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 33,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Net gravitational force at the center of a square is found to be $F_{1}$ when four particles having mass M, 2M, 3M and 4M are placed at the four corners of the square as shown in figure and it is $F_{2}$ when the positions of 3M and 4M are interchanged. The ratio $\\frac{F_{1}}{F_{2}}$ is $\\frac{a}{\\sqrt{5}}$. The value of a is",
+      "options": [
+        { "id": "A", "content": "3" },
+        { "id": "B", "content": "2" },
+        { "id": "C", "content": "1" },
+        { "id": "D", "content": "2\\sqrt{5}" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 34,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Match the LIST-I with LIST-II:\nLIST-I:\nA. Spring constant\nB. Thermal conductivity\nC. Boltzmann constant\nD. Inductive reactance\nLIST-II:\nI. $ML^{2}T^{-2}K^{-1}$\nII. $ML^{0}T^{-2}$\nIII. $ML^{2}T^{-3}A^{-2}$\nIV. $MLT^{-3}K^{-1}$",
+      "options": [
+        { "id": "A", "content": "A-II, B-I, C-IV, D-III" },
+        { "id": "B", "content": "A-III, B-II, C-IV, D-I" },
+        { "id": "C", "content": "A-II, B-IV, C-I, D-III" },
+        { "id": "D", "content": "A-I, B-IV, C-II, D-III" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 35,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Electric field in a region is given by $\\vec{E}=Ax\\hat{i}+By\\hat{j}$, where $A=10~V/m^{2}$ and $B=5~V/m^{2}$. If the electric potential at a point (10, 20) is 500 V, then the electric potential at origin is _____ V.",
+      "options": [
+        { "id": "A", "content": "500" },
+        { "id": "B", "content": "2000" },
+        { "id": "C", "content": "1000" },
+        { "id": "D", "content": "0" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 36,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "XPQY is a vertical smooth long loop having a total resistance R where PX is parallel to QY and separation between them is l. A constant magnetic field B perpendicular to the plane of the loop exists in the entire space. A rod CD of length $L(L>l)$ and mass m is made to slide down from rest under the gravity as shown in figure. The terminal speed acquired by the rod is (g = acceleration due to gravity)",
+      "options": [
+        { "id": "A", "content": "\\frac{mgR}{B^{2}l^{2}}" },
+        { "id": "B", "content": "\\frac{8mgR}{B^{2}l^{2}}" },
+        { "id": "C", "content": "\\frac{2mgR}{B^{2}L^{2}}" },
+        { "id": "D", "content": "\\frac{2mgR}{B^{2}l^{2}}" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 37,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "7.9 MeV $\\alpha$-particle scatters from a target material of atomic number 79. From the given data the estimated diameter of nuclei of the target material is (approximately) _____ m.\n$[\\frac{1}{4\\pi\\epsilon_{0}}=9\\times10^{9}Nm^{2}/C^{2}$ and electron charge $=1.6\\times10^{-19}C]$",
+      "options": [
+        { "id": "A", "content": "5.76\\times10^{-14}" },
+        { "id": "B", "content": "1.44\\times10^{-13}" },
+        { "id": "C", "content": "1.69\\times10^{-12}" },
+        { "id": "D", "content": "2.88\\times10^{-14}" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 38,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A solid sphere of mass 5 kg and radius 10 cm is kept in contact with another solid sphere of mass 10 kg and radius 20 cm. The moment of inertia of this pair of spheres about the tangent passing through the point of contact is _____ $kg\\cdot m^{2}$.",
+      "options": [
+        { "id": "A", "content": "0.36" },
+        { "id": "B", "content": "0.72" },
+        { "id": "C", "content": "0.18" },
+        { "id": "D", "content": "0.63" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 39,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "The volume of an ideal gas increases 8 times and temperature becomes $(1/4)^{th}$ of initial temperature during a reversible change. If there is no exchange of heat in this process $(\\Delta Q=0)$ then identify the gas from the following options (Assuming the gases given in the options are ideal gases):",
+      "options": [
+        { "id": "A", "content": "CO_{2}" },
+        { "id": "B", "content": "NH_{3}" },
+        { "id": "C", "content": "He" },
+        { "id": "D", "content": "O_{2}" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 40,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A cylindrical tube AB of length l, closed at both ends contains an ideal gas of 1 mol having molecular weight M. The tube is rotated in a horizontal plane with constant angular velocity $\\omega$ about an axis perpendicular to AB and passing through the edge at end A, as shown in the figure. If $P_{A}$ and $P_{B}$ are the pressures at A and B respectively, then (Consider the temperature is same at all points in the tube)",
+      "options": [
+        {
+          "id": "A",
+          "content": "P_{B}=P_{A}\\exp\\left(\\frac{M\\omega^{2}l^{2}}{3RT}\\right)"
+        },
+        { "id": "B", "content": "P_{B}=P_{A}" },
+        {
+          "id": "C",
+          "content": "P_{B}=P_{A}\\exp\\left(\\frac{M\\omega^{2}l^{2}}{RT}\\right)"
+        },
+        {
+          "id": "D",
+          "content": "P_{B}=P_{A}\\exp\\left(\\frac{M\\omega^{2}l^{2}}{2RT}\\right)"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 41,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "The escape velocity from a spherical planet A is $10~km/s$. The escape velocity from another planet B whose density and radius are 10% of those of planet A, is _____ $m/s$.",
+      "options": [
+        { "id": "A", "content": "200\\sqrt{5}" },
+        { "id": "B", "content": "100\\sqrt{10}" },
+        { "id": "C", "content": "1000\\sqrt{2}" },
+        { "id": "D", "content": "1000" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 42,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A projectile is thrown upward at an angle $60^{\\circ}$ with the horizontal. The speed of the projectile is $20~m/s$ when its direction of motion is $45^{\\circ}$ with the horizontal. The initial speed of the projectile is _____ $m/s$.",
+      "options": [
+        { "id": "A", "content": "20\\sqrt{3}" },
+        { "id": "B", "content": "40" },
+        { "id": "C", "content": "40\\sqrt{2}" },
+        { "id": "D", "content": "20\\sqrt{2}" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 43,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "The minimum frequency of photon required to break a particle of mass 15.348 amu into $4\\alpha$ particles is _____ kHz. [mass of He nucleus $=4.002~amu$, $1~amu=1.66\\times10^{-27}~kg$, $h=6.6\\times10^{-34}~J\\cdot s$ and $c=3\\times10^{8}~m/s$]",
+      "options": [
+        { "id": "A", "content": "14.94\\times10^{19}" },
+        { "id": "B", "content": "14.94\\times10^{20}" },
+        { "id": "C", "content": "9\\times10^{20}" },
+        { "id": "D", "content": "9\\times10^{19}" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 44,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Find the correct combination of A, B, C and D inputs which can cause the LED to glow.",
+      "options": [
+        { "id": "A", "content": "1101" },
+        { "id": "B", "content": "0011" },
+        { "id": "C", "content": "1000" },
+        { "id": "D", "content": "0100" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 45,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A simple pendulum has a bob with mass m and charge q. The pendulum string has negligible mass. When a uniform and horizontal electric field $\\vec{E}$ is applied, the tension in the string changes. The final tension in the string, when pendulum attains an equilibrium position is _____. (g: acceleration due to gravity)",
+      "options": [
+        { "id": "A", "content": "mg-qE" },
+        { "id": "B", "content": "\\sqrt{m^{2}g^{2}-q^{2}E^{2}}" },
+        { "id": "C", "content": "\\sqrt{m^{2}g^{2}+q^{2}E^{2}}" },
+        { "id": "D", "content": "mg+qE" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 46,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "A circular disc has radius $R_{1}$ and thickness $T_{1}$. Another circular disc made of the same material has radius $R_{2}$ and thickness $T_{2}$. If the moment of inertia of both discs are same and $\\frac{R_{1}}{R_{2}}=2$ then $\\frac{T_{1}}{T_{2}}=\\frac{1}{a}$. The value of a is",
+      "answer": 16
+    },
+    {
+      "id": 47,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "A parallel beam of light travelling in air (refractive index 1.0) is incident on a convex spherical glass surface of radius of curvature 50 cm. Refractive index of glass is 1.5. The rays converge to a point at a distance z cm from the centre of the curvature of the spherical surface. The value of z is _____ cm.",
+      "answer": 100
+    },
+    {
+      "id": 48,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "Inductance of a coil with $10^{4}$ turns is 10 mH and it is connected to a dc source of 10 V with internal resistance of $10\\Omega$. The energy density in the inductor when the current reaches $\\left(\\frac{e-1}{e}\\right)$ of its maximum value is $a\\pi\\times\\frac{1}{e^{2}}J/m^{3}.$ The value of a is $(\\mu_{0}=4\\pi\\times10^{-7}Tm/A).$",
+      "answer": 100
+    },
+    {
+      "id": 49,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "Two loudspeakers ($L_{1}$ and $L_{2}$) are placed with a separation of 10 m, as shown in figure. Both speakers are fed with an audio input signal of same frequency with constant volume. A voice recorder, initially at point A, at equidistance to both loud speakers, is moved by 25 m along the line AB while monitoring the audio signal. The measured signal was found to undergo 10 cycles of minima and maxima during the movement. The frequency of the input signal is _____ Hz (Speed of sound in air is $324~m/s$ and $\\sqrt{5}=2.23$)",
+      "answer": 144
+    },
+    {
+      "id": 50,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "The electric field of a plane electromagnetic wave, travelling in an unknown nonmagnetic medium is given by, $E_{y}=20\\sin(3\\times10^{6}x-4.5\\times10^{14}t)V/m$ (where x, t and other values have S.I. units). The dielectric constant of the medium is (speed of light in free space is $3\\times10^{8}m/s$).",
+      "answer": 25
+    },
+    {
+      "id": 51,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Match the LIST-I with LIST-II\nLIST-I (Reagents):\nA. $NH_{2}-NH_{2}$, KOH\nB. $Ag(NH_{3})_{2}OH$\nC. Aq. $CuSO_{4}$ + Sodium Potassium tartarate + KOH\nD. $Zn-Hg, HCl$\nLIST-II (Name of Reaction involving carbonyl compound):\nI. Tollen's Test\nII. Clemmensen Reduction\nIII. Wolff-Kishner Reduction\nIV. Fehling's Test",
+      "options": [
+        { "id": "A", "content": "A-III, B-I, C-IV, D-II" },
+        { "id": "B", "content": "A-III, B-IV, C-I, D-II" },
+        { "id": "C", "content": "A-IV, B-III, C-II, D-I" },
+        { "id": "D", "content": "A-II, B-I, C-IV, D-III" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 52,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Two p-block elements X and Y form fluorides of the type $EF_{3}$. The fluoride compound $XF_{3}$ is a Lewis acid and $YF_{3}$ is a Lewis base. The hybridizations of the central atoms of $XF_{3}$ and $YF_{3}$ respectively are",
+      "options": [
+        { "id": "A", "content": "Both $sp^{3}$" },
+        { "id": "B", "content": "Both $sp^{2}$" },
+        { "id": "C", "content": "$sp^{3}$ and $sp^{2}$" },
+        { "id": "D", "content": "$sp^{2}$ and $sp^{3}$" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 53,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "A 'p'-block element (E) and hydrogen form a binary cation $(EH_{x})^{+}$ while $EH_{3}$ on treatment with $K_{2}HgI_{4}$ in alkaline medium gives a precipitate of basic mercury(II) amido-iodine. Given below are first ionisation enthalpy values $(kJmol^{-1})$ for first element each from group 13, 14, 15 and 16. Identify the correct first ionisation enthalpy value for element E.",
+      "options": [
+        { "id": "A", "content": "1086" },
+        { "id": "B", "content": "1402" },
+        { "id": "C", "content": "1312" },
+        { "id": "D", "content": "801" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 54,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The correct order of reactivity of $CH_{3}Br$ in methanol with the following nucleophiles is $F^{-}, I^{-}, C_{2}H_{5}O^{-}$ and $C_{6}H_{5}O^{-}$",
+      "options": [
+        {
+          "id": "A",
+          "content": "$I^{-}>C_{2}H_{5}O^{-}>C_{6}H_{5}O^{-}>F^{-}$"
+        },
+        {
+          "id": "B",
+          "content": "$I^{-}>C_{2}H_{5}O^{-}>F^{-}>C_{6}H_{5}O^{-}$"
+        },
+        {
+          "id": "C",
+          "content": "$I^{-}>F^{-}>C_{6}H_{5}O^{-}>C_{2}H_{5}O^{-}$"
+        },
+        {
+          "id": "D",
+          "content": "$I^{-}>C_{6}H_{5}O^{-}>F^{-}>C_{2}H_{5}O^{-}$"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 55,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The energy required by electrons, present in the first Bohr orbit of hydrogen atom to be excited to second Bohr orbit is _____ $Jmol^{-1}$. Given: $R_{H}=2.18\\times10^{-11}~ergs.$",
+      "options": [
+        { "id": "A", "content": "9.835\\times10^{12}" },
+        { "id": "B", "content": "1.635\\times10^{-18}" },
+        { "id": "C", "content": "9.835\\times10^{5}" },
+        { "id": "D", "content": "1.635\\times10^{-11}" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 56,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "A -> Product (First order reaction). Three sets of experiment were performed for a reaction under similar experimental conditions:\nRun 1 => 100 mL of 10 M solution of reactant A\nRun 2 => 200 mL of 10 M solution of reactant A\nRun 3 => 100 mL of 10 M solution of reactant A + 100 mL of $H_{2}O$ added.\nThe correct variation of rate of reaction is",
+      "options": [
+        { "id": "A", "content": "Run 3 < Run 1 = Run 2" },
+        { "id": "B", "content": "Run 1 = Run 2 = Run 3" },
+        { "id": "C", "content": "Run 1 < Run 2 < Run 3" },
+        { "id": "D", "content": "Run 3 < Run 1 < Run 2" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 57,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "In the reaction, $2Al(s)+6HCl(aq)\\rightarrow2Al^{3+}(aq)+6Cl^{-}(aq)+3H_{2}(g)$",
+      "options": [
+        {
+          "id": "A",
+          "content": "67.2 L $H_{2}(g)$ at STP is produced for every mole of Al that reacts."
+        },
+        {
+          "id": "B",
+          "content": "33.6 L $H_{2}(g)$ is produced regardless of temperature and pressure for every mole of Al that reacts."
+        },
+        {
+          "id": "C",
+          "content": "11.2 L $H_{2}(g)$ at STP is produced for every mole of HCl consumed."
+        },
+        {
+          "id": "D",
+          "content": "12 L $HCl(aq)$ is consumed for every 6 L $H_{2}(g)$ produced."
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 58,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "As compared with chlorocyclohexane, which of the following statements correctly apply to chlorobenzene?\nA. The magnitude of negative charge is more on chlorine atom.\nB. The C-Cl bond has partial double bond character.\nC. C-Cl bond is less polar.\nD. C-Cl bond is longer due to repulsion between delocalised electrons of the aromatic ring and lone pairs of electrons of chlorine.\nE. The C-Cl bond is formed using $sp^{2}$ hybridised orbital of carbon.\nChoose the correct answer from the options given below:",
+      "options": [
+        { "id": "A", "content": "B, C and E Only" },
+        { "id": "B", "content": "B, C and D Only" },
+        { "id": "C", "content": "A, D and E Only" },
+        { "id": "D", "content": "A, C and E Only" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 59,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Match the LIST-I with LIST-II:\nLIST-I (Thermodynamic Process):\nA. Work done in reversible, isothermal expansion of 2 mol of ideal gas from $2~dm^{3}$ to $20~dm^{3}$ at 300 K.\nB. Work done in irreversible isothermal expansion of 1 mol ideal gas from $1~m^{3}$ to $3~m^{3}$ at 300 K against a constant pressure of 3 kPa.\nC. Change in internal energy for adiabatic expansion of a 1 mol ideal gas with change of temperature = 320 K and $\\bar{C}_{V}=\\frac{3}{2}R$\nD. Change in enthalpy at constant pressure of 1 mol ideal gas with change of temperature = 337 K and $\\bar{C}_{p}=\\frac{5}{2}R$\nLIST-II (Magnitude in kJ):\nI. 4\nII. 11.5\nIII. 6\nIV. 7",
+      "options": [
+        { "id": "A", "content": "A-I, B-II, C-III, D-IV" },
+        { "id": "B", "content": "A-III, B-II, C-IV, D-I" },
+        { "id": "C", "content": "A-II, B-I, C-III, D-IV" },
+        { "id": "D", "content": "A-II, B-III, C-I, D-IV" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 60,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given below are two statements:\nStatement I: The halogen that makes longest bond with hydrogen in HX, has the smallest covalent radius in its group.\nStatement II: A group 15 element's hydride $EH_{3}$ has the lowest boiling point among corresponding hydrides of other group 15 elements. The maximum covalency of that element E is 4.\nIn the light of the above statements, choose the correct answer from the options given below:",
+      "options": [
+        {
+          "id": "A",
+          "content": "Statement I is false but Statement II is true"
+        },
+        { "id": "B", "content": "Both Statement I and Statement II are true" },
+        {
+          "id": "C",
+          "content": "Statement I is true but Statement II is false"
+        },
+        { "id": "D", "content": "Both Statement I and Statement II are false" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 61,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The correct order of the rate of reaction of the following reactants with nucleophile by $S_{N}1$ mechanism is:\n(Given: Structures I and II are rigid)\n(I) 1-bromobicyclo[2.2.1]heptane\n(II) 2-bromobicyclo[2.2.1]heptane\n(III) 2-bromo-2-phenylpropane\n(IV) bromodiphenylmethane",
+      "options": [
+        { "id": "A", "content": "I < II < III < IV" },
+        { "id": "B", "content": "II < I < III < IV" },
+        { "id": "C", "content": "IV < III < II < I" },
+        { "id": "D", "content": "III < I < II < IV" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 62,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The formal charges on the atoms marked as (1) to (4) in the Lewis representation of $HNO_{3}$ molecule respectively are: (1) H, (2) single-bonded O, (3) N, (4) double-bonded O",
+      "options": [
+        { "id": "A", "content": "+1, 0, 0, -1" },
+        { "id": "B", "content": "0, +1, 0, -1" },
+        { "id": "C", "content": "0, 0, -1, +1" },
+        { "id": "D", "content": "0, -1, +1, 0" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 63,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "A first row transition metal (M) does not liberate $H_{2}$ gas from dilute HCl. 1 mol of aqueous solution of $MSO_{4}$ is treated with excess of aqueous KCN and then $H_{2}S(g)$ is passed through the solution. The amount of MS (metal sulphide) formed from the above reaction is _____ mol.",
+      "options": [
+        { "id": "A", "content": "3" },
+        { "id": "B", "content": "0" },
+        { "id": "C", "content": "2" },
+        { "id": "D", "content": "1" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 64,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given below are two statements:\nStatement I: Benzene is nitrated to give nitrobenzene, which on further treatment with $CH_{3}COCl/AlCl_{3}$ will give m-nitroacetophenone.\nStatement II: $-NO_{2}$ group is a m-directing, and deactivating group.\nIn the light of the above statements, choose the most appropriate answer from the options given below",
+      "options": [
+        {
+          "id": "A",
+          "content": "Statement I is correct but Statement II is incorrect"
+        },
+        {
+          "id": "B",
+          "content": "Statement I is incorrect but Statement II is correct"
+        },
+        {
+          "id": "C",
+          "content": "Both Statement I and Statement II are incorrect"
+        },
+        {
+          "id": "D",
+          "content": "Both Statement I and Statement II are correct"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 65,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given below are two statements:\nStatement I: The Henry's law constant $K_{H}$ is constant with respect to variations in solution's concentration over the range for which the solution is ideally dilute.\nStatement II: $K_{H}$ does not differ for the same solute in different solvents.\nIn the light of the above statements, choose the correct answer from the options given below",
+      "options": [
+        { "id": "A", "content": "Both Statement I and Statement II are true" },
+        {
+          "id": "B",
+          "content": "Statement I is false but Statement II is true"
+        },
+        {
+          "id": "C",
+          "content": "Statement I is true but Statement II is false"
+        },
+        { "id": "D", "content": "Both Statement I and Statement II are false" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 66,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "'A' is a neutral organic compound $(M.F: C_{8}H_{9}ON)$. On treatment with aqueous $Br_{2}/HO^{-}$, 'A' forms a compound 'B' which is soluble in dilute acid. 'B' on treatment with aqueous $NaNO_{2}/HCl(0-5^{\\circ}C)$ produces a compound 'C' which on treatment with CuCN/NaCN produces 'D'. Hydrolysis of 'D' produces 'E' which is also obtainable from the hydrolysis of 'A'. 'E' on treatment with acidified $KMnO_{4}$ produces 'F'. 'F' contains two different types of hydrogen atoms. The structure of 'A' is",
+      "options": [
+        { "id": "A", "content": "4-methylbenzamide" },
+        { "id": "B", "content": "3-methylbenzamide" },
+        { "id": "C", "content": "N-methylbenzamide" },
+        { "id": "D", "content": "2-methylbenzamide" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 67,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Consider the transition metal ions $Mn^{3+}$, $Cr^{3+}$, $Fe^{3+}$ and $Co^{3+}$ and all form low spin octahedral complexes. The correct decreasing order of unpaired electrons in their respective d-orbitals of the complexes is",
+      "options": [
+        { "id": "A", "content": "$Cr^{3+}>Fe^{3+}>Co^{3+}>Mn^{3+}$" },
+        { "id": "B", "content": "$Cr^{3+}>Mn^{3+}>Fe^{3+}>Co^{3+}$" },
+        { "id": "C", "content": "$Mn^{3+}>Fe^{3+}>Co^{3+}>Cr^{3+}$" },
+        { "id": "D", "content": "$Fe^{3+}>Co^{3+}>Mn^{3+}>Cr^{3+}$" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 68,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Consider a solution of $CO_{2}(g)$ dissolved in water in a closed container. Which one of the following plots correctly represents variation of log (partial pressure of $CO_{2}$ in vapour phase above water) [y-axis] with log (mole fraction of $CO_{2}$ in water) [x-axis] at $25^{\\circ}C$?",
+      "options": [
+        { "id": "A", "content": "Horizontal straight line with zero slope" },
+        {
+          "id": "B",
+          "content": "Straight line passing through origin with positive slope"
+        },
+        {
+          "id": "C",
+          "content": "Straight line with positive intercept and positive slope"
+        },
+        { "id": "D", "content": "Straight line with negative slope" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 69,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given below are two statements:\nStatement I: Sucrose is dextrorotatory. However, sucrose upon hydrolysis gives a solution having mixture of products. This solution shows laevorotation.\nStatement II: Hydrolysis of sucrose gives glucose and fructose. Since the laevorotation of glucose is more than the dextrorotation of fructose, the resulting solution becomes laevorotatory.\nIn the light of the above statements, choose the correct answer from the options given below.",
+      "options": [
+        { "id": "A", "content": "Both Statement I and Statement II are true" },
+        {
+          "id": "B",
+          "content": "Statement I is false but Statement II is true"
+        },
+        {
+          "id": "C",
+          "content": "Statement I is true but Statement II is false"
+        },
+        { "id": "D", "content": "Both Statement I and Statement II are false" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 70,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given below are two statements:\nStatement I: Phenol on treatment with $CHCl_{3}/aq.$ KOH under refluxing condition, followed by acidification produces p-hydroxy benzaldehyde as the major product and o-hydroxy benzaldehyde as the minor product.\nStatement II: The mixture of p-hydroxybenzaldehyde and o-hydroxybenzaldehyde can be easily separated through steam distillation.\nIn the light of the above statements, choose the correct answer from the options given below",
+      "options": [
+        {
+          "id": "A",
+          "content": "Statement I is false but Statement II is true"
+        },
+        {
+          "id": "B",
+          "content": "Statement I is true but Statement II is false"
+        },
+        { "id": "C", "content": "Both Statement I and Statement II are false" },
+        { "id": "D", "content": "Both Statement I and Statement II are true" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 71,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "Sodium fusion extract of an organic compound (Y) with $CHCl_{3}$ and chlorine water gives violet color to the $CHCl_{3}$ layer. 0.15 g of (Y) gave 0.12 g of the silver halide precipitate in Carius method. Percentage of halogen in the compound (Y) is _____. (Nearest integer) (Given: molar mass in $g\\cdot mol^{-1}$ C: 12, H: 1, Cl: 35.5, Br: 80, I: 127, Ag: 108)",
+      "answer": 43
+    },
+    {
+      "id": 72,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "The temperature at which the rate constants of the given two gaseous reactions become equal is _____ K. (Nearest integer)\n$X\\longrightarrow Y, k_{1}=10^{6}e^{-\\frac{30000}{T}}$\n$Z\\longrightarrow W, k_{2}=10^{4}e^{-\\frac{24000}{T}}$\nGiven: $\\ln 10=2.303$",
+      "answer": 1303
+    },
+    {
+      "id": 73,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "Consider the following electrochemical cell at 298 K:\n$Pt|HSnO_{2}^{-}(aq)|Sn(OH)_{6}^{2-}(aq)|OH^{-}(aq)||Bi_{2}O_{3}(s)|Bi(s)$.\nIf the reaction quotient at a given time is $10^{6}$, then the cell EMF ($E_{cell}$) is _____ $\\times10^{-1}V$ (Nearest integer).\nGiven the standard half-cell reduction potential as $E^{\\circ}_{Bi_{2}O_{3}/Bi,OH^{-}}=-0.44~V$ and $E^{\\circ}_{Sn(OH)_{6}^{2-}/HSnO_{2}^{-},OH^{-}}=-0.90~V$",
+      "answer": 4
+    },
+    {
+      "id": 74,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "Dissociation of a gas $A_{2}$ takes place according to the following chemical reaction. At equilibrium, the total pressure is 1 bar at 300 K.\n$A_{2}(g)\\rightleftharpoons2 A(g)$\nThe standard Gibbs energy of formation of the involved substances has been provided below:\nSubstance: $A_{2}$, $\\Delta G_{f}^{\\circ} = -100.00~kJ\\cdot mol^{-1}$\nSubstance: A, $\\Delta G_{f}^{\\circ} = -50.832~kJ\\cdot mol^{-1}$\nThe degree of dissociation of $A_{2}(g)$ is given by $(x\\times10^{-2})^{1/2}$ where $x = \\underline{\\quad}$ (Nearest integer).\n[Given: $R=8~J\\cdot mol^{-1}K^{-1}$, $\\log 2=0.3010$, $\\log 3=0.48$]",
+      "answer": 25
+    },
+    {
+      "id": 75,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "The cycloalkene (X) on bromination consumes one mole of bromine per mole of (X) and gives the product (Y) in which C:Br ratio is 3:1. The percentage of bromine in the product (Y) is _____ %. (Nearest integer)\n(Given: molar mass in $g\\cdot mol^{-1}$ H: 1, C: 12, O: 16, Br: 80)",
+      "answer": 69
+    }
+  ]
+}

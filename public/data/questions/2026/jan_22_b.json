@@ -1,0 +1,975 @@
+{
+  "$schema": "../../schema.json",
+  "metadata": {
+    "year": 2026,
+    "month": "January",
+    "day": 22,
+    "shift": 2,
+    "duration": 10800000
+  },
+  "questions": [
+    {
+      "id": 1,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $k$ be the number obtained on rolling a fair die. If the probability that the system $x - ny + z = 6$, $x + (n - 2)y + (n + 1)z = 8$, $(n - 1)y + z = 1$ has a unique solution is $\\frac{k}{6}$, then the sum of $k$ and all possible values of $n$ is:",
+      "options": [
+        { "id": "A", "content": "21" },
+        { "id": "B", "content": "24" },
+        { "id": "C", "content": "20" },
+        { "id": "D", "content": "22" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 2,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Among the statements\n(S1): If $A(5, -1)$ and $B(-2, 3)$ are two vertices of a triangle, whose orthocentre is $(0, 0)$, then its third vertex is $(-4, -7)$\nand\n(S2): If positive numbers $2a, b, c$ are three consecutive terms of an A.P., then the lines $ax + by + c = 0$ are concurrent at $(2, -2)$.",
+      "options": [
+        { "id": "A", "content": "only (S2) is correct" },
+        { "id": "B", "content": "only (S1) is correct" },
+        { "id": "C", "content": "both are incorrect" },
+        { "id": "D", "content": "both are correct" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 3,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $\\alpha, \\beta$ be the roots of the quadratic equation $12x^2 - 20x + 3\\lambda = 0, \\lambda \\in \\mathbb{Z}$. If $\\frac{2}{3} \\le |\\beta - \\alpha| \\le 2$, then the sum of all possible values of $\\lambda$ is :",
+      "options": [
+        { "id": "A", "content": "1" },
+        { "id": "B", "content": "3" },
+        { "id": "C", "content": "6" },
+        { "id": "D", "content": "4" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 4,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If $\\lim_{x \\to 0} \\frac{x \\cos x - \\log(1+x)}{e^x - 1} = \\frac{a^2 + b^2 + c^2}{e + 2\\cos(bx) + (c-2)e^{(a-1)x} - x^2}$, then $a^2 + b^2 + c^2$ is equal to:",
+      "options": [
+        { "id": "A", "content": "7" },
+        { "id": "B", "content": "9" },
+        { "id": "C", "content": "3" },
+        { "id": "D", "content": "5" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 5,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If $y = y(x)$ satisfies the differential equation $16(x\\sqrt{x} + 9x)(4 + 9 + x) \\cos y dy = (1 + 2 \\sin y)dx, x > 0$, $y(256) = \\frac{\\pi}{2}$, $y(49) = \\alpha$, then $2 \\sin \\alpha$ is equal to:",
+      "options": [
+        { "id": "A", "content": "2(\\sqrt{2} - 1)" },
+        { "id": "B", "content": "\\sqrt{2} - 1" },
+        { "id": "C", "content": "3(\\sqrt{2} - 1)" },
+        { "id": "D", "content": "2\\sqrt{2} - 1" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 6,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $P(10, 2\\sqrt{15})$ be a point on the hyperbola $\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1$, whose foci are $S$ and $S'$. If the length of its latus rectum is 8, then the square of the area of $\\Delta PSS'$ is equal to:",
+      "options": [
+        { "id": "A", "content": "900" },
+        { "id": "B", "content": "4200" },
+        { "id": "C", "content": "2700" },
+        { "id": "D", "content": "1462" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 7,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $f$ and $g$ be functions satisfying $f(x + y) = f(x)f(y)$, $f(1) = 7$ and $g(x + y) = g(xy)$, $g(1) = 1$ for all $x, y \\in \\mathbb{N}$. If $\\sum_{x=1}^n \\left(\\frac{g(x)}{f(x)}\\right) = \\frac{1}{9607}$, then $n$ is equal to:",
+      "options": [
+        { "id": "A", "content": "7" },
+        { "id": "B", "content": "6" },
+        { "id": "C", "content": "5" },
+        { "id": "D", "content": "4" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 8,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $S$ and $S'$ be the foci of the ellipse $\\frac{x^2}{25} + \\frac{y^2}{9} = 1$ and $P(\\alpha, \\beta)$ be a point on the ellipse in the first quadrant. If $(SP)^2 + (S'P)^2 - 2 SP \\cdot S'P = 37$, then $\\alpha^2 + \\beta^2$ is equal to:",
+      "options": [
+        { "id": "A", "content": "13" },
+        { "id": "B", "content": "15" },
+        { "id": "C", "content": "17" },
+        { "id": "D", "content": "11" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 9,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $S = \\{z \\in \\mathbb{C} : 4z^2 + \\bar{z} = 0\\}$. Then $\\sum_{z \\in S} |z|^2$ is equal to:",
+      "options": [
+        { "id": "A", "content": "\\frac{64}{7}" },
+        { "id": "B", "content": "\\frac{16}{1}" },
+        { "id": "C", "content": "\\frac{64}{5}" },
+        { "id": "D", "content": "\\frac{16}{3}" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 10,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The number of elements in the relation $R = \\{(x, y) : 4x^2 + y^2 < 52, x, y \\in \\mathbb{Z}\\}$ is",
+      "options": [
+        { "id": "A", "content": "67" },
+        { "id": "B", "content": "77" },
+        { "id": "C", "content": "86" },
+        { "id": "D", "content": "89" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 11,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $C_r$ denote the coefficient of $x^r$ in the binomial expansion of $(1 + x)^n$, $n \\in \\mathbb{N}, 0 \\le r \\le n$. Let $P_n = C_0^2 - C_1^2 + 3 C_2^2 - 4 C_3^2 + \\dots + \\frac{C_{n+1}^2 (-2)^n}{n}$. If $\\sum_{n=1}^{25} P_{2n} = 1$, then the value of $n$ equals:",
+      "options": [
+        { "id": "A", "content": "580" },
+        { "id": "B", "content": "675" },
+        { "id": "C", "content": "525" },
+        { "id": "D", "content": "650" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 12,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let the locus of the mid-point of the chord through the origin $O$ of the parabola $y^2 = 4x$ be the curve $S$. Let $P$ be any point on $S$. Then the locus of the point, which internally divides $OP$ in the ratio 3:1, is:",
+      "options": [
+        { "id": "A", "content": "2x^2 = 3y" },
+        { "id": "B", "content": "2y^2 = 3x" },
+        { "id": "C", "content": "3y^2 = 2x" },
+        { "id": "D", "content": "3x^2 = 2y" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 13,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If $X = \\begin{bmatrix} x \\\\ y \\\\ z \\end{bmatrix}$ is a solution of the system of equations $AX = B$, where $\\text{adj } A = \\begin{bmatrix} 4 & -5 & 1 \\\\ 2 & 0 & -2 \\\\ 2 & 5 & 3 \\end{bmatrix}$ and $B = \\begin{bmatrix} 4 \\\\ 0 \\\\ 2 \\end{bmatrix}$, then $|x + y + z|$ is equal to :",
+      "options": [
+        { "id": "A", "content": "2" },
+        { "id": "B", "content": "1" },
+        { "id": "C", "content": "3" },
+        { "id": "D", "content": "\\frac{2}{3}" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 14,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $[\\cdot]$ denote the greatest integer function, and let $f(x) = \\min\\{2x, x^2\\}$. Let $S = \\{x \\in (-2, 2) : \\text{the function } g(x) = |x|[x^2] \\text{ is discontinuous at } x\\}$. Then $\\sum_{x \\in S} f(x)$ equals",
+      "options": [
+        { "id": "A", "content": "2 - \\sqrt{2}" },
+        { "id": "B", "content": "1 - \\sqrt{2}" },
+        { "id": "C", "content": "2\\sqrt{6} - 3\\sqrt{2}" },
+        { "id": "D", "content": "6 - 2\\sqrt{2}" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 15,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $f(x) = [x]^2 - [x + 3] - 3, x \\in \\mathbb{R}$, where $[\\cdot]$ is the greatest integer function. Then",
+      "options": [
+        { "id": "A", "content": "\\int_{-2}^6 f(x) dx = -6" },
+        { "id": "B", "content": "f(x) = 0 for finitely many values of x" },
+        { "id": "C", "content": "f(x) > 0 only for x \\in [4, \\infty)" },
+        { "id": "D", "content": "f(x) < 0 only for x \\in [-1, 3)" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 16,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $L$ be the line $\\frac{x+1}{2} = \\frac{y+1}{3} = \\frac{z+3}{6}$ and let $S$ be the set of all points on $L$, whose distance from the line $\\frac{x+1}{2} = \\frac{y+1}{3} = \\frac{z-9}{0}$ along the line $L$ is 7. Then $\\sum_{(a,b,c) \\in S} (a + b + c)$ is equal to:",
+      "options": [
+        { "id": "A", "content": "40" },
+        { "id": "B", "content": "28" },
+        { "id": "C", "content": "34" },
+        { "id": "D", "content": "6" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 17,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The area of the region $A = \\{(x, y) : 4x^2 + y^2 \\le 8, y \\le 4x^2\\}$ is:",
+      "options": [
+        { "id": "A", "content": "\\sqrt{2} + \\frac{\\pi}{2}" },
+        { "id": "B", "content": "\\sqrt{2} \\pi + 4" },
+        { "id": "C", "content": "\\pi + \\frac{3}{2}" },
+        { "id": "D", "content": "2 + \\frac{\\pi}{3}" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 18,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If the mean deviation about the median of the numbers $1k, 2k, 3k, \\dots, 1000k$ is 500, then $k^2$ is equal to:",
+      "options": [
+        { "id": "A", "content": "4" },
+        { "id": "B", "content": "1" },
+        { "id": "C", "content": "9" },
+        { "id": "D", "content": "16" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 19,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let the domain of the function $f(x) = \\sqrt{\\log_3 \\log_5 (7 - \\log_2 (x^2 - 10x + 85))} + \\sin^{-1}\\left(\\frac{17-x}{3x-7}\\right)$ be $(\\alpha, \\beta]$. Then $\\alpha + \\beta$ is equal to :",
+      "options": [
+        { "id": "A", "content": "8" },
+        { "id": "B", "content": "9" },
+        { "id": "C", "content": "12" },
+        { "id": "D", "content": "10" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 20,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $\\vec{a} = 2\\hat{i} - \\hat{j} + \\hat{k}$ and $\\vec{b} = \\lambda\\hat{j} + 2\\hat{k}, \\lambda \\in \\mathbb{Z}$ be two vectors. Let $\\vec{c} = \\vec{a} \\times \\vec{b}$ and $\\vec{d}$ be a vector of magnitude $\\sqrt{53}$ in $yz$-plane. If $|\\vec{c}| = 53$, then the maximum possible value of $(\\vec{c} \\cdot \\vec{d})^2$ is equal to:",
+      "options": [
+        { "id": "A", "content": "208" },
+        { "id": "B", "content": "26" },
+        { "id": "C", "content": "52" },
+        { "id": "D", "content": "104" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 21,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "Let $\\cos(\\alpha + \\beta) = -\\frac{1}{10}$ and $\\sin(\\alpha - \\beta) = \\frac{3}{8}$, where $0 < \\alpha < \\frac{3\\pi}{4}$ and $0 < \\beta < \\frac{\\pi}{4}$. If $\\tan 2\\alpha = \\frac{11(s + \\sqrt{5})}{3(1 - r\\sqrt{5})}, r, s \\in \\mathbb{N}$, then $r + s$ is equal to ____ .",
+      "answer": 9
+    },
+    {
+      "id": 22,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "Let $S$ be the set of the first 11 natural numbers. Then the number of elements in $A = \\{B \\subseteq S : n(B) \\ge 2 \\text{ and the product of all elements of } B \\text{ is even}\\}$ is ____.",
+      "answer": 1986
+    },
+    {
+      "id": 23,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "Let $[\\cdot]$ be the greatest integer function. If $\\alpha = \\int_0^{64} \\left(x^{1/3} - [x^{1/3}]\\right) dx$, then $\\frac{1}{\\pi} \\int_0^{\\alpha \\pi} \\left(\\frac{\\sin^6 \\theta + \\cos^6 \\theta}{\\sin^2 \\theta}\\right) d\\theta$ is equal to _____ .",
+      "answer": 32
+    },
+    {
+      "id": 24,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "Suppose $a, b, c$ are in A.P. and $a^2, 2b^2, c^2$ are in G.P. If $a < b < c$ and $a + b + c = 1$, then $9(a^2 + b^2 + c^2)$ is equal to _____ .",
+      "answer": 11
+    },
+    {
+      "id": 25,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "Let a vector $\\vec{a} = 2\\hat{i} - \\hat{j} + \\lambda\\hat{k}, \\lambda > 0$, make an obtuse angle with the vector $\\vec{b} = -\\lambda^2\\hat{i} + 4\\sqrt{2}\\hat{j} + 4\\sqrt{2}\\hat{k}$ and an angle $\\theta, \\frac{\\pi}{6} < \\theta < \\frac{\\pi}{2}$ with the positive $z$-axis. If the set of all possible values of $\\lambda$ is $(\\alpha, \\beta) - \\{\\gamma\\}$, then $\\alpha + \\beta + \\gamma$ is equal to ____ .",
+      "answer": 8
+    },
+    {
+      "id": 26,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Using a simple pendulum experiment acceleration due to gravity $g$ is determined by measuring its time period $T$. Which of the following plots represent the correct relation between the pendulum length $L$ and time period $T$?",
+      "options": [
+        {
+          "id": "A",
+          "content": "Graph showing 1/T^2 inversely proportional to L (hyperbolic curve decreasing)"
+        },
+        {
+          "id": "B",
+          "content": "Graph showing 1/T^2 concave downward curve decreasing"
+        },
+        {
+          "id": "C",
+          "content": "Graph showing 1/T^2 increasing non-linearly with L"
+        },
+        {
+          "id": "D",
+          "content": "Graph showing 1/T^2 decreasing linearly with L"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 27,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Figure shows the circuit that contains three resistances ($9\\Omega$ each) and two inductors ($4\\text{ mH}$ each). The reading of ammeter at the moment switch $K$ is turned ON, is ___ A.",
+      "options": [
+        { "id": "A", "content": "zero" },
+        { "id": "B", "content": "2" },
+        { "id": "C", "content": "3" },
+        { "id": "D", "content": "1" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 28,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "An electric power line having total resistance of $2\\Omega$, delivers $1\\text{ kW}$ of power at $250\\text{ V}$. The percentage efficiency of transmission line is ____.",
+      "options": [
+        { "id": "A", "content": "86.5" },
+        { "id": "B", "content": "92.5" },
+        { "id": "C", "content": "100" },
+        { "id": "D", "content": "96.9" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 29,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Light is incident on a metallic plate having work function $110 \\times 10^{-20}\\text{ J}$. If the produced photoelectrons have zero kinetic energy then the angular frequency of the incident light is ___ $\\text{rad/s}$. ($h = 6.63 \\times 10^{-34}\\text{ J}\\cdot\\text{s}$)",
+      "options": [
+        { "id": "A", "content": "1.04 \\times 10^{13}" },
+        { "id": "B", "content": "1.66 \\times 10^{16}" },
+        { "id": "C", "content": "1.04 \\times 10^{16}" },
+        { "id": "D", "content": "1.66 \\times 10^{15}" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 30,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Given below are two statements :\nStatement I: A satellite is moving around earth in the orbit very close to the earth surface. The time period of revolution of satellite depends upon the density of earth.\nStatement II: The time period of revolution of the satellite is $T = 2\\pi \\sqrt{\\frac{R_e}{g}}$ (for satellite very close to the earth surface), where $R_e$ radius of earth and $g$ acceleration due to gravity.\nIn the light of the above statements, choose the correct answer from the options given below :",
+      "options": [
+        { "id": "A", "content": "Both Statement I and Statement II are false" },
+        { "id": "B", "content": "Both Statement I and Statement II are true" },
+        {
+          "id": "C",
+          "content": "Statement I is true but Statement II is false"
+        },
+        {
+          "id": "D",
+          "content": "Statement I is false but Statement II is true"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 31,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Five positive charges each having charge $+q$ are placed at the vertices of a pentagon as shown in the figure. The electric potential $(V)$ and the electric field $(E)$ at the center $O$ of the pentagon due to these five positive charges are :",
+      "options": [
+        {
+          "id": "A",
+          "content": "V = \\frac{5q}{4\\pi \\epsilon_0 r} and E = 0"
+        },
+        { "id": "B", "content": "V = 0 and E = 0" },
+        {
+          "id": "C",
+          "content": "V = \\frac{5q}{4\\pi \\epsilon_0 r} and E = \\frac{5q}{4\\pi \\epsilon_0 r^2} \\hat{r}"
+        },
+        {
+          "id": "D",
+          "content": "V = \\frac{5q}{4\\pi \\epsilon_0 r} and E = \\frac{5\\sqrt{3}q}{8\\pi \\epsilon_0 r^2} \\hat{r}"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 32,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "When a part of a straight capillary tube is placed vertically in a liquid, the liquid raises up to certain height $h$. If the inner radius of the capillary tube, density of the liquid and surface tension of the liquid decrease by $1\\%$ each, then the height of the liquid in the tube will change by ___ %.",
+      "options": [
+        { "id": "A", "content": "+1" },
+        { "id": "B", "content": "-3" },
+        { "id": "C", "content": "-1" },
+        { "id": "D", "content": "+3" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 33,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "The smallest wavelength of Lyman series is $91\\text{ nm}$. The difference between the largest wavelengths of Paschen and Balmer series is nearly __________ nm.",
+      "options": [
+        { "id": "A", "content": "1875" },
+        { "id": "B", "content": "1550" },
+        { "id": "C", "content": "1217" },
+        { "id": "D", "content": "1784" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 34,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Given below are two statements :\nStatement I: For a mechanical system of many particles, total kinetic energy is the sum of kinetic energies of all the particles.\nStatement II: The total kinetic energy can be the sum of kinetic energy of the center of mass w.r.t to the origin and the kinetic energy of all the particles w.r.t. the center of mass as the reference.\nIn the light of the above statements, choose the correct answer from the options given below :",
+      "options": [
+        { "id": "A", "content": "Both Statement I and Statement II are false" },
+        { "id": "B", "content": "Both Statement I and Statement II are true" },
+        {
+          "id": "C",
+          "content": "Statement I is true but Statement II is false"
+        },
+        {
+          "id": "D",
+          "content": "Statement I is false but Statement II is true"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 35,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "If $\\epsilon_0, E$ and $t$ represent the free space permittivity, electric field and time respectively, then the unit of $\\frac{\\epsilon_0 E}{t}$ will be :",
+      "options": [
+        { "id": "A", "content": "A m" },
+        { "id": "B", "content": "A/m" },
+        { "id": "C", "content": "A/m^2" },
+        { "id": "D", "content": "A m^2" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 36,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "In an open organ pipe $\\nu_3$ and $\\nu_6$ are 3rd and 6th harmonic frequencies, respectively. If $\\nu_6 - \\nu_3 = 2200\\text{ Hz}$, the length of the pipe is _____ mm. (Take velocity of sound in air is $330\\text{ m/s}$.)",
+      "options": [
+        { "id": "A", "content": "275" },
+        { "id": "B", "content": "250" },
+        { "id": "C", "content": "200" },
+        { "id": "D", "content": "225" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 37,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "In parallax method for the determination of focal length of a concave mirror, the object should always be placed:",
+      "options": [
+        { "id": "A", "content": "at any point beyond the focus of the mirror" },
+        {
+          "id": "B",
+          "content": "beyond the centre of the curvature of the mirror ONLY"
+        },
+        {
+          "id": "C",
+          "content": "between the focus and the centre of curvature of the mirror ONLY"
+        },
+        {
+          "id": "D",
+          "content": "between the pole and the focus of the concave mirror ONLY"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 38,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Given below are two statements :\nStatement I: An object moves from position $\\vec{r}_1$ to position $\\vec{r}_2$ under a conservative force field $\\vec{F}$. The work done by the force is $W = -\\int_{\\vec{r}_1}^{\\vec{r}_2} \\vec{F} \\cdot d\\vec{r}$.\nStatement II: Any object moving from one location to another location can follow infinite number of paths. Therefore, the amount of work done by the object changes with the path it follows for a conservative force.\nIn the light of the above statements, choose the correct answer from the options given below :",
+      "options": [
+        { "id": "A", "content": "Both Statement I and Statement II are false" },
+        {
+          "id": "B",
+          "content": "Statement I is true but Statement II is false"
+        },
+        {
+          "id": "C",
+          "content": "Statement I is false but Statement II is true"
+        },
+        { "id": "D", "content": "Both Statement I and Statement II are true" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 39,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A laser beam has intensity of $4.0 \\times 10^{14}\\text{ W/m}^2$. The amplitude of magnetic field associated with beam is ____ $\\mu\\text{T}$. (Take $\\epsilon_0 = 8.85 \\times 10^{-12}\\text{ C}^2/\\text{N}\\cdot\\text{m}^2$ and $c = 3 \\times 10^8\\text{ m/s}$)",
+      "options": [
+        { "id": "A", "content": "1.83" },
+        { "id": "B", "content": "18.3" },
+        { "id": "C", "content": "5.5" },
+        { "id": "D", "content": "2.0" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 40,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Consider two boxes containing ideal gases $A$ and $B$ such that their temperatures, pressures and number densities are same. The molecular size of $A$ is half of that of $B$ and mass of molecule $A$ is four times that of $B$. If the collision frequency in gas $B$ is $32 \\times 10^{18}\\text{ /s}$ then collision frequency in gas $A$ is ____ $/s$.",
+      "options": [
+        { "id": "A", "content": "32 \\times 10^{18}" },
+        { "id": "B", "content": "2 \\times 10^{18}" },
+        { "id": "C", "content": "8 \\times 10^{18}" },
+        { "id": "D", "content": "4 \\times 10^{18}" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 41,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A uniform bar of length $12\\text{ cm}$ and mass $20m$ lies on a smooth horizontal table. Two point masses $m$ and $2m$ are moving in opposite directions with same speed of $v$ and in the same plane as the bar, as shown in figure. These masses strike the bar simultaneously and get stuck to it. After collision the entire system is rotating with angular frequency $\\omega$. The ratio of $v$ and $\\omega$ is:",
+      "options": [
+        { "id": "A", "content": "33" },
+        { "id": "B", "content": "66" },
+        { "id": "C", "content": "32" },
+        { "id": "D", "content": "\\frac{2}{88}" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 42,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Three small identical bubbles of water having same charge on each coalesce to form a bigger bubble. Then the ratio of the potentials on one initial bubble and that on the resultant bigger bubble is :",
+      "options": [
+        { "id": "A", "content": "1 : 3^{1/3}" },
+        { "id": "B", "content": "3^{2/3} : 1" },
+        { "id": "C", "content": "1 : 3^{2/3}" },
+        { "id": "D", "content": "1 : 2^{2/3}" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 43,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "The wavelength of light, while it is passing through water is $540\\text{ nm}$. The refractive index of water is $\\frac{4}{3}$. The wavelength of the same light when it is passing through a transparent medium having refractive index of $\\frac{3}{2}$ is _____ nm.",
+      "options": [
+        { "id": "A", "content": "540" },
+        { "id": "B", "content": "480" },
+        { "id": "C", "content": "840" },
+        { "id": "D", "content": "380" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 44,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Which of the following are true for a single slit diffraction?\nA. Width of central maxima increases with increase in wavelength keeping slit width constant.\nB. Width of central maxima increases with decrease in wavelength keeping slit width constant.\nC. Width of central maxima increases with decrease in slit width at constant wavelength.\nD. Width of central maxima increases with increase in slit width at constant wavelength.\nE. Brightness of central maxima increases for decrease in wavelength at constant slit width.",
+      "options": [
+        { "id": "A", "content": "A, D only" },
+        { "id": "B", "content": "B, C only" },
+        { "id": "C", "content": "A, D, E only" },
+        { "id": "D", "content": "A, C only" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 45,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "The correct truth table for the given input data of the following logic gate is :",
+      "options": [
+        {
+          "id": "A",
+          "content": "Inputs: (1,1,0,1 -> 1), (0,0,1,1 -> 0), (1,0,1,0 -> 1), (1,1,1,1 -> 0)"
+        },
+        {
+          "id": "B",
+          "content": "Inputs: (1,1,0,1 -> 0), (0,0,1,1 -> 1), (1,0,1,0 -> 1), (1,1,1,1 -> 1)"
+        },
+        {
+          "id": "C",
+          "content": "Inputs: (1,1,0,1 -> 0), (0,0,1,1 -> 0), (1,0,1,0 -> 1), (1,1,1,1 -> 1)"
+        },
+        {
+          "id": "D",
+          "content": "Inputs: (1,1,0,1 -> 1), (0,0,1,1 -> 0), (1,0,1,0 -> 0), (1,1,1,1 -> 1)"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 46,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "A conducting circular loop is rotated about its diameter at a constant angular speed of $100\\text{ rad/s}$ in a magnetic field of $0.5\\text{ T}$ perpendicular to the axis of rotation. When the loop is rotated by $30^\\circ$ from the horizontal position, the induced EMF is $15.4\\text{ mV}$. The radius of the loop is ____ mm. (Take $\\pi = \\frac{22}{7}$)",
+      "answer": 14
+    },
+    {
+      "id": 47,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "Two masses $m$ and $2m$ are connected by a light string going over a pulley (disc) of mass $30m$ with radius $r = 0.1\\text{ m}$. The pulley is mounted in a vertical plane and it is free to rotate about its axis. The mass $2m$ is released from rest and its speed when it has descended through a height of $3.6\\text{ m}$ is ______ m/s. (Assume string does not slip and $g = 10\\text{ m/s}^2$)",
+      "answer": 2
+    },
+    {
+      "id": 48,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "An insulated cylinder of volume $60\\text{ cm}^3$ is filled with a gas at $27^\\circ\\text{C}$ and 2 atmospheric pressure. Then the gas is compressed making the final volume as $20\\text{ cm}^3$ while allowing the temperature to rise to $77^\\circ\\text{C}$. The final pressure is ____ atmospheric pressure.",
+      "answer": 7
+    },
+    {
+      "id": 49,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "A capacitor $P$ with capacitance $10 \\times 10^{-6}\\text{ F}$ is fully charged with a potential difference of $6.0\\text{ V}$ and disconnected from the battery. The charged capacitor is connected across another capacitor $Q$ with capacitance $20 \\times 10^{-6}\\text{ F}$. The charge on capacitor $Q$ when equilibrium is established will be $\\alpha \\times 10^{-5}\\text{ C}$ (assume capacitor $Q$ does not have any charge initially), the value of $\\alpha$ is ____.",
+      "answer": 4
+    },
+    {
+      "id": 50,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "A cylindrical conductor of length $2\\text{ m}$ and area of cross-section $0.2\\text{ mm}^2$ carries an electric current of $1.6\\text{ A}$ when its ends are connected to a $2\\text{ V}$ battery. Mobility of electrons in the conductor is $\\alpha \\times 10^{-3}\\text{ m}^2/\\text{V}\\cdot\\text{s}$. The value of $\\alpha$ is : (electron concentration $n = 5 \\times 10^{28}/\\text{m}^3$ and electron charge $e = 1.6 \\times 10^{-19}\\text{ C}$)",
+      "answer": 1
+    },
+    {
+      "id": 51,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "$[\\text{Ni}(\\text{PPh}_3)_2\\text{Cl}_2]$ is a paramagnetic complex. Identify the INCORRECT statements about this complex.\nA. The complex exhibits geometrical isomerism.\nB. The complex is white in colour.\nC. The calculated spin-only magnetic moment of the complex is $2.84\\text{ BM}$.\nD. The calculated CFSE (Crystal Field Stabilization Energy) of Ni in this complex is $-0.8\\Delta_o$.\nE. The geometrical arrangement of ligands in this complex is similar to that in $\\text{Ni}(\\text{CO})_4$.\nChoose the correct answer from the options given below :",
+      "options": [
+        { "id": "A", "content": "A, B and D Only" },
+        { "id": "B", "content": "C, D and E Only" },
+        { "id": "C", "content": "C and D Only" },
+        { "id": "D", "content": "A and B Only" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 52,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "3,3-Dimethyl-2-butanol cannot be prepared by:\nA. $(CH_3)_3C-CHO + MeMgBr/dry ether \\to H_3O^+$\nB. $3,3-dimethylbut-1-ene + H_2O/H^+$\nC. $2,3,4-trimethylpent-2-ene + (i) O_3/Zn-H_2O (ii) NaBH_4/MeOH$\nD. $3,3-dimethylbutan-2-one + LiAlH_4/H_3O^+$\nE. $3,3-dimethylbut-1-yne + H_2O, Hg^{2+}/H^+$",
+      "options": [
+        { "id": "A", "content": "B only" },
+        { "id": "B", "content": "B and C only" },
+        { "id": "C", "content": "B and E only" },
+        { "id": "D", "content": "B, C and E only" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 53,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Identify the correct statements :\nA. Hydrated salts can be used as primary standard.\nB. Primary standard should not undergo any reaction with air.\nC. Reactions of primary standard with another substance should be instantaneous and stoichiometric.\nD. Primary standard should not be soluble in water.\nE. Primary standard should have low relative molar mass.",
+      "options": [
+        { "id": "A", "content": "A, B, C and E Only" },
+        { "id": "B", "content": "A, B and C Only" },
+        { "id": "C", "content": "A, B and E Only" },
+        { "id": "D", "content": "D and E Only" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 54,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Which of the following mixture gives a buffer solution with $\\text{pH} = 9.25$? Given : $pK_b(\\text{NH}_4\\text{OH}) = 4.75$",
+      "options": [
+        { "id": "A", "content": "0.4M NH_4OH (1 L) + 0.1M HCl (1 L)" },
+        { "id": "B", "content": "0.2M NH_4OH (0.5 L) + 0.1M HCl (0.5 L)" },
+        { "id": "C", "content": "0.5M NH_4OH (0.2 L) + 0.2M HCl (0.5 L)" },
+        { "id": "D", "content": "0.2M NH_4OH (0.4 L) + 0.1M HCl (1 L)" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 55,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "When $1\\text{ g}$ of compound $(X)$ is subjected to Kjeldahl's method for estimation of nitrogen, $15\\text{ mL}$ $1\\text{ M}$ $\\text{H}_2\\text{SO}_4$ was neutralized by ammonia evolved. The percentage of nitrogen in compound $(X)$ is :",
+      "options": [
+        { "id": "A", "content": "21" },
+        { "id": "B", "content": "42" },
+        { "id": "C", "content": "0.42" },
+        { "id": "D", "content": "0.21" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 56,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Consider the following reduction processes :\n$\\text{Al}^{3+} + 3e^- \\to \\text{Al}(s), E^\\circ = -1.66\\text{ V}$\n$\\text{Fe}^{3+} + e^- \\to \\text{Fe}^{2+}, E^\\circ = +0.77\\text{ V}$\n$\\text{Co}^{3+} + e^- \\to \\text{Co}^{2+}, E^\\circ = +1.81\\text{ V}$\n$\\text{Cr}^{3+} + 3e^- \\to \\text{Cr}(s), E^\\circ = -0.74\\text{ V}$\nThe tendency to act as reducing agent decreases in the order :",
+      "options": [
+        { "id": "A", "content": "Cr > Fe^{2+} > Al > Co^{2+}" },
+        { "id": "B", "content": "Al > Cr > Co^{2+} > Fe^{2+}" },
+        { "id": "C", "content": "Al > Cr > Fe^{2+} > Co^{2+}" },
+        { "id": "D", "content": "Al > Fe^{2+} > Cr > Co^{2+}" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 57,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Consider the following reaction:\n$\\text{1,2-dibromopentane} + 2\\text{NaNH}_2 \\to X \\xrightarrow[(ii) (CH_3)_2CHBr]{(i) NaNH_2} Y$.\nThe product $Y$ formed is :",
+      "options": [
+        { "id": "A", "content": "5-methylhex-2-yne" },
+        { "id": "B", "content": "2-methylhex-3-yne" },
+        { "id": "C", "content": "Isopropylbut-1-yne" },
+        { "id": "D", "content": "2-methylhex-2-yne" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 58,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "$A + 2B \\longrightarrow AB_2$\n$36.0\\text{ g}$ of 'A' (Molar mass : $60\\text{ g mol}^{-1}$) and $56.0\\text{ g}$ of 'B' (Molar mass : $80\\text{ g mol}^{-1}$) are allowed to react. Which of the following statements are correct ?\nA. 'A' is the limiting reagent.\nB. $77.0\\text{ g}$ of $AB_2$ is formed.\nC. Molar mass of $AB_2$ is $140\\text{ g mol}^{-1}$.\nD. $15.0\\text{ g}$ of A is left unreacted after the completion of reaction.",
+      "options": [
+        { "id": "A", "content": "A and B Only" },
+        { "id": "B", "content": "A and C Only" },
+        { "id": "C", "content": "C and D Only" },
+        { "id": "D", "content": "B and D Only" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 59,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The compound $A, C_8H_8O_2$ reacts with acetophenone to form a single product via cross-Aldol condensation. The compound A on reaction with conc. NaOH forms a substituted benzyl alcohol as one of the two products. The compound A is :",
+      "options": [
+        { "id": "A", "content": "2-hydroxy acetophenone" },
+        { "id": "B", "content": "4-methoxy benzaldehyde" },
+        { "id": "C", "content": "4-methyl benzoic acid" },
+        { "id": "D", "content": "4-hydroxy benzylaldehyde" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 60,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The energy of first (lowest) Balmer line of H atom is $x$. The energy (in J) of second Balmer line of H atom is :",
+      "options": [
+        { "id": "A", "content": "2x" },
+        { "id": "B", "content": "1.35x" },
+        { "id": "C", "content": "\\frac{x}{2}" },
+        { "id": "D", "content": "1.35/x" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 61,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The IUPAC name of the following compound is :",
+      "options": [
+        { "id": "A", "content": "2-bromo-5-methylhexylpropanoate" },
+        { "id": "B", "content": "2-bromo-5-methylpropanoate" },
+        { "id": "C", "content": "n-propyl-1-bromo-4-methylhexanoate" },
+        { "id": "D", "content": "n-propyl-2-bromo-5-methylheptanoate" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 62,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Match List-I (Reaction of Glucose with) with List-II (Product formed):\nList-I:\nA. Hydroxylamine\nB. $Br_2$ water\nC. Excess acetic anhydride\nD. Concentrated $HNO_3$\nList-II:\nI. Gluconic acid\nII. Glucose pentacetate\nIII. Saccharic acid\nIV. Glucoxime",
+      "options": [
+        { "id": "A", "content": "A-IV, B-III, C-II, D-I" },
+        { "id": "B", "content": "A-IV, B-I, C-II, D-III" },
+        { "id": "C", "content": "A-III, B-I, C-IV, D-II" },
+        { "id": "D", "content": "A-I, B-III, C-IV, D-II" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 63,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "At $T(K)$, $100\\text{ g}$ of $98\\%$ (w/w) aqueous $\\text{H}_2\\text{SO}_4$ solution is mixed with $100\\text{ g}$ of $49\\%$ (w/w) aqueous $\\text{H}_2\\text{SO}_4$ solution. What is the mole fraction of $\\text{H}_2\\text{SO}_4$ in the resultant solution? (Given: Atomic mass $\\text{H} = 1\\text{ u}$; $\\text{S} = 32\\text{ u}$; $\\text{O} = 16\\text{ u}$). (Assume that temperature after mixing remains constant)",
+      "options": [
+        { "id": "A", "content": "0.1" },
+        { "id": "B", "content": "0.9" },
+        { "id": "C", "content": "0.337" },
+        { "id": "D", "content": "0.663" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 64,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Cyclohexylmethanamine $\\xrightarrow[NaOH]{C_6H_5COCl} [A] \\xrightarrow[H_2O]{LiAlH_4} [B]$. The final product $[B]$ is :",
+      "options": [
+        { "id": "A", "content": "N-(cyclohexylmethyl)benzamide" },
+        { "id": "B", "content": "N-benzyl-1-cyclohexylmethanamine" },
+        { "id": "C", "content": "N-cyclohexylbenzamide" },
+        { "id": "D", "content": "phenyl(cyclohexylmethylamino)methanol" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 65,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given below are two statements :\nStatement I: Elements 'X' and 'Y' are the most and least electronegative elements, respectively among N, As, Sb and P. The nature of the oxides $X_2O_3$ and $Y_2O_3$ is acidic and amphoteric, respectively.\nStatement II: $\\text{BCl}_3$ is covalent in nature and gets hydrolysed in water. It produces $[\\text{B}(\\text{OH})_4]^-$ and $[\\text{B}(\\text{H}_2\\text{O})_6]^{3+}$ in aqueous medium.\nIn the light of the above statements, choose the correct answer from the options given below :",
+      "options": [
+        {
+          "id": "A",
+          "content": "Statement I is false but Statement II is true"
+        },
+        { "id": "B", "content": "Both Statement I and Statement II are false" },
+        {
+          "id": "C",
+          "content": "Statement I is true but Statement II is false"
+        },
+        { "id": "D", "content": "Both Statement I and Statement II are true" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 66,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The dibromo compound [P] (molecular formula : $C_9H_{10}Br_2$) when heated with excess sodamide followed by treatment with dilute HCl gives [Q]. On warming [Q] with mercuric sulphate and dilute sulphuric acid yields [R] which gives positive Iodoform test but negative Tollen's test. The compound [P] is :",
+      "options": [
+        { "id": "A", "content": "1,1-dibromo-1-p-tolylethane" },
+        { "id": "B", "content": "1,2-dibromo-1-phenylpropane" },
+        { "id": "C", "content": "bis(bromomethyl)-p-xylene" },
+        { "id": "D", "content": "1,2-dibromo-1-p-tolylethene" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 67,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Correct statements regarding Arrhenius equation among the following are :\nA. Factor $e^{-E_a/RT}$ corresponds to fraction of molecules having kinetic energy less than $E_a$.\nB. At a given temperature, lower the $E_a$, faster is the reaction.\nC. Increase in temperature by about $10^\\circ\\text{C}$ doubles the rate of reaction.\nD. Plot of $\\log k$ vs $\\frac{1}{T}$ gives a straight line with slope $-\\frac{E_a}{R}$.\nChoose the correct answer from the options given below :",
+      "options": [
+        { "id": "A", "content": "B and C Only" },
+        { "id": "B", "content": "A and C Only" },
+        { "id": "C", "content": "A and B Only" },
+        { "id": "D", "content": "B and D Only" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 68,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given below are two statements :\nStatement I : The first ionization enthalpy of Cr is lower than that of Mn.\nStatement II: The second and third ionization enthalpies of Cr are higher than those of Mn.\nIn the light of the above statements, choose the correct answer from the options given below :",
+      "options": [
+        { "id": "A", "content": "Both Statement I and Statement II are true" },
+        {
+          "id": "B",
+          "content": "Statement I is false but Statement II is true"
+        },
+        {
+          "id": "C",
+          "content": "Statement I is true but Statement II is false"
+        },
+        { "id": "D", "content": "Both Statement I and Statement II are false" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 69,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given below are two statements :\nStatement I: $C < O < N < F$ is the correct order in terms of first ionization enthalpy values.\nStatement II: $S > Se > Te > Po > O$ is the correct order in terms of the magnitude of electron gain enthalpy values.\nIn the light of the above statements, choose the correct answer from the options given below:",
+      "options": [
+        { "id": "A", "content": "Both Statement I and Statement II are false" },
+        {
+          "id": "B",
+          "content": "Statement I is false but Statement II is true"
+        },
+        {
+          "id": "C",
+          "content": "Statement I is true but Statement II is false"
+        },
+        { "id": "D", "content": "Both Statement I and Statement II are true" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 70,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Among $H_2S, H_2O, NF_3, NH_3$ and $CHCl_3$ identify the molecule (X) with lowest dipole moment value. The number of lone pairs of electrons present on the central atom of the molecule (X) is:",
+      "options": [
+        { "id": "A", "content": "0" },
+        { "id": "B", "content": "3" },
+        { "id": "C", "content": "2" },
+        { "id": "D", "content": "1" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 71,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "Among the following oxides of 3d elements, the number of mixed oxides are $Ti_2O_3, V_2O_4, Cr_2O_3, Mn_3O_4, Fe_3O_4, Fe_2O_3, Co_3O_4$",
+      "answer": 3
+    },
+    {
+      "id": 72,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "If the enthalpy of sublimation of Li is $155\\text{ kJ mol}^{-1}$, enthalpy of dissociation of $F_2$ is $150\\text{ kJ mol}^{-1}$, ionization enthalpy of Li is $520\\text{ kJ mol}^{-1}$, electron gain enthalpy of F is $-313\\text{ kJ mol}^{-1}$, standard enthalpy of formation of LiF is $-594\\text{ kJ mol}^{-1}$. The magnitude of lattice enthalpy of LiF is ____ $\\text{kJ mol}^{-1}$ (Nearest Integer)",
+      "answer": 1031
+    },
+    {
+      "id": 73,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "The mass of benzanilide obtained from the benzoylation reaction of $5.8\\text{ g}$ of aniline, if yield of product is $82\\%$, is ____ g (nearest integer). (Given molar mass in $\\text{g mol}^{-1}$ H: 1, C: 12, N: 14, O: 16)",
+      "answer": 10
+    },
+    {
+      "id": 74,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "Consider $A \\to B$ and $C \\to D$ are two reactions. If the rate constant $(k_1)$ of the $A \\longrightarrow B$ reaction can be expressed by the following equation $\\log_{10} k = 14.34 - \\frac{1.5 \\times 10^4}{T/K}$ and activation energy of $C \\longrightarrow D$ reaction ($E_{a2}$) is $\\frac{1}{5}\\text{th}$ of the $A \\longrightarrow B$ reaction ($E_{a1}$), then the value of $E_{a2}$ is ____ $\\text{kJ mol}^{-1}$ (Nearest Integer)",
+      "answer": 57
+    },
+    {
+      "id": 75,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "Consider the following electrochemical cell $Pt | O_2(g) (1\\text{ bar}) | HCl(aq) || M^{2+}(aq, 1.0\\text{M}) | M(s) |$. The pH above which, oxygen gas would start to evolve at anode is ____ (nearest integer). Given: $E^0_{M^{2+}/M} = 0.994\\text{ V}$, $E^0_{O_2/H_2O} = 1.23\\text{ V}$ [standard reduction potential]",
+      "answer": 4
+    }
+  ]
+}

@@ -1,0 +1,966 @@
+{
+  "$schema": "../../schema.json",
+  "metadata": {
+    "year": 2026,
+    "month": "January",
+    "day": 24,
+    "shift": 2,
+    "duration": 10800000
+  },
+  "questions": [
+    {
+      "id": 1,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The smallest positive integral value of $a$, for which all the roots of $x^4 - ax^2 + 9 = 0$ are real and distinct, is equal to",
+      "options": [
+        { "id": "A", "content": "9" },
+        { "id": "B", "content": "7" },
+        { "id": "C", "content": "3" },
+        { "id": "D", "content": "4" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 2,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Consider the following three statements for the function $f : (0,\\infty) \\to \\mathbb{R}$ defined by $f(x) = |\\log_e x| - |x - 1|$:\n(I) $f$ is differentiable at all $x > 0$.\n(II) $f$ is increasing in $(0, 1)$.\n(III) $f$ is decreasing in $(1, \\infty)$.\nThen.",
+      "options": [
+        { "id": "A", "content": "Only (I) and (III) are TRUE." },
+        { "id": "B", "content": "Only (II) and (III) are TRUE." },
+        { "id": "C", "content": "Only (I) is TRUE." },
+        { "id": "D", "content": "All (I), (II) and (III) are TRUE." }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 3,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $f$ be a function such that $3f(x) + 2f\\left(\\frac{1}{x}\\right) = 19x$, where $x \\neq 0$. Then $m = \\sum_{i=1}^{9} 2(f(5) - f(2))$ is equal to",
+      "options": [
+        { "id": "A", "content": "9" },
+        { "id": "B", "content": "18" },
+        { "id": "C", "content": "36" },
+        { "id": "D", "content": "-9" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 4,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "$\\left(\\frac{3}{7} + \\frac{1}{4}\\right) + \\left(\\frac{3^2}{7^2} + \\frac{3}{7} \\times \\frac{1}{4} + \\frac{1}{4^2}\\right) + \\left(\\frac{3^3}{7^3} + \\frac{3^2}{7^2} \\times \\frac{1}{4} + \\frac{3}{7} \\times \\frac{1}{4^2} + \\frac{1}{4^3}\\right) + \\dots$ upto infinite terms, is equal to",
+      "options": [
+        { "id": "A", "content": "$\\frac{3}{4}$" },
+        { "id": "B", "content": "$\\frac{4}{7}$" },
+        { "id": "C", "content": "$\\frac{5}{6}$" },
+        { "id": "D", "content": "$\\frac{2}{5}$" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 5,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $P = [p_{ij}]$ and $Q = [q_{ij}]$ be two square matrices of order 3 such that $q_{ij} = 2^{(i+j-1)} p_{ij}$ and $\\det(Q) = 2^{10}$. Then the value of $\\det(\\text{adj}(\\text{adj} P))$ is:",
+      "options": [
+        { "id": "A", "content": "32" },
+        { "id": "B", "content": "81" },
+        { "id": "C", "content": "124" },
+        { "id": "D", "content": "16" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 6,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The letters of the word \"UDAYPUR\" are written in all possible ways with or without meaning and these words are arranged as in a dictionary. The rank of the word \"UDAYPUR\" is",
+      "options": [
+        { "id": "A", "content": "1580" },
+        { "id": "B", "content": "1581" },
+        { "id": "C", "content": "1579" },
+        { "id": "D", "content": "1578" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 7,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $\\vec{a} = 2\\hat{i} - 5\\hat{j} + 5\\hat{k}$ and $\\vec{b} = \\hat{i} - \\hat{j} + 3\\hat{k}$. If $\\vec{c}$ is a vector such that $2(\\vec{a} \\times \\vec{c}) + 3(\\vec{b} \\times \\vec{c}) = 0$ and $(\\vec{a} - \\vec{b}) \\cdot \\vec{c} = -97$, then $|\\vec{c} \\times \\hat{k}|^2$ is equal to",
+      "options": [
+        { "id": "A", "content": "233" },
+        { "id": "B", "content": "205" },
+        { "id": "C", "content": "193" },
+        { "id": "D", "content": "218" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 8,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $a_1, a_2, a_3, a_4$ be an A.P. of four terms such that each term of the A.P. and its common difference are integers. If $a_1 + a_2 + a_3 + a_4 = 48$ and $a_1 a_2 a_3 a_4 + l^4 = 361$, then the largest term of the A.P. is equal to",
+      "options": [
+        { "id": "A", "content": "23" },
+        { "id": "B", "content": "21" },
+        { "id": "C", "content": "24" },
+        { "id": "D", "content": "27" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 9,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let the image of parabola $x^2 = 4y$ in the line $x - y = 1$ be $(y + a)^2 = b(x - c)$, $a, b, c \\in \\mathbb{N}$. Then $a + b + c$ is equal to",
+      "options": [
+        { "id": "A", "content": "4" },
+        { "id": "B", "content": "8" },
+        { "id": "C", "content": "12" },
+        { "id": "D", "content": "6" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 10,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $X = \\{x \\in \\mathbb{N} : 1 \\le x \\le 19\\}$ and $Y = \\{ax + b : x \\in X\\}$ for some $a, b \\in \\mathbb{R}$. If the mean and variance of the elements of $Y$ are 30 and 750 respectively, find the sum of all possible values of $a^2 + b^2$.",
+      "options": [
+        { "id": "A", "content": "20" },
+        { "id": "B", "content": "100" },
+        { "id": "C", "content": "80" },
+        { "id": "D", "content": "60" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 11,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let the length of the latus rectum of an ellipse $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1, (a > b)$ be 30. If its eccentricity is the maximum value of the function $f(t) = -4 + \\sqrt{3}\\sqrt{2t - t^2}$, then $(a^2 + b^2)$ is equal to",
+      "options": [
+        { "id": "A", "content": "516" },
+        { "id": "B", "content": "276" },
+        { "id": "C", "content": "256" },
+        { "id": "D", "content": "496" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 12,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $[t]$ denote the greatest integer less than or equal to $t$. If the function $f(x) = \\begin{cases} b \\frac{\\sin((\\cos x + \\sin x)^{\\frac{2}{\\pi}})}{x^2 \\left(\\frac{\\pi}{2} - \\left[\\frac{\\pi}{2}\\right]\\right)}, & x < 0 \\\\ 3, & x = 0 \\\\ \\frac{\\sin x - \\sin 2x}{2 \\left(\\frac{1}{a}\\right) x^3}, & x > 0 \\end{cases}$ is continuous at $x = 0$, then $a^2 + b^2$ is equal to",
+      "options": [
+        { "id": "A", "content": "$\\frac{2}{3}$" },
+        { "id": "B", "content": "$\\frac{1}{16}$" },
+        { "id": "C", "content": "$\\frac{9}{4}$" },
+        { "id": "D", "content": "$\\frac{3}{8}$" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 13,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $f(x) = \\int \\frac{7x^8 + 9x^{10}}{(1 + x^2 + 2x^9)^2} dx, x > 0$ and $\\lim_{x\\to 0} f(x) = 0$. If $f(1) = \\frac{4}{9}$. Let $A = \\begin{bmatrix} 0 & 1 \\\\ \\frac{4}{\\alpha} & 2 \\end{bmatrix}$, $f'(1) = 0$ and $B = \\text{adj}(\\text{adj} A)$. If $|B| = 81$, then $\\alpha^2$ is equal to",
+      "options": [
+        { "id": "A", "content": "2" },
+        { "id": "B", "content": "1" },
+        { "id": "C", "content": "4" },
+        { "id": "D", "content": "3" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 14,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $\\vec{a} = 2\\hat{i} - \\hat{j} - \\hat{k}$, $\\vec{b} = \\hat{i} + 3\\hat{j} - \\hat{k}$ and $\\vec{c} = 2\\hat{i} + \\hat{j} + 3\\hat{k}$. Let $\\vec{v}$ be the vector in the plane of the vectors $\\vec{a}$ and $\\vec{b}$, such that the length of its projection on the vector $\\vec{c}$ is $\\frac{14}{\\sqrt{14}}$. Then $|\\vec{v}|^2$ is equal to:",
+      "options": [
+        { "id": "A", "content": "$\\frac{35}{2}$" },
+        { "id": "B", "content": "7" },
+        { "id": "C", "content": "$\\frac{21}{2}$" },
+        { "id": "D", "content": "13" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 15,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $f(\\alpha)$ denote the area of the region in the first quadrant bounded by $x = 0$, $x = 1$, $y^2 = x$, and $y = |\\alpha x - 5| - |1 - \\alpha x| + \\alpha x$. Then $2(f(0) + f(1))$ is equal to",
+      "options": [
+        { "id": "A", "content": "12" },
+        { "id": "B", "content": "7" },
+        { "id": "C", "content": "9" },
+        { "id": "D", "content": "14" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 16,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $y = y(x)$ be a differentiable function in the interval $(0,\\infty)$ such that $y(1) = 2$, and $\\lim_{t\\to x} \\left(\\frac{x^2 y(x) - t^2 y(t)}{x - t}\\right) = 3$ for each $x > 0$. Then $2y(2)$ is equal to",
+      "options": [
+        { "id": "A", "content": "18" },
+        { "id": "B", "content": "12" },
+        { "id": "C", "content": "23" },
+        { "id": "D", "content": "27" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 17,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If the domain of the function $f(x) = \\sin^{-1}\\left(\\frac{x^2 - 2x - 2}{21}\\right)$ is $(-\\infty, \\alpha] \\cup [\\beta, \\gamma] \\cup [\\delta, \\infty)$, then $\\alpha + \\beta + \\gamma + \\delta$ is equal to",
+      "options": [
+        { "id": "A", "content": "2" },
+        { "id": "B", "content": "3" },
+        { "id": "C", "content": "4" },
+        { "id": "D", "content": "5" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 18,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The largest value of $n$, for which $40^n$ divides $60!$, is",
+      "options": [
+        { "id": "A", "content": "13" },
+        { "id": "B", "content": "14" },
+        { "id": "C", "content": "11" },
+        { "id": "D", "content": "12" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 19,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The sum of all values of $\\alpha$, for which the shortest distance between the lines $\\frac{x + 1}{\\alpha} = \\frac{y - 2}{-1} = \\frac{z - 4}{-\\alpha}$ and $\\frac{x}{\\alpha} = \\frac{y - 1}{2} = \\frac{z - 1}{2\\alpha}$ is $\\sqrt{2}$, is",
+      "options": [
+        { "id": "A", "content": "-8" },
+        { "id": "B", "content": "6" },
+        { "id": "C", "content": "-6" },
+        { "id": "D", "content": "8" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 20,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let the angles made with the positive $x$-axis by two straight lines drawn from the point $P(2, 3)$ and meeting the line $x + y = 6$ at a distance $\\sqrt{32}$ from the point $P$ be $\\theta_1$ and $\\theta_2$. Then the value of $(\\theta_1 + \\theta_2)$ is:",
+      "options": [
+        { "id": "A", "content": "$\\frac{\\pi}{6}$" },
+        { "id": "B", "content": "$\\frac{\\pi}{3}$" },
+        { "id": "C", "content": "$\\frac{\\pi}{12}$" },
+        { "id": "D", "content": "$\\frac{\\pi}{2}$" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 21,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "Let $(h, k)$ lie on the circle $C : x^2 + y^2 = 4$ and the point $(2h + 1, 3k + 2)$ lie on an ellipse with eccentricity $e$. Then the value of $e^2$ is equal to __________.",
+      "answer": 0.55
+    },
+    {
+      "id": 22,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "If $f(x)$ satisfies the relation $f(x) = e^x + \\int_0^1 (y + x e) f(y) dy$, then $e + f(0)$ is equal to ____ .",
+      "answer": 2
+    },
+    {
+      "id": 23,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "The number of elements in the set $\\{x \\in [0, 180^\\circ] : \\tan(x + 100^\\circ) = \\tan(x + 50^\\circ) \\tan x \\tan(x - 50^\\circ)\\}$ is",
+      "answer": 2
+    },
+    {
+      "id": 24,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "Let $z = (1 + i)(1 + 2i)(1 + 3i)\\dots(1 + ni)$, where $i = \\sqrt{-1}$. If $|z|^2 = 44200$, then $n$ is equal to ____",
+      "answer": 4
+    },
+    {
+      "id": 25,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "Let $S$ be a set of 5 elements and $P(S)$ denote the power set of $S$. Let $E$ be an event of choosing an ordered pair $(A, B)$ from the set $P(S) \\times P(S)$ such that $A \\cap B = \\emptyset$. If the probability of the event $E$ is $\\frac{3^p}{2^q}$, where $p, q \\in \\mathbb{N}$, then $p + q$ is equal to",
+      "answer": 15
+    },
+    {
+      "id": 26,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Two identical circular loops $P$ and $Q$ each of radius $r$ are lying in parallel planes such that they have common axis. The current through $P$ and $Q$ are $I$ and $4I$ respectively in clockwise direction as seen from $O$. The net magnetic field at $O$ is:",
+      "options": [
+        { "id": "A", "content": "$\\frac{\\mu_0 I}{4\\sqrt{2}r}$ towards $P$" },
+        {
+          "id": "B",
+          "content": "$\\frac{3\\mu_0 I}{4\\sqrt{2}r}$ towards $Q$"
+        },
+        {
+          "id": "C",
+          "content": "$\\frac{3\\mu_0 I}{4\\sqrt{2}r}$ towards $P$"
+        },
+        { "id": "D", "content": "$\\frac{\\mu_0 I}{4\\sqrt{2}r}$ towards $Q$" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 27,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A flexible chain of mass $m$ hangs between two fixed points at the same level. The inclination of the chain with the horizontal at the two points of support is $30^\\circ$. Considering the equilibrium of each half of the chain, the tension of the chain at the lowest point is _______.",
+      "options": [
+        { "id": "A", "content": "$\\frac{\\sqrt{3} mg}{2}$" },
+        { "id": "B", "content": "$\\frac{mg}{2}$" },
+        { "id": "C", "content": "$\\frac{1}{\\sqrt{3}} mg$" },
+        { "id": "D", "content": "$\\frac{\\sqrt{3}}{2} mg$" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 28,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A point source is kept at the center of a spherically enclosed detector. If the volume of the detector increased by 8 times, the intensity will",
+      "options": [
+        { "id": "A", "content": "decrease by 4 times" },
+        { "id": "B", "content": "increase by 8 times" },
+        { "id": "C", "content": "decrease by 8 times" },
+        { "id": "D", "content": "increase by 64 times" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 29,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "The fifth harmonic of a closed organ pipe is found to be in unison with the first harmonic of an open pipe. The ratio of lengths of closed pipe to that of the open pipe is $5/x$. The value of $x$ is ____.",
+      "options": [
+        { "id": "A", "content": "1" },
+        { "id": "B", "content": "2" },
+        { "id": "C", "content": "3" },
+        { "id": "D", "content": "4" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 30,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "In case of vertical circular motion of a particle by a thread of length $r$ if the tension in the thread is zero at an angle $30^\\circ$ as shown in figure, the velocity at the bottom point of the circular path is ($g =$ gravitational acceleration)",
+      "options": [
+        { "id": "A", "content": "$\\sqrt{5gr}$" },
+        { "id": "B", "content": "$\\sqrt{4gr}$" },
+        { "id": "C", "content": "$\\sqrt{\\frac{5}{2} gr}$" },
+        { "id": "D", "content": "$\\sqrt{\\frac{7}{2} gr}$" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 31,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Three parallel plate capacitors each with area $A$ and separation $d$ are filled with two dielectric ($k_1$ and $k_2$) ($k_1 > k_2$) in the following fashion. Which of the following is true?",
+      "options": [
+        { "id": "A", "content": "$C_C > C_A > C_B$" },
+        { "id": "B", "content": "$C_C > C_B > C_A$" },
+        { "id": "C", "content": "$C_B > C_C > C_A$" },
+        { "id": "D", "content": "$C_A > C_C > C_B$" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 32,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Distance between an object and three times magnified real image is 40 cm. The focal length of the mirror used is ____ cm.",
+      "options": [
+        { "id": "A", "content": "-2" },
+        { "id": "B", "content": "-15" },
+        { "id": "C", "content": "-20" },
+        { "id": "D", "content": "-10" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 33,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "In the Young's double slit experiment the intensity produced by each one of the individual slits is $I_0$. The distance between two slits is 2 mm. The distance of screen from slits is 10 m. The wavelength of light is $6000\\text{ \\AA}$. The intensity of light on the screen in front of one of the slits is ____.",
+      "options": [
+        { "id": "A", "content": "$1.4 I_0$" },
+        { "id": "B", "content": "$2 I_0$" },
+        { "id": "C", "content": "$2\\sqrt{2} I_0$" },
+        { "id": "D", "content": "$I_0$" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 34,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A thin uniform rod of mass $M$ and length $L$ is pivoted at a height $\\frac{L}{3}$ as shown in the figure. The rod is allowed to fall from a vertical position and lie horizontally on the table. The angular velocity of this rod when it hits the table top, is ____. ($g =$ gravitational acceleration)",
+      "options": [
+        { "id": "A", "content": "$\\sqrt{\\frac{3g}{L}}$" },
+        { "id": "B", "content": "$\\sqrt{\\frac{2g}{L}}$" },
+        { "id": "C", "content": "$\\sqrt{\\frac{g}{L}}$" },
+        { "id": "D", "content": "$\\sqrt{\\frac{3g}{2L}}$" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 35,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "In a vernier callipers, 50 vernier scale divisions are equal to 48 main scale divisions. If one main scale division $= 0.05\\text{ mm}$, then the least count of the vernier callipers is _____ mm.",
+      "options": [
+        { "id": "A", "content": "0.05" },
+        { "id": "B", "content": "0.02" },
+        { "id": "C", "content": "0.002" },
+        { "id": "D", "content": "0.005" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 36,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Identify the correct truth table of the given logic circuit.",
+      "options": [
+        {
+          "id": "A",
+          "content": "A=0, B=0, Y=0; A=0, B=1, Y=1; A=1, B=0, Y=1; A=1, B=1, Y=0"
+        },
+        {
+          "id": "B",
+          "content": "A=0, B=0, Y=1; A=0, B=1, Y=1; A=1, B=0, Y=1; A=1, B=1, Y=0"
+        },
+        {
+          "id": "C",
+          "content": "A=0, B=0, Y=1; A=0, B=1, Y=0; A=1, B=0, Y=1; A=1, B=1, Y=0"
+        },
+        {
+          "id": "D",
+          "content": "A=0, B=0, Y=0; A=0, B=1, Y=0; A=1, B=0, Y=1; A=1, B=1, Y=0"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 37,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "10 mole of an ideal gas is undergoing the process shown in the figure. The heat involved in the process from $P_1$ to $P_2$ is $\\alpha \\cdot P_1$ Joule ($P_1 = 21.7\\text{ Pa}$, $P_2 = 30\\text{ Pa}$, $C_v = 21\\text{ J/K}\\cdot\\text{mol}$, $R = 8.3\\text{ J/mol}\\cdot\\text{K}$). The value of $\\alpha$ is ____.",
+      "options": [
+        { "id": "A", "content": "28" },
+        { "id": "B", "content": "24" },
+        { "id": "C", "content": "21" },
+        { "id": "D", "content": "15" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 38,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "The reading of the ammeter (A) in steady state in the following circuit (assuming negligible internal resistance of the ammeter) is ____ A.",
+      "options": [
+        { "id": "A", "content": "1" },
+        { "id": "B", "content": "0" },
+        { "id": "C", "content": "$\\frac{1}{2}$" },
+        { "id": "D", "content": "2" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 39,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A moving coil galvanometer of resistance $1000\\,\\Omega$ shows a full scale deflection for a current of 1 mA. The value of resistance required to convert this galvanometer into an ammeter, showing full scale deflection for a current of 5 mA, is ____ $\\Omega$.",
+      "options": [
+        { "id": "A", "content": "25" },
+        { "id": "B", "content": "2.5" },
+        { "id": "C", "content": "0.5" },
+        { "id": "D", "content": "250" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 40,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A regular hexagon is formed by six wires each of resistance $r$ and the corners are joined to the centre by wires of same resistance. If the current enters at one corner and leaves at the opposite corner, the equivalent resistance of the hexagon between the two opposite corners will be",
+      "options": [
+        { "id": "A", "content": "$\\frac{3}{4}r$" },
+        { "id": "B", "content": "$\\frac{4}{5}r$" },
+        { "id": "C", "content": "$\\frac{3}{5}r$" },
+        { "id": "D", "content": "$\\frac{5}{8}r$" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 41,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Five persons $P_1, P_2, P_3, P_4$ and $P_5$ recorded object distance ($u$) and image distance ($v$) using same convex lens having power $+5\\text{ D}$ as $(25, 96)$, $(30, 62)$, $(35, 37)$, $(45, 35)$ and $(50, 32)$ respectively. Identify correct statement",
+      "options": [
+        {
+          "id": "A",
+          "content": "Readings recorded by $P_3$ person are incorrect"
+        },
+        {
+          "id": "B",
+          "content": "Readings recorded by $P_3$ and $P_2$ persons are incorrect"
+        },
+        {
+          "id": "C",
+          "content": "Readings recorded by all persons are correct"
+        },
+        {
+          "id": "D",
+          "content": "Readings recorded by $P_4$ and $P_5$ persons are incorrect"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 42,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "The velocity ($v$) - Distance ($x$) graph is shown in figure. Which graph represents acceleration ($a$) versus distance ($x$) variation of this system?",
+      "options": [
+        { "id": "A", "content": "Straight line with positive slope" },
+        {
+          "id": "B",
+          "content": "Straight line with negative slope starting from negative axis"
+        },
+        { "id": "C", "content": "Parabola opening upwards" },
+        { "id": "D", "content": "Constant acceleration" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 43,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "When a light of a given wavelength falls on a metallic surface the stopping potential for photoelectrons is 3.2 V. If a second light having wavelength twice of first light is used, the stopping potential drops to 0.7 V. The wavelength of first light is ____ m. ($h = 6.63 \\times 10^{-34}\\text{ J}\\cdot\\text{s}, e = 1.6 \\times 10^{-19}\\text{ C}, c = 3 \\times 10^8\\text{ m/s}$)",
+      "options": [
+        { "id": "A", "content": "$2.5 \\times 10^{-7}$" },
+        { "id": "B", "content": "$2.2 \\times 10^{-8}$" },
+        { "id": "C", "content": "$2.9 \\times 10^{-8}$" },
+        { "id": "D", "content": "$3.1 \\times 10^{-7}$" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 44,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A cubical block of density $\\rho_b = 600\\text{ kg/m}^3$ floats in a liquid of density $\\rho_l = 900\\text{ kg/m}^3$. If the height of block is $H = 8.0\\text{ cm}$ then height of the submerged part is ____ cm.",
+      "options": [
+        { "id": "A", "content": "7.3" },
+        { "id": "B", "content": "4.3" },
+        { "id": "C", "content": "6.3" },
+        { "id": "D", "content": "5.3" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 45,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "The binding energy for the following nuclear reaction are expressed in MeV.\n${}_2\\text{He}^3 + {}_0\\text{n}^1 \\to {}_2\\text{He}^4 + 20\\text{ MeV}$\n${}_2\\text{He}^4 + {}_0\\text{n}^1 \\to {}_2\\text{He}^5 - 0.9\\text{ MeV}$\nIf $X_3, X_4, X_5$ denote the stability of ${}_2\\text{He}^3, {}_2\\text{He}^4$ and ${}_2\\text{He}^5$ respectively, then the correct order is:",
+      "options": [
+        { "id": "A", "content": "$X_4 = X_5 = X_3$" },
+        { "id": "B", "content": "$X_4 > X_5 > X_3$" },
+        { "id": "C", "content": "$X_4 < X_5 < X_3$" },
+        { "id": "D", "content": "$X_4 > X_5 < X_3$" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 46,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "A soap bubble of surface tension $0.04\\text{ N/m}$ is blown to a diameter of 7 cm. If $(15000 - x)\\,\\mu\\text{J}$ of work is done in blowing it further to make its diameter 14 cm, then the value of $x$ is ____. (\\pi = 22/7)",
+      "answer": 1856
+    },
+    {
+      "id": 47,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "A point charge $q = 1\\,\\mu\\text{C}$ is located at a distance 2 cm from one end of a thin insulating wire of length 10 cm having a charge $Q = 24\\,\\mu\\text{C}$, distributed uniformly along its length, as shown in figure. Force between $q$ and wire is ____ N. (Use $\\frac{1}{4\\pi\\epsilon_0} = 9 \\times 10^9\\text{ N}\\cdot\\text{m}^2/\\text{C}^2$)",
+      "answer": 15
+    },
+    {
+      "id": 48,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "In a meter bridge experiment to determine the value of unknown resistance, first the resistances $2\\,\\Omega$ and $3\\,\\Omega$ are connected in the left and right gaps of the bridge and the null point is obtained at a distance $l\\text{ cm}$ from the left. Now when an unknown resistance $x\\,\\Omega$ is connected in parallel to $3\\,\\Omega$ resistance, the null point is shifted by 15 cm to the right of wire. The value of unknown resistance is ____ $\\Omega$.",
+      "answer": 6
+    },
+    {
+      "id": 49,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "A uniform solid cylinder of length $L$ and radius $R$ has moment of inertia about its axis equal to $I_1$. A small concentric cylinder of length $L/2$ and radius $R/3$ carved from this cylinder has moment of inertia about its axis equals to $I_2$. The ratio $I_1/I_2$ is ____.",
+      "answer": 162
+    },
+    {
+      "id": 50,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "When 300 J of heat given to an ideal gas with $C_p = \\frac{7}{2}R$ its temperature raises from $20^\\circ\\text{C}$ to $50^\\circ\\text{C}$ keeping its volume constant. The mass of the gas is (approximately) ____ g. ($R = 8.314\\text{ J/mol}\\cdot\\text{K}$)",
+      "answer": 16
+    },
+    {
+      "id": 51,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "From the following given structures (I to VI), how many compounds contain at least one secondary alcohol?",
+      "options": [
+        { "id": "A", "content": "Five" },
+        { "id": "B", "content": "Four" },
+        { "id": "C", "content": "Three" },
+        { "id": "D", "content": "Two" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 52,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "\"X\" is an oxoanion of the lightest element of group 7 (in the periodic table). The metal is in +6 oxidation state in \"X\". The color of the potassium salt of X is",
+      "options": [
+        { "id": "A", "content": "green" },
+        { "id": "B", "content": "purple" },
+        { "id": "C", "content": "orange" },
+        { "id": "D", "content": "yellow" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 53,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The wavelength of light absorbed for the following complexes are in the order:\n(I) $[\\text{Co}(\\text{NH}_3)_6]^{3+}$\n(II) $[\\text{Co}(\\text{H}_2\\text{O})_6]^{3+}$\n(III) $[\\text{Co}(\\text{CN})_6]^{3-}$\n(IV) $[\\text{Co}(\\text{NH}_3)_5(\\text{H}_2\\text{O})]^{3+}$\n(V) $[\\text{CoF}_6]^{3-}$",
+      "options": [
+        { "id": "A", "content": "III < IV < I < II < V" },
+        { "id": "B", "content": "III < I < II < IV < V" },
+        { "id": "C", "content": "III < I < IV < V < II" },
+        { "id": "D", "content": "III < I < IV < II < V" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 54,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "At 298 K, the mole percentage of $\\text{N}_2(\\text{g})$ in air is 80%. Water is in equilibrium with air at a pressure of 10 atm. What is the mole fraction of $\\text{N}_2$ in water at 298 K? ($K_H$ for $\\text{N}_2$ is $6.5 \\times 10^7\\text{ mmHg}$)",
+      "options": [
+        { "id": "A", "content": "$9.35 \\times 10^{-5}$" },
+        { "id": "B", "content": "$9.35 \\times 10^5$" },
+        { "id": "C", "content": "$1.17 \\times 10^{-4}$" },
+        { "id": "D", "content": "$1.23 \\times 10^{-7}$" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 55,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Consider the following gaseous equilibrium in a closed container of volume 'V' at temperature $T(\\text{K})$: $P_2(\\text{g}) + Q_2(\\text{g}) \\rightleftharpoons 2PQ(\\text{g})$. 2 moles each of $P_2(\\text{g})$, $Q_2(\\text{g})$, and $PQ(\\text{g})$ are present at equilibrium. Now one mole each of '$P_2$' and '$Q_2$' are added to the equilibrium keeping the temperature at $T(\\text{K})$. The number of moles of $P_2$, $Q_2$ and $PQ$ at the new equilibrium, respectively, are:",
+      "options": [
+        { "id": "A", "content": "1.66, 1.66, 1.66" },
+        { "id": "B", "content": "1.21, 2.24, 1.56" },
+        { "id": "C", "content": "2.56, 1.62, 2.24" },
+        { "id": "D", "content": "2.67, 2.67, 2.67" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 56,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The unsaturated ether on acidic hydrolysis produces carbonyl compounds as shown below:\n$\\text{CH}_3-\\text{CH}=\\text{CH}-\\text{O}-\\text{CH}=\\text{CH}_2 \\xrightarrow{\\text{H}_3\\text{O}^+} \\text{CH}_3-\\text{CH}_2-\\text{CH}=\\text{O} + \\text{O}=\\text{CH}-\\text{CH}_3$\nBased on this, predict the solution/reagent that will help to distinguish \"P\" and \"Q\" obtained in the following reaction:\n$\\text{CH}_3-\\text{CH}=\\text{CH}-\\text{O}-\\text{C}(\\text{CH}_3)=\\text{CH}_2 \\xrightarrow[\\Delta]{\\text{H}_3\\text{O}^+} P + Q$",
+      "options": [
+        { "id": "A", "content": "Fehling solution" },
+        { "id": "B", "content": "Saturated $\\text{NaHSO}_3$ solution" },
+        { "id": "C", "content": "2, 4-DNP reagent" },
+        { "id": "D", "content": "Lucas reagent" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 57,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The wavelength of spectral line obtained in the spectrum of $\\text{Li}^{2+}$ ion, when the transition takes place between two levels whose sum is 4 and difference is 2, is",
+      "options": [
+        { "id": "A", "content": "$2.28 \\times 10^{-6}\\text{ cm}$" },
+        { "id": "B", "content": "$1.14 \\times 10^{-7}\\text{ cm}$" },
+        { "id": "C", "content": "$2.28 \\times 10^{-7}\\text{ cm}$" },
+        { "id": "D", "content": "$1.14 \\times 10^{-6}\\text{ cm}$" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 58,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "A student has planned to prepare acetanilide from aniline using acetic anhydride. The student has started from 9.3 g of aniline. However, the student has managed to obtain 11 g of dry acetanilide. The percentage yield of this reaction is:",
+      "options": [
+        { "id": "A", "content": "59.5%" },
+        { "id": "B", "content": "97.5%" },
+        { "id": "C", "content": "72.5%" },
+        { "id": "D", "content": "81.5%" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 59,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The number of possible tripeptides formed involving alanine (ala), glycine (gly) and valine (val), where no amino acid has been used more than once is:",
+      "options": [
+        { "id": "A", "content": "3" },
+        { "id": "B", "content": "8" },
+        { "id": "C", "content": "6" },
+        { "id": "D", "content": "4" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 60,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given below are two statements:\nStatement I: There are several conformers for n-butane. Out of those conformers, fully eclipsed conformer (X) is the least stable and most stable conformer is anti conformer (Y).\nStatement II: As the dihedral angle increases, torsional strain decreases from (X) to (Y).\nIn the light of the above statements, choose the correct answer from the options given below:",
+      "options": [
+        {
+          "id": "A",
+          "content": "Statement I is false but Statement II is true"
+        },
+        { "id": "B", "content": "Both Statement I and Statement II are true" },
+        {
+          "id": "C",
+          "content": "Statement I is true but Statement II is false"
+        },
+        { "id": "D", "content": "Both Statement I and Statement II are false" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 61,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The heat of atomisation of methane and ethane are '$x\\text{ kJ}\\cdot\\text{mol}^{-1}$' and '$y\\text{ kJ}\\cdot\\text{mol}^{-1}$' respectively. The longest wavelength ($\\lambda$) of light capable of breaking the C-C bond can be expressed in SI unit as:",
+      "options": [
+        {
+          "id": "A",
+          "content": "$N_A h c \\left(y - \\frac{6x}{4}\\right)^{-1}$"
+        },
+        { "id": "B", "content": "$\\frac{N_A h c}{250(y - 6x)}$" },
+        {
+          "id": "C",
+          "content": "$\\frac{h c}{1000}\\left(\\frac{y - 6x}{4}\\right)^{-1}$"
+        },
+        { "id": "D", "content": "$\\frac{1000 N_A h c}{y - \\frac{6x}{4}}$" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 62,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Choose the INCORRECT statement:",
+      "options": [
+        {
+          "id": "A",
+          "content": "Carbon cannot exceed its covalency more than four."
+        },
+        {
+          "id": "B",
+          "content": "Among the isotopes of carbon, ${}^{13}\\text{C}$ is a radioactive isotope."
+        },
+        {
+          "id": "C",
+          "content": "Carbon exhibits negative oxidation states along with +4 and +2."
+        },
+        {
+          "id": "D",
+          "content": "$\\text{CO}_2$ is the most acidic oxide among the dioxides of group 14 elements."
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 63,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given below are two statements:\nStatement I: The dipole moment of R-CN is greater than R-NC and R-NC can undergo hydrolysis under acidic medium to produce carboxylic acid.\nStatement II: R-CN hydrolyses under acidic medium to produce a compound which on treatment with $\\text{SOCl}_2$ followed by the addition of $\\text{NH}_3$ gives another compound (x). This compound (x) on treatment with $\\text{NaOCl}/\\text{NaOH}$ gives a product, that on treatment with $\\text{CHCl}_3/\\text{KOH}$ produces R-NC.\nIn the light of the above statements, choose the correct answer from the options given below:",
+      "options": [
+        {
+          "id": "A",
+          "content": "Statement I is false but Statement II is true"
+        },
+        { "id": "B", "content": "Both Statement I and Statement II are true" },
+        {
+          "id": "C",
+          "content": "Statement I is true but Statement II is false"
+        },
+        { "id": "D", "content": "Both Statement I and Statement II are false" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 64,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Two liquids A and B form an ideal solution at temperature T K. At T K, the vapour pressures of pure A and B are 55 and $15\\text{ kN}\\cdot\\text{m}^{-2}$ respectively. What is the mole fraction of A in solution of A and B in equilibrium with a vapour in which the mole fraction of A is 0.8?",
+      "options": [
+        { "id": "A", "content": "0.52" },
+        { "id": "B", "content": "0.60" },
+        { "id": "C", "content": "0.75" },
+        { "id": "D", "content": "0.33" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 65,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Find out the statements which are not true.\nA. Resonating structures with more number of covalent bonds and lesser charge separation are more stable.\nB. In electromeric effect, an unsaturated system shows +E effect with nucleophile and -E effect with electrophile.\nC. Inductive effect is responsible for high melting point, boiling point and dipole moment of polar compounds.\nD. The greater the number of alkyl groups attached to the doubly bonded carbon atoms, higher is the heat of hydrogenation.\nE. Stability of carbanion increases with the increase in s-character of the carbon carrying the negative charge.\nChoose the correct answer from the options given below:",
+      "options": [
+        { "id": "A", "content": "A, D & E only" },
+        { "id": "B", "content": "B & D only" },
+        { "id": "C", "content": "B, D & E only" },
+        { "id": "D", "content": "A, C & D only" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 66,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Pair of species among the following having same bond order as well as paramagnetic character will be-",
+      "options": [
+        { "id": "A", "content": "$\\text{O}_2^+, \\text{N}_2^{2-}$" },
+        { "id": "B", "content": "$\\text{O}_2, \\text{N}_2^+$" },
+        { "id": "C", "content": "$\\text{O}_2^+, \\text{N}_2$" },
+        { "id": "D", "content": "$\\text{O}_2^-, \\text{N}_2$" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 67,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The correct order of C, N, O and F in terms of second ionisation potential is",
+      "options": [
+        { "id": "A", "content": "F < N < C < O" },
+        { "id": "B", "content": "C < O < N < F" },
+        { "id": "C", "content": "C < N < F < O" },
+        { "id": "D", "content": "C < F < N < O" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 68,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "In the Group analysis of cations, $\\text{Ba}^{2+} \\& \\text{Ca}^{2+}$ are precipitated respectively as",
+      "options": [
+        { "id": "A", "content": "sulphide & sulphide" },
+        { "id": "B", "content": "hydroxide & carbonate" },
+        { "id": "C", "content": "carbonate & carbonate" },
+        { "id": "D", "content": "chromate & sulphide" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 69,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given below are two statements:\nStatement I: Cross aldol condensation between two different aldehydes will always produce four different products.\nStatement II: When semicarbazide reacts with a mixture of benzaldehyde and acetophenone under optimum pH, it forms a condensation product with acetophenone only.\nIn the light of the above statements, choose the correct answer from the options given below.",
+      "options": [
+        { "id": "A", "content": "Both Statement I and Statement II are false" },
+        {
+          "id": "B",
+          "content": "Statement I is false but Statement II is true"
+        },
+        {
+          "id": "C",
+          "content": "Statement I is true but Statement II is false"
+        },
+        { "id": "D", "content": "Both Statement I and Statement II are true" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 70,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "One mole of $\\text{Cl}_2(\\text{g})$ was passed into 2 L of cold 2 M KOH solution. After the reaction, the concentrations of $\\text{Cl}^-$, $\\text{ClO}^-$ and $\\text{OH}^-$ are respectively (assume volume remains constant)",
+      "options": [
+        { "id": "A", "content": "0.5M, 0.5M, 1M" },
+        { "id": "B", "content": "0.5M, 0.5M, 0.5M" },
+        { "id": "C", "content": "1M, 1M, 1M" },
+        { "id": "D", "content": "0.75M, 0.75M, 1M" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 71,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "Grignard reagent $\\text{RMgBr}$ (P) reacts with water and forms a gas (Q). One gram of Q occupies $1.4\\text{ dm}^3$ at STP. (P) on reaction with dry ice in dry ether followed by $\\text{H}_3\\text{O}^+$ forms a compound (Z). 0.1 mole of (Z) will weigh ____ g.",
+      "answer": 6
+    },
+    {
+      "id": 72,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "0.25 g of an organic compound \"A\" containing carbon, hydrogen and oxygen was analysed using the combustion method. There was an increase in mass of $\\text{CaCl}_2$ tube and potash tube at the end of the experiment. The amount was found to be 0.15 g and 0.1837 g, respectively. The percentage of oxygen in compound A is ____ %. (Given: molar mass in $\\text{g}\\cdot\\text{mol}^{-1}$ H: 1, C: 12, O: 16)",
+      "answer": 60
+    },
+    {
+      "id": 73,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "A chromium complex with a formula $\\text{CrCl}_3 \\cdot 6\\text{H}_2\\text{O}$ has spin only magnetic moment value of 3.87 BM and its solution conductivity corresponds to 1:2 electrolyte. 2.665 g of the complex solution was initially passed through cation exchanger. The solution obtained after the process was reacted with excess of $\\text{AgNO}_3$. The amount of $\\text{AgCl}$ formed in the above process is ____ g.",
+      "answer": 3
+    },
+    {
+      "id": 74,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "Molar conductivity of a weak acid HQ of concentration 0.18 M was found to be $\\frac{1}{30}$ of the molar conductivity of another weak acid HZ with concentration of 0.02 M. If $\\lambda^0_{\\text{Q}^-}$ happened to be equal with $\\lambda^0_{\\text{Z}^-}$, then the difference of the $\\text{p}K_a$ values of the two weak acids $(\\text{p}K_a(\\text{HQ}) - \\text{p}K_a(\\text{HZ}))$ is ____.",
+      "answer": 4
+    },
+    {
+      "id": 75,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "The half-life of ${}^{65}\\text{Zn}$ is 245 days. After $x$ days, 75% of original activity remained. The value of $x$ in days is ____. (Given: $\\log 3 = 0.4771, \\log 2 = 0.3010$)",
+      "answer": 102
+    }
+  ]
+}

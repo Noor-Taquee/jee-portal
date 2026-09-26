@@ -1,0 +1,939 @@
+{
+  "$schema": "../../schema.json",
+  "metadata": {
+    "year": 2026,
+    "month": "January",
+    "day": 23,
+    "shift": 1,
+    "duration": 10800000
+  },
+  "questions": [
+    {
+      "id": 1,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $S=\\{z:3\\le|2z-3(1+i)|\\le7\\}$ be a set of complex numbers. Then $\\min_{z\\in S}|(z+\\frac{1}{2}(5+3i))|$ is equal to:",
+      "options": [
+        { "id": "A", "content": "$\\frac{1}{2}$" },
+        { "id": "B", "content": "$\\frac{5}{2}$" },
+        { "id": "C", "content": "2" },
+        { "id": "D", "content": "$\\frac{3}{2}$" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 2,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let the mean and variance of 8 numbers -10, -7, -1, x, y, 9, 2, 16 be $\\frac{7}{2}$ and $\\frac{293}{4}$, respectively. Then the mean of 4 numbers x, y, $x+y+1$, $|x-y|$ is:",
+      "options": [
+        { "id": "A", "content": "10" },
+        { "id": "B", "content": "9" },
+        { "id": "C", "content": "11" },
+        { "id": "D", "content": "12" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 3,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Number of solutions of $\\sqrt{3}\\cos 2\\theta+8\\cos\\theta+3\\sqrt{3}=0, \\theta\\in[-3\\pi,2\\pi]$ is:",
+      "options": [
+        { "id": "A", "content": "0" },
+        { "id": "B", "content": "3" },
+        { "id": "C", "content": "4" },
+        { "id": "D", "content": "5" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 4,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If $\\alpha$ and $\\beta$ $(\\alpha<\\beta)$ are the roots of the equation $(-2+\\sqrt{3})(|\\sqrt{x}-3|)+(x-6\\sqrt{x})+(9-2\\sqrt{3})=0, x\\ge0$ then $\\sqrt{\\frac{\\beta}{\\alpha}}+\\sqrt{\\alpha\\beta}$ is equal to:",
+      "options": [
+        { "id": "A", "content": "10" },
+        { "id": "B", "content": "11" },
+        { "id": "C", "content": "8" },
+        { "id": "D", "content": "9" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 5,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The value of $\\frac{^{100}C_{50}}{51}+\\frac{^{100}C_{51}}{52}+...+\\frac{^{100}C_{100}}{101}$ is:",
+      "options": [
+        { "id": "A", "content": "$\\frac{2^{100}}{100}$" },
+        { "id": "B", "content": "$\\frac{2^{100}}{101}$" },
+        { "id": "C", "content": "$\\frac{2^{101}}{100}$" },
+        { "id": "D", "content": "$\\frac{2^{101}}{101}$" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 6,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "A building construction work can be completed by two masons A and B together in 22.5 days. Mason A alone can complete the construction work in 24 days less than mason B alone. Then mason A alone will complete the construction work in:",
+      "options": [
+        { "id": "A", "content": "36 days" },
+        { "id": "B", "content": "42 days" },
+        { "id": "C", "content": "24 days" },
+        { "id": "D", "content": "30 days" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 7,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $f(x)=\\int\\frac{(2-x^2)\\cdot e^x}{(\\sqrt{1+x})(1-x)^{3/2}} dx$. If $f(0)=0,$ then $f(\\frac{1}{2})$ is equal to:",
+      "options": [
+        { "id": "A", "content": "$\\sqrt{3e}-1$" },
+        { "id": "B", "content": "$\\sqrt{2e}-1$" },
+        { "id": "C", "content": "$\\sqrt{2e}+1$" },
+        { "id": "D", "content": "$\\sqrt{3e}+1$" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 8,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The vertices B and C of a triangle ABC lie on the line $\\frac{x}{1}=\\frac{1-y}{-2}=\\frac{z-2}{3}$. The coordinates of A and B are (1,6,3) and (4,9,a) respectively and C is at a distance of 10 units from B. The area (in sq. units) of $\\triangle ABC$ is:",
+      "options": [
+        { "id": "A", "content": "$15\\sqrt{13}$" },
+        { "id": "B", "content": "$20\\sqrt{13}$" },
+        { "id": "C", "content": "$5\\sqrt{13}$" },
+        { "id": "D", "content": "$10\\sqrt{13}$" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 9,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $f(x) = \\begin{cases} \\frac{ax^2+2ax+3}{4x^2+4x-3}, & x \\ne -\\frac{3}{2},\\frac{1}{2} \\\\ b, & x = -\\frac{3}{2},\\frac{1}{2} \\end{cases}$ be continuous at $x=-\\frac{3}{2}$. If $f\\circ f(x)=\\frac{7}{5},$ then $x$ is equal to:",
+      "options": [
+        { "id": "A", "content": "1" },
+        { "id": "B", "content": "2" },
+        { "id": "C", "content": "1.4" },
+        { "id": "D", "content": "0" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 10,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let the line $y-x=1$ intersect the ellipse $\\frac{x^2}{2}+\\frac{y^2}{1}=1$ at the points A and B. Then the angle made by the line segment AB at the center of the ellipse is:",
+      "options": [
+        { "id": "A", "content": "$\\frac{\\pi}{2}-\\tan^{-1}(\\frac{1}{4})$" },
+        { "id": "B", "content": "$\\frac{\\pi}{2}+\\tan^{-1}(\\frac{1}{4})$" },
+        { "id": "C", "content": "$\\pi-\\tan^{-1}(\\frac{1}{4})$" },
+        { "id": "D", "content": "$\\frac{\\pi}{2}+2\\tan^{-1}(\\frac{1}{4})$" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 11,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The value of the integral $\\int_{2/24}^{5/24} \\frac{dx}{1+\\sqrt[3]{\\tan 2x}}$ is:",
+      "options": [
+        { "id": "A", "content": "$\\frac{\\pi}{3}$" },
+        { "id": "B", "content": "$\\frac{\\pi}{18}$" },
+        { "id": "C", "content": "$\\frac{\\pi}{6}$" },
+        { "id": "D", "content": "$\\frac{\\pi}{12}$" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 12,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "A rectangle is formed by the lines $x=0$, $y=0$, $x=3$ and $y=4.$ Let the line L be perpendicular to $3x+y+6=0$ and divide the area of the rectangle into two equal parts. Then the distance of the point $(\\frac{1}{2},-5)$ from the line L is equal to:",
+      "options": [
+        { "id": "A", "content": "$3\\sqrt{10}$" },
+        { "id": "B", "content": "$\\sqrt{10}$" },
+        { "id": "C", "content": "$2\\sqrt{5}$" },
+        { "id": "D", "content": "$2\\sqrt{10}$" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 13,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The sum of all possible values of $n\\in N$ so that the coefficients of $x$, $x^2$ and $x^3$ in the expansion of $(1+x^2)^2(1+x)^n$ are in arithmetic progression is:",
+      "options": [
+        { "id": "A", "content": "7" },
+        { "id": "B", "content": "12" },
+        { "id": "C", "content": "9" },
+        { "id": "D", "content": "3" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 14,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $\\vec{a}=-\\hat{i}+\\hat{j}+2\\hat{k}$, $\\vec{b}=\\hat{i}-\\hat{j}-3\\hat{k}$, $\\vec{c}=\\vec{a}\\times\\vec{b}$ and $\\vec{d}=\\vec{c}\\times\\vec{a}$. Then $(\\vec{a}-\\vec{b})\\cdot\\vec{d}$ is equal to:",
+      "options": [
+        { "id": "A", "content": "4" },
+        { "id": "B", "content": "2" },
+        { "id": "C", "content": "-2" },
+        { "id": "D", "content": "-4" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 15,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let the direction cosines of two lines satisfy the equations $4l+m-n=0$ and $2mn+10nl+3lm=0.$ Then the cosine of the acute angle between these lines is:",
+      "options": [
+        { "id": "A", "content": "$\\frac{10}{3\\sqrt{38}}$" },
+        { "id": "B", "content": "$\\frac{10}{7\\sqrt{38}}$" },
+        { "id": "C", "content": "$\\frac{10}{\\sqrt{38}}$" },
+        { "id": "D", "content": "$\\frac{20}{3\\sqrt{38}}$" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 16,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $\\alpha$ and $\\beta$ respectively be the maximum and the minimum values of the function $f(\\theta)=4(\\sin^4(\\frac{7\\pi}{2}-\\theta)+\\sin^4(11\\pi+\\theta))-2(\\sin^6(\\frac{3\\pi}{2}-\\theta)+\\sin^6(5\\pi+\\theta))$. Then $\\alpha+2\\beta$ is equal to:",
+      "options": [
+        { "id": "A", "content": "35" },
+        { "id": "B", "content": "32" },
+        { "id": "C", "content": "34" },
+        { "id": "D", "content": "33" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 17,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Among the statements:\nI: If $\\begin{vmatrix} 1 & \\cos\\alpha & \\cos\\beta \\\\ \\cos\\alpha & 1 & \\cos\\gamma \\\\ \\cos\\beta & \\cos\\gamma & 1 \\end{vmatrix} = 0$, then $\\cos^2\\alpha+\\cos^2\\beta+\\cos^2\\gamma = 0$\nII: If $\\begin{vmatrix} x^2+x & x+1 & x-2 \\\\ 2x^2+3x-1 & 3x & 3x-3 \\\\ x^2+2x+3 & 2x-1 & 2x-1 \\end{vmatrix} = px+q$, then $p^2=196q^2$.",
+      "options": [
+        { "id": "A", "content": "both are false" },
+        { "id": "B", "content": "only I is true" },
+        { "id": "C", "content": "both are true" },
+        { "id": "D", "content": "only II is true" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 18,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $y=y(x)$ be the solution of the differential equation $x dy + (4x^2y + 2\\sin x) dx = 0, x>0, y(\\frac{\\pi}{2})=0$. Then $\\pi^4 y(\\frac{\\pi}{3})$ is equal to:",
+      "options": [
+        { "id": "A", "content": "64" },
+        { "id": "B", "content": "92" },
+        { "id": "C", "content": "72" },
+        { "id": "D", "content": "81" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 19,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $A=\\{-2,-1,0,1,2,3,4\\}$. Let R be a relation on A defined by $xRy$ if and only if $2x+y\\le2.$ Let l be the number of elements in R. Let m and n be the minimum number of elements required to be added in R to make it symmetric and transitive relations respectively. Then $l+m+n$ is equal to:",
+      "options": [
+        { "id": "A", "content": "3" },
+        { "id": "B", "content": "4" },
+        { "id": "C", "content": "5" },
+        { "id": "D", "content": "6" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 20,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let the domain of the function $f(x)=\\log_3\\log_5\\log_7(9x-x^2-13)$ be the interval (m, n). Let the hyperbola $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$ have eccentricity $\\frac{n}{3}$ and the length of the latus rectum $\\frac{8m}{3}$. Then $b^2-a^2$ is equal to:",
+      "options": [
+        { "id": "A", "content": "9" },
+        { "id": "B", "content": "7" },
+        { "id": "C", "content": "5" },
+        { "id": "D", "content": "11" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 21,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "Let $|A|=6,$ where A is a $3\\times3$ matrix. If $|\\text{adj}(3\\text{ adj}(A^2\\cdot \\text{adj}(2A)))|=2^m\\cdot 3^n$, $m, n\\in N$, then $m+n$ is equal to",
+      "answer": 68
+    },
+    {
+      "id": 22,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "Let the area of the region bounded by the curve $y=\\max\\{\\sin x, \\cos x\\}$, lines $x=0$, $x=\\frac{3\\pi}{2}$ and the x-axis be A. Then, $A+A^2$ is equal to",
+      "answer": 12
+    },
+    {
+      "id": 23,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "From the first 100 natural numbers, two numbers first a and then b are selected randomly without replacement. If the probability that $a-b\\ge10$ is $\\frac{m}{n}$ where $\\gcd(m,n)=1$, then $m+n$ is equal to",
+      "answer": 182
+    },
+    {
+      "id": 24,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "The number of 4-letter words, with or without meaning, which can be formed using the letters PQRPQRSTUV is",
+      "answer": 1470
+    },
+    {
+      "id": 25,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "Let f be a twice differentiable non-negative function such that $(f(x))^2=25+\\int_0^x ((f(t))^2+(f'(t))^2)dt$. Then the mean of $f(\\log_e(1)), f(\\log_e(2)), \\dots, f(\\log_e(625))$ is equal to",
+      "answer": 1565
+    },
+    {
+      "id": 26,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A simple pendulum of string length 30 cm performs 20 oscillations in 10 s. The length of the string required for the pendulum to perform 40 oscillations in the same time duration is ______ cm. [Assume that the mass of the pendulum remains same.]",
+      "options": [
+        { "id": "A", "content": "15" },
+        { "id": "B", "content": "7.5" },
+        { "id": "C", "content": "120" },
+        { "id": "D", "content": "0.75" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 27,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A small bob A of mass m is attached to a massless rigid rod of length 1 m pivoted at point P and kept at an angle of 60° with vertical as shown in figure. At a distance of 1 m below point P, an identical bob B is kept at rest on a smooth horizontal surface that extends to a circular track of radius R. If bob B just manages to complete the circular path of radius R up to a point Q after being hit elastically by bob A, then radius R is:",
+      "options": [
+        { "id": "A", "content": "$\\frac{2-\\sqrt{3}}{5}$" },
+        { "id": "B", "content": "$\\frac{1}{5}$" },
+        { "id": "C", "content": "$\\frac{2+\\sqrt{3}}{5}$" },
+        { "id": "D", "content": "$\\frac{3}{5}$" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 28,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "In a screw gauge, the zero of the circular scale lies 3 divisions above the horizontal pitch line when their metallic studs are brought in contact. Using this instrument thickness of a sheet is measured. If pitch scale reading is 1 mm and the circular scale reading is 51 then the correct thickness of the sheet is [Assume least count is 0.01 mm]",
+      "options": [
+        { "id": "A", "content": "1.50" },
+        { "id": "B", "content": "1.48" },
+        { "id": "C", "content": "1.54" },
+        { "id": "D", "content": "1.51" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 29,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "The de Broglie wavelength of an oxygen molecule at $27^\\circ\\text{C}$ is $x \\times 10^{-12}\\text{ m}$. The value of x is (take Planck's constant $=6.63\\times 10^{-34}\\text{ J}\\cdot\\text{s}$, Boltzmann constant $= 1.38\\times 10^{-23}\\text{ J/K}$, mass of oxygen molecule $=5.31\\times 10^{-26}\\text{ kg}$)",
+      "options": [
+        { "id": "A", "content": "20" },
+        { "id": "B", "content": "26" },
+        { "id": "C", "content": "24" },
+        { "id": "D", "content": "30" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 30,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Consider light travelling from a medium A to medium B separated by a plane interface. If the light undergoes total internal reflection during its travel from medium A to B and the speed of light in media A and B are $2.4 \\times 10^8\\text{ m/s}$ and $2.7 \\times 10^8\\text{ m/s}$, respectively, then the value of critical angle is:",
+      "options": [
+        { "id": "A", "content": "$\\tan^{-1}(\\frac{8}{\\sqrt{17}})$" },
+        { "id": "B", "content": "$\\cos^{-1}(\\frac{8}{9})$" },
+        { "id": "C", "content": "$\\cot^{-1}(\\frac{3}{\\sqrt{13}})$" },
+        { "id": "D", "content": "$\\sin^{-1}(\\frac{9}{8})$" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 31,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "In hydrogen atom spectrum, (R -> Rydberg's constant)\nA. the maximum wavelength of the radiation of Lyman series is $\\frac{4}{3R}$\nB. the Balmer series lies in the visible region of the spectrum\nC. the minimum wavelength of the radiation of Paschen series is $\\frac{9}{R}$\nD. the minimum wavelength of Lyman series is $\\frac{5}{4R}$\nChoose the correct answer from the options given below:",
+      "options": [
+        { "id": "A", "content": "A, B and C Only" },
+        { "id": "B", "content": "A, B Only" },
+        { "id": "C", "content": "A, B and D Only" },
+        { "id": "D", "content": "B, D Only" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 32,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "In a perfectly inelastic collision, two spheres made of the same material with masses 15 kg and 25 kg, moving in opposite directions with speeds of $10\\text{ m/s}$ and $30\\text{ m/s}$ respectively, strike each other and stick together. The rise in temperature (in $^\\circ\\text{C}$), if all the heat produced during the collision is retained by these spheres, is: (specific heat of sphere material $31\\text{ cal/kg}\\cdot^\\circ\\text{C}$ and $1\\text{ cal}=4.2\\text{ J}$)",
+      "options": [
+        { "id": "A", "content": "1.15" },
+        { "id": "B", "content": "1.95" },
+        { "id": "C", "content": "1.44" },
+        { "id": "D", "content": "1.75" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 33,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Four persons measure the length of a rod as 20.00 cm, 19.75 cm, 17.01 cm and 18.25 cm. The relative error in the measurement of average length of the rod is:",
+      "options": [
+        { "id": "A", "content": "0.08" },
+        { "id": "B", "content": "0.24" },
+        { "id": "C", "content": "0.06" },
+        { "id": "D", "content": "0.18" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 34,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A 20 m long uniform copper wire held horizontally is allowed to fall under gravity ($g=10\\text{ m/s}^2$) through a uniform horizontal magnetic field of 0.5 Gauss perpendicular to the length of the wire. The induced EMF across the wire when it travels a vertical distance of 200 m is ______ mV.",
+      "options": [
+        { "id": "A", "content": "$2\\sqrt{10}$" },
+        { "id": "B", "content": "$0.2\\sqrt{10}$" },
+        { "id": "C", "content": "$200\\sqrt{10}$" },
+        { "id": "D", "content": "$20\\sqrt{10}$" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 35,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Two point charges 2q and q are placed at vertex A and centre of face CDEF of the cube as shown in figure. The electric flux passing through the cube is:",
+      "options": [
+        { "id": "A", "content": "$\\frac{3q}{4\\epsilon_0}$" },
+        { "id": "B", "content": "$\\frac{3q}{2\\epsilon_0}$" },
+        { "id": "C", "content": "$\\frac{3q}{\\epsilon_0}$" },
+        { "id": "D", "content": "$\\frac{q}{\\epsilon_0}$" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 36,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Match List - I with List - II.\nList - I: A. $\\oint E\\cdot dl = -\\frac{d\\phi_B}{dt}$, B. $\\oint B\\cdot dl = \\mu_0(I + \\epsilon_0\\frac{d\\phi_E}{dt})$, C. $\\oint E\\cdot da = \\frac{1}{\\epsilon_0}\\int_V \\rho dv$, D. $\\oint B\\cdot dl = \\mu_0 I$\nList - II: I. Ampere's circuital law, II. Faraday's laws of electromagnetic induction, III. Ampere - Maxwell law, IV. Gauss's law of electrostatics\nChoose the correct answer from the options given below:",
+      "options": [
+        { "id": "A", "content": "A-IV, B-I, C-II, D-III" },
+        { "id": "B", "content": "A-II, B-III, C-I, D-IV" },
+        { "id": "C", "content": "A-II, B-III, C-IV, D-I" },
+        { "id": "D", "content": "A-I, B-IV, C-III, D-II" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 37,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "The diagram shows a Zener diode as a voltage regulator. The Zener diode is rated at $V_z = 5\\text{ V}$ and the desired current in load is 5 mA. The unregulated voltage source can supply up to 25 V. Considering the Zener diode can withstand four times of the load current, the value of resistor $R_s$ should be ______ $\\Omega$.",
+      "options": [
+        { "id": "A", "content": "100" },
+        { "id": "B", "content": "1000" },
+        { "id": "C", "content": "10" },
+        { "id": "D", "content": "4000" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 38,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A wire of uniform resistance $\\lambda\\ \\Omega/\\text{m}$ is bent into a circle of radius r and another piece of wire with length 2r is connected between points A and B (AOB) as shown in figure. The equivalent resistance between points A and B is:",
+      "options": [
+        { "id": "A", "content": "$\\frac{2\\pi \\lambda r}{8}$" },
+        {
+          "id": "B",
+          "content": "$\\frac{3\\pi \\lambda r}{(\\pi+1)2r\\lambda}$"
+        },
+        { "id": "C", "content": "$\\frac{6\\pi \\lambda r}{3\\pi+16}$" },
+        { "id": "D", "content": "$\\frac{6\\pi \\lambda r}{\\pi+8}$" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 39,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Two blocks with masses 100 g and 200 g are attached to the ends of springs A and B as shown in figure. The energy stored in A is E. The energy stored in B, when spring constants of A and B, respectively satisfy the relation $4k_A = 3k_B$, is:",
+      "options": [
+        { "id": "A", "content": "$\\frac{4}{3}E$" },
+        { "id": "B", "content": "$2E$" },
+        { "id": "C", "content": "$\\frac{3}{4}E$" },
+        { "id": "D", "content": "$4E$" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 40,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "The moment of inertia of a square loop made of four uniform solid cylinders, each having radius R and length L ($R < L$) about an axis passing through the mid points of opposite sides, is (Take the mass of the entire loop as M):",
+      "options": [
+        { "id": "A", "content": "$\\frac{8}{3}MR^2 + \\frac{1}{12}ML^2$" },
+        { "id": "B", "content": "$\\frac{7}{8}MR^2 + \\frac{1}{6}ML^2$" },
+        { "id": "C", "content": "$\\frac{3}{4}MR^2 + \\frac{1}{6}ML^2$" },
+        { "id": "D", "content": "$\\frac{1}{4}MR^2 + \\frac{7}{12}ML^2$" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 41,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Two small balls with masses m and 2m are attached to both ends of a rigid rod of length d and negligible mass. If angular momentum of this system is L about an axis passing through its centre of mass and perpendicular to the rod, then angular velocity of the system about it is:",
+      "options": [
+        { "id": "A", "content": "$\\frac{3L}{2md^2}$" },
+        { "id": "B", "content": "$\\frac{5L}{2md^2}$" },
+        { "id": "C", "content": "$\\frac{3L}{4md^2}$" },
+        { "id": "D", "content": "$\\frac{L}{2md^2}$" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 42,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "The strain-stress plot for materials A, B, C and D is shown in the figure. Which material has the largest Young's modulus?",
+      "options": [
+        { "id": "A", "content": "C" },
+        { "id": "B", "content": "D" },
+        { "id": "C", "content": "B" },
+        { "id": "D", "content": "A" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 43,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R).\nConsider a ferromagnetic material :\nAssertion (A) : The individual atoms in a ferromagnetic material possess a magnetic dipole moment and interact with one another in such a way that they spontaneously align themselves forming domains.\nReason (R): At high enough temperature, the domain structure of ferromagnetic material disintegrates. Thus, magnetization will disappear at high enough temperature known as Curie temperature.\nIn the light of the above statements, choose the correct answer from the options given below :",
+      "options": [
+        { "id": "A", "content": "(A) is true but (R) is false" },
+        {
+          "id": "B",
+          "content": "Both (A) and (R) are true and (R) is the correct explanation of (A)"
+        },
+        { "id": "C", "content": "(A) is false but (R) is true" },
+        {
+          "id": "D",
+          "content": "Both (A) and (R) are true but (R) is not the correct explanation of (A)"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 44,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A thin prism with angle $5^\\circ$ of refractive index 1.72 is combined with another prism of refractive index 1.9 to produce dispersion without deviation. The angle of second prism is:",
+      "options": [
+        { "id": "A", "content": "$4^\\circ$" },
+        { "id": "B", "content": "$5^\\circ$" },
+        { "id": "C", "content": "$6^\\circ$" },
+        { "id": "D", "content": "$4.5^\\circ$" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 45,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "An object is projected with kinetic energy K from a point A at an angle $60^\\circ$ with the horizontal. The ratio of the difference in kinetic energies at points A and B to that at point B (see figure), in the absence of air friction is:",
+      "options": [
+        { "id": "A", "content": "2 : 3" },
+        { "id": "B", "content": "1 : 4" },
+        { "id": "C", "content": "3 : 4" },
+        { "id": "D", "content": "3 : 1" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 46,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "The equation of the electric field of an electromagnetic wave propagating through free space is given by: $E = 377 \\sin(6.27 \\times 10^8 t - 2.09 \\times 10^0 x)\\text{ N/C}$. The average power of the electromagnetic wave is $(\\frac{1}{\\alpha} - 5)\\text{ W/m}^2$. The value of $\\alpha$ is ______. (Take $\\sqrt{\\frac{\\mu_0}{\\epsilon_0}} = 377$ in SI units)",
+      "answer": 2
+    },
+    {
+      "id": 47,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "The space between the plates of a parallel plate capacitor of capacitance C (without any dielectric) is now filled with three dielectric slabs of dielectric constants $K_1 = 2$, $K_2 = 3$ and $K_3 = 5$ (as shown in figure). If new capacitance is $nC$, then the value of n is _____.",
+      "answer": 3
+    },
+    {
+      "id": 48,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "In two separate Young's double-slit experimental set-up and two monochromatic light sources of different wavelengths are used to get fringes of equal width. The ratio of the slits separations and that of the wavelengths of light used are 2 : 1 and 1 : 2 respectively. The corresponding ratio of the distances between the slits and the respective screens ($D_1/D_2$) is __________.",
+      "answer": 4
+    },
+    {
+      "id": 49,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "A simple pendulum made of mass 10 g and a metallic wire of length 10 cm is suspended vertically in a uniform magnetic field of 2 T. The magnetic field direction is perpendicular to the plane of oscillations of the pendulum. If the pendulum is released from an angle of $60^\\circ$ with vertical, then maximum induced EMF between the point of suspension and point of oscillation is mV. (Take $g = 10\\text{ m/s}^2$)",
+      "answer": 100
+    },
+    {
+      "id": 50,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "Using a variable frequency a.c. voltage source the maximum current measured in the given LCR circuit is 50 mA for $V = 5 \\sin(100t)$. The values of L and R are shown in the figure ($L=2\\text{ H}$, $R=100\\ \\Omega$). The capacitance of the capacitor (C) used is _____ $\\mu\\text{F}$.",
+      "answer": 50
+    },
+    {
+      "id": 51,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Which one of the following graphs accurately represents the plot of partial pressure of $CS_2$ vs its mole fraction in a mixture of acetone and $CS_2$ at constant temperature?",
+      "options": [
+        { "id": "A", "content": "Graph showing positive deviation" },
+        { "id": "B", "content": "Graph showing negative deviation" },
+        { "id": "C", "content": "Graph showing ideal linear behavior" },
+        { "id": "D", "content": "Graph showing Henry's law curve for CS2" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 52,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The correct sequence of reagents for the conversion of X (1-bromo-1-phenylethane) to Y (2-phenylacetic acid) is:",
+      "options": [
+        {
+          "id": "A",
+          "content": "(i) NaOEt (ii) B2H6/H2O2, NaOH(aq) (iii) Jones reagent"
+        },
+        { "id": "B", "content": "(i) B2H6/H2O2 (ii) Jones reagent (iii) H3O+" },
+        {
+          "id": "C",
+          "content": "(i) Jones reagent (ii) NaOEt (iii) B2H6/H2O2"
+        },
+        {
+          "id": "D",
+          "content": "(i) Hot KMnO4/KOH (ii) NaOEt (iii) Jones reagent"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 53,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The statements that are incorrect about the nickel(II) complex of dimethylglyoxime are :\nA. It is red in colour.\nB. It has a high solubility in water at $5^\\circ\\text{C}$.\nC. The Ni ion has two unpaired d-electrons.\nD. The N-Ni-N bond angle is almost close to $90^\\circ$.\nE. The complex contains four five-membered metallacycles (metal containing rings).\nChoose the correct answer from the options given below:",
+      "options": [
+        { "id": "A", "content": "B, C and E Only" },
+        { "id": "B", "content": "C and E Only" },
+        { "id": "C", "content": "A, D and B Only" },
+        { "id": "D", "content": "C and D Only" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 54,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "A cup of water at $25^\\circ\\text{C}$ (system) is placed in a microwave oven and the oven is turned on for one minute during which the water begins to boil. Which of the following option is true?",
+      "options": [
+        { "id": "A", "content": "$q = +ve, w = -ve, \\Delta U = -ve$" },
+        { "id": "B", "content": "$q = +ve, w = -ve, \\Delta U = +ve$" },
+        { "id": "C", "content": "$q = +ve, w = 0, \\Delta U = -ve$" },
+        { "id": "D", "content": "$q = -ve, w = -ve, \\Delta U = -ve$" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 55,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given below are two statements :\nStatement I : Sublimation is used for the separation and purification of compounds with low melting point.\nStatement II: The boiling point of a liquid increases as the external pressure is reduced.\nIn the light of the above statements, choose the correct answer from the options given below :",
+      "options": [
+        { "id": "A", "content": "Both Statement I and Statement II are false" },
+        {
+          "id": "B",
+          "content": "Statement I is false but Statement II is true"
+        },
+        { "id": "C", "content": "Both Statement I and Statement II are true" },
+        {
+          "id": "D",
+          "content": "Statement I is true but Statement II is false"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 56,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Which of the following statements regarding the energy of the stationary state is true in the following one-electron systems?",
+      "options": [
+        {
+          "id": "A",
+          "content": "$+8.72 \\times 10^{-18}\\text{ J}$ for first orbit of $He^+$ ion"
+        },
+        {
+          "id": "B",
+          "content": "$-2.18 \\times 10^{-18}\\text{ J}$ for third orbit of $Li^{2+}$ ion"
+        },
+        {
+          "id": "C",
+          "content": "$+2.18 \\times 10^{-18}\\text{ J}$ for second orbit of $He^+$ ion"
+        },
+        {
+          "id": "D",
+          "content": "$-1.09 \\times 10^{-18}\\text{ J}$ for second orbit of H atom"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 57,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The correct statements from the following are :\nA. Ionic radii of trivalent cations of group 13 elements decreases down the group.\nB. Electronegativity of group 13 elements decreases down the group.\nC. Among the group 13 elements, Boron has highest first ionisation enthalpy.\nD. The trichloride and triiodide of group 13 elements are covalent in nature.\nChoose the correct answer from the options given below :",
+      "options": [
+        { "id": "A", "content": "C and D Only" },
+        { "id": "B", "content": "A and C Only" },
+        { "id": "C", "content": "B and D Only" },
+        { "id": "D", "content": "A and D Only" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 58,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Match List - I with List - II.\nList I (Functional group detection): A. Unsaturation (Baeyer's test), B. Alcoholic group (Ceric ammonium nitrate test), C. Aldehyde group (Tollen's reagent), D. Phenolic group (FeCl3 test)\nList II (Change observed during detection): I. Red colour appears, II. Silver mirror appears, III. Violet colour appears, IV. Discharge of pink colour\nChoose the correct answer from the options given below :",
+      "options": [
+        { "id": "A", "content": "A-IV, B-III, C-II, D-I" },
+        { "id": "B", "content": "A-III, B-IV, C-I, D-II" },
+        { "id": "C", "content": "A-IV, B-I, C-II, D-III" },
+        { "id": "D", "content": "A-III, B-IV, C-II, D-I" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 59,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Identify the molecule with maximum number of lone pairs of electrons (obtained using Lewis dot structure) among $HNO_3, H_2SO_4, NF_3$ and $O_3$. Choose the correct bond angle made by the central atom of the molecule (X).",
+      "options": [
+        { "id": "A", "content": "$102^\\circ$" },
+        { "id": "B", "content": "$116^\\circ$" },
+        { "id": "C", "content": "$120^\\circ$" },
+        { "id": "D", "content": "$107^\\circ$" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 60,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "In the given electrochemical cell $Ag(s)|AgCl(s)|FeCl_2(aq), FeCl_3(aq)|Pt(s)$ at 298 K the cell potential ($E_{cell}$) will increase when :\nA. Concentration of $Fe^{2+}$ is increased.\nB. Concentration of $Fe^{3+}$ is decreased.\nC. Concentration of $Fe^{2+}$ is decreased.\nD. Concentration of $Fe^{3+}$ is increased.\nE. Concentration of $Cl^-$ is increased.\nChoose the correct answer from the options given below :",
+      "options": [
+        { "id": "A", "content": "A and B only" },
+        { "id": "B", "content": "C, D and E only" },
+        { "id": "C", "content": "A and E Only" },
+        { "id": "D", "content": "B Only" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 61,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given below are two statements :\nStatement I : $[CoBr_4]^{2-}$ ion will absorb light of lower energy than $[CoCl_4]^{2-}$ ion.\nStatement II: In $[CoI_4]^{2-}$ ion, the energy separation between the two set of d-orbitals is more than $[CoCl_4]^{2-}$ ion.\nIn the light of the above statements, choose the correct answer from the options given below :",
+      "options": [
+        {
+          "id": "A",
+          "content": "Statement I is false but Statement II is true"
+        },
+        {
+          "id": "B",
+          "content": "Statement I is true but Statement II is false"
+        },
+        { "id": "C", "content": "Both Statement I and Statement II are false" },
+        { "id": "D", "content": "Both Statement I and Statement II are true" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 62,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given,\n(A) $n=5, m_l = -1$\n(B) $n=3, l=2, m_l=-1, m_s=+1/2$\nThe maximum number of electron(s) in an atom that can have the quantum numbers as given in (A) and (B) respectively are :",
+      "options": [
+        { "id": "A", "content": "8 and 1" },
+        { "id": "B", "content": "4 and 1" },
+        { "id": "C", "content": "26 and 1" },
+        { "id": "D", "content": "2 and 4" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 63,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "'x' is the product which is obtained from propanenitrile and stannous chloride in the presence of hydrochloric acid followed by hydrolysis. 'y' is the product which is obtained from the but-2-ene by the ozonolysis followed by hydrolysis. From the following, which product is not obtained when one mole of 'x' and one mole of 'y' react with each other in the presence of alkali followed by heating?",
+      "options": [
+        { "id": "A", "content": "3-Methylbut-2-enal" },
+        { "id": "B", "content": "2-Methylbut-2-enal" },
+        { "id": "C", "content": "Pent-2-enal" },
+        { "id": "D", "content": "2-Methylpent-2-enal" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 64,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Consider the following compounds: a. chlorobenzene, b. nitrobenzene, c. anisole ($OCH_3$). Arrange these compounds in the increasing order of reactivity with nitrating mixture.",
+      "options": [
+        { "id": "A", "content": "b < c < a" },
+        { "id": "B", "content": "c < b < a" },
+        { "id": "C", "content": "b < a < c" },
+        { "id": "D", "content": "c < a < b" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 65,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Compound 'P' undergoes reaction (i) NH3 (ii) heat to form Q. Q undergoes (i) KOH, Br2 (ii) CHCl3, KOH(alc), heat to form cyclohexyl isocyanide. 'P' is:",
+      "options": [
+        { "id": "A", "content": "Cyclohexanecarboxamide" },
+        { "id": "B", "content": "1-Cyclohexylpropan-1-one" },
+        { "id": "C", "content": "2-Cyclohexylacetaldehyde" },
+        { "id": "D", "content": "Cyclohexanecarboxylic acid" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 66,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "From the given cyclic structures (A to D), those which will not react with Tollen's reagent are:",
+      "options": [
+        { "id": "A", "content": "B and D" },
+        { "id": "B", "content": "A and D" },
+        { "id": "C", "content": "B and C" },
+        { "id": "D", "content": "A and B" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 67,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The correct trend in the first ionization enthalpies of the 3rd period elements of periodic table is :",
+      "options": [
+        { "id": "A", "content": "Al < Si < S < P < Cl" },
+        { "id": "B", "content": "S < Si < Al < P < Cl" },
+        { "id": "C", "content": "Al < S < P < Si < Cl" },
+        { "id": "D", "content": "Si < S < Al < P < Cl" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 68,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Consider the general reaction given below at 400 K: $xA(g) \\rightleftharpoons yB(g)$. The values of $K_p$ and $K_c$ are studied under the same condition of temperature but variation in x and y.\n(i) $K_p = 85.87, K_c = 2.586$ and appropriate units\n(ii) $K_p = 0.862, K_c = 28.62$ and appropriate units\nThe values of x and y in (i) and (ii) respectively are:",
+      "options": [
+        { "id": "A", "content": "(i) 3,1 ; (ii) 3,1" },
+        { "id": "B", "content": "(i) 4,1 ; (ii) 4,1" },
+        { "id": "C", "content": "(i) 1,3 ; (ii) 2,1" },
+        { "id": "D", "content": "(i) 1,2 ; (ii) 2,1" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 69,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "But-2-yne and hydrogen (one mole each) are separately treated with (i) Pd/C and (ii) Na/liq. NH3 to give the products X and Y respectively. Identify the incorrect statements.\nA. X and Y are stereoisomers.\nB. Dipole moment of X is zero.\nC. Boiling point of X is higher than Y.\nD. X and Y react with O3/Zn + H2O to give different products.\nChoose the correct answer from the options given below:",
+      "options": [
+        { "id": "A", "content": "B and C only" },
+        { "id": "B", "content": "B and D only" },
+        { "id": "C", "content": "A and B only" },
+        { "id": "D", "content": "A and C only" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 70,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Consider the following sequence of reactions: 4-Nitrotoluene treated with (i) Sn, HCl/heat (ii) pH neutralisation gives (A). (A) treated with (i) (H3CCO)2O (ii) Br2/AcOH gives (B). Assuming that the reaction proceeds to completion, 137 mg of 4-nitrotoluene will produce mg of B. (Given molar mass in g/mol: H=1, C=12, N=14, O=16, Br=80)",
+      "options": [
+        { "id": "A", "content": "301" },
+        { "id": "B", "content": "146" },
+        { "id": "C", "content": "208" },
+        { "id": "D", "content": "228" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 71,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "The crystal field splitting energy of $[Co(\\text{oxalate})_3]^{3-}$ complex is 'n' times that of the $[Cr(\\text{oxalate})_3]^{3-}$ complex. Here 'n' is _____ (Assume $\\Delta_0 \\gg P$)",
+      "answer": 1
+    },
+    {
+      "id": 72,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "Consider all the structural isomers with molecular formula $C_5H_{11}Cl$ are separately treated with KOH(aq) to give respective substitution products, without any rearrangement. The number of products which can exhibit optical isomerism from these is",
+      "answer": 3
+    },
+    {
+      "id": 73,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "z mg of pure HCl was used to make an aqueous solution. 25.0 mL of $0.1\\text{ M Ba(OH)}_2$ solution is used when the HCl solution was titrated against it. The numerical value of z is _____ $\\times 10^{-1}$ (Nearest integer) Given: Molar mass of HCl and $Ba(OH)_2$ are 36.5 and $171.0\\text{ g mol}^{-1}$ respectively.",
+      "answer": 1825
+    },
+    {
+      "id": 74,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "For the thermal decomposition of reactant $AB(g)$, the following plot of $[AB]/M$ vs time/s is constructed showing a straight line passing through $(0, 0.6)$, $(100, 0.55)$, $(200, 0.5)$. The half life of the reaction is 'x' min. $x =$ _____ (Nearest integer)",
+      "answer": 10
+    },
+    {
+      "id": 75,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "For the following gas phase equilibrium reaction at constant temperature, $NH_3(g) \\rightleftharpoons 1/2\\ N_2(g) + 3/2\\ H_2(g)$. If the total pressure is $\\sqrt{3}\\text{ atm}$ and the pressure equilibrium constant ($K_p$) is 9 atm, then the degree of dissociation is given as $(x \\times 10^{-2})^{-1/2}$. The value of x is _____ (nearest integer)",
+      "answer": 19
+    }
+  ]
+}
