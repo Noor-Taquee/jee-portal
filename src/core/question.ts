@@ -62,8 +62,10 @@ export const ExamDataSchema = z.object({
 
 export type ExamData = z.infer<typeof ExamDataSchema>;
 
-export async function getQuestions() {
-  const res = await fetch(`${import.meta.env.BASE_URL}data/data.json`);
+export async function getQuestions(path: string) {
+  path = `${import.meta.env.BASE_URL}data/questions/${path}.json`;
+  console.log(path);
+  const res = await fetch(path);
   const data: ExamData = await res.json();
   return data;
 }
