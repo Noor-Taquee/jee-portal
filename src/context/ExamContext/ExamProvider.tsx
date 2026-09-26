@@ -2,8 +2,8 @@ import { useState } from "react";
 
 import { ExamContext, type ExamSession } from ".";
 
-import type { ResponseData } from "../../core/response";
-import type { ExamData } from "../../core/question";
+import { generateResponse, type ResponseData } from "../../core/response";
+import { getQuestions, type ExamData } from "../../core/question";
 
 interface ExamProviderProps {
   children: React.ReactNode;
@@ -16,9 +16,18 @@ export default function ExamProvider({ children }: ExamProviderProps) {
 
   const [examData, setExamData] = useState<ExamData | undefined>(undefined);
 
-  const [responseData, setResponseData] = useState<ResponseData | undefined>(
-    undefined
-  );
+  const [candidateResponse, setCandidateResponse] = useState<
+    ResponseData | undefined
+  >(undefined);
+
+  function loadPaper(path: string) {
+    getQuestions(path).then((data) => {
+      setStartedAt(undefined);
+      setCompletedAt(undefined);
+      setExamData(data);
+      setCandidateResponse(generateResponse(data.questions));
+    });
+  }
 
   const value: ExamSession = {
     startedAt: startedAt,
@@ -27,8 +36,9 @@ export default function ExamProvider({ children }: ExamProviderProps) {
     setCompletedAt: setCompletedAt,
     examData: examData,
     setExamData: setExamData,
-    candidateResponse: responseData,
-    setCandidateResponse: setResponseData,
+    candidateResponse: candidateResponse,
+    setCandidateResponse: setCandidateResponse,
+    loadPaper: loadPaper,
   };
 
   return <ExamContext.Provider value={value}>{children}</ExamContext.Provider>;

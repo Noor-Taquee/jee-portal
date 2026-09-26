@@ -23,6 +23,14 @@ export type ExamSession = {
   setCandidateResponse: React.Dispatch<
     React.SetStateAction<ExamSession["candidateResponse"]>
   >;
+
+  /** Loads a paper from a given path.
+   * @example
+   * ```ts
+   * loadPaper("2026/jan_21_a");
+   * ```
+   */
+  loadPaper: (path: string) => void;
 };
 
 export const defaultTestData: ExamSession = {
@@ -34,6 +42,7 @@ export const defaultTestData: ExamSession = {
   setExamData: () => {},
   candidateResponse: undefined,
   setCandidateResponse: () => {},
+  loadPaper: () => {},
 };
 
 export const ExamContext = createContext<ExamSession>(defaultTestData);
