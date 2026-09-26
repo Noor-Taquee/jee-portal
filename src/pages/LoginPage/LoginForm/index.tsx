@@ -5,8 +5,6 @@ import "./style.css";
 import { useState } from "react";
 import { useExamSession } from "../../../hooks/useExamSession";
 
-import { getQuestions } from "../../../core/question";
-import { generateResponse } from "../../../core/response";
 import { changeHash } from "../../../hooks/useHash";
 
 import PaswwordInput from "./PasswordInput";
@@ -15,11 +13,6 @@ import Keyboard from "../Keyboard";
 
 export default function LoginForm() {
   const examSession = useExamSession();
-
-  getQuestions().then((data) => {
-    examSession.setExamData(data);
-    examSession.setCandidateResponse(generateResponse(data.questions));
-  });
 
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
