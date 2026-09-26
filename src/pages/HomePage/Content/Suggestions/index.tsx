@@ -1,3 +1,5 @@
+import { useExamSession } from "../../../../hooks/useExamSession";
+import { changeHash } from "../../../../hooks/useHash";
 import "./style.css";
 
 import { useEffect, useState } from "react";
@@ -19,6 +21,8 @@ function format(raw: string) {
 }
 
 export default function Suggestions() {
+  const examSession = useExamSession();
+
   const [isLoading, setIsLoading] = useState(true);
   const [suggestions, setSuggestions] = useState<{ "2026": string[] }>();
 
@@ -41,6 +45,10 @@ export default function Suggestions() {
           <button
             className="suggestion-button"
             key={data}
+            onClick={() => {
+              examSession.loadPaper(`2026/${data}`);
+              changeHash("login");
+            }}
           >
             <p>{format(data)}</p>
           </button>

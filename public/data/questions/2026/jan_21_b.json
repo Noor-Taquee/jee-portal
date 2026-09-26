@@ -1,0 +1,1011 @@
+{
+  "$schema": "../../schema.json",
+  "metadata": {
+    "year": 2026,
+    "month": "January",
+    "day": 21,
+    "shift": 2,
+    "duration": 10800000
+  },
+  "questions": [
+    {
+      "id": 1,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $y=y(x)$ be the solution of the differential equation $\\sec x \\frac{dy}{dx}-2y=2+3\\sin x$, $x\\in\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$, $y(0)=-\\frac{7}{4}$. Then $y\\left(\\frac{\\pi}{6}\\right)$ is equal to:",
+      "options": [
+        { "id": "A", "content": "$-3\\sqrt{2}-7$" },
+        { "id": "B", "content": "$-3\\sqrt{3}-7$" },
+        { "id": "C", "content": "$-\\frac{5}{4}$" },
+        { "id": "D", "content": "$-\\frac{5}{2}$" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 2,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $A=\\{2,3,5,7,9\\}$. Let $R$ be the relation on $A$ defined by $xRy$ if and only if $2x\\le 3y$. Let $l$ be the number of elements in $R$, and $m$ be the minimum number of elements required to be added in $R$ to make it a symmetric relation. Then $l+m$ is equal to:",
+      "options": [
+        { "id": "A", "content": "27" },
+        { "id": "B", "content": "21" },
+        { "id": "C", "content": "25" },
+        { "id": "D", "content": "23" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 3,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let the line $L_{1}$ be parallel to the vector $-3\\hat{i}+2\\hat{j}+4\\hat{k}$ and pass through the point $(2, 6, 7)$, and the line $L_{2}$ be parallel to the vector $2\\hat{i}+\\hat{j}+3\\hat{k}$ and pass through the point $(4, 3, 5)$. If the line $L_{3}$ is parallel to the vector $-3\\hat{i}+5\\hat{j}+16\\hat{k}$ and intersects the lines $L_{1}$ and $L_{2}$ at the points $C$ and $D$, respectively, then $|\\vec{CD}|^{2}$ is equal to:",
+      "options": [
+        { "id": "A", "content": "312" },
+        { "id": "B", "content": "290" },
+        { "id": "C", "content": "171" },
+        { "id": "D", "content": "89" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 4,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let one end of a focal chord of the parabola $y^{2}=16x$ be $(16, 16)$. If $P(\\alpha,\\beta)$ divides this focal chord internally in the ratio $5:2$, then the minimum value of $\\alpha+\\beta$ is equal to:",
+      "options": [
+        { "id": "A", "content": "7" },
+        { "id": "B", "content": "5" },
+        { "id": "C", "content": "16" },
+        { "id": "D", "content": "22" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 5,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $\\alpha$ and $\\beta$ be the roots of the equation $x^{2}+2ax+(3a+10)=0$ such that $\\alpha<1<\\beta$. Then the set of all possible values of $a$ is:",
+      "options": [
+        { "id": "A", "content": "$(-\\infty,\\frac{-11}{5})\\cup(5,\\infty)$" },
+        { "id": "B", "content": "$(-\\infty,-2)\\cup(5,\\infty)$" },
+        { "id": "C", "content": "$(-\\infty,-3)$" },
+        { "id": "D", "content": "$(-\\infty,\\frac{-11}{5})$" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 6,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "For the matrices $A=\\begin{bmatrix}3&-4\\\\ 1&-1\\end{bmatrix}$ and $B=\\begin{bmatrix}-29&49\\\\ -13&18\\end{bmatrix}$, if $(A^{15}+B)\\begin{bmatrix}x\\\\ y\\end{bmatrix}=\\begin{bmatrix}0\\\\ 0\\end{bmatrix}$, then among the following which one is true?",
+      "options": [
+        { "id": "A", "content": "$x=5, y=7$" },
+        { "id": "B", "content": "$x=16, y=3$" },
+        { "id": "C", "content": "$x=18, y=11$" },
+        { "id": "D", "content": "$x=11, y=2$" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 7,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $y^{2}=12x$ be the parabola with its vertex at $O$. Let $P$ be a point on the parabola and $A$ be a point on the $x$-axis such that $\\angle OPA=90^{\\circ}$. Then the locus of the centroid of such triangles $OPA$ is:",
+      "options": [
+        { "id": "A", "content": "$y^{2}-4x+8=0$" },
+        { "id": "B", "content": "$y^{2}-9x+6=0$" },
+        { "id": "C", "content": "$y^{2}-6x+4=0$" },
+        { "id": "D", "content": "$y^{2}-2x+8=0$" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 8,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $f:\\mathbb{R}\\rightarrow\\mathbb{R}$ be a twice differentiable function such that $f''(x)>0$ for all $x\\in\\mathbb{R}$ and $f'(a-1)=0$, where $a$ is a real number. Let $g(x)=f(\\tan^{2}x-2\\tan x+a)$, $0<x<\\frac{\\pi}{2}$. Consider the following two statements:\n(I) $g$ is increasing in $(0, \\frac{\\pi}{4})$\n(II) $g$ is decreasing in $(\\frac{\\pi}{4}, \\frac{\\pi}{2})$\nThen,",
+      "options": [
+        { "id": "A", "content": "Neither (I) nor (II) is True" },
+        { "id": "B", "content": "Only (II) is True" },
+        { "id": "C", "content": "Both (I) and (II) are True" },
+        { "id": "A", "content": "Only (I) is True" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 9,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If the system of equations $3x+y+4z=3$, $2x+ay-z=-3$, $x+2y+z=4$ has no solution, then the value of $a$ is equal to:",
+      "options": [
+        { "id": "A", "content": "13" },
+        { "id": "B", "content": "19" },
+        { "id": "C", "content": "4" },
+        { "id": "D", "content": "23" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 10,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let the line $L$ pass through the point $(-3, 5, 2)$ and make equal angles with the positive coordinate axes. If the distance of $L$ from the point $(-2, r, 1)$ is $\\sqrt{\\frac{14}{3}}$, then the sum of all possible values of $r$ is:",
+      "options": [
+        { "id": "A", "content": "6" },
+        { "id": "B", "content": "10" },
+        { "id": "C", "content": "12" },
+        { "id": "D", "content": "16" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 11,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If the line $\\alpha x+4y=\\sqrt{7}$, where $\\alpha\\in\\mathbb{R}$ touches the ellipse $3x^{2}+4y^{2}=1$ at the point $P$ in the first quadrant, then one of the focal distances of $P$ is:",
+      "options": [
+        {
+          "id": "A",
+          "content": "$\\frac{1}{\\sqrt{3}}+\\frac{1}{2\\sqrt{7}}$"
+        },
+        {
+          "id": "B",
+          "content": "$\\frac{1}{\\sqrt{3}}-\\frac{1}{2\\sqrt{11}}$"
+        },
+        {
+          "id": "C",
+          "content": "$\\frac{1}{\\sqrt{3}}+\\frac{1}{2\\sqrt{5}}$"
+        },
+        { "id": "D", "content": "$\\frac{1}{\\sqrt{3}}-\\frac{1}{2\\sqrt{5}}$" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 12,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $A=\\{x:|x^{2}-10|\\le 6\\}$ and $B=\\{x:|x-2|>1\\}$. Then",
+      "options": [
+        { "id": "A", "content": "$A\\cap B=[-4,-2]\\cup[3,4]$" },
+        { "id": "B", "content": "$A\\cup B=(-\\infty,1]\\cup(2,\\infty)$" },
+        {
+          "id": "C",
+          "content": "$B-A=(-\\infty,-4)\\cup(-2,1)\\cup(4,\\infty)$"
+        },
+        { "id": "D", "content": "$A-B=[2,3)$" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 13,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "For a triangle $ABC$, let $\\vec{p}=\\vec{BC}$, $\\vec{q}=\\vec{CA}$ and $\\vec{r}=\\vec{BA}$. If $|\\vec{p}|=2\\sqrt{3}$, $|\\vec{q}|=2$ and $\\cos\\theta=\\frac{1}{\\sqrt{3}}$, where $\\theta$ is the angle between $\\vec{p}$ and $\\vec{q}$, then $|\\vec{p}\\times(\\vec{q}-3\\vec{r})|^{2}+3|\\vec{r}|^{2}$ is equal to:",
+      "options": [
+        { "id": "A", "content": "410" },
+        { "id": "B", "content": "340" },
+        { "id": "C", "content": "220" },
+        { "id": "D", "content": "200" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 14,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $a_{1}, \\frac{a_{2}}{2}, \\frac{a_{3}}{2^{2}}, \\dots, \\frac{a_{10}}{2^{9}}$ be a G.P. of common ratio $\\frac{1}{\\sqrt{2}}$. If $a_{1}+a_{2}+\\dots+a_{10}=62$, then $a_{1}$ is equal to:",
+      "options": [
+        { "id": "A", "content": "$2(2-\\sqrt{2})$" },
+        { "id": "B", "content": "$\\sqrt{2}-1$" },
+        { "id": "C", "content": "$2-\\sqrt{2}$" },
+        { "id": "D", "content": "$2(\\sqrt{2}-1)$" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 15,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The largest $n\\in\\mathbb{N}$ for which $7^{n}$ divides $101!$ is:",
+      "options": [
+        { "id": "A", "content": "19" },
+        { "id": "B", "content": "15" },
+        { "id": "C", "content": "16" },
+        { "id": "D", "content": "18" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 16,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $z$ be the complex number satisfying $|z-5|\\le 3$ and having maximum positive principal argument. Then $\\left|\\frac{5z-12}{5iz+16}\\right|^{2}$ is equal to:",
+      "options": [
+        { "id": "A", "content": "12" },
+        { "id": "B", "content": "16" },
+        { "id": "C", "content": "26" },
+        { "id": "D", "content": "20" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 17,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "A random variable $X$ takes values 0, 1, 2, 3 with probabilities $2a, a, a, b$ respectively, where $a, b\\in\\mathbb{R}$. Let $\\mu$ and $\\sigma$ respectively be the mean and standard deviation of $X$ such that $\\sigma^{2}+\\mu^{2}=2$. Then $\\frac{a}{b}$ is equal to:",
+      "options": [
+        { "id": "A", "content": "30" },
+        { "id": "B", "content": "60" },
+        { "id": "C", "content": "12" },
+        { "id": "D", "content": "3" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 18,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "If the area of the region $\\{(x,y) : 1-2x\\le y\\le 4-x^{2}, x\\ge 0, y\\ge 0\\}$ is $\\frac{\\alpha}{\\beta}$, $\\alpha, \\beta\\in\\mathbb{N}$, $\\gcd(\\alpha,\\beta)=1$, then the value of $(\\alpha+\\beta)$ is:",
+      "options": [
+        { "id": "A", "content": "67" },
+        { "id": "B", "content": "73" },
+        { "id": "C", "content": "91" },
+        { "id": "D", "content": "85" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 19,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "Let $f(x)=x^{3}+x^{2}f'(1)+2xf''(2)+f'''(3)$, $x\\in\\mathbb{R}$. Then the value of $f'(5)$ is:",
+      "options": [
+        { "id": "A", "content": "$\\frac{117}{5}$" },
+        { "id": "B", "content": "$\\frac{657}{5}$" },
+        { "id": "C", "content": "$\\frac{2}{5}$" },
+        { "id": "D", "content": "$\\frac{62}{5}$" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 20,
+      "subject": "Mathematics",
+      "type": "single-choice",
+      "question": "The positive integer $n$, for which the solutions of the equation $x(x+2)+(x+2)(x+4)+\\dots+(x+2n-2)(x+2n)=\\frac{8n}{3}$ are two consecutive even integers, is:",
+      "options": [
+        { "id": "A", "content": "3" },
+        { "id": "B", "content": "9" },
+        { "id": "C", "content": "6" },
+        { "id": "D", "content": "12" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 21,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "If $\\left(\\frac{1}{^{14}C_{0}}+\\frac{1}{^{14}C_{1}}\\right)\\left(\\frac{1}{^{14}C_{1}}+\\frac{1}{^{14}C_{2}}\\right)\\dots\\left(\\frac{1}{^{14}C_{12}}+\\frac{1}{^{14}C_{13}}\\right) = \\frac{a^{13}}{^{14}C_{0}\\cdot ^{14}C_{1}\\dots ^{14}C_{12}}$, then $30a$ is equal to",
+      "answer": 450
+    },
+    {
+      "id": 22,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "If $\\int_{0}^{1}4\\cot^{-1}(1-2x+4x^{2})dx = a\\tan^{-1}(2)-b\\log_{e}(5)$ where $a, b\\in\\mathbb{N}$, then $(2a+b)$ is equal to",
+      "answer": 9
+    },
+    {
+      "id": 23,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "Let $[.]$ denote the greatest integer function and $f(x)=\\lim_{n\\rightarrow\\infty}\\frac{1}{n^{3}}\\sum_{k=1}^{n}\\left[\\frac{k^{2}}{3^{x}}\\right]$. Then $\\sum_{j=1}^{\\infty}f(j)$ is equal to",
+      "answer": 0
+    },
+    {
+      "id": 24,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "Let the maximum value of $(\\sin^{-1}x)^{2}+(\\cos^{-1}x)^{2}$ for $x\\in\\left[-\\frac{\\sqrt{3}}{2},\\frac{1}{\\sqrt{2}}\\right]$ be $\\frac{m}{n}\\pi^{2}$ where $\\gcd(m,n)=1$. Then $m+n$ is equal to",
+      "answer": 181
+    },
+    {
+      "id": 25,
+      "subject": "Mathematics",
+      "type": "numerical",
+      "question": "If $P$ is a point on the circle $x^{2}+y^{2}=4$, $Q$ is a point on the straight line $5x+y+2=0$ and $x-y+1=0$ is the perpendicular bisector of $PQ$, then 13 times the sum of abscissa of all such points $P$ is",
+      "answer": -26
+    },
+    {
+      "id": 26,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Two known resistances of $2R\\,\\Omega$ and $R\\,\\Omega$ and one unknown resistance $X\\,\\Omega$ are connected in a circuit as shown in the figure. If the equivalent resistance between points A and B in the circuit is $X\\,\\Omega$, then the value of $X$ is",
+      "options": [
+        { "id": "A", "content": "$(\\sqrt{3}+1)R$" },
+        { "id": "B", "content": "$(\\sqrt{3}-1)R$" },
+        { "id": "C", "content": "$2(\\sqrt{3}-1)R$" },
+        { "id": "D", "content": "$R$" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 27,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "The pulley shown in figure is made using a thin rim and two rods of length equal to diameter of the rim. The rim and each rod have a mass of $M$. Two blocks of mass of $M$ and $m$ are attached to two ends of a light string passing over the pulley, which is hinged to rotate freely in vertical plane about its center. The magnitudes of the acceleration experienced by the blocks is (assume no slipping of string on pulley).",
+      "options": [
+        { "id": "A", "content": "$\\frac{(M-m)g}{2M+m}$" },
+        { "id": "B", "content": "$\\frac{(M-m)g}{M+m}$" },
+        {
+          "id": "C",
+          "content": "$\\frac{(M-m)g}{\\left(\\frac{8}{3}\\right)M+m}$"
+        },
+        {
+          "id": "D",
+          "content": "$\\frac{(M-m)g}{\\left(\\frac{12}{5}\\right)M+m}$"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 28,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "The charge stored by the capacitor $C$ in the given circuit in the steady state is",
+      "options": [
+        { "id": "A", "content": "2" },
+        { "id": "B", "content": "5" },
+        { "id": "C", "content": "6" },
+        { "id": "D", "content": "4" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 29,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "The r.m.s. speed of oxygen molecules at $47^{\\circ}\\text{C}$ is equal to that of the hydrogen molecules kept at",
+      "options": [
+        { "id": "A", "content": "-100" },
+        { "id": "B", "content": "-235" },
+        { "id": "C", "content": "-253" },
+        { "id": "D", "content": "-20" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 30,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Consider two identical metallic spheres of radius $R$ each having charge $Q$ and mass $m$. Their centers have an initial separation of $4R$. Both the spheres are given an initial speed of $u$ towards each other. The minimum value of $u$, so that they can just touch each other is: (Take $k=\\frac{1}{4\\pi\\epsilon_{0}}$ and assume $kQ^{2}>Gm^{2}$ where $G$ is the Gravitational constant)",
+      "options": [
+        {
+          "id": "A",
+          "content": "$\\sqrt{\\frac{kQ^{2}}{4mR}\\left(1+\\frac{Gm^{2}}{kQ^{2}}\\right)}$"
+        },
+        {
+          "id": "B",
+          "content": "$\\sqrt{\\frac{kQ^{2}}{2mR}\\left(1-\\frac{Gm^{2}}{kQ^{2}}\\right)}$"
+        },
+        {
+          "id": "C",
+          "content": "$\\sqrt{\\frac{kQ^{2}}{2mR}\\left(1-\\frac{Gm^{2}}{2kQ^{2}}\\right)}$"
+        },
+        {
+          "id": "D",
+          "content": "$\\sqrt{\\frac{kQ^{2}}{4mR}\\left(1-\\frac{Gm^{2}}{kQ^{2}}\\right)}$"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 31,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "The total length of potentiometer wire AB is 50 cm in the arrangement as shown in figure. If P is the point where the galvanometer shows zero reading then the length AP is",
+      "options": [
+        { "id": "A", "content": "15" },
+        { "id": "B", "content": "30" },
+        { "id": "C", "content": "25" },
+        { "id": "D", "content": "20" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 32,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "The energy of an electron in an orbit of the Bohr's atom is $-0.04E_{0}\\,\\text{eV}$ where $E_{0}$ is the ground state energy. If $L$ is the angular momentum of the electron in this orbit and $h$ is the Planck's constant, then $\\frac{2\\pi L}{h}$ is:",
+      "options": [
+        { "id": "A", "content": "7.5" },
+        { "id": "B", "content": "10" },
+        { "id": "C", "content": "5" },
+        { "id": "D", "content": "12.5" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 33,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "As shown in the diagram, when the incident ray is parallel to base of the prism, the emergent ray grazes along the second surface. If refractive index of the material of prism is $\\sqrt{2}$, the angle $\\theta$ of prism is.",
+      "options": [
+        { "id": "A", "content": "$60^{\\circ}$" },
+        { "id": "B", "content": "$90^{\\circ}$" },
+        { "id": "C", "content": "$75^{\\circ}$" },
+        { "id": "D", "content": "$45^{\\circ}$" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 34,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A body of mass 2 kg is moving along $x$-direction such that its displacement as function of time is given by $x(t)=\\alpha t^{2}+\\beta t+\\gamma\\,\\text{m}$ where $\\alpha=1\\,\\text{m/s}^{2}$, $\\beta=1\\,\\text{m/s}$ and $\\gamma=1\\,\\text{m}$. The work done on the body during the time interval $t=2\\,\\text{s}$ to $t=3\\,\\text{s}$, is",
+      "options": [
+        { "id": "A", "content": "49" },
+        { "id": "B", "content": "24" },
+        { "id": "C", "content": "12" },
+        { "id": "D", "content": "42" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 35,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A capacitor $C$ is first charged fully with potential difference of $V_{0}$ and disconnected from the battery. The charged capacitor is connected across an inductor having inductance $L$. In $t$ seconds, $25\\%$ of the initial energy in the capacitor is transferred to the inductor. The value of $t$ is:",
+      "options": [
+        { "id": "A", "content": "$\\pi\\sqrt{\\frac{LC}{2}}$" },
+        { "id": "B", "content": "$\\frac{\\pi\\sqrt{LC}}{6}$" },
+        { "id": "C", "content": "$\\frac{\\pi\\sqrt{LC}}{3}$" },
+        { "id": "D", "content": "$\\frac{\\pi\\sqrt{LC}}{2}$" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 36,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Surface tension of two liquids (having same densities), $T_{1}$ and $T_{2}$ are measured using capillary rise method utilizing two tubes with inner radii of $r_{1}$ and $r_{2}$ where $r_{1}>r_{2}$. The measured liquid heights in these tubes are $h_{1}$ and $h_{2}$ respectively. [Ignore the weight of the liquid about the lowest point of meniscus]. The heights $h_{1}$ and $h_{2}$ and surface tensions $T_{1}$ and $T_{2}$ satisfy the relation:",
+      "options": [
+        { "id": "A", "content": "$h_{1}>h_{2}$ and $T_{1}<T_{2}$" },
+        { "id": "B", "content": "$h_{1}=h_{2}$ and $T_{1}=T_{2}$" },
+        { "id": "C", "content": "$h_{1}<h_{2}$ and $T_{1}=T_{2}$" },
+        { "id": "D", "content": "$h_{1}>h_{2}$ and $T_{1}=T_{2}$" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 37,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A battery with EMF $E$ and internal resistance $r$ is connected across a resistance $R$. The power consumption in $R$ will be maximum when:",
+      "options": [
+        { "id": "A", "content": "$R=\\frac{r}{2}$" },
+        { "id": "B", "content": "$R=2r$" },
+        { "id": "C", "content": "$R=\\sqrt{2}r$" },
+        { "id": "D", "content": "$R=r$" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 38,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "The kinetic energy of a simple harmonic oscillator is oscillating with angular frequency of $176\\,\\text{rad/s}$. The frequency of this simple harmonic oscillator is",
+      "options": [
+        { "id": "A", "content": "176" },
+        { "id": "B", "content": "28" },
+        { "id": "C", "content": "14" },
+        { "id": "D", "content": "88" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 39,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A spherical body of radius $r$ and density $\\sigma$ falls freely through a viscous liquid having density $\\rho$ and viscosity $\\eta$ and attains a terminal velocity $v_{0}$. Estimated maximum error in the quantity $\\eta$ is (Ignore errors associated with $\\sigma, \\rho$ and $g$, gravitational acceleration)",
+      "options": [
+        {
+          "id": "A",
+          "content": "$\\frac{2\\Delta r}{r}+\\frac{\\Delta v_{0}}{v_{0}}$"
+        },
+        {
+          "id": "B",
+          "content": "$2\\frac{\\Delta r}{r}-\\frac{\\Delta v_{0}}{v_{0}}$"
+        },
+        {
+          "id": "C",
+          "content": "$2\\left[\\frac{\\Delta r}{r}-\\frac{\\Delta v_{0}}{v_{0}}\\right]$"
+        },
+        {
+          "id": "D",
+          "content": "$2\\left[\\frac{\\Delta r}{r}+\\frac{\\Delta v_{0}}{v_{0}}\\right]$"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 40,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Two cars A and B each of mass $10^{3}\\,\\text{kg}$ are moving on parallel tracks separated by a distance of $10\\,\\text{m}$, in the same direction with speeds $72\\,\\text{km/h}$ and $36\\,\\text{km/h}$. The magnitude of angular momentum of car A with respect to car B is",
+      "options": [
+        { "id": "A", "content": "$2\\times 10^{5}$" },
+        { "id": "B", "content": "$3.6\\times 10^{5}$" },
+        { "id": "C", "content": "$3\\times 10^{5}$" },
+        { "id": "D", "content": "$10^{5}$" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 41,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Keeping the significant figures in view, the sum of the physical quantities $52.01\\,\\text{m}$, $153.2\\,\\text{m}$ and $0.123\\,\\text{m}$ is:",
+      "options": [
+        { "id": "A", "content": "205.3 m" },
+        { "id": "B", "content": "205 m" },
+        { "id": "C", "content": "205.33 m" },
+        { "id": "D", "content": "205.333 m" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 42,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A river of width 200 m is flowing from west to east with a speed of $18\\,\\text{km/h}$. A boat, moving with speed of $36\\,\\text{km/h}$ in still water, is made to travel one-round trip (bank to bank of the river). Minimum time taken by the boat for this journey and also the displacement along the river bank are respectively.",
+      "options": [
+        { "id": "A", "content": "40 s and 0 m" },
+        { "id": "B", "content": "40 s and 200 m" },
+        { "id": "C", "content": "20 s and 100 m" },
+        { "id": "D", "content": "40 s and 100 m" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 43,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "Given below are two statements:\nStatement I: In a Young's double slit experiment, the angular separation of fringes will increase as the screen is moved away from the plane of the slits.\nStatement II: In a Young's double slit experiment, the angular separation of fringes will increase when monochromatic source is replaced by another monochromatic source of higher wavelength.\nIn the light of the above statements, choose the correct answer from the options given below:",
+      "options": [
+        { "id": "A", "content": "Both Statement I and Statement II are false" },
+        { "id": "B", "content": "Both Statement I and Statement II are true" },
+        {
+          "id": "C",
+          "content": "Statement I is true but Statement II is false"
+        },
+        {
+          "id": "D",
+          "content": "Statement I is false but Statement II is true"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 44,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "A large drum having radius $R$ is spinning around its axis with angular velocity $\\omega$, as shown in figure. The minimum value of $\\omega$ so that a body of mass $M$ remains stuck to the inner wall of the drum, taking the coefficient of friction between the drum surface and mass $M$ as $\\mu$, is :",
+      "options": [
+        { "id": "A", "content": "$\\sqrt{\\frac{g}{\\mu R}}$" },
+        { "id": "B", "content": "$\\sqrt{\\frac{g}{2\\mu R}}$" },
+        { "id": "C", "content": "$\\sqrt{\\frac{\\mu g}{R}}$" },
+        { "id": "D", "content": "$\\sqrt{\\frac{2g}{\\mu R}}$" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 45,
+      "subject": "Physics",
+      "type": "single-choice",
+      "question": "An infinitely long straight wire carrying current $I$ is bent in a planar shape as shown in the diagram. The radius of the circular part is $r$. The magnetic field at the centre $O$ of the circular loop is:",
+      "options": [
+        {
+          "id": "A",
+          "content": "$-\\frac{\\mu_{0}}{2\\pi}\\frac{I}{r}(\\pi+1)\\hat{i}$"
+        },
+        {
+          "id": "B",
+          "content": "$-\\frac{\\mu_{0}}{2\\pi}\\frac{I}{r}(\\pi-1)\\hat{i}$"
+        },
+        {
+          "id": "C",
+          "content": "$\\frac{\\mu_{0}}{2\\pi}\\frac{I}{r}(\\pi-1)\\hat{i}$"
+        },
+        {
+          "id": "D",
+          "content": "$\\frac{\\mu_{0}}{2\\pi}\\frac{I}{r}(\\pi+1)\\hat{i}$"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 46,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "An electromagnetic wave of frequency 100 MHz propagates through a medium of conductivity, $\\sigma=10\\,\\text{mho/m}$. The ratio of maximum conduction current density to maximum displacement current density is (Take $\\frac{1}{4\\pi\\epsilon_{0}}=9\\times 10^{9}\\,\\text{N m}^{2}/\\text{C}^{2}$)",
+      "answer": 1800
+    },
+    {
+      "id": 47,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "In a Young's double slit experiment set up, the two slits are kept 0.4 mm apart and screen is placed at 1 m from slits. If a thin transparent sheet of thickness $20\\,\\mu\\text{m}$ is introduced in front of one of the slits then center bright fringe shifts by 20 mm on the screen. The refractive index of transparent sheet is given by $\\frac{a}{10}$, where $a$ is",
+      "answer": 14
+    },
+    {
+      "id": 48,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "A diatomic gas $(\\gamma=1.4)$ does 100 J of work when it is expanded isobarically. Then the heat given to the gas is",
+      "answer": 350
+    },
+    {
+      "id": 49,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "The terminal velocity of a metallic ball of radius 6 mm in a viscous fluid is $20\\,\\text{cm/s}$. The terminal velocity of another ball of same material and having radius 3 mm in the same fluid will be",
+      "answer": 5
+    },
+    {
+      "id": 50,
+      "subject": "Physics",
+      "type": "numerical",
+      "question": "A particle having electric charge $3\\times 10^{-19}\\,\\text{C}$ and mass $6\\times 10^{-27}\\,\\text{kg}$ is accelerated by applying an electric potential of 1.21 V. Wavelength of the matter wave associated with the particle is $a\\times 10^{-12}\\,\\text{m}$. The value of $a$ is (Take Planck's constant $=6.6\\times 10^{-34}\\,\\text{J}\\cdot\\text{s}$).",
+      "answer": 10
+    },
+    {
+      "id": 51,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given below are some of the statements about Mn and $\\text{Mn}_{2}\\text{O}_{7}$. Identify the correct statements.\nA. Mn forms the oxide $\\text{Mn}_{2}\\text{O}_{7}$, in which Mn is in its highest oxidation state.\nB. Oxygen stabilizes the Mn in higher oxidation states by forming multiple bonds with Mn.\nC. $\\text{Mn}_{2}\\text{O}_{7}$ is an ionic oxide.\nD. The structure of $\\text{Mn}_{2}\\text{O}_{7}$ consists of one bridged oxygen.\nChoose the correct answer from the options given below :",
+      "options": [
+        { "id": "A", "content": "A, B, C and D" },
+        { "id": "B", "content": "A, C and D Only" },
+        { "id": "C", "content": "A, B and C Only" },
+        { "id": "D", "content": "A, B and D Only" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 52,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given below are two statements:\nStatement I: Compound (X), 2-bromo-3-methylbutanoic acid, dissolves in $\\text{NaHCO}_{3}$ solution and has two chiral carbon atoms.\nStatement II: Compound (Y), 3-butynoic acid, has two carbons with $sp^{3}$ hybridization, one carbon with $sp^{2}$ and one carbon with $sp$ hybridization.\nIn the light of the above statements, choose the correct answer from the options given below :",
+      "options": [
+        { "id": "A", "content": "Both Statement I and Statement II are false" },
+        { "id": "B", "content": "Both Statement I and Statement II are true" },
+        {
+          "id": "C",
+          "content": "Statement I is false but Statement II is true"
+        },
+        {
+          "id": "D",
+          "content": "Statement I is true but Statement II is false"
+        }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 53,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Nitrobenzene $\\xrightarrow{(1)\\text{Br}_{2}/\\text{FeBr}_{3}/\\Delta \\,\\,(2)\\text{Sn/HCl}/\\Delta \\,\\,(3)\\text{pH neutralisation} \\,\\,(4)\\text{Br}_{2}/\\text{H}_{2}\\text{O} \\,\\,(5)\\text{NaNO}_{2}/\\text{HBr}, 0-5^{\\circ}\\text{C} \\,\\,(6)\\text{CuBr/NaBr}}$ Major Product (P). Consider the above sequence of reactions. The number of bromine atom(s) in the final product (P) will be:",
+      "options": [
+        { "id": "A", "content": "1" },
+        { "id": "B", "content": "5" },
+        { "id": "C", "content": "6" },
+        { "id": "D", "content": "3" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 54,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given below are two statements:\nStatement I: The correct order in terms of bond dissociation enthalpy is $\\text{Cl}_{2}>\\text{Br}_{2}>\\text{F}_{2}>\\text{I}_{2}$.\nStatement II: The correct trend in the covalent character of the metal halides is $[\\text{SnCl}_{4}>\\text{SnCl}_{2}]$, $[\\text{PbCl}_{4}>\\text{PbCl}_{2}]$ and $[\\text{UF}_{4}>\\text{UF}_{6}]$.\nIn the light of the above statements, choose the correct answer from the options given below:",
+      "options": [
+        {
+          "id": "A",
+          "content": "Statement I is false but Statement II is true"
+        },
+        { "id": "B", "content": "Both Statement I and Statement II are false" },
+        { "id": "C", "content": "Both Statement I and Statement II are true" },
+        {
+          "id": "D",
+          "content": "Statement I is true but Statement II is false"
+        }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 55,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given below are four compounds:\n(a) n-propyl chloride\n(b) iso-propyl chloride\n(c) sec-butyl chloride\n(d) neo-pentyl chloride\nPercentage of carbon in the one which exhibits optical isomerism is:",
+      "options": [
+        { "id": "A", "content": "52" },
+        { "id": "B", "content": "40" },
+        { "id": "C", "content": "46" },
+        { "id": "D", "content": "56" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 56,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Consider the following data:\n$\\Delta_{f}H^{\\ominus}(\\text{methane}, g) = -X\\,\\text{kJ mol}^{-1}$\nEnthalpy of sublimation of graphite $= Y\\,\\text{kJ mol}^{-1}$\nDissociation enthalpy of $\\text{H}_{2} = Z\\,\\text{kJ mol}^{-1}$\nThe bond enthalpy of $\\text{C-H}$ bond is given by:",
+      "options": [
+        { "id": "A", "content": "$X+Y+Z$" },
+        { "id": "B", "content": "$\\frac{X+Y+2Z}{4}$" },
+        { "id": "C", "content": "$\\frac{X+Y+4Z}{2}$" },
+        { "id": "D", "content": "$\\frac{-X+Y+Z}{4}$" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 57,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The correct statements are:\nA. Activation energy for enzyme catalysed hydrolysis of sucrose is lower than that of acid catalysed hydrolysis.\nB. During denaturation, secondary and tertiary structures of a protein are destroyed but primary structure remains intact.\nC. Nucleotides are joined together by glycosidic linkage between $C_{1}$ and $C_{4}$ carbons of the pentose sugar.\nD. Quaternary structure of proteins represents overall folding of the polypeptide chain.\nChoose the correct answer from the options given below :",
+      "options": [
+        { "id": "A", "content": "A and B Only" },
+        { "id": "B", "content": "A, C and D Only" },
+        { "id": "C", "content": "A, B and D Only" },
+        { "id": "D", "content": "B and C Only" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 58,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Aqueous $\\text{HCl}$ reacts with $\\text{MnO}_{2}(s)$ to form $\\text{MnCl}_{2}(aq)$, $\\text{Cl}_{2}(g)$ and $\\text{H}_{2}\\text{O}(l)$. What is the weight (in g) of $\\text{Cl}_{2}$ liberated when 8.7 g of $\\text{MnO}_{2}(s)$ is reacted with excess aqueous $\\text{HCl}$ solution? (Given Molar mass in $\\text{g mol}^{-1}$: $\\text{Mn}=55$, $\\text{Cl}=35.5$, $\\text{O}=16$, $\\text{H}=1$)",
+      "options": [
+        { "id": "A", "content": "71" },
+        { "id": "B", "content": "14.2" },
+        { "id": "C", "content": "21.3" },
+        { "id": "D", "content": "7.1" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 59,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Consider the following spectral lines for atomic hydrogen\nA. First line of Paschen series\nB. Second line of Balmer series\nC. Third line of Paschen series\nD. Fourth line of Bracket series\nThe correct arrangement of the above lines in ascending order of energy is:",
+      "options": [
+        { "id": "A", "content": "$C<D<B<A$" },
+        { "id": "B", "content": "$D<A<C<B$" },
+        { "id": "C", "content": "$D<C<A<B$" },
+        { "id": "D", "content": "$A<B<C<D$" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 60,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Decomposition of A is a first order reaction at $T(\\text{K})$ and is given by $A(g)\\longrightarrow B(g)+C(g)$. In a closed 1 L vessel, 1 bar $A(g)$ is allowed to decompose at $T(\\text{K})$. After 100 minutes, the total pressure was 1.5 bar. What is the rate constant (in $\\text{min}^{-1}$) of the reaction? ($\\log 2 = 0.3$)",
+      "options": [
+        { "id": "A", "content": "$6.9\\times 10^{-1}$" },
+        { "id": "B", "content": "$6.9\\times 10^{-2}$" },
+        { "id": "C", "content": "$6.9\\times 10^{-4}$" },
+        { "id": "D", "content": "$6.9\\times 10^{-3}$" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 61,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Match List - I with List - II.\nList - I (Reagents): A. $\\text{H}_{2}, \\text{Pd-BaSO}_{4}$ | B. $\\text{SnCl}_{2}, \\text{HCl}$ | C. $\\text{CrO}_{2}\\text{Cl}_{2}, \\text{CS}_{2}$ | D. $\\text{CO}, \\text{HCl}, \\text{Anhyd. AlCl}_{3}$\nList - II (Reaction Name): I. Étard Reaction | II. Rosenmund Reduction | III. Gattermann-Koch Reaction | IV. Stephen Reaction\nChoose the correct answer from the options given below :",
+      "options": [
+        { "id": "A", "content": "A-IV, B-I, C-II, D-III" },
+        { "id": "B", "content": "A-II, B-III, C-IV, D-I" },
+        { "id": "C", "content": "A-II, B-IV, C-I, D-III" },
+        { "id": "D", "content": "A-IV, B-III, C-I, D-II" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 62,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given below are two statements:\nStatement I: Crystal Field Stabilization Energy (CFSE) of $[\\text{Cr}(\\text{H}_{2}\\text{O})_{6}]^{2+}$ is greater than that of $[\\text{Mn}(\\text{H}_{2}\\text{O})_{6}]^{2+}$.\nStatement II: Potassium ferricyanide has a greater spin-only magnetic moment than sodium ferrocyanide.\nIn the light of the above statements, choose the correct answer from the options given below :",
+      "options": [
+        {
+          "id": "A",
+          "content": "Statement I is false but Statement II is true"
+        },
+        { "id": "B", "content": "Both Statement I and Statement II are false" },
+        {
+          "id": "C",
+          "content": "Statement I is true but Statement II is false"
+        },
+        { "id": "D", "content": "Both Statement I and Statement II are true" }
+      ],
+      "answer": "D"
+    },
+    {
+      "id": 63,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Match List - I with List - II.\nList - I (Pair of Compounds): A. 2-Methylpropene and but-1-ene | B. Cis-but-2-ene and trans-but-2-ene | C. 2-Butanol and diethyl ether | D. But-1-ene and but-2-ene\nList - II (Type of Isomers): I. Stereoisomers | II. Position isomers | III. Chain isomers | IV. Functional group isomers\nChoose the correct answer from the options given below:",
+      "options": [
+        { "id": "A", "content": "A-I, B-IV, C-III, D-II" },
+        { "id": "B", "content": "A-III, B-I, C-IV, D-II" },
+        { "id": "C", "content": "A-II, B-I, C-IV, D-III" },
+        { "id": "D", "content": "A-III, B-I, C-II, D-IV" }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 64,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "On heating a mixture of common salt and $\\text{K}_{2}\\text{Cr}_{2}\\text{O}_{7}$ in equal amount along with concentrated $\\text{H}_{2}\\text{SO}_{4}$ in a test tube, a gas is evolved. Formula of the gas evolved and oxidation state of the central metal atom in the gas respectively are:",
+      "options": [
+        { "id": "A", "content": "$\\text{CrO}_{2}\\text{Cl}_{2}$ and +5" },
+        { "id": "B", "content": "$\\text{CrO}_{2}\\text{Cl}_{2}$ and +6" },
+        {
+          "id": "C",
+          "content": "$\\text{Cr}_{2}\\text{O}_{2}\\text{Cl}_{2}$ and +6"
+        },
+        {
+          "id": "D",
+          "content": "$\\text{Cr}_{2}\\text{O}_{2}\\text{Cl}_{2}$ and +3"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 65,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The correct increasing order of $\\text{C-H}\\,(A)$, $\\text{C-O}\\,(B)$, $\\text{C=O}\\,(C)$ and $\\text{C}\\equiv\\text{N}\\,(D)$ bonds in terms of covalent bond length is:",
+      "options": [
+        { "id": "A", "content": "$A<B<C<D$" },
+        { "id": "B", "content": "$D<C<B<A$" },
+        { "id": "C", "content": "$A<D<C<B$" },
+        { "id": "D", "content": "$D<C<A<B$" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 66,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The correct order of the rate of the reaction for the following reaction with respect to nucleophiles is: $\\text{CH}_{3}\\text{Br}+\\text{Nu}^{\\ominus}\\longrightarrow \\text{CH}_{3}\\text{Nu}+\\text{Br}^{\\ominus}$",
+      "options": [
+        {
+          "id": "A",
+          "content": "$\\text{ClO}_{4}^{-}>\\text{CH}_{3}\\text{COO}^{-}>^{-}\\text{OH}>\\text{PhO}^{-}$"
+        },
+        {
+          "id": "B",
+          "content": "$\\text{CH}_{3}\\text{COO}^{-}>\\text{PhO}^{-}>^{-}\\text{OH}>\\text{ClO}_{4}^{-}$"
+        },
+        {
+          "id": "C",
+          "content": "$^{-}\\text{OH}>\\text{PhO}^{-}>\\text{CH}_{3}\\text{COO}^{-}>\\text{ClO}_{4}^{-}$"
+        },
+        {
+          "id": "D",
+          "content": "$\\text{PhO}^{-}>^{-}\\text{OH}>\\text{CH}_{3}\\text{COO}^{-}>\\text{ClO}_{4}^{-}$"
+        }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 67,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "For a closed circuit Daniell cell, which of the following plots of $E_{\\text{cell}}^{\\circ}$ vs time is the accurate one at a given temperature?",
+      "options": [
+        {
+          "id": "A",
+          "content": "Vertical line representing instantaneous jump/drop"
+        },
+        {
+          "id": "B",
+          "content": "Horizontal constant line parallel to time axis"
+        },
+        {
+          "id": "C",
+          "content": "Line with negative slope decreasing with time"
+        },
+        {
+          "id": "D",
+          "content": "Line with positive slope increasing with time"
+        }
+      ],
+      "answer": "B"
+    },
+    {
+      "id": 68,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "By usual analysis, 1.00 g of compound (X) gave 1.79 g of magnesium pyrophosphate. The percentage of phosphorus in compound (X) is: (nearest integer) (Given, molar mass in $\\text{g mol}^{-1}$: $\\text{O}=16$, $\\text{Mg}=24$, $\\text{P}=31$)",
+      "options": [
+        { "id": "A", "content": "20" },
+        { "id": "B", "content": "30" },
+        { "id": "C", "content": "50" },
+        { "id": "D", "content": "40" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 69,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "Given below are two statements:\nStatement I: The correct order in terms of atomic/ionic radii is $\\text{Al}>\\text{Mg}^{-}>\\text{Mg}^{2+}>\\text{Al}^{3+}$.\nStatement II: The correct order in terms of the magnitude of electron gain enthalpy is $\\text{Cl}>\\text{Br}>\\text{S}>\\text{O}$.\nIn the light of the above statements, choose the correct answer from the options given below :",
+      "options": [
+        { "id": "A", "content": "Both Statement I and Statement II are false" },
+        {
+          "id": "B",
+          "content": "Statement I is true but Statement II is false"
+        },
+        {
+          "id": "C",
+          "content": "Statement I is false but Statement II is true"
+        },
+        { "id": "D", "content": "Both Statement I and Statement II are true" }
+      ],
+      "answer": "C"
+    },
+    {
+      "id": 70,
+      "subject": "Chemistry",
+      "type": "single-choice",
+      "question": "The correct order of reactivity of the following benzyl halides towards reaction with KCN is:\n(a) 4-hydroxybenzyl bromide\n(b) 4-aminobenzyl bromide\n(c) 4-nitrobenzyl bromide\n(d) 3-nitrobenzyl bromide",
+      "options": [
+        { "id": "A", "content": "$b>a>d>c$" },
+        { "id": "B", "content": "$a>b>c>d$" },
+        { "id": "C", "content": "$a>b>d>c$" },
+        { "id": "D", "content": "$b>a>c>d$" }
+      ],
+      "answer": "A"
+    },
+    {
+      "id": 71,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "A substance 'X' (1.5 g) dissolved in 150 g of a solvent 'Y' (molar mass $= 300\\,\\text{g mol}^{-1}$) led to an elevation of the boiling point by 0.5 K. The relative lowering in the vapour pressure of the solvent 'Y' is $\\text{ans}\\times 10^{-2}$. (nearest integer) [Given: $K_{b}$ of the solvent $= 5.0\\,\\text{K kg mol}^{-1}$] Assume the solution to be dilute and no association or dissociation of X takes place in solution.",
+      "answer": 2
+    },
+    {
+      "id": 72,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "MX is a sparingly soluble salt that follows the given solubility equilibrium at 298 K: $\\text{MX}(s)\\rightleftharpoons \\text{M}^{+}(aq)+\\text{X}^{-}(aq)$, $K_{sp}=10^{-10}$. If the standard reduction potential for $\\text{M}^{+}(aq)+e^{-}\\rightarrow \\text{M}(s)$ is $E^{\\ominus}_{\\text{M}^{+}/\\text{M}}=0.79\\,\\text{V}$, then the value of the standard reduction potential for the metal/metal insoluble salt electrode $E^{\\ominus}_{\\text{X}^{-}/\\text{MX}(s)/\\text{M}}$ is in mV. (nearest integer) [Given: $\\frac{2.303RT}{F}=0.059\\,\\text{V}$]",
+      "answer": 200
+    },
+    {
+      "id": 73,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "Identify the metal ions among $\\text{Co}^{2+}$, $\\text{Ni}^{2+}$, $\\text{Fe}^{2+}$, $\\text{V}^{3+}$ and $\\text{Ti}^{2+}$ having a spin-only magnetic moment value more than 3.0 BM. The sum of unpaired electrons present in the high spin octahedral complexes formed by those metal ions is",
+      "answer": 7
+    },
+    {
+      "id": 74,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "The first and second ionization constants of $\\text{H}_{2}\\text{X}$ are $2.5\\times 10^{-8}$ and $1.0\\times 10^{-13}$ respectively. The concentration of $\\text{X}^{2-}$ in $0.1\\text{ M } \\text{H}_{2}\\text{X}$ solution is $\\text{ans}\\times 10^{-15}\\,\\text{M}$. (Nearest Integer)",
+      "answer": 100
+    },
+    {
+      "id": 75,
+      "subject": "Chemistry",
+      "type": "numerical",
+      "question": "The osmotic pressure of a living cell is 12 atm at 300 K. The strength of sodium chloride solution that is isotonic with the living cell at this temperature is $\\text{g L}^{-1}$. (Nearest integer) Given: $R=0.08\\,\\text{L atm K}^{-1}\\text{ mol}^{-1}$. Assume complete dissociation of NaCl. (Given: Molar mass of Na and Cl are 23 and $35.5\\,\\text{g mol}^{-1}$ respectively.)",
+      "answer": 15
+    }
+  ]
+}

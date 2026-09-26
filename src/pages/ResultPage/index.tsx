@@ -16,10 +16,7 @@ export default function ResultPage() {
     return <div className="app-panel"></div>;
   }
 
-  const testResult = getResult(
-    examSession.examData.questions,
-    examSession.candidateResponse
-  );
+  const testResult = getResult(examSession, examSession.candidateResponse);
 
   return (
     <div

@@ -6,9 +6,11 @@ import "katex/dist/katex.min.css";
 import { createRoot } from "react-dom/client";
 import { StrictMode } from "react";
 
-import App from "./App";
 import SettingsProvider from "./context/SettingsContext/SettingsProvider";
 import UserProvider from "./context/UserContext/Provider";
+import ExamProvider from "./context/ExamContext/ExamProvider";
+
+import App from "./App";
 
 const root = document.getElementById("root") as HTMLDivElement | null;
 
@@ -18,7 +20,9 @@ createRoot(root).render(
   <StrictMode>
     <SettingsProvider>
       <UserProvider>
-        <App />
+        <ExamProvider>
+          <App />
+        </ExamProvider>
       </UserProvider>
     </SettingsProvider>
   </StrictMode>
