@@ -11,13 +11,4 @@ export type AppSettings = {
   toggleSimpleMode: () => void;
 };
 
-export const defaultSettings: AppSettings = {
-  theme: "dark",
-  changeTheme: () => {},
-  textSize: 16,
-  changeTextSize: () => {},
-  simpleMode: false,
-  toggleSimpleMode: () => {},
-};
-
-export const SettingsContext = createContext(defaultSettings);
+export const SettingsContext = createContext<AppSettings | null>(null);
