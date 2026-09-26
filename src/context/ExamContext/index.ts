@@ -33,16 +33,4 @@ export type ExamSession = {
   loadPaper: (path: string) => void;
 };
 
-export const defaultTestData: ExamSession = {
-  startedAt: undefined,
-  setStartedAt: () => {},
-  completedAt: undefined,
-  setCompletedAt: () => {},
-  examData: undefined,
-  setExamData: () => {},
-  candidateResponse: undefined,
-  setCandidateResponse: () => {},
-  loadPaper: () => {},
-};
-
-export const ExamContext = createContext<ExamSession>(defaultTestData);
+export const ExamContext = createContext<ExamSession | null>(null);
