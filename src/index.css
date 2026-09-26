@@ -8,23 +8,11 @@
 
   --text-1: 300 16px "Inter";
   --text-2: 300 14px "Inter";
+  --text-3: 400 10px "Inter";
 
   --large-icon: 33px;
   --medium-icon: 24px;
   --small-icon: 15px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  color: var(--color-1);
-  -webkit-tap-highlight-color: transparent;
-}
-
-.lucide {
-  height: var(--size);
-  width: var(--size);
 }
 
 html,
@@ -34,6 +22,39 @@ body,
   width: 100%;
 
   background-color: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--color-1);
+  -webkit-tap-highlight-color: transparent;
+
+  &::selection {
+    background-color: var(--accent-1);
+    color: var(--bg-p-1);
+  }
+}
+
+.lucide {
+  flex-shrink: 0;
+  height: var(--size);
+  width: var(--size);
+}
+
+button {
+  &:focus-visible {
+    outline: 2px solid var(--accent-1);
+    outline-offset: 2px;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    touch-action: none;
+    pointer-events: none;
+
+    opacity: 0.6;
+  }
 }
 
 .disabled {
