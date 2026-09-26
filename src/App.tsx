@@ -7,8 +7,6 @@ import { useHash } from "./hooks/useHash.js";
 import { useSettings } from "./hooks/useSettings.js";
 import { useUser } from "./hooks/useUser.js";
 
-import ExamProvider from "./context/ExamContext/ExamProvider";
-
 import NavigationBar from "./components/NavigationBar/index.js";
 import RegistrationPage from "./pages/RegistrationPage/index.js";
 import HomePage from "./pages/HomePage";
@@ -36,13 +34,9 @@ export default function App() {
       <div className="panel-container">
         {panel === "registration" && <RegistrationPage />}
         {panel === "home" && <HomePage />}
-        {["login", "question", "result"].includes(panel) && (
-          <ExamProvider>
-            {panel === "login" && <LoginPage />}
-            {panel === "question" && <QuestionsPage />}
-            {panel === "result" && <ResultPage />}
-          </ExamProvider>
-        )}
+        {panel === "login" && <LoginPage />}
+        {panel === "question" && <QuestionsPage />}
+        {panel === "result" && <ResultPage />}
       </div>
     </div>
   );
