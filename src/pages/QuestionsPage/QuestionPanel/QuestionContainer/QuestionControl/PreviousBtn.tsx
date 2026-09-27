@@ -13,11 +13,12 @@ export default function PreviousBtn({
   return (
     <ActionBtn
       title="Previous question"
-      className={`question-control-btn ${questionNo <= 1 ? "disabled" : ""}`}
+      className="question-control-btn"
       onClick={() => {
         if (questionNo <= 1) return;
         setQuestionNo(questionNo - 1);
       }}
+      disabled={questionNo <= 1}
     >
       <ChevronLeft />
       <p>{"Previous"}</p>
