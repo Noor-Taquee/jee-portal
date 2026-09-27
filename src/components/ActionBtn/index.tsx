@@ -1,25 +1,15 @@
 import "./style.css";
 
-interface ActionBtnProps {
-  onClick?: () => void;
-  id?: string;
-  className?: string;
-  title?: string;
-  children?: React.ReactNode;
-}
+import type { ComponentPropsWithoutRef } from "react";
+
+type Props = ComponentPropsWithoutRef<"button">;
 
 /** Basic horizontal button. */
-export default function ActionBtn({
-  className,
-  onClick,
-  title,
-  children,
-}: ActionBtnProps) {
+export default function ActionBtn({ className, children, ...props }: Props) {
   return (
     <button
-      title={title}
       className={`action-btn ${className}`}
-      onClick={onClick}
+      {...props}
     >
       {children}
     </button>
