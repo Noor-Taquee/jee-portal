@@ -9,14 +9,12 @@ import { changeHash } from "../../../hooks/useHash";
 
 import PaswwordInput from "./PasswordInput";
 import UsernameInput from "./UsernameInput";
-import Keyboard from "../Keyboard";
 
 export default function LoginForm() {
   const examSession = useExamSession();
 
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const [keyboard, setKeyboard] = useState<boolean>(false);
 
   return (
     <div id="login-form">
@@ -32,10 +30,7 @@ export default function LoginForm() {
         <PaswwordInput
           password={password}
           setPassword={setPassword}
-          setKeyboard={setKeyboard}
         />
-
-        {keyboard && <Keyboard />}
 
         <button
           id="login-btn"
