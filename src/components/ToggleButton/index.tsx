@@ -1,26 +1,14 @@
 import "./style.css";
 
-interface ToggleButtonProps {
-  className?: string;
-  id?: string;
-  title?: string;
-  onClick?: (...props: any) => any;
-  children: React.ReactNode;
-}
+import type { ComponentPropsWithoutRef } from "react";
 
-export default function ToggleButton({
-  title,
-  id,
-  className,
-  onClick,
-  children,
-}: ToggleButtonProps) {
+type Props = ComponentPropsWithoutRef<"button">;
+
+export default function ToggleButton({ className, children, ...props }: Props) {
   return (
     <button
       className={`toggle-button ${className}`}
-      id={id}
-      title={title}
-      onClick={onClick}
+      {...props}
     >
       {children}
     </button>
