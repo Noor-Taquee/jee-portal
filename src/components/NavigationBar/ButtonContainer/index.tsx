@@ -1,29 +1,26 @@
 // oxlint-disable max-lines-per-function
 import "./style.css";
 
-import { changeHash, type Route } from "../../../hooks/useHash";
-
 import { HomeIcon } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
-const navButtons: [text: string, route: Route, icon: () => React.ReactNode][] =
+const navButtons: [text: string, route: string, icon: () => React.ReactNode][] =
   [["home", "home", () => <HomeIcon />]];
 
-type Props = {
-  panel: Route;
-};
-
-export default function ButtonContainer({ panel }: Props) {
+export default function ButtonContainer() {
   return (
     <div id="navigation-btn-div">
       {navButtons.map((stack) => (
-        <button
-          className={`navigation-button  ${panel === stack[1] ? "active" : ""}`}
-          onClick={() => changeHash(stack[1])}
+        <NavLink
+          to={`/${stack[1]}`}
           key={`nav-${stack[0]}`}
+          className={({ isActive }) =>
+            `navigation-button ${isActive ? "active" : ""}`
+          }
         >
           {stack[2]()}
           <p>{stack[0]}</p>
-        </button>
+        </NavLink>
       ))}
     </div>
   );
