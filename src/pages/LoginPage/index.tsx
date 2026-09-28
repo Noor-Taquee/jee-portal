@@ -20,14 +20,14 @@ export default function LoginPage() {
         texts={["Create or login to your account first"]}
       >
         <Link
-          to={"registration"}
+          to={"/registration"}
           title="Registration page"
           className="action-btn sec"
         >
           <p>Login</p>
         </Link>
         <Link
-          to={"home"}
+          to={"/home"}
           title="Back"
           className="action-btn"
         >
