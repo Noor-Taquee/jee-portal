@@ -5,7 +5,7 @@ import { useExamSession } from "../../../../hooks/useExamSession";
 import { useNavigate } from "react-router-dom";
 
 async function getSuggestions() {
-  const res = await fetch(`${import.meta.env.BASE_URL}/data/data.json`);
+  const res = await fetch(`${import.meta.env.BASE_URL}data/data.json`);
   const data: { "2026": string[] } = await res.json();
   return data;
 }
