@@ -2,10 +2,9 @@
 
 import "./app.css";
 
+import { Navigate, Route, Routes } from "react-router-dom";
 import { useOrientation } from "./hooks/useOrientation.js";
-import { useHash } from "./hooks/useHash.js";
 import { useSettings } from "./hooks/useSettings.js";
-import { useUser } from "./hooks/useUser.js";
 
 import NavigationBar from "./components/NavigationBar/index.js";
 import RegistrationPage from "./pages/RegistrationPage/index.js";
@@ -15,9 +14,7 @@ import QuestionsPage from "./pages/QuestionsPage";
 import ResultPage from "./pages/ResultPage";
 
 export default function App() {
-  const { user } = useUser();
   const appSettings = useSettings();
-  let panel = useHash();
   const orientation = useOrientation();
 
   return (
@@ -27,16 +24,55 @@ export default function App() {
       data-orientation={orientation}
       className={appSettings.simpleMode ? "original-ui" : ""}
     >
-      {user &&
-        !["registration", "login", "question", "result"].includes(panel) && (
-          <NavigationBar panel={panel} />
-        )}
+      <NavigationBar />
       <div className="panel-container">
-        {panel === "registration" && <RegistrationPage />}
-        {panel === "home" && <HomePage />}
-        {panel === "login" && <LoginPage />}
-        {panel === "question" && <QuestionsPage />}
-        {panel === "result" && <ResultPage />}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Navigate
+                to="/home"
+                replace
+              />
+            }
+          />
+
+          <Route
+            path="/registration"
+            element={<RegistrationPage />}
+          />
+          <Route
+            path="/login"
+            element={<LoginPage />}
+          />
+
+          <Route
+            path="/home"
+            element={<HomePage />}
+          />
+          <Route
+            path="/history"
+            element={<HistoryPage />}
+          />
+          <Route
+            path="/question"
+            element={<QuestionsPage />}
+          />
+          <Route
+            path="/result"
+            element={<ResultPage />}
+          />
+
+          <Route
+            path="*"
+            element={
+              <Navigate
+                to="/home"
+                replace
+              />
+            }
+          />
+        </Routes>
       </div>
     </div>
   );
