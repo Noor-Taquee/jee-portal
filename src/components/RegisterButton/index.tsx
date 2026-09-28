@@ -1,19 +1,16 @@
 import "./style.css";
 
-import { changeHash } from "../../hooks/useHash";
-
 import { LogInIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function RegisterButton() {
   return (
-    <button
+    <Link
+      to={"registration"}
       id="register-button"
-      onClick={() => {
-        changeHash("registration");
-      }}
     >
       <p>Register / Login</p>
       <LogInIcon />
-    </button>
+    </Link>
   );
 }

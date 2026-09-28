@@ -2,7 +2,7 @@
 import "./style.css";
 
 import { useRef, useState } from "react";
-import { changeHash } from "../../hooks/useHash";
+import { useNavigate } from "react-router-dom";
 import { useExamSession } from "../../hooks/useExamSession";
 
 import QuestionPanel from "./QuestionPanel";
@@ -10,6 +10,7 @@ import Header from "./Header";
 
 export default function QuestionsPage() {
   const examSession = useExamSession();
+  const navigate = useNavigate();
 
   const [questionNo, setQuestionNo] = useState<number>(1);
 
@@ -86,7 +87,7 @@ export default function QuestionsPage() {
 
     // 2. Mark exam completed and navigate
     examSession.setCompletedAt(new Date());
-    changeHash("result");
+    navigate("/result");
   }
 
   if (!examSession.examData || !examSession.startedAt) {
@@ -108,7 +109,7 @@ export default function QuestionsPage() {
           </p>
           <button
             onClick={() => {
-              changeHash("login");
+              navigate("/login");
             }}
             className="action-btn"
           >

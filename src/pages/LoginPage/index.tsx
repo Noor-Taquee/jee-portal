@@ -4,13 +4,11 @@ import "./style.css";
 
 import { useUser } from "../../hooks/useUser";
 
-import { changeHash } from "../../hooks/useHash";
-
+import { Link } from "react-router-dom";
 import Header from "./Header";
 import LoginForm from "./LoginForm";
 import InstituteLogo from "../../components/InstituteLogo";
 import DialogueBox from "../../components/DialogueBox";
-import ActionBtn from "../../components/ActionBtn";
 
 export default function LoginPage() {
   const { user } = useUser();
@@ -21,23 +19,20 @@ export default function LoginPage() {
         header="No user was found"
         texts={["Create or login to your account first"]}
       >
-        <ActionBtn
+        <Link
+          to={"registration"}
           title="Registration page"
-          className="sec"
-          onClick={() => {
-            changeHash("registration");
-          }}
+          className="action-btn sec"
         >
           <p>Login</p>
-        </ActionBtn>
-        <ActionBtn
+        </Link>
+        <Link
+          to={"home"}
           title="Back"
-          onClick={() => {
-            window.history.back();
-          }}
+          className="action-btn"
         >
           <p>Back</p>
-        </ActionBtn>
+        </Link>
       </DialogueBox>
     );
   }

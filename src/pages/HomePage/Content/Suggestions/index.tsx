@@ -1,11 +1,11 @@
-import { useExamSession } from "../../../../hooks/useExamSession";
-import { changeHash } from "../../../../hooks/useHash";
 import "./style.css";
 
 import { useEffect, useState } from "react";
+import { useExamSession } from "../../../../hooks/useExamSession";
+import { useNavigate } from "react-router-dom";
 
 async function getSuggestions() {
-  const res = await fetch(`${import.meta.env.BASE_URL}data/data.json`);
+  const res = await fetch(`${import.meta.env.BASE_URL}/data/data.json`);
   const data: { "2026": string[] } = await res.json();
   return data;
 }
@@ -21,6 +21,7 @@ function format(raw: string) {
 }
 
 export default function Suggestions() {
+  const navigate = useNavigate();
   const examSession = useExamSession();
 
   const [isLoading, setIsLoading] = useState(true);
@@ -31,7 +32,7 @@ export default function Suggestions() {
       setSuggestions(data);
       setIsLoading(false);
     });
-  });
+  }, []);
 
   return (
     <div
@@ -47,7 +48,7 @@ export default function Suggestions() {
             key={data}
             onClick={() => {
               examSession.loadPaper(`2026/${data}`);
-              changeHash("login");
+              navigate("/login");
             }}
           >
             <p>{format(data)}</p>
