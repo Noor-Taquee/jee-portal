@@ -51,10 +51,6 @@ export default function App() {
             element={<HomePage />}
           />
           <Route
-            path="/history"
-            element={<HistoryPage />}
-          />
-          <Route
             path="/question"
             element={<QuestionsPage />}
           />
