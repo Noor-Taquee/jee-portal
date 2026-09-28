@@ -2,7 +2,7 @@
 
 import "./app.css";
 
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { useOrientation } from "./hooks/useOrientation.js";
 import { useSettings } from "./hooks/useSettings.js";
 
@@ -16,6 +16,13 @@ import ResultPage from "./pages/ResultPage";
 export default function App() {
   const appSettings = useSettings();
   const orientation = useOrientation();
+  const location = useLocation();
+  const hideNavigation = [
+    "/registration",
+    "/login",
+    "/question",
+    "/result",
+  ].includes(location.pathname);
 
   return (
     <div
@@ -24,7 +31,7 @@ export default function App() {
       data-orientation={orientation}
       className={appSettings.simpleMode ? "original-ui" : ""}
     >
-      <NavigationBar />
+      {!hideNavigation && <NavigationBar />}
       <div className="panel-container">
         <Routes>
           <Route
