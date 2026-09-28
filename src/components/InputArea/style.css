@@ -39,8 +39,8 @@
   display: flex;
   align-items: center;
 
-  &:focus-within {
-    border-color: var(--color-1);
+  &:has(input:focus-within) {
+    border-color: var(--accent-1);
   }
 
   > .icon-holder {
