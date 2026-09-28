@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function RegisterButton() {
   return (
     <Link
-      to={"registration"}
+      to={"/registration"}
       id="register-button"
     >
       <p>Register / Login</p>
