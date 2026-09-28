@@ -4,13 +4,13 @@ import "./style.css";
 
 import { useState } from "react";
 import { useExamSession } from "../../../hooks/useExamSession";
-
-import { changeHash } from "../../../hooks/useHash";
+import { useNavigate } from "react-router-dom";
 
 import PaswwordInput from "./PasswordInput";
 import UsernameInput from "./UsernameInput";
 
 export default function LoginForm() {
+  const navigate = useNavigate();
   const examSession = useExamSession();
 
   const [username, setUsername] = useState<string>("");
@@ -38,7 +38,7 @@ export default function LoginForm() {
           onClick={() => {
             if (!examSession.examData) return;
             examSession.setStartedAt(new Date());
-            changeHash("question");
+            navigate("/question");
           }}
         >
           <p>Start Test</p>

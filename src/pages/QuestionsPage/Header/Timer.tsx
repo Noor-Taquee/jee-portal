@@ -1,12 +1,12 @@
 // oxlint-disable max-lines-per-function
 
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useExamSession } from "../../../hooks/useExamSession";
-
-import { changeHash } from "../../../hooks/useHash";
 
 export default function Timer() {
   const examSession = useExamSession();
+  const navigate = useNavigate();
 
   const [leftTime, setLeftTime] = useState<number>(
     examSession.examData?.metadata.duration as number
@@ -27,7 +27,7 @@ export default function Timer() {
       if (remaining <= 0) {
         setLeftTime(0);
         clearInterval(timerInterval);
-        changeHash("result");
+        navigate("/result");
       } else {
         setLeftTime(remaining);
       }
@@ -36,7 +36,7 @@ export default function Timer() {
     return () => {
       clearInterval(timerInterval);
     };
-  }, [examSession]);
+  }, [examSession, navigate]);
 
   const totalSeconds = Math.floor(leftTime / 1000);
   const hours = Math.floor(totalSeconds / 3600);
