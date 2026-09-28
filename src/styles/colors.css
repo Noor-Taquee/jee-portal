@@ -7,15 +7,17 @@
 }
 
 [data-theme="light"] {
-  --color-1: #000000;
+  --color-1: #1f2328;
+  --color-2: #59636e;
 
   --bg-p-1: #ffffff;
-  --bg-p-2: #f0f0f0;
+  --bg-p-2: #f6f8fa;
+  --bg-p-3: #eceef0;
 
-  --bg-s-1: #0056b320;
-  --bg-s-2: #afafaf;
+  --bg-s-1: #0969da20;
+  --bg-s-2: #e3e9ed;
 
-  --accent-1: #0056b3;
+  --accent-1: #0969da;
   --accent-2: #ffdb0f;
 
   --border-1: 1px solid var(--bg-s-2);
@@ -34,15 +36,17 @@
 }
 
 [data-theme="dark"] {
-  --color-1: #c0c0c0;
+  --color-1: #e5eaf0;
+  --color-2: #8c939c;
 
-  --bg-p-1: #232325;
-  --bg-p-2: #303030;
+  --bg-p-1: #010409;
+  --bg-p-2: #151b23;
+  --bg-p-3: #212830;
 
-  --bg-s-1: #0f63ff20;
-  --bg-s-2: #494949;
+  --bg-s-1: #1f6feb20;
+  --bg-s-2: #3d444d;
 
-  --accent-1: #0f63ff;
+  --accent-1: #1f6feb;
   --accent-2: #ffdb0f;
 
   --border-1: 1px solid var(--bg-s-2);
