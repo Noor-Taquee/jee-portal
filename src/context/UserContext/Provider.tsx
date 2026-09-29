@@ -13,7 +13,22 @@ export default function UserProvider({ children }: UserProviderProps) {
 
   const [user, setUser] = useState<User | null>(name ? { name } : null);
 
-  const value = { user: user, setUser: setUser };
+  function logout(keep = false) {
+    setUser(null);
+    if (!keep) {
+      localStorage.removeItem(userLocalStorageKey);
+    }
+  }
+
+  function login(newUser: User, save = true) {
+    if (user) throw new Error("User already exists!");
+    setUser(newUser);
+    if (save) {
+      localStorage.setItem(userLocalStorageKey, newUser.name);
+    }
+  }
+
+  const value = { user: user, logout: logout, login: login };
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 }
