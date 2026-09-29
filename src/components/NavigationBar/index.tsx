@@ -7,6 +7,8 @@ import ButtonContainer from "./ButtonContainer";
 import NavigationHeader from "./NavigationHeader";
 import AccountButton from "../AccountButton";
 import Avatar from "../AccountButton/Avatar";
+import SettingsPopover from "./SettingsPopover";
+import AppearancePopover from "./SettingsPopover/AppearancePopover";
 
 export default function NavigationBar() {
   const [expanded, setExpanded] = useState(true);
@@ -23,7 +25,19 @@ export default function NavigationBar() {
         setExpanded={setExpanded}
       />
       <ButtonContainer />
-      {user && (expanded ? <AccountButton /> : <Avatar />)}
+
+      <SettingsPopover />
+      <AppearancePopover />
+
+      {user &&
+        (expanded ? (
+          <AccountButton
+            popoverTarget="settings-popover"
+            style={{ anchorName: "--settings-popover-anchor" }}
+          />
+        ) : (
+          <Avatar />
+        ))}
     </nav>
   );
 }
