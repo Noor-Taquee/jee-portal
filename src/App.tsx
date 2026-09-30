@@ -5,6 +5,7 @@ import "./app.css";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { useOrientation } from "./hooks/useOrientation.js";
 import { useSettings } from "./hooks/useSettings.js";
+import { useUser } from "./hooks/useUser.js";
 
 import NavigationBar from "./components/NavigationBar/index.js";
 import RegistrationPage from "./pages/RegistrationPage/index.js";
@@ -14,15 +15,14 @@ import QuestionsPage from "./pages/QuestionsPage";
 import ResultPage from "./pages/ResultPage";
 
 export default function App() {
+  const { user } = useUser();
   const appSettings = useSettings();
   const orientation = useOrientation();
   const location = useLocation();
-  const hideNavigation = [
-    "/registration",
-    "/login",
-    "/question",
-    "/result",
-  ].includes(location.pathname);
+  const hideNavigation =
+    ["/registration", "/login", "/question", "/result"].includes(
+      location.pathname
+    ) || !user;
 
   return (
     <div
