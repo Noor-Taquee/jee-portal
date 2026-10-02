@@ -13,6 +13,7 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import QuestionsPage from "./pages/QuestionsPage";
 import ResultPage from "./pages/ResultPage";
+import HistoryPage from "./pages/HistoryPage/index.js";
 
 export default function App() {
   const { user } = useUser();
@@ -52,6 +53,11 @@ export default function App() {
           <Route
             path="/home"
             element={<HomePage />}
+          />
+
+          <Route
+            path="/history"
+            element={<HistoryPage />}
           />
 
           <Route
