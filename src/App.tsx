@@ -48,14 +48,15 @@ export default function App() {
             path="/registration"
             element={<RegistrationPage />}
           />
-          <Route
-            path="/login"
-            element={<LoginPage />}
-          />
 
           <Route
             path="/home"
             element={<HomePage />}
+          />
+
+          <Route
+            path="/login"
+            element={<LoginPage />}
           />
           <Route
             path="/question"
