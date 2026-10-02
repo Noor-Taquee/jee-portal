@@ -1,11 +1,14 @@
 // oxlint-disable max-lines-per-function
 import "./style.css";
 
-import { HomeIcon } from "lucide-react";
+import { HistoryIcon, HomeIcon } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 const navButtons: [text: string, route: string, icon: () => React.ReactNode][] =
-  [["home", "home", () => <HomeIcon />]];
+  [
+    ["home", "home", () => <HomeIcon />],
+    ["history", "history", () => <HistoryIcon />],
+  ];
 
 export default function ButtonContainer() {
   return (
