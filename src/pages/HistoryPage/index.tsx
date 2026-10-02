@@ -1,5 +1,7 @@
 import "./style.css";
 
+import NoTestMessage from "./NoTestMessage";
+
 export default function HistoryPage() {
   return (
     <div
@@ -12,7 +14,9 @@ export default function HistoryPage() {
 
       <div id="history-table-wrapper">
         <div className="table-header"></div>
-        <div id="history-table"></div>
+        <div id="history-table">
+          <NoTestMessage />
+        </div>
       </div>
     </div>
   );
