@@ -3,6 +3,7 @@ import "./style.css";
 
 import { useState } from "react";
 import { useUser } from "../../hooks/useUser";
+import { useNavigate } from "react-router-dom";
 
 import { ArrowRight } from "lucide-react";
 import DialogueBox from "../../components/DialogueBox";
@@ -11,6 +12,8 @@ import SignupForm from "./SignupForm";
 import SigninForm from "./SigninForm";
 
 export default function RegistrationPage() {
+  const navigate = useNavigate();
+
   const { user } = useUser();
 
   const [method, setMethod] = useState<"signin" | "signup">("signup");
@@ -23,7 +26,7 @@ export default function RegistrationPage() {
           `Logged in as ${user.name}. Logout first to create a new account.`,
         ]}
       >
-        <ActionBtn onClick={() => history.back()}>
+        <ActionBtn onClick={() => navigate("/home")}>
           <p>Back</p>
         </ActionBtn>
       </DialogueBox>
