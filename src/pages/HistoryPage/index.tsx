@@ -9,13 +9,8 @@ export default function HistoryPage() {
       className="app-panel"
     >
       <div id="panel-header">
-        <p className="header">History</p>
-      </div>
-
-      <div id="history-table-wrapper">
-        <div className="table-header"></div>
-        <div id="history-table">
-          <NoTestMessage />
+        <div className="panel-name-container">
+          <p className="header">Test History</p>
         </div>
       </div>
     </div>
