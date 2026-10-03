@@ -1,6 +1,7 @@
 import "./style.css";
 
-import NoTestMessage from "./NoTestMessage";
+import Header from "./Header";
+import TestHistoryTable from "./TestHistoryTable";
 
 export default function HistoryPage() {
   return (
@@ -13,6 +14,10 @@ export default function HistoryPage() {
           <p className="header">Test History</p>
         </div>
       </div>
+
+      <Header />
+
+      <TestHistoryTable />
     </div>
   );
 }
