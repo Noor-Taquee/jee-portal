@@ -1,0 +1,11 @@
+#test-history-table {
+  flex-grow: 1;
+  min-height: 0;
+  min-width: 0;
+
+  border: var(--border-1);
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+}
