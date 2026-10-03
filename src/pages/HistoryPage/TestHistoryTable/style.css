@@ -3,6 +3,8 @@
   min-height: 0;
   min-width: 0;
 
+  margin: 12px 24px;
+
   border: var(--border-1);
   border-radius: 12px;
 
