@@ -1,0 +1,61 @@
+#table-header {
+  width: 100%;
+  height: fit-content;
+
+  padding: 6px 24px;
+
+  display: flex;
+  gap: 12px;
+
+  .input-box {
+    padding: 4px;
+
+    display: flex;
+    gap: 8px;
+
+    .lucide {
+      --size: 18px;
+    }
+  }
+}
+
+#date-period {
+  flex-shrink: 0;
+
+  padding: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  border: var(--border-1);
+  border-radius: 6px;
+
+  .lucide {
+    --size: 18px;
+  }
+  p {
+    display: flex;
+    font: var(--text-3);
+  }
+}
+
+#filter-button {
+  padding: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: var(--border-1);
+  border-radius: 6px;
+
+  .lucide {
+    --size: 16px;
+  }
+  span {
+    font: var(--text-2);
+  }
+}
