@@ -109,7 +109,7 @@ export default function QuestionsPage() {
           </p>
           <button
             onClick={() => {
-              navigate("/login");
+              navigate("/exam/login");
             }}
             className="action-btn"
           >
