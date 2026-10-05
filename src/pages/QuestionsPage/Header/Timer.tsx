@@ -27,7 +27,7 @@ export default function Timer() {
       if (remaining <= 0) {
         setLeftTime(0);
         clearInterval(timerInterval);
-        navigate("/result");
+        navigate("exam/result");
       } else {
         setLeftTime(remaining);
       }
