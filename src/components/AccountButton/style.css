@@ -25,6 +25,11 @@
 }
 
 #user-icon-holder {
+  cursor: pointer;
+  touch-action: manipulation;
+
+  flex-shrink: 0;
+
   aspect-ratio: 1 / 1;
   width: 24px;
 
