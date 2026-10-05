@@ -20,7 +20,7 @@ export default function App() {
   const orientation = useOrientation();
   const location = useLocation();
   const hideNavigation =
-    ["/registration", "/exam/login", "exam/questions", "exam/result"].includes(
+    ["/registration", "/exam/login", "/exam/questions", "exam/result"].includes(
       location.pathname
     ) || !user;
 
@@ -59,7 +59,7 @@ export default function App() {
             element={<LoginPage />}
           />
           <Route
-            path="exam/questions"
+            path="/exam/questions"
             element={<QuestionsPage />}
           />
           <Route

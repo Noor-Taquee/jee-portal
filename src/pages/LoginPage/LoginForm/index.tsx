@@ -38,7 +38,7 @@ export default function LoginForm() {
           onClick={() => {
             if (!examSession.examData) return;
             examSession.setStartedAt(new Date());
-            navigate("exam/questions");
+            navigate("/exam/questions");
           }}
         >
           <p>Start Test</p>
