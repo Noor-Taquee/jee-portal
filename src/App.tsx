@@ -66,7 +66,7 @@ export default function App() {
             element={<QuestionsPage />}
           />
           <Route
-            path="exam/result"
+            path="/exam/result"
             element={<ResultPage />}
           />
 
