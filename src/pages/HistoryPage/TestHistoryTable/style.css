@@ -1,7 +1,11 @@
-#test-history-table {
+table#test-history-table {
+  position: relative;
+
   flex-grow: 1;
   min-height: 0;
   min-width: 0;
+
+  overflow: hidden;
 
   margin: 12px 24px;
 
@@ -10,4 +14,82 @@
 
   display: flex;
   flex-direction: column;
+
+  > thead {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  > tbody {
+    flex-grow: 1;
+    width: 100%;
+
+    overflow: auto;
+
+    tr:hover {
+      background-color: var(--bg-p-2);
+    }
+  }
+
+  tr {
+    width: 100%;
+
+    border-bottom: var(--border-1);
+
+    display: flex;
+    align-items: center;
+  }
+}
+
+td,
+th {
+  display: flex;
+
+  padding: 12px;
+
+  span {
+    font: var(--text-1);
+    font-weight: 400;
+  }
+
+  &.col-paper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+
+    .paper-subtitle {
+      margin: 2px 0px;
+      font: var(--text-2);
+      color: var(--color-2) !important;
+    }
+  }
+
+  &.col-marks {
+    min-width: 140px;
+    width: 140px;
+  }
+
+  &.col-date {
+    min-width: 180px;
+    width: 180px;
+  }
+
+  &.col-view {
+    min-width: 100px;
+    width: 100px;
+
+    .view-button {
+      padding: 0px 6px;
+
+      border: none;
+
+      span {
+        font: var(--text-2);
+        font-weight: 400;
+      }
+    }
+  }
 }
