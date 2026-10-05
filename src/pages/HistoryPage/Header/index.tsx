@@ -2,6 +2,7 @@ import "./style.css";
 
 import { CalendarIcon, ListFilterIcon, SearchIcon } from "lucide-react";
 import InputBox from "../../../components/InputBox";
+import ActionBtn from "../../../components/ActionBtn";
 
 export default function Header() {
   return (
@@ -18,7 +19,7 @@ export default function Header() {
       <div id="date-period">
         <CalendarIcon />
         <p>
-          <span>Jan 6 2026 - Jan 12 2026</span>
+          <span>Jan 6, 2026 - Jan 12, 2026</span>
         </p>
       </div>
 
@@ -27,9 +28,9 @@ export default function Header() {
         <span>Filter</span>
       </button>
 
-      <button id="search-button">
-        <span>Search</span>
-      </button>
+      <ActionBtn className="sec">
+        <p>Search</p>
+      </ActionBtn>
     </div>
   );
 }
