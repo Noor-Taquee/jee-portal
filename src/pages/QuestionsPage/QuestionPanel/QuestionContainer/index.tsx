@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useSettings } from "../../../../hooks/useSettings";
 import { useExamSession } from "../../../../hooks/useExamSession";
 
-import type { OptionID, QuestionData } from "../../../../core/question";
+import type { OptionID } from "../../../../core/question";
 
 import QuestionCard from "./QuestionCard";
 import OptionsContainer from "./OptionsContainer";
@@ -17,14 +17,12 @@ import Header from "./Header";
 interface Props {
   questionNo: number;
   setQuestionNo: (n: number) => void;
-  question: QuestionData | undefined;
 }
 
 /** Question container */
 export default function QuestionContainer({
   questionNo,
   setQuestionNo,
-  question,
 }: Props) {
   const appSettings = useSettings();
   const examSession = useExamSession();
@@ -33,7 +31,10 @@ export default function QuestionContainer({
     examSession.candidateResponse?.get(questionNo)?.answer || null
   );
 
-  if (!examSession.candidateResponse) return <div></div>;
+  if (!examSession.candidateResponse || !examSession.examData)
+    return <div></div>;
+
+  const question = examSession.examData.questions[questionNo - 1];
 
   if (!question) return <div id="question-container"></div>;
 
