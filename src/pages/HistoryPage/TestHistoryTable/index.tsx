@@ -99,8 +99,48 @@ const tests = [
 
 export default function TestHistoryTable() {
   return (
-    <div id="test-history-table">
-      <NoTestMessage />
-    </div>
+    <table id="test-history-table">
+      <thead className="table-row header">
+        <tr>
+          <th className="col-paper">
+            <span>Paper</span>
+          </th>
+          <th className="col-marks">
+            <span>Marks</span>
+          </th>
+          <th className="col-date">
+            <span>Date</span>
+          </th>
+          <th className="col-view">
+            <span></span>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {(!tests || tests.length < 1) && <NoTestMessage />}
+        {tests.map((test) => (
+          <tr key={test.id}>
+            <td className="col-paper">
+              <span className="paper-title">{test.paperName}</span>
+              <span className="paper-subtitle">{test.subject}</span>
+            </td>
+            <td className="col-marks">
+              <span className="marks-obtained">
+                {test.obtainedMarks}/{test.totalMarks}
+              </span>
+            </td>
+            <td className="col-date">
+              <span className="test-date">{test.date}</span>
+            </td>
+            <td className="col-view">
+              <button className="view-button">
+                <span>View</span>
+              </button>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 }
