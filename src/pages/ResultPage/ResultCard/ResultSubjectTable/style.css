@@ -3,16 +3,16 @@
 
   tr {
     .subject-col {
-      width: 120px;
+      width: 84px;
     }
     .obtained-col {
       width: 120px;
     }
     .maximum-col {
-      width: 120px;
+      width: 128px;
     }
     .percentage-col {
-      width: 120px;
+      width: 88px;
     }
   }
 }
