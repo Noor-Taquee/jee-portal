@@ -37,11 +37,11 @@ export default function ResultSubjectTable({ marks }: ResultSubjectTableProps) {
           <td className="subject-col">
             <p>Physics</p>
           </td>
-          <td className="maximum-col">
-            <p>{100}</p>
-          </td>
           <td className="obtained-col">
             <p>{p}</p>
+          </td>
+          <td className="maximum-col">
+            <p>{100}</p>
           </td>
           <td className="percentage-col">
             <p>{p}.00%</p>

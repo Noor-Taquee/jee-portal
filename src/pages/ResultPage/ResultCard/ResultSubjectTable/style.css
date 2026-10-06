@@ -1,18 +1,18 @@
 #result-subject-table {
   margin: 0 auto;
 
-  .table-row {
+  tr {
     .subject-col {
       width: 120px;
     }
     .obtained-col {
-      width: 160px;
+      width: 120px;
     }
     .maximum-col {
-      width: 160px;
+      width: 120px;
     }
     .percentage-col {
-      width: 160px;
+      width: 120px;
     }
   }
 }
