@@ -1,3 +1,5 @@
+// oxlint-disable max-lines-per-function
+
 import "./style.css";
 
 import type { TestResult } from "../../../core/result";
@@ -24,7 +26,7 @@ export default function ResultQuestionTable({ testResult }: Props) {
             <th className="col-submitted">
               <p>Submitted Answer</p>
             </th>
-            <th className="col-submitted">
+            <th className="col-correct">
               <p>Correct Answer</p>
             </th>
             <th className="col-marks">
@@ -48,7 +50,7 @@ export default function ResultQuestionTable({ testResult }: Props) {
               <td className="col-submitted">
                 <p>{answerResult.submittedAnswer}</p>
               </td>
-              <td className="col-submitted">
+              <td className="col-correct">
                 <p>{answerResult.correctAnswer}</p>
               </td>
               <td className="col-marks">
