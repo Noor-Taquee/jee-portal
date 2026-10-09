@@ -1,27 +1,31 @@
 #result-question-table-wrapper {
   width: fit-content;
+  min-width: 0;
   max-height: 100%;
 
   overflow: hidden;
 
-  margin: 0;
+  display: flex;
 }
 
-#result-question-table {
-  .table-row {
-    .s-no-col {
-      width: 60px;
+table#result-question-table {
+  height: 100%;
+
+  tr {
+    .col-s-no {
+      justify-content: center;
+      width: 54px;
     }
-    .status-col {
-      width: 160px;
+    .col-status {
+      width: 130px;
     }
-    .submitted-col {
-      width: 160px;
+    .col-submitted {
+      width: 146px;
     }
-    .correct-col {
-      width: 160px;
+    .col-correct {
+      width: 124px;
     }
-    .marks-col {
+    .col-marks {
       width: 80px;
       &.cor {
         color: var(--cor-color-1);

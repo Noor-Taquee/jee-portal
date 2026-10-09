@@ -48,7 +48,7 @@ export default function Suggestions() {
             key={data}
             onClick={() => {
               examSession.loadPaper(`2026/${data}`);
-              navigate("/login");
+              navigate("/exam/login");
             }}
           >
             <p>{format(data)}</p>
