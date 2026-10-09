@@ -2,7 +2,6 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "jee-portal",
   "main": "src/index.tsx",
-  "pages_build_output_dir": "dist",
   "compatibility_date": "2026-10-09",
   "d1_databases": [
     {
