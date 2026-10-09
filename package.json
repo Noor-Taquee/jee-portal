@@ -39,6 +39,7 @@
     "wrangler": "^4.149.0"
   },
   "dependencies": {
+    "@libsql/client": "^0.18.0",
     "@tailwindcss/vite": "^4.3.3",
     "framer-motion": "^13.4.1",
     "idb": "^8.0.3",
