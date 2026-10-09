@@ -6,7 +6,6 @@
   display: flex;
 
   p {
-    font: var(--question-font);
     font-size: var(--text-size);
   }
 }

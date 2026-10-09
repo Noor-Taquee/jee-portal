@@ -6,7 +6,6 @@
   gap: 0;
 
   p {
-    font: var(--question-font);
     font-size: var(--text-size);
   }
 }
