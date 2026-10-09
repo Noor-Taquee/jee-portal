@@ -40,7 +40,6 @@
   },
   "dependencies": {
     "@libsql/client": "^0.18.0",
-    "@tailwindcss/vite": "^4.3.3",
     "framer-motion": "^13.4.6",
     "idb": "^8.0.3",
     "katex": "^0.18.9",
@@ -51,7 +50,6 @@
     "react-router-dom": "^7.18.4",
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0",
-    "tailwindcss": "^4.3.3",
     "zod": "^4.6.5"
   }
 }
