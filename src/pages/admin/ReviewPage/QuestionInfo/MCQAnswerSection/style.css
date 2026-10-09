@@ -1,0 +1,31 @@
+#mcq-answer-section {
+  .options-holder {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .option {
+    --size: 44px;
+
+    cursor: pointer;
+    touch-action: manipulation;
+
+    aspect-ratio: 1 / 1;
+    width: var(--size);
+
+    border: var(--border-1);
+    border-radius: 6px;
+
+    background-color: var(--bg-p-1);
+
+    p {
+      font: var(--text-1);
+    }
+
+    &.selected {
+      border-color: var(--accent-1);
+      background-color: var(--bg-s-1);
+    }
+  }
+}
