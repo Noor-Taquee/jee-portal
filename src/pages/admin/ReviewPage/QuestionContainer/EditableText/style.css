@@ -1,0 +1,50 @@
+.editable-text-container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+
+  textarea {
+    width: 100%;
+    height: fit-content;
+
+    field-sizing: content;
+    resize: none;
+
+    font: 400 16px monospace;
+
+    padding: 6px;
+    border-radius: 8px;
+
+    outline: 1px dashed var(--accent-1);
+
+    &:focus {
+      outline: 2px solid var(--accent-1);
+    }
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .cta-btn {
+    cursor: pointer;
+
+    height: 36px;
+    padding: 0px 12px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: var(--accent-1);
+
+    p {
+      font: var(--text-2);
+      color: var(--bg-p-1);
+    }
+  }
+}
