@@ -9,13 +9,13 @@
   "main": "main.js",
   "scripts": {
     "dev": "vite",
+    "pages:dev": "wrangler pages dev --proxy 5173 -- npm run dev",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "format:check": "prettier --check src/",
     "format:fix": "prettier --write src/",
     "lint:check": "tsc -b --noEmit && oxlint",
     "lint:fix": "oxlint --fix",
-    "deploy": "powershell -Command \"Invoke-RestMethod -Method Post -Uri 'https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/f16ce427-050f-4452-99cb-10a7ff5bf3ba'\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/username/jee-portal#readme",
   "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261009.1",
     "@types/node": "^26.6.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
@@ -34,14 +35,16 @@
     "oxlint": "^1.85.0",
     "prettier": "^3.9.8",
     "typescript": "^7.0.2",
-    "vite": "^8.3.0"
+    "vite": "^8.3.0",
+    "wrangler": "^4.149.0"
   },
   "dependencies": {
+    "@libsql/client": "^0.18.0",
     "@tailwindcss/vite": "^4.3.3",
-    "framer-motion": "^13.4.1",
+    "framer-motion": "^13.4.6",
     "idb": "^8.0.3",
-    "katex": "^0.18.7",
-    "lucide-react": "^1.47.0",
+    "katex": "^0.18.9",
+    "lucide-react": "^1.49.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "react-markdown": "^10.1.0",
