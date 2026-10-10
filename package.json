@@ -51,5 +51,9 @@
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0",
     "zod": "^4.6.5"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "workerd@1.20261006.1": true
   }
 }
