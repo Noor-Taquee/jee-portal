@@ -13,11 +13,7 @@ export default function QuestionContainer({ question }: Props) {
   return (
     <div id="review-question-container">
       <QuestionCard question={question.question_text} />
-      {question.type === 1 && (
-        <OptionsContainer
-          options={question.options}
-        />
-      )}
+      {question.type === 1 && <OptionsContainer options={question.options} />}
     </div>
   );
 }
