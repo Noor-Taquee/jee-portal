@@ -6,8 +6,7 @@ interface Props {
   options: string[];
 }
 
-export default function OptionsContainer({
-  options }: Props) {
+export default function OptionsContainer({ options }: Props) {
   return (
     <div id="review-option-container">
       {options.map((text, index) => (
