@@ -1,0 +1,26 @@
+#question-type-section {
+  .type-holder {
+    display: flex;
+    gap: 6px;
+  }
+
+  .type-button {
+    cursor: pointer;
+    touch-action: manipulation;
+
+    padding: 4px 14px;
+    border: var(--border-1);
+    border-radius: 6px;
+
+    background-color: var(--bg-p-1);
+
+    p {
+      font: var(--text-2);
+    }
+
+    &.selected {
+      background-color: var(--bg-s-1);
+      border-color: var(--accent-1);
+    }
+  }
+}

@@ -13,6 +13,7 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import QuestionsPage from "./pages/QuestionsPage";
 import ResultPage from "./pages/ResultPage";
+import ReviewPage from "./pages/admin/ReviewPage/index.js";
 
 export default function App() {
   const { user } = useUser();
@@ -50,6 +51,11 @@ export default function App() {
           <Route
             path="/registration"
             element={<RegistrationPage />}
+          />
+
+          <Route
+            path="/admin/review"
+            element={<ReviewPage />}
           />
 
           <Route
