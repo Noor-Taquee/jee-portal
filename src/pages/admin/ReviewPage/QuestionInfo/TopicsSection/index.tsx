@@ -32,7 +32,6 @@ export default function TopicsSection({ question }: Props) {
         ))}
         <button id="add-topic-button">
           <PlusIcon />
-          <p>Add</p>
         </button>
       </div>
     </div>
