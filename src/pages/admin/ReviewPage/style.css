@@ -1,4 +1,5 @@
 .horizontal-container {
+  flex-grow: 1;
   padding: 12px;
 
   display: flex;
