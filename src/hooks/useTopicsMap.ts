@@ -10,7 +10,7 @@ export type Topic = {
 export type Topics = Map<number, Topic>;
 
 export function useTopicsMap() {
-  const [topicMap, setTopicMap] = useState<Topics|undefined>(undefined);
+  const [topicMap, setTopicMap] = useState<Topics | undefined>(undefined);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
