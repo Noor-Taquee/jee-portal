@@ -1,6 +1,9 @@
 import "./style.css";
 
+import { useTopicsMap } from "../../../../../hooks/useTopicsMap";
+
 import type { Questions } from "../..";
+
 import { PlusIcon } from "lucide-react";
 
 interface Props {
@@ -8,6 +11,10 @@ interface Props {
 }
 
 export default function TopicsSection({ question }: Props) {
+  const { topicMap, loading } = useTopicsMap();
+
+  if (loading || !topicMap) return <div>Loading Physics topics...</div>;
+
   return (
     <div
       className="review-question-info-section"
@@ -20,7 +27,7 @@ export default function TopicsSection({ question }: Props) {
             className="topic-pill"
             key={`${topic}-${index}`}
           >
-            {topic}
+            {topicMap.get(topic)?.name || "unknown"}
           </p>
         ))}
         <button id="add-topic-button">
