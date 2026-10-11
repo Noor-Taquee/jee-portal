@@ -16,7 +16,7 @@ export function useTopicsMap() {
   useEffect(() => {
     async function fetchTopics() {
       try {
-        const res = await fetch("/api/topics");
+        const res = await fetch("/api/jee/topics");
         const data = await res.json();
 
         if (data.success) {
