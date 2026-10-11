@@ -5,6 +5,7 @@ import { useTopicsMap } from "../../../../../hooks/useTopicsMap";
 import type { Questions } from "../..";
 
 import { PlusIcon } from "lucide-react";
+import TopicPickerPopover from "./TopicPickerPopover";
 
 interface Props {
   question: Questions;
@@ -21,7 +22,10 @@ export default function TopicsSection({ question }: Props) {
       id="topic-section"
     >
       <h3 className="section-header">Topics</h3>
-      <div id="topic-holder">
+      <div
+        id="topic-holder"
+        style={{ anchorName: "--review-topic-picker-popover-anchor" }}
+      >
         {question.topics.map((topic, index) => (
           <p
             className="topic-pill"
@@ -30,9 +34,14 @@ export default function TopicsSection({ question }: Props) {
             {topicMap.get(topic)?.name || "unknown"}
           </p>
         ))}
-        <button id="add-topic-button">
+        <button
+          id="add-topic-button"
+          title="Add Topic"
+          popoverTarget="review-topic-picker-popover"
+        >
           <PlusIcon />
         </button>
+        <TopicPickerPopover topicMap={topicMap} />
       </div>
     </div>
   );
