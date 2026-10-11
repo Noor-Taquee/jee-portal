@@ -24,7 +24,7 @@ export default function Content() {
         <ExamCountdown />
       </div>
       <AnalyticsPanel />
-      <div className="flex w-auto m-2 gap-2 px-2">
+      <div>
         <HistoryPanel />
         <Suggestions />
       </div>

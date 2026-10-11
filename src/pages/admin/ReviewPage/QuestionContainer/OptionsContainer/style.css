@@ -1,0 +1,20 @@
+#review-option-container {
+  width: 100%;
+
+  margin-top: 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.review-option-div {
+  padding: 6px 12px;
+
+  border-radius: 8px;
+
+  display: flex;
+
+  background-color: var(--bg-p-2);
+}
