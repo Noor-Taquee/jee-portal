@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export type Topic = {
   id: number;
   name: string;
-  subject: string;
+  subject: "Physics" | "Chemistry" | "Mathematics";
   unit: string;
 };
 
