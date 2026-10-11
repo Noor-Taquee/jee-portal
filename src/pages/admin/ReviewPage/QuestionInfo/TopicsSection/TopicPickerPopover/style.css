@@ -1,0 +1,45 @@
+#review-topic-picker-popover:popover-open {
+  top: anchor(bottom);
+  left: auto;
+  right: anchor(right);
+  bottom: auto;
+
+  max-height: 450px;
+
+  margin: 4px 0px;
+  padding: 6px;
+
+  border: var(--border-1);
+  border-radius: 12px;
+
+  display: flex;
+  gap: 12px;
+
+  .subject-container {
+    padding: 6px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    p.header {
+      font: var(--text-1);
+      font-weight: 400;
+    }
+  }
+
+  .topic-pill-choose {
+    cursor: pointer;
+    touch-action: manipulation;
+
+    border: 1px dashed var(--bg-s-1);
+    border-radius: 6px;
+
+    display: flex;
+    padding: 4px;
+
+    background-color: transparent;
+
+    font: var(--text-2);
+  }
+}
