@@ -9,12 +9,12 @@ interface Props {
 }
 
 export default function EditableText({ question }: Props) {
-  const [edit, setEdit] = useState(false);
+  const [editMode, setEditMode] = useState(false);
   const [newQuestion, setNewQuestion] = useState(question);
 
   return (
     <div className="editable-text-container">
-      {edit ? (
+      {editMode ? (
         <textarea
           id="question-editor"
           value={newQuestion}
@@ -28,9 +28,9 @@ export default function EditableText({ question }: Props) {
       <div className="button-container">
         <button
           className="cta-btn"
-          onClick={() => setEdit((p) => !p)}
+          onClick={() => setEditMode((p) => !p)}
         >
-          {edit ? <p>Save</p> : <p>Edit</p>}
+          {editMode ? <p>Save</p> : <p>Edit</p>}
         </button>
       </div>
     </div>
