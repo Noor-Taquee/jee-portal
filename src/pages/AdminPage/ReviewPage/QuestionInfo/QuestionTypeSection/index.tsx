@@ -1,15 +1,14 @@
 import "./style.css";
 
-import type { Questions } from "../..";
-
 import { ChevronsUpDownIcon } from "lucide-react";
 import ReviewQuestionTypePopover from "./ReviewQuestionTypePopover";
+import { useReview } from "../../../../../hooks/useReview";
 
-interface Props {
-  question: Questions;
-}
+export default function QuestionTypeSection() {
+  const { currentQuestion } = useReview();
 
-export default function QuestionTypeSection({ question }: Props) {
+  if (!currentQuestion) return <div></div>;
+
   return (
     <div
       className="review-question-info-section"
@@ -22,7 +21,9 @@ export default function QuestionTypeSection({ question }: Props) {
         style={{ anchorName: "--review-question-popover-anchor" }}
       >
         <p>
-          {question.type === 1 ? "MCQ (Single Correct Answer)" : "Numerical"}
+          {currentQuestion.type === 1
+            ? "MCQ (Single Correct Answer)"
+            : "Numerical"}
         </p>
         <ChevronsUpDownIcon />
       </button>

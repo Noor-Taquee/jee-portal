@@ -1,12 +1,14 @@
 #topic-section {
   #topic-holder {
     --height: 26px;
+
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
   }
 
   .topic-pill {
+    flex-shrink: 0;
     height: var(--height);
     padding: 0px 8px;
 
@@ -19,6 +21,17 @@
 
     display: grid;
     place-items: center;
+
+    &.loading {
+      border: none;
+      background-color: var(--bg-s-2);
+      &:first-child {
+        width: 120px;
+      }
+      &:last-child {
+        width: 80px;
+      }
+    }
   }
 
   #add-topic-button {
