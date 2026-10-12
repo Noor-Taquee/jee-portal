@@ -13,7 +13,7 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import QuestionsPage from "./pages/QuestionsPage";
 import ResultPage from "./pages/ResultPage";
-import ReviewPage from "./pages/admin/ReviewPage/index.js";
+import AdminPage from "./pages/AdminPage";
 
 export default function App() {
   const { user } = useUser();
@@ -54,8 +54,8 @@ export default function App() {
           />
 
           <Route
-            path="/admin/review"
-            element={<ReviewPage />}
+            path="/admin/*"
+            element={<AdminPage />}
           />
 
           <Route
