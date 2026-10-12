@@ -11,6 +11,9 @@ interface BaseResponse {
   /** Flag for the question if it has been read or visited. */
   visited: boolean;
 
+  /** Time taken to answer the question. */
+  timeTaken: number;
+
   /** If the question is marked for review. */
   review: boolean;
 
@@ -47,6 +50,7 @@ export function generateResponse(questionData: QuestionData[]) {
         {
           type: question.type,
           visited: false,
+          timeTaken: 0,
           answer: null,
           review: false,
           submittedAnswer: null,

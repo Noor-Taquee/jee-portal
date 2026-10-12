@@ -1,5 +1,7 @@
 import "./style.css";
 
+import InputBox from "../InputBox";
+
 interface props {
   /** Label text that appears on top of input box.  */
   label: string;
@@ -15,7 +17,7 @@ export default function InputArea({ label, children, error }: props) {
   return (
     <div className="input-area">
       <p className="label">{label}</p>
-      <div className="input-box">{children}</div>
+      <InputBox>{children}</InputBox>
       {error && <span className="error-text">{error}</span>}
     </div>
   );

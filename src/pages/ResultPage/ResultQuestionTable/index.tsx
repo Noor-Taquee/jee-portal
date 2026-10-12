@@ -1,9 +1,8 @@
+// oxlint-disable max-lines-per-function
+
 import "./style.css";
 
 import type { TestResult } from "../../../core/result";
-
-import VerticalTable from "../../../components/VerticalTable";
-import TableRow from "./TableRow";
 
 interface Props {
   testResult: TestResult;
@@ -12,21 +11,55 @@ interface Props {
 export default function ResultQuestionTable({ testResult }: Props) {
   return (
     <div id="result-question-table-wrapper">
-      <VerticalTable id="result-question-table">
-        <div className="result-question-table-row table-row table-header">
-          <span className="s-no-col table-col">S no</span>
-          <span className="status-col table-col">Status</span>
-          <span className="submitted-col table-col">Submitted Answer</span>
-          <span className="correct-col table-col">Correct Answer</span>
-          <span className="marks-col table-col">Marks</span>
-        </div>
-        {testResult.responses.map((answerResult) => (
-          <TableRow
-            answerResult={answerResult}
-            key={`result-${answerResult.id}`}
-          />
-        ))}
-      </VerticalTable>
+      <table
+        id="result-question-table"
+        className="vertical-table"
+      >
+        <thead>
+          <tr>
+            <th className="col-s-no">
+              <p>S no</p>
+            </th>
+            <th className="col-status">
+              <p>Status</p>
+            </th>
+            <th className="col-submitted">
+              <p>Submitted Answer</p>
+            </th>
+            <th className="col-correct">
+              <p>Correct Answer</p>
+            </th>
+            <th className="col-marks">
+              <p>Marks</p>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {testResult.responses.map((answerResult) => (
+            <tr key={`result-${answerResult.id}`}>
+              <td className="col-s-no">
+                <p>{answerResult.id}</p>
+              </td>
+              <td className="col-status">
+                <p>
+                  {answerResult.status === "cor" && "Correct"}
+                  {answerResult.status === "inc" && "Wrong"}
+                  {answerResult.status === "na" && "Not Attempted"}
+                </p>
+              </td>
+              <td className="col-submitted">
+                <p>{answerResult.submittedAnswer}</p>
+              </td>
+              <td className="col-correct">
+                <p>{answerResult.correctAnswer}</p>
+              </td>
+              <td className="col-marks">
+                <p>{answerResult.marks}</p>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }

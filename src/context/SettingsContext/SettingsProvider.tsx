@@ -1,22 +1,22 @@
 import { useState } from "react";
-import { type AppTheme, defaultSettings, SettingsContext } from ".";
+import { type AppTheme, SettingsContext } from ".";
 
 interface SettingsProviderProps {
   children: React.ReactNode;
 }
 
 export default function SettingsProvider({ children }: SettingsProviderProps) {
-  const [theme, setTheme] = useState<AppTheme>(defaultSettings.theme);
+  const [theme, setTheme] = useState<AppTheme>("light");
   function changeTheme() {
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   }
 
-  const [textSize, setTextSize] = useState(defaultSettings.textSize);
+  const [textSize, setTextSize] = useState<number>(18);
   function changeTextSize(val: number) {
     setTextSize((prev) => (prev += val));
   }
 
-  const [simpleMode, setSimpleMode] = useState(defaultSettings.simpleMode);
+  const [simpleMode, setSimpleMode] = useState<boolean>(false);
   function toggleSimpleMode() {
     setSimpleMode((prev) => !prev);
   }

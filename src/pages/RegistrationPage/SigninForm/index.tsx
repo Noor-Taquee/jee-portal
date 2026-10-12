@@ -1,16 +1,15 @@
 // oxlint-disable max-lines-per-function
 
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useUser } from "../../../hooks/useUser";
-
-import { userLocalStorageKey } from "../../../context/UserContext/Provider";
-import { changeHash } from "../../../hooks/useHash";
 
 import { EyeIcon, EyeOffIcon, KeyRoundIcon, User2Icon } from "lucide-react";
 import InputArea from "../../../components/InputArea";
 
 export default function SigninForm() {
-  const { setUser } = useUser();
+  const { login } = useUser();
+  const navigate = useNavigate();
 
   const [username, setUsername] = useState("");
   const [usernameError, setUsernameError] = useState<string | null>(null);
@@ -28,10 +27,9 @@ export default function SigninForm() {
     }
 
     setUsernameError(null);
-    localStorage.setItem(userLocalStorageKey, cleanName);
-    setUser({ name: cleanName });
+    login({ name: cleanName });
 
-    changeHash("home");
+    navigate("/home");
   }
 
   return (

@@ -12,7 +12,7 @@ import SaveBtn from "./SaveBtn";
 
 interface QuestionControlProps {
   questionNo: number;
-  setQuestionNo: React.Dispatch<React.SetStateAction<number>>;
+  setQuestionNo: (n: number) => void;
   answer: OptionID | OptionID[] | null;
   setAnswer: React.Dispatch<React.SetStateAction<string | string[] | null>>;
 }

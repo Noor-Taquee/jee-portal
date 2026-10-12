@@ -5,7 +5,7 @@ import { useExamSession } from "../../../../../hooks/useExamSession";
 
 interface MFRBtnProps {
   questionNo: number;
-  setQuestionNo: React.Dispatch<React.SetStateAction<number>>;
+  setQuestionNo: (n: number) => void;
   answer: OptionID | OptionID[] | null;
 }
 
@@ -39,7 +39,7 @@ export default function MFRBtn({
         }
 
         if (isLastQuestion) return;
-        setQuestionNo((p) => p + 1);
+        setQuestionNo(questionNo + 1);
       }}
     >
       <p>{isLastQuestion ? "Mark for review" : "Mark for review & Next"}</p>

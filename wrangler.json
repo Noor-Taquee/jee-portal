@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "jee-portal",
+  "main": "src/index.tsx",
+  "compatibility_date": "2026-10-09",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "jee-portal-db",
+      "database_id": "12bc244b-7ac1-4803-a341-5e7200ff1ab1"
+    }
+  ]
+}

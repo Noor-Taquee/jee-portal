@@ -3,24 +3,20 @@ import "./style.css";
 import { useState } from "react";
 import { useUser } from "../../hooks/useUser";
 
-import type { Route } from "../../hooks/useHash";
-
 import ButtonContainer from "./ButtonContainer";
 import NavigationHeader from "./NavigationHeader";
 import AccountButton from "../AccountButton";
 import Avatar from "../AccountButton/Avatar";
+import SettingsPopover from "./SettingsPopover";
+import AppearancePopover from "./SettingsPopover/AppearancePopover";
 
-interface NavigationBarProps {
-  panel: Route;
-}
-
-export default function NavigationBar({ panel }: NavigationBarProps) {
+export default function NavigationBar() {
   const [expanded, setExpanded] = useState(true);
 
   const { user } = useUser();
 
   return (
-    <div
+    <nav
       id="navigation-bar"
       className={expanded ? "expanded" : "collapsed"}
     >
@@ -28,8 +24,20 @@ export default function NavigationBar({ panel }: NavigationBarProps) {
         expanded={expanded}
         setExpanded={setExpanded}
       />
-      <ButtonContainer panel={panel} />
-      {user && (expanded ? <AccountButton /> : <Avatar />)}
-    </div>
+      <ButtonContainer />
+
+      <SettingsPopover />
+      <AppearancePopover />
+
+      {user &&
+        (expanded ? (
+          <AccountButton
+            popoverTarget="settings-popover"
+            style={{ anchorName: "--settings-popover-anchor" }}
+          />
+        ) : (
+          <Avatar />
+        ))}
+    </nav>
   );
 }

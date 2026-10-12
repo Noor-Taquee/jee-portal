@@ -1,0 +1,36 @@
+#history-box-wrapper {
+  flex-grow: 1;
+  height: 400px;
+
+  overflow: auto;
+
+  border: var(--border-1);
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: transparent;
+
+  > .header {
+    width: 100%;
+    padding: 8px 12px;
+
+    font: var(--header-2);
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    background-color: var(--bg-p-2);
+
+    .lucide {
+      --size: 20px;
+    }
+  }
+
+  #placeholder-message {
+    margin: auto;
+    font: var(--text-2);
+  }
+}

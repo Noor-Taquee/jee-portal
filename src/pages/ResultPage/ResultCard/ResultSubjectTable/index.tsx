@@ -1,8 +1,8 @@
+// oxlint-disable max-lines-per-function
+
 import "./style.css";
 
 import type { ResultMarks } from "../../../../core/result";
-
-import VerticalTable from "../../../../components/VerticalTable";
 
 interface ResultSubjectTableProps {
   marks: ResultMarks;
@@ -12,39 +12,84 @@ export default function ResultSubjectTable({ marks }: ResultSubjectTableProps) {
   let [p, c, m, totalMarks] = marks;
 
   return (
-    <VerticalTable id="result-subject-table">
-      <div className="table-row table-header">
-        <span className="subject-col table-col">Subject</span>
-        <span className="obtained-col table-col">Marks Obtained</span>
-        <span className="maximum-col table-col">Maximium Marks</span>
-        <span className="percentage-col table-col">Percentage</span>
-      </div>
-      <div className="table-row">
-        <span className="subject-col table-col">Physics</span>
-        <span className="obtained-col table-col">{p}</span>
-        <span className="maximum-col table-col">{100}</span>
-        <span className="percentage-col table-col">{p}.00%</span>
-      </div>
-      <div className="table-row">
-        <span className="subject-col table-col">Chemistry</span>
-        <span className="obtained-col table-col">{c}</span>
-        <span className="maximum-col table-col">{100}</span>
-        <span className="percentage-col table-col">{c}.00%</span>
-      </div>
-      <div className="table-row">
-        <span className="subject-col table-col">Maths</span>
-        <span className="obtained-col table-col">{m}</span>
-        <span className="maximum-col table-col">{100}</span>
-        <span className="percentage-col table-col">{m}.00%</span>
-      </div>
-      <div className="table-row table-footer">
-        <span className="subject-col table-col">Total</span>
-        <span className="obtained-col table-col">{totalMarks}</span>
-        <span className="maximum-col table-col">{300}</span>
-        <span className="percentage-col table-col">
-          {(totalMarks / 3).toFixed(2)}%
-        </span>
-      </div>
-    </VerticalTable>
+    <table
+      id="result-subject-table"
+      className="vertical-table"
+    >
+      <thead>
+        <tr className="subject-col">
+          <th className="subject-col">
+            <p>Subject</p>
+          </th>
+          <th className="obtained-col">
+            <p>Marks Obtained</p>
+          </th>
+          <th className="maximum-col">
+            <p>Maximium Marks</p>
+          </th>
+          <th className="percentage-col">
+            <p>Percentage</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td className="subject-col">
+            <p>Physics</p>
+          </td>
+          <td className="obtained-col">
+            <p>{p}</p>
+          </td>
+          <td className="maximum-col">
+            <p>{100}</p>
+          </td>
+          <td className="percentage-col">
+            <p>{p}.00%</p>
+          </td>
+        </tr>
+        <tr>
+          <td className="subject-col">
+            <p>Chemistry</p>
+          </td>
+          <td className="obtained-col">
+            <p>{c}</p>
+          </td>
+          <td className="maximum-col">
+            <p>{100}</p>
+          </td>
+          <td className="percentage-col">
+            <p>{c}.00%</p>
+          </td>
+        </tr>
+        <tr>
+          <td className="subject-col">
+            <p>Maths</p>
+          </td>
+          <td className="obtained-col">
+            <p>{m}</p>
+          </td>
+          <td className="maximum-col">
+            <p>{100}</p>
+          </td>
+          <td className="percentage-col">
+            <p>{m}.00%</p>
+          </td>
+        </tr>
+        <tr className="footer">
+          <td className="subject-col">
+            <p>Total</p>
+          </td>
+          <td className="obtained-col">
+            <p>{totalMarks}</p>
+          </td>
+          <td className="maximum-col">
+            <p>{300}</p>
+          </td>
+          <td className="percentage-col">
+            <p>{(totalMarks / 3).toFixed(2)}%</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   );
 }

@@ -1,12 +1,13 @@
 // oxlint-disable max-lines-per-function
 import type { ResponseData } from "./response";
-import type { QuestionData } from "./question";
+import type { ExamSession } from "../context/ExamContext";
 
 export type AnswerResult = {
   id: number;
   subject: "Chemistry" | "Physics" | "Mathematics";
   correctAnswer: string | string[];
   submittedAnswer: string | string[];
+  timeTaken: number;
   status: "cor" | "inc" | "na";
   marks: number;
 };
@@ -16,10 +17,10 @@ export type ResultData = AnswerResult[];
 export interface TestResult {
   paperId: number;
   paperTitle: string;
-  completedAt: number;
+  startedAt: Date;
+  completedAt: Date;
   totalMarks: number;
   maxMarks: number;
-  timeTakenSeconds: number;
   subjectScores: {
     physics: number;
     chemistry: number;
@@ -29,14 +30,18 @@ export interface TestResult {
 }
 
 export function getResult(
-  questionData: QuestionData[],
+  examSession: ExamSession,
   responseData: ResponseData
 ) {
+  if (!examSession.examData) {
+    throw new Error();
+  }
+
   const testResult: TestResult = {
     paperId: 0,
     paperTitle: "",
-    completedAt: 0,
-    timeTakenSeconds: 0,
+    startedAt: examSession.startedAt || new Date(),
+    completedAt: examSession.completedAt || new Date(),
     totalMarks: 0,
     maxMarks: 300,
     subjectScores: {
@@ -47,12 +52,13 @@ export function getResult(
     responses: [],
   };
 
-  questionData.forEach((question) => {
+  examSession.examData.questions.forEach((question) => {
     const answerResult: AnswerResult = {
       id: question.id,
       subject: question.subject,
       correctAnswer: question.answer,
       submittedAnswer: "",
+      timeTaken: 0,
       status: "na",
       marks: 0,
     };
@@ -75,6 +81,8 @@ export function getResult(
             : question.type === "numerical"
               ? 0
               : -1;
+
+      answerResult.timeTaken = response.timeTaken;
     }
 
     testResult.totalMarks += answerResult.marks;

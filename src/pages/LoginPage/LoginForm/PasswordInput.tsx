@@ -1,15 +1,13 @@
-import { KeyboardIcon, LockKeyhole } from "lucide-react";
+import { LockKeyhole } from "lucide-react";
 
 interface PasswordInputProps {
   password: string;
   setPassword: React.Dispatch<React.SetStateAction<string>>;
-  setKeyboard: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export default function PaswwordInput({
   password,
   setPassword,
-  setKeyboard,
 }: PasswordInputProps) {
   function onChange(e: React.ChangeEvent<HTMLInputElement, HTMLInputElement>) {
     setPassword(e.target.value);
@@ -32,14 +30,6 @@ export default function PaswwordInput({
         placeholder={"01/01/2001"}
         onChange={onChange}
       />
-      <span
-        className="icon-holder trailing"
-        onClick={() => {
-          setKeyboard((p) => !p);
-        }}
-      >
-        <KeyboardIcon />
-      </span>
     </div>
   );
 }

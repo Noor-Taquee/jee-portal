@@ -7,7 +7,7 @@ import { ChevronRight } from "lucide-react";
 
 interface SaveBtnProps {
   questionNo: number;
-  setQuestionNo: React.Dispatch<React.SetStateAction<number>>;
+  setQuestionNo: (n: number) => void;
   answer: OptionID | OptionID[] | null;
 }
 
@@ -40,7 +40,7 @@ export default function SaveBtn({
         }
 
         if (questionNo >= 75) return;
-        setQuestionNo((p) => p + 1);
+        setQuestionNo(questionNo + 1);
       }}
     >
       {!lastQuestion && <ChevronRight />}

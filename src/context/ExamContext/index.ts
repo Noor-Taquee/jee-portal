@@ -8,6 +8,12 @@ export type ExamSession = {
   startedAt: Date | undefined;
   setStartedAt: React.Dispatch<React.SetStateAction<ExamSession["startedAt"]>>;
 
+  /** Timestamp of the instance when exam completed. */
+  completedAt: Date | undefined;
+  setCompletedAt: React.Dispatch<
+    React.SetStateAction<ExamSession["completedAt"]>
+  >;
+
   /** Question data and metadata for the current exam. */
   examData: ExamData | undefined;
   setExamData: React.Dispatch<React.SetStateAction<ExamSession["examData"]>>;
@@ -17,15 +23,14 @@ export type ExamSession = {
   setCandidateResponse: React.Dispatch<
     React.SetStateAction<ExamSession["candidateResponse"]>
   >;
+
+  /** Loads a paper from a given path.
+   * @example
+   * ```ts
+   * loadPaper("2026/jan_21_a");
+   * ```
+   */
+  loadPaper: (path: string) => void;
 };
 
-export const defaultTestData: ExamSession = {
-  startedAt: undefined,
-  setStartedAt: () => {},
-  examData: undefined,
-  setExamData: () => {},
-  candidateResponse: undefined,
-  setCandidateResponse: () => {},
-};
-
-export const ExamContext = createContext<ExamSession>(defaultTestData);
+export const ExamContext = createContext<ExamSession | null>(null);

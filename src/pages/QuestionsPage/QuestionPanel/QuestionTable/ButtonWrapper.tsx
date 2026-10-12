@@ -11,12 +11,12 @@ export default function ButtonWrapper({ page, setPage }: ButtonWrapperProps) {
     <div id="q-t-button-wrapper">
       <ActionBtn
         title="To previous pane"
-        className={page === 1 ? "disabled" : ""}
         onClick={() => {
           if (page === 1) return;
           const p = (page - 1) as 1 | 2 | 3;
           setPage(p);
         }}
+        disabled={page === 1}
       >
         <ChevronsLeft />
         <p>{"Previous"}</p>
@@ -24,12 +24,12 @@ export default function ButtonWrapper({ page, setPage }: ButtonWrapperProps) {
 
       <ActionBtn
         title="To Next pane"
-        className={page === 3 ? "disabled" : ""}
         onClick={() => {
           if (page === 3) return;
           const p = (page + 1) as 1 | 2 | 3;
           setPage(p);
         }}
+        disabled={page === 3}
       >
         <ChevronsRight />
         <p>{"Next"}</p>

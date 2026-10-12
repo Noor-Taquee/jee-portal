@@ -1,3 +1,5 @@
+import "./style.css";
+
 import ReactMarkdown from "react-markdown";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
@@ -10,11 +12,13 @@ interface TextRendererProps {
 /** Renders Question using `ReactMarkdown` */
 export default function TextRenderer({ content }: TextRendererProps) {
   return (
-    <ReactMarkdown
-      remarkPlugins={[remarkMath]}
-      rehypePlugins={[rehypeKatex]}
-    >
-      {content}
-    </ReactMarkdown>
+    <div className="rendered-content">
+      <ReactMarkdown
+        remarkPlugins={[remarkMath]}
+        rehypePlugins={[rehypeKatex]}
+      >
+        {content}
+      </ReactMarkdown>
+    </div>
   );
 }

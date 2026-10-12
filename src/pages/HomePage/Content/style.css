@@ -1,0 +1,27 @@
+#home-page > .content-div {
+  height: 100%;
+  width: 100%;
+
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#home-header {
+  width: 100%;
+  height: fit-content;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#welcome-message {
+  margin: 4px 0;
+  font: 400 32px "Inter";
+}
+
+#welcome-text {
+  font: var(--text-2);
+}

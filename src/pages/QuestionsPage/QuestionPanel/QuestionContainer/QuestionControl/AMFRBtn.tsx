@@ -6,7 +6,7 @@ import ActionBtn from "../../../../../components/ActionBtn";
 
 interface AMFRBtnProps {
   questionNo: number;
-  setQuestionNo: React.Dispatch<React.SetStateAction<number>>;
+  setQuestionNo: (n: number) => void;
   answer: OptionID | OptionID[] | null;
 }
 
@@ -18,7 +18,7 @@ export default function AMFRBtn({
 }: AMFRBtnProps) {
   const examSession = useExamSession();
 
-  const lastQuestion = questionNo >= 75;
+  const isLastQuestion = questionNo >= 75;
 
   return (
     <ActionBtn
@@ -40,8 +40,8 @@ export default function AMFRBtn({
           );
         }
 
-        if (lastQuestion) return;
-        setQuestionNo((p) => p + 1);
+        if (isLastQuestion) return;
+        setQuestionNo(questionNo + 1);
       }}
     >
       <p>{"Save & Mark for review"}</p>

@@ -4,26 +4,17 @@ import "./style.css";
 
 import { useState } from "react";
 import { useExamSession } from "../../../hooks/useExamSession";
-
-import { getQuestions } from "../../../core/question";
-import { generateResponse } from "../../../core/response";
-import { changeHash } from "../../../hooks/useHash";
+import { useNavigate } from "react-router-dom";
 
 import PaswwordInput from "./PasswordInput";
 import UsernameInput from "./UsernameInput";
-import Keyboard from "../Keyboard";
 
 export default function LoginForm() {
+  const navigate = useNavigate();
   const examSession = useExamSession();
-
-  getQuestions().then((data) => {
-    examSession.setExamData(data);
-    examSession.setCandidateResponse(generateResponse(data.questions));
-  });
 
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const [keyboard, setKeyboard] = useState<boolean>(false);
 
   return (
     <div id="login-form">
@@ -39,10 +30,7 @@ export default function LoginForm() {
         <PaswwordInput
           password={password}
           setPassword={setPassword}
-          setKeyboard={setKeyboard}
         />
-
-        {keyboard && <Keyboard />}
 
         <button
           id="login-btn"
@@ -50,7 +38,7 @@ export default function LoginForm() {
           onClick={() => {
             if (!examSession.examData) return;
             examSession.setStartedAt(new Date());
-            changeHash("question");
+            navigate("/exam/questions");
           }}
         >
           <p>Start Test</p>
