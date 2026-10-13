@@ -90,34 +90,46 @@ export default function SignupForm() {
         password: cleanPassword,
       }),
     })
-      .then((response) => response.json())
-      .then(
-        (data: {
-          success: true;
-          token: string;
-          user: {
+      .then(async (response) => {
+        const data: {
+          success?: boolean;
+          token?: string;
+          user?: {
             name: string;
             role: "student" | "maintainer" | "admin";
           };
-        }) => {
-          login(
-            {
-              username: cleanUsername,
-              name: data.user.name,
-              role: data.user.role,
-            },
-            data.token
-          );
-          navigate("/home");
-        }
-      )
-      .catch((error: { success: false; error: string }) => {
-        if (error.error === "Invalid username or password") {
-          setUsernameError(error.error);
-        } else setUsernameError("Internal server error");
-      });
+          error?: string;
+        } = await response.json();
 
-    setLoading(false);
+        if (!response.ok || !data.success || !data.token || !data.user) {
+          throw new Error(data.error ?? "Unable to sign in");
+        }
+
+        login(
+          {
+            username: cleanUsername,
+            name: data.user.name,
+            role: data.user.role,
+          },
+          data.token
+        );
+        navigate("/home");
+      })
+      .catch((error: unknown) => {
+        if (
+          error instanceof Error &&
+          error.message === "Invalid username or password"
+        ) {
+          setUsernameError(error.message);
+        }
+        if (
+          error instanceof Error &&
+          error.message === "Username is already taken"
+        ) {
+          setUsernameError(error.message);
+        } else setUsernameError("Unable to register. Please try again.");
+      })
+      .finally(() => setLoading(false));
   }
 
   return (
