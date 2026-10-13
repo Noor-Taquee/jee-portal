@@ -8,6 +8,7 @@ import { useSettings } from "./hooks/useSettings.js";
 import { useUser } from "./hooks/useUser.js";
 
 import NavigationBar from "./components/NavigationBar/index.js";
+import SessionRestoreScreen from "./components/SessionRestoreScreen";
 import RegistrationPage from "./pages/RegistrationPage/index.js";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
@@ -16,7 +17,7 @@ import ResultPage from "./pages/ResultPage";
 import AdminPage from "./pages/AdminPage";
 
 export default function App() {
-  const { user } = useUser();
+  const { user, isRestoring, sessionRestoreFailed } = useUser();
   const appSettings = useSettings();
   const orientation = useOrientation();
   const location = useLocation();
@@ -35,58 +36,71 @@ export default function App() {
       data-orientation={orientation}
       className={appSettings.simpleMode ? "original-ui" : ""}
     >
-      {!hideNavigation && <NavigationBar />}
-      <div className="panel-container">
-        <Routes>
-          <Route
-            path="/"
-            element={
+      {isRestoring ? (
+        <SessionRestoreScreen />
+      ) : (
+        <>
+          {!hideNavigation && <NavigationBar />}
+          <div className="panel-container">
+            {sessionRestoreFailed && location.pathname !== "/registration" ? (
               <Navigate
-                to="/home"
+                to="/registration"
                 replace
               />
-            }
-          />
+            ) : (
+              <Routes>
+                <Route
+                  path="/"
+                  element={
+                    <Navigate
+                      to="/home"
+                      replace
+                    />
+                  }
+                />
 
-          <Route
-            path="/registration"
-            element={<RegistrationPage />}
-          />
+                <Route
+                  path="/registration"
+                  element={<RegistrationPage />}
+                />
 
-          <Route
-            path="/admin/*"
-            element={<AdminPage />}
-          />
+                <Route
+                  path="/admin/*"
+                  element={<AdminPage />}
+                />
 
-          <Route
-            path="/home"
-            element={<HomePage />}
-          />
+                <Route
+                  path="/home"
+                  element={<HomePage />}
+                />
 
-          <Route
-            path="/exam/login"
-            element={<LoginPage />}
-          />
-          <Route
-            path="/exam/questions"
-            element={<QuestionsPage />}
-          />
-          <Route
-            path="/exam/result"
-            element={<ResultPage />}
-          />
+                <Route
+                  path="/exam/login"
+                  element={<LoginPage />}
+                />
+                <Route
+                  path="/exam/questions"
+                  element={<QuestionsPage />}
+                />
+                <Route
+                  path="/exam/result"
+                  element={<ResultPage />}
+                />
 
-          <Route
-            path="*"
-            element={
-              <Navigate
-                to="/home"
-                replace
-              />
-            }
-          />
-        </Routes>
-      </div>
+                <Route
+                  path="*"
+                  element={
+                    <Navigate
+                      to="/home"
+                      replace
+                    />
+                  }
+                />
+              </Routes>
+            )}
+          </div>
+        </>
+      )}
     </div>
   );
 }
