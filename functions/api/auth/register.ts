@@ -47,7 +47,7 @@ export const onRequestPost: PagesFunction<{ DB: D1Database }> = async (
 
     // 2. Insert new user into D1 database
     const insertResult = await context.env.DB.prepare(
-      "INSERT INTO users (name, username, password, role) VALUES (?, ?, ?)"
+      "INSERT INTO users (name, username, password, role) VALUES (?, ?, ?, ?)"
     )
       .bind(name, username, password, role)
       .run();
