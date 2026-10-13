@@ -4,42 +4,120 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../../../hooks/useUser";
 
-import { EyeIcon, EyeOffIcon, KeyRoundIcon, User2Icon } from "lucide-react";
+import {
+  EyeIcon,
+  EyeOffIcon,
+  KeyRoundIcon,
+  LoaderIcon,
+  User2Icon,
+} from "lucide-react";
 import InputArea from "../../../components/InputArea";
 
 const MIN_USERNAME_LENGTH = 2;
 const MAX_USERNAME_LENGTH = 16;
+const MIN_PASSWORD_LENGTH = 8;
 
 export default function SignupForm() {
   const { login } = useUser();
   const navigate = useNavigate();
 
+  const [firstName, setFirstName] = useState("");
+  const [firstNameError, setFirstNameError] = useState("");
+
+  const [lastName, setLastName] = useState("");
+
   const [username, setUsername] = useState("");
   const [usernameError, setUsernameError] = useState<string | null>(null);
 
-  const [pass, setPass] = useState("");
-  const [passError, setPassError] = useState<string | null>(null);
-  const [showPass, setShowPass] = useState(false);
+  const [password, setPassword] = useState("");
+  const [passwordError, setPasswordError] = useState<string | null>(null);
+  const [showPassword, setShowPassword] = useState(false);
+
+  const [loading, setLoading] = useState(false);
 
   function handleRegister(e: React.SubmitEvent) {
     e.preventDefault();
-    const cleanName = username.trim();
 
-    if (cleanName.length < MIN_USERNAME_LENGTH) {
-      setUsernameError(
-        `Username is too short (minimum ${MIN_USERNAME_LENGTH} characters).`
-      );
-      return;
-    } else if (cleanName.length > MAX_USERNAME_LENGTH) {
-      setUsernameError(
-        `Username is too long (maximum ${MAX_USERNAME_LENGTH} characters).`
-      );
+    setLoading(true);
+
+    const cleanFirstName = firstName.trim();
+    const cleanLastName = lastName.trim();
+    if (cleanFirstName.length < 1 && cleanLastName.length > 1) {
+      setFirstNameError("First name cannot be empty");
+      setLoading(false);
       return;
     }
 
-    setUsernameError(null);
-    login({ name: cleanName });
-    navigate("/home");
+    const cleanName = cleanFirstName + cleanLastName;
+    if (cleanName.length < 1) {
+      setFirstNameError("Please enter your name");
+      setLoading(false);
+      return;
+    }
+
+    const cleanUsername = username.trim();
+    if (cleanUsername.length < MIN_USERNAME_LENGTH) {
+      setUsernameError(
+        `Username is too short (minimum ${MIN_USERNAME_LENGTH} characters).`
+      );
+      setLoading(false);
+      return;
+    } else if (cleanUsername.length > MAX_USERNAME_LENGTH) {
+      setUsernameError(
+        `Username is too long (maximum ${MAX_USERNAME_LENGTH} characters).`
+      );
+      setLoading(false);
+      return;
+    }
+
+    const cleanPassword = password.trim();
+    if (cleanPassword.length < MIN_PASSWORD_LENGTH) {
+      setPasswordError(
+        `Password must be at least ${MIN_PASSWORD_LENGTH} characters long`
+      );
+      setLoading(false);
+      return;
+    }
+
+    fetch("/api/auth/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: cleanName,
+        username: cleanUsername,
+        password: cleanPassword,
+      }),
+    })
+      .then((response) => response.json())
+      .then(
+        (data: {
+          success: true;
+          token: string;
+          user: {
+            name: string;
+            role: "student" | "maintainer" | "admin";
+          };
+        }) => {
+          login(
+            {
+              username: cleanUsername,
+              name: data.user.name,
+              role: data.user.role,
+            },
+            data.token
+          );
+          navigate("/home");
+        }
+      )
+      .catch((error: { success: false; error: string }) => {
+        if (error.error === "Invalid username or password") {
+          setUsernameError(error.error);
+        } else setUsernameError("Internal server error");
+      });
+
+    setLoading(false);
   }
 
   return (
@@ -55,12 +133,17 @@ export default function SignupForm() {
         <div className="row-input-holder">
           <InputArea
             label="First name"
-            error={null}
+            error={firstNameError}
           >
             <input
               type="text"
               name="first-name"
               autoComplete="given-name"
+              onChange={(val) => {
+                setFirstName(val.target.value);
+                if (firstNameError) setFirstNameError("");
+              }}
+              readOnly={loading}
             />
           </InputArea>
           <InputArea
@@ -71,6 +154,10 @@ export default function SignupForm() {
               type="text"
               name="last-name"
               autoComplete="family-name"
+              onChange={(val) => {
+                setLastName(val.target.value);
+              }}
+              readOnly={loading}
             />
           </InputArea>
         </div>
@@ -84,7 +171,7 @@ export default function SignupForm() {
           <input
             type="text"
             name="username"
-            autoComplete="username"
+            autoComplete="off"
             value={username}
             onChange={(val) => {
               const value = val.target.value.trim();
@@ -96,6 +183,7 @@ export default function SignupForm() {
               }
               if (usernameError) setUsernameError("");
             }}
+            readOnly={loading}
           />
           <span className="icon-holder">
             <span id="username-length">
@@ -106,34 +194,36 @@ export default function SignupForm() {
 
         <InputArea
           label="Create Password"
-          error={passError}
+          error={passwordError}
         >
           <span className="icon-holder">
             <KeyRoundIcon />
           </span>
           <input
-            type={showPass ? "text" : "password"}
-            value={pass}
+            type={showPassword ? "text" : "password"}
+            value={password}
             autoComplete="new-password"
             onChange={(val) => {
-              setPass(val.target.value);
-              if (passError) setPassError("");
+              setPassword(val.target.value);
+              if (passwordError) setPasswordError("");
             }}
+            readOnly={loading}
           />
           <button
             type="button"
             className="in-input-btn"
-            onClick={() => setShowPass((p) => !p)}
+            onClick={() => setShowPassword((p) => !p)}
           >
-            {showPass ? <EyeIcon /> : <EyeOffIcon />}
+            {showPassword ? <EyeIcon /> : <EyeOffIcon />}
           </button>
         </InputArea>
 
         <button
           type="submit"
           className="register-submit-btn"
+          disabled={loading}
         >
-          <span>Complete Registration</span>
+          {loading ? <LoaderIcon /> : <span>Complete Registration</span>}
         </button>
       </form>
     </div>
