@@ -102,7 +102,7 @@ export default function SignupForm() {
         } = await response.json();
 
         if (!response.ok || !data.success || !data.token || !data.user) {
-          throw new Error(data.error ?? "Unable to sign in");
+          throw new Error(data.error ?? "Unable to register");
         }
 
         login(
@@ -118,16 +118,12 @@ export default function SignupForm() {
       .catch((error: unknown) => {
         if (
           error instanceof Error &&
-          error.message === "Invalid username or password"
-        ) {
-          setUsernameError(error.message);
-        }
-        if (
-          error instanceof Error &&
           error.message === "Username is already taken"
         ) {
           setUsernameError(error.message);
-        } else setUsernameError("Unable to register. Please try again.");
+        } else {
+          setUsernameError("Unable to register. Please try again.");
+        }
       })
       .finally(() => setLoading(false));
   }
