@@ -8,6 +8,8 @@ export type User = {
 
 export type UserContextType = {
   user: User | null;
+  isRestoring: boolean;
+  sessionRestoreFailed: boolean;
 
   /** Logs in a user, optionally saving their credentials. */
   login: (newUser: User, token: string) => void;
