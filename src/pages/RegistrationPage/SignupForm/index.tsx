@@ -48,7 +48,7 @@ export default function SignupForm() {
       return;
     }
 
-    const cleanName = cleanFirstName + cleanLastName;
+    const cleanName = cleanFirstName + " " + cleanLastName;
     if (cleanName.length < 1) {
       setFirstNameError("Please enter your name");
       setLoading(false);
