@@ -5,18 +5,20 @@ export const onRequestPost: PagesFunction<{ DB: D1Database }> = async (
 ) => {
   try {
     const {
+      name,
       username,
       password,
       role = "student",
     } = await context.request.json<{
+      name?: string;
       username?: string;
       password?: string;
       role?: string;
     }>();
 
-    if (!username || !password) {
+    if (!username || !password || !name) {
       return Response.json(
-        { success: false, error: "username and password are required" },
+        { success: false, error: "Details not provided" },
         { status: 400 }
       );
     }
@@ -45,9 +47,9 @@ export const onRequestPost: PagesFunction<{ DB: D1Database }> = async (
 
     // 2. Insert new user into D1 database
     const insertResult = await context.env.DB.prepare(
-      "INSERT INTO users (username, password, role) VALUES (?, ?, ?)"
+      "INSERT INTO users (name, username, password, role) VALUES (?, ?, ?)"
     )
-      .bind(username, password, role)
+      .bind(name, username, password, role)
       .run();
 
     if (!insertResult.success) {
@@ -70,8 +72,11 @@ export const onRequestPost: PagesFunction<{ DB: D1Database }> = async (
     return Response.json({
       success: true,
       message: "User registered successfully",
-      sessionToken,
-      role,
+      token: sessionToken,
+      user: {
+        name: name,
+        role: role,
+      },
     });
   } catch (error: any) {
     return Response.json(
