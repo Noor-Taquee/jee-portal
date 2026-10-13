@@ -16,7 +16,7 @@
     "format:fix": "prettier --write src/",
     "lint:check": "tsc -b --noEmit && oxlint",
     "lint:fix": "oxlint --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest run"
   },
   "repository": {
     "type": "git",
@@ -27,15 +27,19 @@
   },
   "homepage": "https://github.com/username/jee-portal#readme",
   "devDependencies": {
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.0",
     "@cloudflare/workers-types": "^5.20261009.1",
     "@types/node": "^26.6.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.1",
+    "jsdom": "^26.1.0",
     "oxlint": "^1.85.0",
     "prettier": "^3.9.8",
     "typescript": "^7.0.2",
     "vite": "^8.3.0",
+    "vitest": "^5.0.4",
     "wrangler": "^4.149.0"
   },
   "dependencies": {
