@@ -17,10 +17,10 @@ export const onRequestPost: PagesFunction<{ DB: D1Database }> = async (
     }
 
     const user = await context.env.DB.prepare(
-      "SELECT id, password_hash, role FROM users WHERE username = ?"
+      "SELECT id, name, password, role FROM users WHERE username = ?"
     )
       .bind(username)
-      .first<{ id: number; password: string; role: string }>();
+      .first<{ id: number; name: string; password: string; role: string }>();
 
     if (!user) {
       return Response.json(
