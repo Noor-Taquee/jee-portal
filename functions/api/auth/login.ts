@@ -51,8 +51,11 @@ export const onRequestPost: PagesFunction<{ DB: D1Database }> = async (
     // Return success along with the session token and role
     return Response.json({
       success: true,
-      sessionToken,
-      role: user.role,
+      token: sessionToken,
+      user: {
+        name: user.name,
+        role: user.role,
+      },
     });
   } catch (error: any) {
     return Response.json(
