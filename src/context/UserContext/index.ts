@@ -8,7 +8,7 @@ export type UserContextType = {
   user: User | null;
 
   /** Logs in a user, optionally saving their credentials. */
-  login: (newUser: User, save?: boolean) => void;
+  login: (newUser: User, token: string) => void;
 
   /** Logs out the user, optionally keeping their credentials. */
   logout: (keep?: boolean) => void;
