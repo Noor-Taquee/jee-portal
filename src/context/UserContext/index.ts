@@ -2,6 +2,8 @@ import { createContext } from "react";
 
 export type User = {
   name: string;
+  username: string;
+  role: "student" | "maintainer" | "admin";
 };
 
 export type UserContextType = {
