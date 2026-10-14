@@ -1,6 +1,6 @@
-export type D1Env = {
-  d1: D1Database;
-};
+export interface D1Env {
+  DB: D1Database;
+}
 
 /**
  * Represents a row in the "users" table of the D1 database.
