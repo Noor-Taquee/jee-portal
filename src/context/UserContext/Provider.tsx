@@ -33,9 +33,11 @@ interface UserProviderProps {
 
 export default function UserProvider({ children }: UserProviderProps) {
   const [user, setUser] = useState<User | null>(null);
+
   const [isRestoring, setIsRestoring] = useState(() =>
     Boolean(localStorage.getItem(USER_TOKEN_KEY))
   );
+
   const [sessionRestoreFailed, setSessionRestoreFailed] = useState(false);
 
   useEffect(() => {
