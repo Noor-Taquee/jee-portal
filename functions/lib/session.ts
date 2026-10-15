@@ -97,12 +97,14 @@ export type SessionUser = {
  * @param database The D1 database instance to query and update the session information.
  * @param token The session token to validate and refresh.
  * @param currentTime Optional parameter to specify the current time in milliseconds since epoch. Defaults to the current time.
+ * @param timeMargin Optional parameter to specify the time margin in milliseconds for extending the session expiry. Defaults to `SESSION_IDLE_TTL`.
  * @returns
  */
 export async function validateAndRefreshSession(
   database: D1Database,
   token: string,
-  currentTime = new Date().getTime()
+  currentTime = new Date().getTime(),
+  timeMargin = SESSION_IDLE_TTL
 ): Promise<SessionUser | null> {
   const session = await database
     .prepare(
@@ -129,13 +131,17 @@ export async function validateAndRefreshSession(
     return null;
   }
 
-  await extendSessionExpiry(
-    database,
-    session.id,
-    createdAt,
-    token,
-    currentTime
-  );
+  const timeToExpire = calculateTimeElapsed(currentTime, expiresAt);
+
+  if (timeToExpire <= timeMargin) {
+    await extendSessionExpiry(
+      database,
+      session.id,
+      createdAt,
+      token,
+      currentTime
+    );
+  }
 
   return {
     id: session.id,
