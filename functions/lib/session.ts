@@ -98,13 +98,13 @@ export type SessionUser = {
  * Validates a session token and refreshes its expiry if valid. If the session is invalid or expired, it will be revoked.
  * @param database The D1 database instance to query and update the session information.
  * @param token The session token to validate and refresh.
- * @param nowSeconds Optional parameter to specify the current time in milliseconds since epoch. Defaults to the current time.
+ * @param currentTime Optional parameter to specify the current time in milliseconds since epoch. Defaults to the current time.
  * @returns
  */
 export async function validateAndRefreshSession(
   database: D1Database,
   token: string,
-  nowSeconds = new Date().getTime()
+  currentTime = new Date().getTime()
 ): Promise<SessionUser | null> {
   const session = await database
     .prepare(
@@ -120,14 +120,20 @@ export async function validateAndRefreshSession(
   if (
     createdAt === null ||
     expiresAt === null ||
-    calculateTimeElapsed(expiresAt, nowSeconds) >= 0 ||
-    calculateTimeElapsed(createdAt, nowSeconds) > SESSION_ABSOLUTE_TTL_SECONDS
+    calculateTimeElapsed(expiresAt, currentTime) >= 0 ||
+    calculateTimeElapsed(createdAt, currentTime) > SESSION_ABSOLUTE_TTL_SECONDS
   ) {
     await revokeExpiredSession(database, session.id, token);
     return null;
   }
 
-  await extendSessionExpiry(database, session.id, createdAt, token, nowSeconds);
+  await extendSessionExpiry(
+    database,
+    session.id,
+    createdAt,
+    token,
+    currentTime
+  );
 
   return {
     id: session.id,
