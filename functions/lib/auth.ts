@@ -5,7 +5,7 @@ export type Role = {
   error?: string;
 };
 
-export async function verifyUserRole(
+export async function verifyRequest(
   request: Request,
   env: D1Database
 ): Promise<Role> {
