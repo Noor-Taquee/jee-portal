@@ -9,6 +9,9 @@ export type User = {
 export type UserContextType = {
   user: User | null;
 
+  /** Indicates whether the session is still being loaded from `localStorage` and validated with the server. */
+  loadingSession: boolean;
+
   /** Logs in the `newUser` and saves the `sessionToken` in `localStorage`. */
   login: (newUser: User, sessionToken: string) => void;
 
