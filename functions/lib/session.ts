@@ -10,7 +10,7 @@ export const SESSION_IDLE_TTL_SECONDS = 3 * 24 * 60 * 60;
  * The absolute TTL (Time To Live) for a session, after which the session is considered expired regardless of activity.
  * This is set to 30 days.
  */
-export const SESSION_ABSOLUTE_TTL_SECONDS = 30 * 24 * 60 * 60;
+export const SESSION_ABSOLUTE_TTL_SECONDS = 45 * 24 * 60 * 60;
 
 export function calculateTimeElapsed(
   from: string | number,
