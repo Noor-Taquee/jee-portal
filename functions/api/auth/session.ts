@@ -1,6 +1,7 @@
-export const onRequestGet: PagesFunction<{ DB: D1Database }> = async (
-  context
-) => {
+import { D1Env } from "../../lib/d1";
+import { validateAndRefreshSession } from "../../lib/session";
+
+export const onRequestGet: PagesFunction<D1Env> = async (context) => {
   const sessionToken = context.request.headers
     .get("Authorization")
     ?.match(/^Bearer\s+(.+)$/iu)?.[1];
@@ -13,15 +14,7 @@ export const onRequestGet: PagesFunction<{ DB: D1Database }> = async (
   }
 
   try {
-    const user = await context.env.DB.prepare(
-      "SELECT name, username, role FROM users WHERE session_token = ?"
-    )
-      .bind(sessionToken)
-      .first<{
-        name: string;
-        username: string;
-        role: "student" | "maintainer" | "admin";
-      }>();
+    const user = await validateAndRefreshSession(context.env.DB, sessionToken);
 
     if (!user) {
       return Response.json(
@@ -31,7 +24,10 @@ export const onRequestGet: PagesFunction<{ DB: D1Database }> = async (
     }
 
     return Response.json(
-      { success: true, user },
+      {
+        success: true,
+        user: { name: user.name, username: user.username, role: user.role },
+      },
       { headers: { "Cache-Control": "no-store" } }
     );
   } catch {
