@@ -5,38 +5,32 @@ import { useState } from "react";
 import TextRenderer from "../../../../../components/TextRenderer";
 
 interface Props {
-  text: string;
-  onSave: (newText: string) => void;
+  question: string;
 }
 
-export default function EditableText({ text, onSave }: Props) {
-  const [editMode, setEditMode] = useState(false);
-  const [newText, setNewText] = useState(text);
+export default function EditableText({ question }: Props) {
+  const [edit, setEdit] = useState(false);
+  const [newQuestion, setNewQuestion] = useState(question);
 
   return (
     <div className="editable-text-container">
-      {editMode ? (
+      {edit ? (
         <textarea
           id="question-editor"
-          value={newText}
+          value={newQuestion}
           onChange={(e) => {
-            setNewText(e.target.value);
+            setNewQuestion(e.target.value);
           }}
         />
       ) : (
-        <TextRenderer content={text} />
+        <TextRenderer content={question} />
       )}
       <div className="button-container">
         <button
           className="cta-btn"
-          onClick={() => {
-            if (editMode === true) {
-              onSave(newText);
-            }
-            setEditMode((p) => !p);
-          }}
+          onClick={() => setEdit((p) => !p)}
         >
-          {editMode ? <p>Save</p> : <p>Edit</p>}
+          {edit ? <p>Save</p> : <p>Edit</p>}
         </button>
       </div>
     </div>
