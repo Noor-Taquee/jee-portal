@@ -1,7 +1,7 @@
 // oxlint-disable max-lines-per-function
 
 import { D1Env } from "../../lib/d1";
-import { SESSION_IDLE_TTL, toISO8601String } from "../../lib/session";
+import { generateSession } from "../../lib/session";
 
 export const onRequestPost: PagesFunction<D1Env> = async (context) => {
   try {
@@ -40,24 +40,19 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
     }
 
     // Generate a secure random session token
-    const now = new Date();
-    const sessionToken = crypto.randomUUID() + "-" + now.getTime();
-    const sessionCreatedAt = toISO8601String(now.toISOString());
-    const sessionExpiresAt = toISO8601String(
-      new Date(now.getTime() + SESSION_IDLE_TTL).toISOString()
-    );
+    const session = generateSession();
 
     // Save session token in D1
     await context.env.DB.prepare(
       "UPDATE users SET session_token = ?, session_created_at = ?, session_expires_at = ? WHERE id = ?"
     )
-      .bind(sessionToken, sessionCreatedAt, sessionExpiresAt, user.id)
+      .bind(session.token, session.createdAt, session.expiresAt, user.id)
       .run();
 
     // Return success along with the session token and role
     return Response.json({
       success: true,
-      token: sessionToken,
+      token: session.token,
       user: {
         name: user.name,
         role: user.role,
