@@ -32,6 +32,22 @@ export function toISO8601String(time: string) {
 }
 
 /**
+ * Generates a new session token along with its creation and expiry timestamps.
+ * The session token is a combination of a UUID and the current timestamp.
+ * The creation timestamp is the current time, and the expiry timestamp is calculated based on the idle TTL.
+ * @returns
+ */
+export function generateSession() {
+  const now = new Date();
+  const sessionToken = crypto.randomUUID() + "-" + now.getTime();
+  const sessionCreatedAt = toISO8601String(now.toISOString());
+  const sessionExpiresAt = toISO8601String(
+    new Date(now.getTime() + SESSION_IDLE_TTL).toISOString()
+  );
+  return { sessionToken, sessionCreatedAt, sessionExpiresAt };
+}
+
+/**
  * Revokes an expired session by clearing the session token and timestamps in the database.
  * @param database The D1 database instance to update the session information.
  * @param sessionUserId The ID of the user whose session is to be revoked.
