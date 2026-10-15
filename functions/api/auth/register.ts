@@ -1,22 +1,25 @@
 // oxlint-disable max-lines-per-function
 
-export const onRequestPost: PagesFunction<{ DB: D1Database }> = async (
-  context
-) => {
+import { D1Env } from "../../lib/d1";
+import { generateSession } from "../../lib/session";
+
+export const onRequestPost: PagesFunction<D1Env> = async (context) => {
   try {
     const {
+      name,
       username,
       password,
       role = "student",
     } = await context.request.json<{
+      name?: string;
       username?: string;
       password?: string;
       role?: string;
     }>();
 
-    if (!username || !password) {
+    if (!username || !password || !name) {
       return Response.json(
-        { success: false, error: "username and password are required" },
+        { success: false, error: "Details not provided" },
         { status: 400 }
       );
     }
@@ -43,11 +46,22 @@ export const onRequestPost: PagesFunction<{ DB: D1Database }> = async (
       );
     }
 
-    // 2. Insert new user into D1 database
+    // 2. Generate a session token so users are logged in right away
+    const session = generateSession();
+
+    // 3. Insert new user into D1 database
     const insertResult = await context.env.DB.prepare(
-      "INSERT INTO users (username, password, role) VALUES (?, ?, ?)"
+      "INSERT INTO users (name, username, password, role, session_token, session_created_at, session_expires_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
     )
-      .bind(username, password, role)
+      .bind(
+        name,
+        username,
+        password,
+        role,
+        session.token,
+        session.createdAt,
+        session.expiresAt
+      )
       .run();
 
     if (!insertResult.success) {
@@ -57,21 +71,14 @@ export const onRequestPost: PagesFunction<{ DB: D1Database }> = async (
       );
     }
 
-    // 3. Automatically generate a session token so they are logged in right away
-    const sessionToken = crypto.randomUUID() + "-" + Date.now();
-    const userId = insertResult.meta.last_row_id;
-
-    await context.env.DB.prepare(
-      "UPDATE users SET session_token = ? WHERE id = ?"
-    )
-      .bind(sessionToken, userId)
-      .run();
-
     return Response.json({
       success: true,
       message: "User registered successfully",
-      sessionToken,
-      role,
+      token: session.token,
+      user: {
+        name: name,
+        role: role,
+      },
     });
   } catch (error: any) {
     return Response.json(
