@@ -13,9 +13,10 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import QuestionsPage from "./pages/QuestionsPage";
 import ResultPage from "./pages/ResultPage";
+import SessionRestoreScreen from "./components/SessionRestoreScreen/index.js";
 
 export default function App() {
-  const { user } = useUser();
+  const { user, loadingSession } = useUser();
   const appSettings = useSettings();
   const orientation = useOrientation();
   const location = useLocation();
@@ -34,6 +35,8 @@ export default function App() {
       data-orientation={orientation}
       className={appSettings.simpleMode ? "original-ui" : ""}
     >
+      {loadingSession ? <SessionRestoreScreen /> :
+        <>
       {!hideNavigation && <NavigationBar />}
       <div className="panel-container">
         <Routes>
@@ -81,6 +84,8 @@ export default function App() {
           />
         </Routes>
       </div>
+      </>
+      }
     </div>
   );
 }
