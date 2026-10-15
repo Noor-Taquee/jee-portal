@@ -31,20 +31,27 @@ export function toISO8601String(time: string) {
   return time.replace("T", " ").slice(0, 19);
 }
 
+export type Session = {
+  /** The unique session token generated for the user session. It is a combination of a UUID and the current timestamp. */
+  token: string;
+  /** The timestamp when the session was created, formatted as an ISO 8601 string. */
+  createdAt: string;
+  /** The timestamp when the session will expire, formatted as an ISO 8601 string. */
+  expiresAt: string;
+};
+
 /**
  * Generates a new session token along with its creation and expiry timestamps.
- * The session token is a combination of a UUID and the current timestamp.
- * The creation timestamp is the current time, and the expiry timestamp is calculated based on the idle TTL.
  * @returns
  */
-export function generateSession() {
+export function generateSession(): Session {
   const now = new Date();
-  const sessionToken = crypto.randomUUID() + "-" + now.getTime();
-  const sessionCreatedAt = toISO8601String(now.toISOString());
-  const sessionExpiresAt = toISO8601String(
+  const token = crypto.randomUUID() + "-" + now.getTime();
+  const createdAt = toISO8601String(now.toISOString());
+  const expiresAt = toISO8601String(
     new Date(now.getTime() + SESSION_IDLE_TTL).toISOString()
   );
-  return { sessionToken, sessionCreatedAt, sessionExpiresAt };
+  return { token, createdAt, expiresAt };
 }
 
 /**
