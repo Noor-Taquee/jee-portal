@@ -9,9 +9,7 @@ interface UserProviderProps {
 }
 
 export default function UserProvider({ children }: UserProviderProps) {
-  const name = localStorage.getItem(userLocalStorageKey);
-
-  const [user, setUser] = useState<User | null>(name ? { name } : null);
+  const [user, setUser] = useState<User | null>(null);
 
   function logout(keep = false) {
     setUser(null);
