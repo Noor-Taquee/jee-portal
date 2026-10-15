@@ -1,3 +1,5 @@
+import { validateAndRefreshSession } from "./session";
+
 export type Role = {
   role: "admin" | "student" | "maintainer" | "none";
   error?: string;
@@ -13,16 +15,21 @@ export async function verifyUserRole(
     return { role: "none", error: "No authorization token provided" };
   }
 
-  const sessionToken = authHeader.replace("Bearer ", "");
+  const sessionToken = authHeader.match(/^Bearer\s+(.+)$/iu)?.[1];
+  if (!sessionToken) {
+    return { role: "none", error: "Invalid authorization token" };
+  }
 
   try {
-    const user = await env
-      .prepare("SELECT role FROM users WHERE session_token = ?")
-      .bind(sessionToken)
-      .first<{ role: string }>();
+    const user = await validateAndRefreshSession(
+      env,
+      sessionToken,
+      Date.now(),
+      2 * 24 * 60 * 60 * 1000
+    );
 
     if (!user) {
-      return { role: "none", error: "User not found" };
+      return { role: "none", error: "Invalid or expired session" };
     }
 
     return { role: user.role as Role["role"] };
