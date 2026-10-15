@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { UserContext, type User } from ".";
 
-export const USER_NAME_KEY = "user:name";
+export const USER_NAME_KEY = "user:username";
 export const USER_SESSION_TOKEN_KEY = "user:session_token";
 
 interface UserProviderProps {
