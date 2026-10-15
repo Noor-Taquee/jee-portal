@@ -1,8 +1,8 @@
 import { expect, test, vi } from "vitest";
 
 import {
-  SESSION_ABSOLUTE_TTL_SECONDS,
-  SESSION_IDLE_TTL_SECONDS,
+  SESSION_ABSOLUTE_TTL,
+  SESSION_IDLE_TTL,
   validateAndRefreshSession,
 } from "./session";
 
@@ -49,27 +49,27 @@ test("extends an active session by three days", async () => {
 
   expect(user?.username).toBe("ada123");
   expect(updates[0]?.values).toEqual([
-    databaseTimestamp(now + SESSION_IDLE_TTL_SECONDS * 1000),
+    databaseTimestamp(now + SESSION_IDLE_TTL),
     7,
     "token",
   ]);
 });
 
-test("never extends a session beyond its 30-day absolute limit", async () => {
+test("never extends a session beyond its 45-day absolute limit", async () => {
   const createdAt = 1_000_000;
-  const now = createdAt + SESSION_ABSOLUTE_TTL_SECONDS * 1000 - 100_000;
+  const now = createdAt + SESSION_ABSOLUTE_TTL - 100_000;
   const { database, updates } = createDatabase(sessionRow(createdAt, now + 10));
 
   await validateAndRefreshSession(database, "token", now);
 
   expect(updates[0]?.values[0]).toBe(
-    databaseTimestamp(createdAt + SESSION_ABSOLUTE_TTL_SECONDS * 1000)
+    databaseTimestamp(createdAt + SESSION_ABSOLUTE_TTL)
   );
 });
 
 test("revokes an expired session", async () => {
   const createdAt = 1_000_000;
-  const now = createdAt + SESSION_IDLE_TTL_SECONDS * 1000;
+  const now = createdAt + SESSION_IDLE_TTL;
   const { database, updates } = createDatabase(
     sessionRow(createdAt, now - 1_000)
   );
