@@ -27,7 +27,7 @@ export function calculateTimeElapsed(
  * @param time date as string in ISO format
  * @returns
  */
-function toISO8601String(time: string) {
+export function toISO8601String(time: string) {
   return time.replace("T", " ").slice(0, 19);
 }
 
