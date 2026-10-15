@@ -35,57 +35,59 @@ export default function App() {
       data-orientation={orientation}
       className={appSettings.simpleMode ? "original-ui" : ""}
     >
-      {loadingSession ? <SessionRestoreScreen /> :
+      {loadingSession ? (
+        <SessionRestoreScreen />
+      ) : (
         <>
-      {!hideNavigation && <NavigationBar />}
-      <div className="panel-container">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Navigate
-                to="/home"
-                replace
+          {!hideNavigation && <NavigationBar />}
+          <div className="panel-container">
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <Navigate
+                    to="/home"
+                    replace
+                  />
+                }
               />
-            }
-          />
 
-          <Route
-            path="/registration"
-            element={<RegistrationPage />}
-          />
-
-          <Route
-            path="/home"
-            element={<HomePage />}
-          />
-
-          <Route
-            path="/exam/login"
-            element={<LoginPage />}
-          />
-          <Route
-            path="/exam/questions"
-            element={<QuestionsPage />}
-          />
-          <Route
-            path="/exam/result"
-            element={<ResultPage />}
-          />
-
-          <Route
-            path="*"
-            element={
-              <Navigate
-                to="/home"
-                replace
+              <Route
+                path="/registration"
+                element={<RegistrationPage />}
               />
-            }
-          />
-        </Routes>
-      </div>
-      </>
-      }
+
+              <Route
+                path="/home"
+                element={<HomePage />}
+              />
+
+              <Route
+                path="/exam/login"
+                element={<LoginPage />}
+              />
+              <Route
+                path="/exam/questions"
+                element={<QuestionsPage />}
+              />
+              <Route
+                path="/exam/result"
+                element={<ResultPage />}
+              />
+
+              <Route
+                path="*"
+                element={
+                  <Navigate
+                    to="/home"
+                    replace
+                  />
+                }
+              />
+            </Routes>
+          </div>
+        </>
+      )}
     </div>
   );
 }
