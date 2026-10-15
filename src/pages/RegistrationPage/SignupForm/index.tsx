@@ -42,18 +42,17 @@ export default function SignupForm() {
 
     const cleanFirstName = firstName.trim();
     const cleanLastName = lastName.trim();
-    if (cleanFirstName.length < 1 && cleanLastName.length > 1) {
-      setFirstNameError("First name cannot be empty");
+    if (cleanFirstName.length < 1) {
+      if (cleanLastName.length > 1) {
+        setFirstNameError("First name cannot be empty");
+      } else {
+        setFirstNameError("Please enter you name");
+      }
       setLoading(false);
       return;
     }
 
     const cleanName = cleanFirstName + " " + cleanLastName;
-    if (cleanName.length < 1) {
-      setFirstNameError("Please enter your name");
-      setLoading(false);
-      return;
-    }
 
     const cleanUsername = username.trim();
     if (cleanUsername.length < MIN_USERNAME_LENGTH) {
