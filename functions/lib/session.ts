@@ -113,14 +113,18 @@ export async function validateAndRefreshSession(
     .bind(token)
     .first<Omit<UsersTableRow, "password" | "session_token">>();
 
+  // Check if the session does not exist
   if (!session) return null;
 
   const createdAt = session.session_created_at;
   const expiresAt = session.session_expires_at;
+
   if (
     createdAt === null ||
     expiresAt === null ||
+    // if token's idle session has expired
     calculateTimeElapsed(expiresAt, currentTime) >= 0 ||
+    // if token's absolute session has expired
     calculateTimeElapsed(createdAt, currentTime) > SESSION_ABSOLUTE_TTL_SECONDS
   ) {
     await revokeExpiredSession(database, session.id, token);
