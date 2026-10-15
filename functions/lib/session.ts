@@ -4,13 +4,13 @@ import { UsersTableRow } from "./d1";
  * The idle TTL (Time To Live) for a session, after which the session is considered expired if there has been no activity.
  * This is set to 3 days.
  */
-export const SESSION_IDLE_TTL_SECONDS = 3 * 24 * 60 * 60;
+export const SESSION_IDLE_TTL = 3 * 24 * 60 * 60 * 1000;
 
 /**
  * The absolute TTL (Time To Live) for a session, after which the session is considered expired regardless of activity.
- * This is set to 30 days.
+ * This is set to 45 days.
  */
-export const SESSION_ABSOLUTE_TTL_SECONDS = 45 * 24 * 60 * 60;
+export const SESSION_ABSOLUTE_TTL = 45 * 24 * 60 * 60 * 1000;
 
 export function calculateTimeElapsed(
   from: string | number,
@@ -68,12 +68,10 @@ async function extendSessionExpiry(
   const creationDate = new Date(createdAt);
 
   const absolueExpiryDate = new Date(
-    creationDate.getTime() + SESSION_ABSOLUTE_TTL_SECONDS * 1000
+    creationDate.getTime() + SESSION_ABSOLUTE_TTL
   );
 
-  const refreshedExpiryDate = new Date(
-    currentTime + SESSION_IDLE_TTL_SECONDS * 1000
-  );
+  const refreshedExpiryDate = new Date(currentTime + SESSION_IDLE_TTL);
 
   const newExpiryDate = new Date(
     Math.min(absolueExpiryDate.getTime(), refreshedExpiryDate.getTime())
@@ -125,7 +123,7 @@ export async function validateAndRefreshSession(
     // if token's idle session has expired
     calculateTimeElapsed(expiresAt, currentTime) >= 0 ||
     // if token's absolute session has expired
-    calculateTimeElapsed(createdAt, currentTime) > SESSION_ABSOLUTE_TTL_SECONDS
+    calculateTimeElapsed(createdAt, currentTime) > SESSION_ABSOLUTE_TTL / 1000
   ) {
     await revokeExpiredSession(database, session.id, token);
     return null;
