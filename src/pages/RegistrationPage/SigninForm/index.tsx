@@ -17,6 +17,8 @@ export default function SigninForm() {
   const [pass, setPass] = useState("");
   const [showPass, setShowPass] = useState(false);
 
+  const [loading, setLoading] = useState(false);
+
   function handleRegister(e: React.SubmitEvent) {
     e.preventDefault();
     const cleanName = username.trim();
@@ -58,6 +60,7 @@ export default function SigninForm() {
               setUsername(val.target.value);
               if (usernameError) setUsernameError("");
             }}
+            readOnly={loading}
           />
         </InputArea>
 
@@ -77,6 +80,7 @@ export default function SigninForm() {
               setPass(val.target.value);
               if (usernameError) setUsernameError("");
             }}
+            readOnly={loading}
           />
           <button
             type="button"
@@ -90,8 +94,9 @@ export default function SigninForm() {
         <button
           type="submit"
           className="register-submit-btn"
+          disabled={loading}
         >
-          <span>Log in</span>
+          {loading ? <LoaderIcon /> : <span>Log in</span>}
         </button>
       </form>
     </div>
