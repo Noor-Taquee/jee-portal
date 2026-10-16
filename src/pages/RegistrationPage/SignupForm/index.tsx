@@ -230,7 +230,11 @@ export default function SignupForm() {
           className="register-submit-btn"
           disabled={loading}
         >
-          {loading ? <LoaderIcon /> : <span>Complete Registration</span>}
+          {loading ? (
+            <LoaderIcon className="spin" />
+          ) : (
+            <span>Complete Registration</span>
+          )}
         </button>
       </form>
     </div>

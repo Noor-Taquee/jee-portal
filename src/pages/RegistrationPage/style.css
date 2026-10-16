@@ -91,6 +91,10 @@
     opacity 0.15s ease,
     background-color 200ms ease;
 
+  .lucide {
+    stroke: var(--bg-p-1);
+  }
+
   span {
     font: var(--text-1);
     font-weight: 600;

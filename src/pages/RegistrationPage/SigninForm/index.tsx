@@ -155,7 +155,7 @@ export default function SigninForm() {
           className="register-submit-btn"
           disabled={loading}
         >
-          {loading ? <LoaderIcon /> : <span>Log in</span>}
+          {loading ? <LoaderIcon className="spin" /> : <span>Log in</span>}
         </button>
       </form>
     </div>
