@@ -4,22 +4,25 @@ import "./style.css";
 import { HomeIcon } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
-const navButtons: [text: string, route: string, icon: () => React.ReactNode][] =
-  [["home", "home", () => <HomeIcon />]];
+const navButtons: [
+  label: string,
+  route: string,
+  icon: () => React.ReactNode,
+][] = [["home", "home", () => <HomeIcon />]];
 
 export default function ButtonContainer() {
   return (
     <div id="navigation-btn-div">
-      {navButtons.map((stack) => (
+      {navButtons.map(([label, route, icon]) => (
         <NavLink
-          to={`/${stack[1]}`}
-          key={`nav-${stack[0]}`}
+          to={`/${route}`}
+          key={`nav-${label}`}
           className={({ isActive }) =>
             `navigation-button ${isActive ? "active" : ""}`
           }
         >
-          {stack[2]()}
-          <p>{stack[0]}</p>
+          {icon()}
+          <p>{label}</p>
         </NavLink>
       ))}
     </div>
