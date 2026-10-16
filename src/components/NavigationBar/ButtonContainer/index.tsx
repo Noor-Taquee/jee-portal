@@ -1,16 +1,24 @@
 // oxlint-disable max-lines-per-function
 import "./style.css";
 
-import { HomeIcon } from "lucide-react";
+import { useUser } from "../../../hooks/useUser";
+
+import { HomeIcon, ShieldCheckIcon } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
-const navButtons: [
-  label: string,
-  route: string,
-  icon: () => React.ReactNode,
-][] = [["home", "home", () => <HomeIcon />]];
-
 export default function ButtonContainer() {
+  const { user } = useUser();
+
+  const navButtons: [
+    label: string,
+    route: string,
+    icon: () => React.ReactNode,
+  ][] = [["home", "home", () => <HomeIcon />]];
+
+  if (user) {
+    navButtons.push(["admin", "admin", () => <ShieldCheckIcon />])
+  }
+
   return (
     <div id="navigation-btn-div">
       {navButtons.map(([label, route, icon]) => (
