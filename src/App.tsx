@@ -13,6 +13,7 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import QuestionsPage from "./pages/QuestionsPage";
 import ResultPage from "./pages/ResultPage";
+import AdminPage from "./pages/AdminPage";
 import SessionRestoreScreen from "./components/SessionRestoreScreen/index.js";
 
 export default function App() {
@@ -55,6 +56,11 @@ export default function App() {
               <Route
                 path="/registration"
                 element={<RegistrationPage />}
+              />
+
+              <Route
+                path="/admin/*"
+                element={<AdminPage />}
               />
 
               <Route

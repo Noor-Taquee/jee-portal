@@ -9,6 +9,7 @@
   textarea {
     width: 100%;
     height: fit-content;
+    max-height: 450px;
 
     field-sizing: content;
     resize: none;
@@ -16,9 +17,13 @@
     font: 400 16px monospace;
 
     padding: 6px;
+
+    border: none;
     border-radius: 8px;
 
     outline: 1px dashed var(--accent-1);
+
+    background-color: transparent;
 
     &:focus {
       outline: 2px solid var(--accent-1);
@@ -40,11 +45,21 @@
     border: none;
     border-radius: 6px;
 
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
     background-color: var(--accent-1);
 
     p {
       font: var(--text-2);
+      font-weight: 400;
       color: var(--bg-p-1);
+    }
+
+    .lucide {
+      --size: 14px;
+      stroke: var(--bg-p-1);
     }
   }
 }
