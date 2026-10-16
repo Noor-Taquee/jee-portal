@@ -4,8 +4,11 @@ import "./style.css";
 import { HomeIcon } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
-const navButtons: [label: string, route: string, icon: () => React.ReactNode][] =
-  [["home", "home", () => <HomeIcon />]];
+const navButtons: [
+  label: string,
+  route: string,
+  icon: () => React.ReactNode,
+][] = [["home", "home", () => <HomeIcon />]];
 
 export default function ButtonContainer() {
   return (
