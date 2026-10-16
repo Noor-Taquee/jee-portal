@@ -46,6 +46,9 @@ body,
 }
 
 button {
+  border: none;
+  background-color: transparent;
+
   &:focus-visible {
     outline: 2px solid var(--accent-1);
     outline-offset: 2px;
@@ -57,6 +60,10 @@ button {
 
     opacity: 0.6;
   }
+}
+
+a {
+  text-decoration: none;
 }
 
 .disabled {
