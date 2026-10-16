@@ -62,6 +62,10 @@ button {
   }
 }
 
+a {
+  text-decoration: none;
+}
+
 .disabled {
   cursor: ns-resize !important;
   touch-action: none !important;
