@@ -16,7 +16,7 @@ export default function ButtonContainer() {
   ][] = [["home", "home", () => <HomeIcon />]];
 
   if (user?.role === "admin" || user?.role === "maintainer") {
-    navButtons.push(["admin", "admin", () => <ShieldCheckIcon />])
+    navButtons.push(["admin", "admin", () => <ShieldCheckIcon />]);
   }
 
   return (
