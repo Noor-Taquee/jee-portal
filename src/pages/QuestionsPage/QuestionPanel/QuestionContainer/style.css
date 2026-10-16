@@ -1,8 +1,6 @@
 #question-container {
   --gutter-width: 64px;
 
-  --question-font: 400 20px/1.9 "KaTeX_Main";
-
   position: relative;
 
   flex-grow: 1;

@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-@import "tailwindcss";
+@import "./styles/animations.css";
+@import "./styles/table.css";
+@import "./styles/popover.css";
 
 :root {
   --header-1: 400 26px "Inter";
@@ -50,6 +52,9 @@ h3 {
 }
 
 button {
+  border: none;
+  background-color: transparent;
+
   &:focus-visible {
     outline: 2px solid var(--accent-1);
     outline-offset: 2px;
@@ -61,6 +66,10 @@ button {
 
     opacity: 0.6;
   }
+}
+
+a {
+  text-decoration: none;
 }
 
 .disabled {

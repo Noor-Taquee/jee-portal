@@ -2,13 +2,18 @@ import { createContext } from "react";
 
 export type User = {
   name: string;
+  username: string;
+  role: "student" | "maintainer" | "admin";
 };
 
 export type UserContextType = {
   user: User | null;
 
-  /** Logs in a user, optionally saving their credentials. */
-  login: (newUser: User, save?: boolean) => void;
+  /** Indicates whether the session is still being loaded from `localStorage` and validated with the server. */
+  loadingSession: boolean;
+
+  /** Logs in the `newUser` and saves the `sessionToken` in `localStorage`. */
+  login: (newUser: User, sessionToken: string) => void;
 
   /** Logs out the user, optionally keeping their credentials. */
   logout: (keep?: boolean) => void;

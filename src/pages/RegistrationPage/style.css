@@ -85,7 +85,7 @@
   align-items: center;
   justify-content: center;
 
-  background-color: var(--bg-s-2);
+  background-color: var(--accent-1);
 
   transition:
     opacity 0.15s ease,
@@ -94,14 +94,7 @@
   span {
     font: var(--text-1);
     font-weight: 600;
-  }
-
-  &:focus,
-  &:hover {
-    background-color: var(--accent-1);
-    span {
-      color: #fff;
-    }
+    color: var(--bg-p-1);
   }
 
   &:active {
