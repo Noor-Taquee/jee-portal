@@ -1,17 +1,12 @@
 import { Route, Routes } from "react-router-dom";
-import ReviewProvider from "../../context/ReviewContext/Provider";
-import ReviewPage from "./ReviewPage";
+import Content from "./Content";
 
 export default function AdminPage() {
   return (
     <Routes>
       <Route
-        path="review"
-        element={
-          <ReviewProvider>
-            <ReviewPage />
-          </ReviewProvider>
-        }
+        path=""
+        element={<Content />}
       />
     </Routes>
   );
