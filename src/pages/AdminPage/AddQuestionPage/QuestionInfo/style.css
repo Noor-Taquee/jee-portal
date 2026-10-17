@@ -1,0 +1,30 @@
+#review-question-info {
+  flex-shrink: 0;
+  width: 280px;
+  max-width: 280px;
+
+  padding: 8px;
+
+  /*border: var(--border-1);*/
+  border-radius: 12px;
+
+  overflow: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 18px;
+
+  #upload-button {
+    margin-top: auto;
+  }
+}
+
+.review-question-info-section {
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+}
