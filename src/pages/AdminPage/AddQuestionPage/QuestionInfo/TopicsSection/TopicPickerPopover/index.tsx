@@ -76,7 +76,7 @@ export default function TopicPickerPopover({
           className="cta-1"
           popoverTarget="review-topic-picker-popover"
         >
-          <p>save</p>
+          <p>Save</p>
         </button>
       </div>
     </div>
