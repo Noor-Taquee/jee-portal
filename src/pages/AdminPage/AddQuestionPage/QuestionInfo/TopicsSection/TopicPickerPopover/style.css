@@ -70,32 +70,18 @@
     }
   }
 
-  >.footer{
+  > .footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    >p {
+    > p {
+      margin: 0px 8px;
       font: var(--text-2);
     }
 
     button {
-    cursor: pointer;
-    touch-action: manipulation;
-
-    border: none;
-    border-radius: 6px;
-
-    margin-left: auto;
-    padding: 6px 16px;
-
-    background-color: var(--accent-1);
-
-    p {
-      font: var(--text-1);
-      font-weight: 400;
-      color: var(--bg-p-1);
-    }
+      margin-left: auto;
     }
   }
 

@@ -44,7 +44,10 @@ export default function QuestionInfo({ question, setQuestion }: Props) {
         />
       )}
 
-      <button id="upload-button" className="cta-1 fill">
+      <button
+        id="upload-button"
+        className="cta-1 fill"
+      >
         <CloudUploadIcon />
         <p>Upload</p>
       </button>
