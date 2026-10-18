@@ -16,7 +16,7 @@
     "format:fix": "prettier --write src/",
     "lint:check": "tsc -b --noEmit && oxlint",
     "lint:fix": "oxlint --fix",
-    "test": "vitest run"
+    "test": "vitest run --reporter=verbose"
   },
   "repository": {
     "type": "git",

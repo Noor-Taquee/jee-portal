@@ -1,10 +1,12 @@
 import { D1Env } from "../../lib/d1";
 
 export const onRequestPost: PagesFunction<D1Env> = async (context) => {
+  // Extract session token
   const sessionToken = context.request.headers
     .get("Authorization")
     ?.match(/^Bearer\s+(.+)$/iu)?.[1];
 
+  // Token not provided
   if (!sessionToken) {
     return Response.json(
       { success: false, error: "Invalid session" },
@@ -13,9 +15,8 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
   }
 
   try {
-    await context.env.DB.prepare(
-      "UPDATE users SET session_token = NULL, session_created_at = NULL, session_expires_at = NULL WHERE session_token = ?"
-    )
+    // Delete session
+    await context.env.DB.prepare("DELETE FROM sessions WHERE session_token = ?")
       .bind(sessionToken)
       .run();
 
