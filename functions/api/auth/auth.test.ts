@@ -20,9 +20,9 @@ function createDatabase({
   const database = {
     prepare: vi.fn((query: string) => ({
       bind: (...values: unknown[]) => ({
-        first: vi.fn(async () => firstResult),
+        first: vi.fn(async () => await firstResult),
         run: vi.fn(async () => {
-          writes.push({ query, values });
+          await writes.push({ query, values });
           if (runError) throw runError;
           return { success: runSuccess };
         }),
@@ -193,7 +193,7 @@ test("session restore returns the validated user", async () => {
 
   const database = {
     prepare: vi.fn((query: string) => ({
-      bind: (...values: unknown[]) => ({
+      bind: (..._values: unknown[]) => ({
         first: vi.fn(async () => {
           if (query.includes("FROM sessions")) {
             return {

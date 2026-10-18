@@ -1,6 +1,6 @@
 // oxlint-disable max-lines-per-function
 
-import { SessionsTableRow, UsersTableRow } from "./d1";
+import { SessionsTableRow } from "./d1";
 
 /**
  * The idle TTL (Time To Live) for a session, after which the session is considered expired if there has been no activity.
