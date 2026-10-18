@@ -94,6 +94,7 @@
   justify-content: space-between;
   gap: 16px;
 
+  p,
   span {
     font: var(--text-2);
   }
