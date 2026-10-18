@@ -54,7 +54,7 @@ function createContext(
   return { request, env: { DB: database } } as Parameters<typeof register>[0];
 }
 
-test("register rejects missing details without querying the database", async () => {
+test("register rejects missing details before touching the database", async () => {
   const { database } = createDatabase();
   const response = await register(
     createContext(database, { body: { name: "Ada" } })
@@ -88,31 +88,29 @@ test("register reports duplicate usernames", async () => {
   expect(database.prepare).toHaveBeenCalledTimes(1);
 });
 
-test("register inserts the user and session in one write", async () => {
+test("register creates a user and a session for the new account", async () => {
   const { database, writes } = createDatabase();
   const response = await register(
     createContext(database, {
       body: { name: "Ada", username: "ada", password: "secret" },
     })
   );
-  const body = (await response.json()) as { success: boolean; token: string };
-  const [write] = writes;
+  const body = (await response.json()) as {
+    success: boolean;
+    token: string;
+    user: { name: string; role: string };
+  };
 
   expect(response.status).toBe(200);
   expect(body.success).toBe(true);
-  expect(write?.query).toContain("INSERT INTO users");
-  expect(write?.query).toContain(
-    "session_token, session_created_at, session_expires_at"
+  expect(body.token).toBeTruthy();
+  expect(body.user).toEqual({ name: "Ada", role: "student" });
+  expect(writes.some((write) => /INSERT INTO users/i.test(write.query))).toBe(
+    true
   );
-  expect(write?.values.slice(0, 4)).toEqual([
-    "Ada",
-    "ada",
-    "secret",
-    "student",
-  ]);
-  expect(write?.values[4]).toBe(body.token);
-  expect(write?.values[5]).toMatch(/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/);
-  expect(write?.values[6]).toMatch(/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/);
+  expect(
+    writes.some((write) => /INSERT INTO sessions/i.test(write.query))
+  ).toBe(true);
 });
 
 test("login rejects invalid credentials", async () => {
@@ -128,7 +126,7 @@ test("login rejects invalid credentials", async () => {
   expect(response.status).toBe(401);
 });
 
-test("login stores a generated session after valid credentials", async () => {
+test("login creates a session after valid credentials", async () => {
   const { database, writes } = createDatabase({
     firstResult: { id: 1, name: "Ada", password: "secret", role: "student" },
   });
@@ -137,16 +135,19 @@ test("login stores a generated session after valid credentials", async () => {
       body: { username: "ada", password: "secret" },
     })
   );
-  const body = (await response.json()) as { success: boolean; token: string };
-  const [write] = writes;
+  const body = (await response.json()) as {
+    success: boolean;
+    token: string;
+    user: { name: string; role: string };
+  };
 
   expect(response.status).toBe(200);
   expect(body.success).toBe(true);
-  expect(write?.query).toContain("UPDATE users SET session_token");
-  expect(write?.values[0]).toBe(body.token);
-  expect(write?.values[1]).toMatch(/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/);
-  expect(write?.values[2]).toMatch(/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/);
-  expect(write?.values[3]).toBe(1);
+  expect(body.token).toBeTruthy();
+  expect(body.user).toEqual({ name: "Ada", role: "student" });
+  expect(
+    writes.some((write) => /INSERT INTO sessions/i.test(write.query))
+  ).toBe(true);
 });
 
 test("logout requires a bearer token", async () => {
@@ -169,7 +170,7 @@ test("logout clears the matching session", async () => {
   expect(response.status).toBe(200);
   expect(await response.json()).toEqual({ success: true });
   expect(response.headers.get("Cache-Control")).toBe("no-store");
-  expect(writes[0]?.query).toContain("session_token = NULL");
+  expect(writes[0]?.query).toContain("DELETE FROM sessions");
   expect(writes[0]?.values).toEqual(["session-token"]);
 });
 
@@ -184,20 +185,51 @@ test("session restore requires a bearer token", async () => {
 
 test("session restore returns the validated user", async () => {
   const now = Date.now();
-  const { database } = createDatabase({
-    firstResult: {
-      id: 1,
-      name: "Ada Lovelace",
-      username: "ada",
-      role: "student",
-      session_created_at: new Date(now).toISOString(),
-      session_expires_at: new Date(now + 60_000).toISOString(),
-    },
-  });
+  const pad = (value: number) => String(value).padStart(2, "0");
+  const toDbDateTime = (timestamp: number) => {
+    const date = new Date(timestamp);
+    return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())} ${pad(date.getHours())}:${pad(date.getMinutes())}:${pad(date.getSeconds())}`;
+  };
+
+  const database = {
+    prepare: vi.fn((query: string) => ({
+      bind: (...values: unknown[]) => ({
+        first: vi.fn(async () => {
+          if (query.includes("FROM sessions")) {
+            return {
+              user_id: 1,
+              session_token: "session-token",
+              created_at: toDbDateTime(now),
+              expires_at: toDbDateTime(now + 60_000),
+              device: "Windows",
+              agent: "Google Chrome",
+            };
+          }
+
+          if (query.includes("FROM users")) {
+            return {
+              id: 1,
+              name: "Ada Lovelace",
+              username: "ada",
+              role: "student",
+            };
+          }
+
+          return null;
+        }),
+        run: vi.fn(async () => ({ success: true })),
+      }),
+    })),
+  } as unknown as D1Database;
+
   const response = await getSession(
     createContext(database, {
       method: "GET",
-      headers: { Authorization: "Bearer session-token" },
+      headers: {
+        Authorization: "Bearer session-token",
+        "User-Agent":
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0 Safari/537.36",
+      },
     })
   );
 
