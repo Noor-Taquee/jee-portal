@@ -1,4 +1,6 @@
-import { UsersTableRow } from "./d1";
+// oxlint-disable max-lines-per-function
+
+import { SessionsTableRow, UsersTableRow } from "./d1";
 
 /**
  * The idle TTL (Time To Live) for a session, after which the session is considered expired if there has been no activity.
@@ -31,61 +33,84 @@ export function toISO8601String(time: string) {
   return time.replace("T", " ").slice(0, 19);
 }
 
+function parseUserAgent(ua = "") {
+  let device = "Unknown OS";
+  let agent = "Unknown Browser";
+
+  // Detect Operating System (device)
+  if (/windows/i.test(ua)) device = "Windows";
+  else if (/macintosh|mac os x/i.test(ua)) device = "macOS";
+  else if (/linux/i.test(ua)) device = "Linux";
+  else if (/android/i.test(ua)) device = "Android";
+  else if (/iphone|ipad|ipod/i.test(ua)) device = "iOS";
+
+  // Detect Browser (agent)
+  if (/edg/i.test(ua)) agent = "Microsoft Edge";
+  else if (/chrome|crios/i.test(ua) && !/opr|edg/i.test(ua))
+    agent = "Google Chrome";
+  else if (/firefox|fxios/i.test(ua)) agent = "Mozilla Firefox";
+  else if (/safari/i.test(ua) && !/chrome|crios/i.test(ua))
+    agent = "Apple Safari";
+  else if (/brave/i.test(ua)) agent = "Brave";
+  else if (/opr|opera/i.test(ua)) agent = "Opera";
+
+  return { device, agent };
+}
+
 export type Session = {
   /** The unique session token generated for the user session. It is a combination of a UUID and the current timestamp. */
   token: string;
+
   /** The timestamp when the session was created, formatted as an ISO 8601 string. */
   createdAt: string;
+
   /** The timestamp when the session will expire, formatted as an ISO 8601 string. */
   expiresAt: string;
+
+  device: string;
+
+  agent: string;
 };
 
 /**
  * Generates a new session token along with its creation and expiry timestamps.
  * @returns
  */
-export function generateSession(): Session {
+export function generateSession(userAgent: string = ""): Session {
+  const { device, agent } = parseUserAgent(userAgent);
+
   const now = new Date();
   const token = crypto.randomUUID() + "-" + now.getTime();
   const createdAt = toISO8601String(now.toISOString());
   const expiresAt = toISO8601String(
     new Date(now.getTime() + SESSION_IDLE_TTL).toISOString()
   );
-  return { token, createdAt, expiresAt };
+  return { token, createdAt, expiresAt, device, agent };
 }
 
 /**
- * Revokes an expired session by clearing the session token and timestamps in the database.
+ * Revokes a session by clearing the session row from the database.
  * @param database The D1 database instance to update the session information.
- * @param sessionUserId The ID of the user whose session is to be revoked.
  * @param token The session token to be revoked.
  */
-async function revokeExpiredSession(
-  database: D1Database,
-  sessionUserId: number,
-  token: string
-) {
+async function revokeSession(database: D1Database, token: string) {
   await database
-    .prepare(
-      "UPDATE users SET session_token = NULL, session_created_at = NULL, session_expires_at = NULL WHERE id = ? AND session_token = ?"
-    )
-    .bind(sessionUserId, token)
+    .prepare("DELETE FROM sessions WHERE session_token = ?")
+    .bind(token)
     .run();
 }
 
 /**
  * Extends the expiry of a valid session if it is still active.
  * @param database The D1 database instance to update the session information.
- * @param sessionUserId The ID of the user whose session expiry is to be extended.
  * @param createdAt The timestamp when the session was created.
  * @param token The session token.
  * @param currentTime The current time in milliseconds since epoch.
  */
 async function extendSessionExpiry(
   database: D1Database,
-  sessionUserId: number,
-  createdAt: string,
   token: string,
+  createdAt: string,
   currentTime: number
 ) {
   const creationDate = new Date(createdAt);
@@ -101,19 +126,10 @@ async function extendSessionExpiry(
   );
 
   await database
-    .prepare(
-      "UPDATE users SET session_expires_at = ? WHERE id = ? AND session_token = ?"
-    )
-    .bind(toISO8601String(newExpiryDate.toISOString()), sessionUserId, token)
+    .prepare("UPDATE sessions SET expires_at = ? WHERE session_token = ?")
+    .bind(toISO8601String(newExpiryDate.toISOString()), token)
     .run();
 }
-
-export type SessionUser = {
-  id: number;
-  name: string;
-  username: string;
-  role: "admin" | "student" | "maintainer";
-};
 
 /**
  * Validates a session token and refreshes its expiry if valid. If the session is invalid or expired, it will be revoked.
@@ -124,52 +140,49 @@ export type SessionUser = {
  * @returns
  */
 export async function validateAndRefreshSession(
+  userAgent: string,
   database: D1Database,
   token: string,
   currentTime = new Date().getTime(),
   timeMargin = SESSION_IDLE_TTL
-): Promise<SessionUser | null> {
+): Promise<{ user_id: number } | null> {
+  const { device, agent } = parseUserAgent(userAgent);
+
+  // Search token
   const session = await database
-    .prepare(
-      "SELECT id, name, username, role, session_created_at, session_expires_at FROM users WHERE session_token = ?"
-    )
+    .prepare("SELECT * FROM sessions WHERE session_token = ?")
     .bind(token)
-    .first<Omit<UsersTableRow, "password" | "session_token">>();
+    .first<SessionsTableRow | null>();
 
   // Check if the session does not exist
   if (!session) return null;
 
-  const createdAt = session.session_created_at;
-  const expiresAt = session.session_expires_at;
+  // Check if the environment is different
+  if (device !== session.device || agent !== session.agent) return null;
+
+  const createdAt = session.created_at;
+  const expiresAt = session.expires_at;
 
   if (
-    createdAt === null ||
-    expiresAt === null ||
+    !createdAt ||
+    !expiresAt ||
     // if token's idle session has expired
     calculateTimeElapsed(expiresAt, currentTime) >= 0 ||
     // if token's absolute session has expired
     calculateTimeElapsed(createdAt, currentTime) > SESSION_ABSOLUTE_TTL / 1000
   ) {
-    await revokeExpiredSession(database, session.id, token);
+    await revokeSession(database, token);
     return null;
   }
 
+  // Calculate the time to active token expiry
   const timeToExpire = calculateTimeElapsed(currentTime, expiresAt);
 
+  // if the time is less than the margin
   if (timeToExpire <= timeMargin) {
-    await extendSessionExpiry(
-      database,
-      session.id,
-      createdAt,
-      token,
-      currentTime
-    );
+    await extendSessionExpiry(database, token, createdAt, currentTime);
   }
 
-  return {
-    id: session.id,
-    name: session.name,
-    username: session.username,
-    role: session.role,
-  };
+  //
+  return { user_id: session.user_id };
 }
