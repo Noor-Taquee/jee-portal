@@ -5,6 +5,7 @@ import { generateSession } from "../../lib/session";
 
 export const onRequestPost: PagesFunction<D1Env> = async (context) => {
   try {
+    // Extract user data
     const {
       name,
       username,
@@ -17,6 +18,7 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
       role?: string;
     }>();
 
+    // If details are not provided
     if (!username || !password || !name) {
       return Response.json(
         { success: false, error: "Details not provided" },
@@ -24,7 +26,7 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
       );
     }
 
-    // Optional: Restrict manual role
+    // Restrict manual role selection
     if (role !== "student") {
       return Response.json(
         { success: false, error: "Unauthorized role assignment" },
@@ -32,13 +34,16 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
       );
     }
 
-    // 1. Check if username already exists
+    // TODO: Validate user data
+
+    // Check if the username is already taken
     const existingUser = await context.env.DB.prepare(
       "SELECT id FROM users WHERE username = ?"
     )
       .bind(username)
       .first<{ id: number }>();
 
+    // If username is already taken
     if (existingUser) {
       return Response.json(
         { success: false, error: "Username is already taken" },
@@ -46,12 +51,29 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
       );
     }
 
-    // 2. Generate a session token so users are logged in right away
-    const session = generateSession();
+    // Generate a session so users are logged in right away
+    const session = generateSession(
+      context.request.headers.get("user-agent") || ""
+    );
 
-    // 3. Insert new user into D1 database
+    // Insert new user into database
     const insertResult = await context.env.DB.prepare(
-      "INSERT INTO users (name, username, password, role, session_token, session_created_at, session_expires_at) VALUES (?, ?, ?, ?, ?, ?, ?)"
+      `
+          BEGIN;
+
+          INSERT INTO users (name, username, password, role)
+          VALUES (?, ?, ?, ?);
+
+          INSERT INTO sessions (
+            user_id, session_token, created_at, expires_at, device, agent
+          )
+          VALUES (
+            last_insert_rowid(),
+            ?, ?, ?, ?, ?
+          );
+
+          COMMIT;
+        `
     )
       .bind(
         name,
@@ -60,10 +82,13 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
         role,
         session.token,
         session.createdAt,
-        session.expiresAt
+        session.expiresAt,
+        session.device,
+        session.agent
       )
       .run();
 
+    // If insertion fails
     if (!insertResult.success) {
       return Response.json(
         { success: false, error: "Failed to register user" },
@@ -71,6 +96,7 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
       );
     }
 
+    // Return success along user data and session token
     return Response.json({
       success: true,
       message: "User registered successfully",
