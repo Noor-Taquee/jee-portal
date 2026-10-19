@@ -42,6 +42,7 @@ export default function ExamSection({ question, setQuestion }: Props) {
     const term = searchText.trim();
 
     if (term.length < 2) {
+      // oxlint-disable-next-line react/set-state-in-effect
       setMatches([]);
       setIsLoading(false);
       setNoMatches(false);
