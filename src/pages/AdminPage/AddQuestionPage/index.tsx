@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import QuestionContainer from "./QuestionContainer";
 import QuestionInfo from "./QuestionInfo";
+import UploadPopover from "./UploadDialogue";
 
 export type ReviewQuestion = {
   /**
@@ -32,6 +33,8 @@ export type SetQuestion = React.Dispatch<
 >;
 
 export default function AddQuestionPage() {
+  const [uploadDialogue, setUploadDialogue] = useState(false);
+
   const [question, setQuestion] = useState<ReviewQuestion | null>({
     type: 1,
     question_text: "Question ...",
@@ -54,6 +57,13 @@ export default function AddQuestionPage() {
       <QuestionInfo
         question={question}
         setQuestion={setQuestion}
+        setUploadDialoge={setUploadDialogue}
+      />
+
+      <UploadPopover
+        question={question}
+        uploadDialogue={uploadDialogue}
+        setUploadDialogue={setUploadDialogue}
       />
     </div>
   );

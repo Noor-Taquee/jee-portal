@@ -14,5 +14,6 @@
     "react/rules-of-hooks": "error",
     "react/only-export-components": ["warn", { "allowConstantExport": true }],
     "typescript/no-non-null-assertion": "error"
-  }
+  },
+  "ignorePatterns": ["**/*.test.tsx", "**/*.test.ts"]
 }

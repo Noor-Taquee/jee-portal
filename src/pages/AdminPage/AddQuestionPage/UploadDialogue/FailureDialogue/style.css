@@ -1,0 +1,10 @@
+#failure-dialogue {
+  .lucide {
+    stroke: var(--bg-p-2);
+    fill: var(--inc-color-1);
+  }
+
+  h2.header {
+    color: var(--inc-color-1);
+  }
+}
