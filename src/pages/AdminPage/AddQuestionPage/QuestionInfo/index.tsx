@@ -9,6 +9,7 @@ import TopicsSection from "./TopicsSection";
 import QuestionTypeSection from "./QuestionTypeSection";
 import MCQAnswerSection from "./MCQAnswerSection";
 import NumericalAnswerSection from "./NumericalAnswerSection";
+import ExamSection from "./ExamSection";
 
 interface Props {
   question: ReviewQuestion | null;
@@ -20,6 +21,11 @@ export default function QuestionInfo({ question, setQuestion }: Props) {
 
   return (
     <div id="review-question-info">
+      <ExamSection
+        question={question}
+        setQuestion={setQuestion}
+      />
+
       <TopicsSection
         question={question}
         setQuestion={setQuestion}
