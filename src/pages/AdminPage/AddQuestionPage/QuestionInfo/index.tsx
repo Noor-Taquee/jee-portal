@@ -14,9 +14,14 @@ import ExamSection from "./ExamSection";
 interface Props {
   question: ReviewQuestion | null;
   setQuestion: SetQuestion;
+  setUploadDialoge: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default function QuestionInfo({ question, setQuestion }: Props) {
+export default function QuestionInfo({
+  question,
+  setQuestion,
+  setUploadDialoge,
+}: Props) {
   if (!question) return;
 
   return (
@@ -53,6 +58,7 @@ export default function QuestionInfo({ question, setQuestion }: Props) {
       <button
         id="upload-button"
         className="cta-1 fill"
+        onClick={() => setUploadDialoge(true)}
       >
         <CloudUploadIcon />
         <p>Upload</p>
