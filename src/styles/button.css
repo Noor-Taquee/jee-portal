@@ -1,10 +1,13 @@
 .cta-1 {
+  cursor: pointer;
+  touch-action: manipulation;
+
   height: fit-content;
   width: fit-content;
 
-  padding: 8px 12px;
+  padding: 10px 12px;
 
-  border-radius: 8px;
+  border-radius: 10px;
 
   display: flex;
   align-items: center;
@@ -12,6 +15,11 @@
   gap: 8px;
 
   background-color: var(--accent-1);
+
+  box-shadow:
+    inset 0px 1px #ffffff80,
+    inset 0px -2px #00000030,
+    0px 1px 2px #00000030;
 
   p {
     font: var(--text-1);
