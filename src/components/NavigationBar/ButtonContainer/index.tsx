@@ -1,7 +1,6 @@
-// oxlint-disable max-lines-per-function
 import "./style.css";
 
-import { useUser } from "../../../hooks/useUser";
+import { useUser } from "@clerk/react";
 
 import { HomeIcon, ShieldCheckIcon } from "lucide-react";
 import { NavLink } from "react-router-dom";
@@ -9,13 +8,16 @@ import { NavLink } from "react-router-dom";
 export default function ButtonContainer() {
   const { user } = useUser();
 
+  const role = user?.publicMetadata?.role || "";
+
   const navButtons: [
     label: string,
     route: string,
     icon: () => React.ReactNode,
   ][] = [["home", "home", () => <HomeIcon />]];
 
-  if (user?.role === "admin" || user?.role === "maintainer") {
+  // Check role from Clerk metadata
+  if (role === "admin" || role === "maintainer") {
     navButtons.push(["admin", "admin", () => <ShieldCheckIcon />]);
   }
 
