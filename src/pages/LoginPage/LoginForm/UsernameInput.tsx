@@ -1,4 +1,4 @@
-import { useUser } from "../../../hooks/useUser";
+import { useUser } from "@clerk/react";
 
 import { UserIcon } from "lucide-react";
 
@@ -31,7 +31,7 @@ export default function UsernameInput({
         id="username"
         autoComplete="off"
         value={username}
-        placeholder={user?.name}
+        placeholder={user?.fullName || ""}
         onChange={onChange}
       />
     </div>

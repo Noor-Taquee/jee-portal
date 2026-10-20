@@ -2,8 +2,8 @@
 
 import "./style.css";
 
+import { useUser } from "@clerk/react";
 import { useExamSession } from "../../../hooks/useExamSession";
-import { useUser } from "../../../hooks/useUser";
 
 export default function Header() {
   const { user } = useUser();
@@ -12,15 +12,11 @@ export default function Header() {
 
   const metadata = examSession.examData?.metadata;
 
-  if (!user) {
-    return <div />;
-  }
-
   return (
     <div id="login-panel-header">
       <div id="info">
         <div className="info-card">
-          <p className="label-1">{user.name}</p>
+          <p className="label-1">{user?.fullName}</p>
           <p
             id="course-label"
             className="label-2"

@@ -1,20 +1,21 @@
 import "./style.css";
 
-import { useUser } from "../../hooks/useUser";
-
+import { Show } from "@clerk/react";
 import NoUserContent from "./NoUserContent";
 import Content from "./Content";
 
 export default function HomePage() {
-  const { user } = useUser();
-
   return (
     <div
       className="app-panel"
       id="home-page"
     >
-      {!user && <NoUserContent />}
-      {user && <Content />}
+      <Show
+        when={"signed-in"}
+        fallback={<NoUserContent />}
+      >
+        <Content />
+      </Show>
     </div>
   );
 }

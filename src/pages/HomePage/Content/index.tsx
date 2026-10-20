@@ -1,6 +1,6 @@
 import "./style.css";
 
-import { useUser } from "../../../hooks/useUser";
+import { useUser } from "@clerk/react";
 
 import Suggestions from "./Suggestions";
 import HistoryPanel from "./HistoryPanel";
@@ -16,7 +16,7 @@ export default function Content() {
     <div className="content-div">
       <div id="home-header">
         <div id="welcome-box">
-          <p id="welcome-message">Welcome back, {user.name}</p>
+          <p id="welcome-message">Welcome back, {user.fullName}</p>
           <p id="welcome-text">
             Track performance and attempt daily practice tests.
           </p>

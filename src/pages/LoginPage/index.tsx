@@ -1,8 +1,6 @@
-// oxlint-disable max-lines-per-function
-
 import "./style.css";
 
-import { useUser } from "../../hooks/useUser";
+import { useUser } from "@clerk/react";
 
 import { Link } from "react-router-dom";
 import Header from "./Header";
