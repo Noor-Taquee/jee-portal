@@ -1,0 +1,10 @@
+#success-dialogue {
+  .lucide {
+    stroke: var(--bg-p-2);
+    fill: var(--cor-color-1);
+  }
+
+  h2.header {
+    color: var(--cor-color-1);
+  }
+}

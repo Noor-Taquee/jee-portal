@@ -38,21 +38,21 @@ function parseUserAgent(ua = "") {
   let agent = "Unknown Browser";
 
   // Detect Operating System (device)
-  if (/windows/i.test(ua)) device = "Windows";
-  else if (/macintosh|mac os x/i.test(ua)) device = "macOS";
-  else if (/linux/i.test(ua)) device = "Linux";
-  else if (/android/i.test(ua)) device = "Android";
-  else if (/iphone|ipad|ipod/i.test(ua)) device = "iOS";
+  if (/windows/iu.test(ua)) device = "Windows";
+  else if (/macintosh|mac os x/iu.test(ua)) device = "macOS";
+  else if (/linux/iu.test(ua)) device = "Linux";
+  else if (/android/iu.test(ua)) device = "Android";
+  else if (/iuphone|ipad|ipod/iu.test(ua)) device = "iOS";
 
   // Detect Browser (agent)
-  if (/edg/i.test(ua)) agent = "Microsoft Edge";
-  else if (/chrome|crios/i.test(ua) && !/opr|edg/i.test(ua))
+  if (/edg/iu.test(ua)) agent = "Microsoft Edge";
+  else if (/chrome|crios/iu.test(ua) && !/opr|edg/iu.test(ua))
     agent = "Google Chrome";
-  else if (/firefox|fxios/i.test(ua)) agent = "Mozilla Firefox";
-  else if (/safari/i.test(ua) && !/chrome|crios/i.test(ua))
+  else if (/firefox|fxios/iu.test(ua)) agent = "Mozilla Firefox";
+  else if (/safari/iu.test(ua) && !/chrome|crios/iu.test(ua))
     agent = "Apple Safari";
-  else if (/brave/i.test(ua)) agent = "Brave";
-  else if (/opr|opera/i.test(ua)) agent = "Opera";
+  else if (/brave/iu.test(ua)) agent = "Brave";
+  else if (/opr|opera/iu.test(ua)) agent = "Opera";
 
   return { device, agent };
 }

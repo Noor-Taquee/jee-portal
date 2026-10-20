@@ -1,0 +1,52 @@
+#failure-dialogue {
+  .lucide {
+    stroke: var(--bg-p-2);
+    fill: var(--inc-color-1);
+  }
+
+  h2.header {
+    color: var(--inc-color-1);
+  }
+
+  #upload-failure-details {
+    overflow: hidden;
+    padding: 6px;
+
+    border: var(--border-1);
+    border-radius: 4px;
+
+    summary {
+      cursor: pointer;
+
+      padding: 6px 0px;
+
+      font: var(--text-1);
+      color: var(--color-2);
+    }
+
+    &[open] summary {
+      border-bottom: var(--border-1);
+    }
+
+    /* The grid parent */
+    .content {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 100ms ease-out;
+
+      > div {
+        overflow: hidden;
+      }
+
+      p {
+        font: var(--text-1);
+        color: var(--color-2);
+        margin-top: 4px;
+      }
+    }
+
+    &[open] .content {
+      grid-template-rows: 1fr;
+    }
+  }
+}

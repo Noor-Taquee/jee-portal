@@ -29,7 +29,7 @@ export default function EditableText({ text, onSave }: Props) {
       )}
       <div className="button-container">
         <button
-          className="cta-btn"
+          className="cta-1"
           onClick={() => {
             if (editMode === true) {
               onSave(newText);

@@ -1,0 +1,67 @@
+#exam-section {
+  .exam-search {
+    position: relative;
+  }
+
+  .exam-search-results {
+    position: absolute;
+    z-index: 10;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    max-height: 300px;
+
+    overflow: auto;
+
+    padding: 6px;
+    border: var(--border-1);
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--bg-p-1);
+    box-shadow: 0 4px 12px var(--bg-p-2);
+  }
+
+  .exam-search-result {
+    cursor: pointer;
+    touch-action: manipulation;
+
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+
+    background: transparent;
+    color: var(--color-1);
+    text-align: left;
+
+    &:hover,
+    &:focus-visible {
+      outline: none;
+      background-color: var(--bg-p-2);
+    }
+
+    p {
+      font: var(--text-1);
+      font-weight: 400;
+    }
+
+    small {
+      font: var(--text-2);
+      color: var(--color-2);
+    }
+  }
+
+  .exam-search-message {
+    margin: 0;
+    padding: 8px;
+    font: var(--text-2);
+    color: var(--color-2);
+  }
+}
