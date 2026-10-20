@@ -1,8 +1,8 @@
 import "./style.css";
 
 import { useState } from "react";
-import { useUser } from "../../hooks/useUser";
 
+import { Show } from "@clerk/react";
 import ButtonContainer from "./ButtonContainer";
 import NavigationHeader from "./NavigationHeader";
 import AccountButton from "../AccountButton";
@@ -12,8 +12,6 @@ import AppearancePopover from "./SettingsPopover/AppearancePopover";
 
 export default function NavigationBar() {
   const [expanded, setExpanded] = useState(true);
-
-  const { user } = useUser();
 
   return (
     <nav
@@ -29,15 +27,16 @@ export default function NavigationBar() {
       <SettingsPopover />
       <AppearancePopover />
 
-      {user &&
-        (expanded ? (
+      <Show when={"signed-in"}>
+        {expanded ? (
           <AccountButton
             popoverTarget="settings-popover"
             style={{ anchorName: "--settings-popover-anchor" }}
           />
         ) : (
           <Avatar />
-        ))}
+        )}
+      </Show>
     </nav>
   );
 }
