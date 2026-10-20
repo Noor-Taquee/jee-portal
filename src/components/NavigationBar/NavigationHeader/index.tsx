@@ -18,7 +18,9 @@ export default function NavigationHeader({
       {expanded && <p className="header-text">JEE Portal</p>}
       <ToggleButton
         title={expanded ? "collapse" : "Expand"}
-        onClick={() => setExpanded((p) => !p)}
+        onClick={() => {
+          setExpanded((p) => !p);
+        }}
       >
         {expanded ? <PanelLeftCloseIcon /> : <PanelLeftOpenIcon />}
       </ToggleButton>

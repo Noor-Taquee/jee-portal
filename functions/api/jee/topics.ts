@@ -1,9 +1,11 @@
-import { getTursoClient, TursoEnv } from '../../lib/turso';
+import { getTursoClient, TursoEnv } from "../../lib/turso";
 
 export const onRequestGet: PagesFunction<TursoEnv> = async (context) => {
   try {
     const turso = getTursoClient(context.env);
-    const result = await turso.execute('SELECT id, name, subject, unit FROM topics');
+    const result = await turso.execute(
+      "SELECT id, name, subject, unit FROM topics"
+    );
 
     return Response.json({
       success: true,
@@ -14,7 +16,7 @@ export const onRequestGet: PagesFunction<TursoEnv> = async (context) => {
       {
         success: false,
         error: error.message,
-        stack: error.stack
+        stack: error.stack,
       },
       { status: 500 }
     );

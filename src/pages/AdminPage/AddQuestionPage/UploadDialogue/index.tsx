@@ -80,9 +80,9 @@ export default function UploadDialogue({
           setSuccess(true);
         }
       })
-      .catch((error) => {
+      .catch((error: { message: string; cause: string }) => {
         setFailure({
-          message: error.message || "Couldn't upload question",
+          message: error.message ?? "Couldn't upload question",
           cause: error.cause,
         });
       })

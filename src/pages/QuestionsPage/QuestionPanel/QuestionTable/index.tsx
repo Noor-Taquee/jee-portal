@@ -50,7 +50,9 @@ export default function QuestionTable({ setQuestionNo }: QuestionTableProps) {
                     : "unread"
               }
               number={i}
-              onClick={() => setQuestionNo(i)}
+              onClick={() => {
+                setQuestionNo(i);
+              }}
             />
           ))}
       </div>

@@ -3,7 +3,9 @@ import type { OptionID, QuestionData } from "./question";
 export type ResponseData = Map<number, AnswerResponse>;
 
 export type AnswerResponse =
-  SingleChoiceResponse | NumericalTypeResponse | MultipleChoiceResponse;
+  | SingleChoiceResponse
+  | NumericalTypeResponse
+  | MultipleChoiceResponse;
 
 interface BaseResponse {
   type: "single-choice" | "multiple-choice" | "numerical";

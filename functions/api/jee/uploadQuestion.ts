@@ -201,7 +201,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
         ],
       });
 
-      if (!result.lastInsertRowid) throw new Error();
+      if (typeof result.lastInsertRowid !== "number") throw new Error();
 
       for (const topicId of body.question.topics) {
         await transaction.execute({

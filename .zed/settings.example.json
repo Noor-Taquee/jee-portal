@@ -3,26 +3,26 @@
     "JavaScript": {
       "colorize_brackets": true,
       "indent_guides": {
-        "active_line_width": 2,
-      },
+        "active_line_width": 2
+      }
     },
     "TypeScript": {
       "inlay_hints": {
-        "enabled": true,
+        "enabled": true
       },
       "colorize_brackets": true,
       "indent_guides": {
-        "active_line_width": 2,
-      },
+        "active_line_width": 2
+      }
     },
     "TSX": {
       "inlay_hints": {
-        "enabled": true,
+        "enabled": true
       },
       "colorize_brackets": true,
       "indent_guides": {
-        "active_line_width": 2,
-      },
-    },
-  },
+        "active_line_width": 2
+      }
+    }
+  }
 }

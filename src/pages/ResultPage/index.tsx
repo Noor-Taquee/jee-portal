@@ -15,7 +15,7 @@ export default function ResultPage() {
 
   useEffect(() => {
     if (!examSession.examData || !examSession.candidateResponse) {
-      navigate("/exam/login", { replace: true });
+      void navigate("/exam/login", { replace: true });
     }
   }, [examSession.examData, examSession.candidateResponse, navigate]);
 

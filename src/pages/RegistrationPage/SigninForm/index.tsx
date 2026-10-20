@@ -78,7 +78,7 @@ export default function SigninForm() {
           },
           data.token
         );
-        navigate("/home");
+        void navigate("/home");
       })
       .catch((error: unknown) => {
         if (
@@ -90,7 +90,9 @@ export default function SigninForm() {
           setUsernameError("Unable to sign in. Please try again.");
         }
       })
-      .finally(() => setLoading(false));
+      .finally(() => {
+        setLoading(false);
+      });
   }
 
   return (
@@ -137,14 +139,17 @@ export default function SigninForm() {
             value={password}
             onChange={(val) => {
               setPassword(val.target.value);
-              if (passwordError) setPasswordError("");
+              if (passwordError !== null && passwordError.length > 0)
+                setPasswordError("");
             }}
             readOnly={loading}
           />
           <button
             type="button"
             className="in-input-btn"
-            onClick={() => setShowPassword((p) => !p)}
+            onClick={() => {
+              setShowPassword((p) => !p);
+            }}
           >
             {showPassword ? <EyeIcon /> : <EyeOffIcon />}
           </button>

@@ -19,7 +19,9 @@ export default function OptionDiv({
     <div className="option-div">
       <div
         className={`option-radio ${selected ? "selected" : ""}`}
-        onClick={() => setOption(option.id)}
+        onClick={() => {
+          setOption(option.id);
+        }}
       ></div>
       <TextRenderer content={option.content} />
     </div>

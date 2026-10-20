@@ -8,15 +8,12 @@
   "type": "module",
   "main": "main.js",
   "scripts": {
-    "dev": "vite",
-    "pages:dev": "wrangler pages dev --proxy 5173 -- bun run dev",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "format:check": "prettier --check src/",
-    "format:fix": "prettier --write src/",
-    "lint:check": "tsc -b --noEmit && oxlint",
-    "lint:fix": "oxlint --fix",
-    "test": "vitest run --reporter=verbose"
+    "pages:dev": "wrangler pages dev --proxy 5173 -- vp dev",
+    "fmt:check": "vp fmt --check src/",
+    "fmt:fix": "vp fmt src/",
+    "lint:check": "vp lint",
+    "lint:fix": "vp lint --fix",
+    "test": "vp test run --reporter=verbose"
   },
   "repository": {
     "type": "git",
@@ -27,19 +24,18 @@
   },
   "homepage": "https://github.com/username/jee-portal#readme",
   "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261009.1",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/react": "^16.3.0",
-    "@cloudflare/workers-types": "^5.20261009.1",
     "@types/node": "^26.6.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.1",
     "jsdom": "^26.1.0",
-    "oxlint": "^1.85.0",
-    "prettier": "^3.9.8",
+    "oxc-transform-react": "^0.155.0",
     "typescript": "^7.0.2",
-    "vite": "^8.3.0",
-    "vitest": "^5.0.4",
+    "vite": "npm:@voidzero-dev/vite-plus-core@1.3.0",
+    "vite-plus": "1.3.0",
     "wrangler": "^4.149.0"
   },
   "dependencies": {
@@ -60,5 +56,8 @@
   "allowScripts": {
     "esbuild@0.28.2": true,
     "workerd@1.20261006.1": true
+  },
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@1.3.0"
   }
 }

@@ -55,7 +55,9 @@ export default function UserProvider({ children }: UserProviderProps) {
         localStorage.removeItem(USER_SESSION_TOKEN_KEY);
         navigate("/registration");
       })
-      .finally(() => setLoadingSession(false));
+      .finally(() => {
+        setLoadingSession(false);
+      });
   }, [loadingSession, navigate]);
 
   function logout(save = false) {

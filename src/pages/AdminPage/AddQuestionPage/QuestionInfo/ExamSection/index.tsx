@@ -132,9 +132,15 @@ export default function ExamSection({ question, setQuestion }: Props) {
             aria-autocomplete="list"
             aria-expanded={isOpen}
             aria-controls="exam-search-results"
-            onFocus={() => setIsOpen(true)}
-            onBlur={() => setIsOpen(false)}
-            onChange={(event) => handleSearchChange(event.target.value)}
+            onFocus={() => {
+              setIsOpen(true);
+            }}
+            onBlur={() => {
+              setIsOpen(false);
+            }}
+            onChange={(event) => {
+              handleSearchChange(event.target.value);
+            }}
           />
         </InputBox>
         {isOpen && !selectedExam && searchText.trim() && (
@@ -163,8 +169,12 @@ export default function ExamSection({ question, setQuestion }: Props) {
                   role="option"
                   aria-selected={question.exam_id === exam.id}
                   key={exam.id}
-                  onMouseDown={(event) => event.preventDefault()}
-                  onClick={() => selectExam(exam)}
+                  onMouseDown={(event) => {
+                    event.preventDefault();
+                  }}
+                  onClick={() => {
+                    selectExam(exam);
+                  }}
                 >
                   <p>{exam.name}</p>
                   <small>
