@@ -1,6 +1,11 @@
 #navigation-bar {
-  height: 100%;
+  height: auto;
   width: fit-content;
+
+  --margin: 12px;
+  margin: var(--margin);
+
+  border-radius: 12px;
 
   display: flex;
   flex-direction: column;
@@ -17,7 +22,7 @@
   }
   &.collapsed {
     width: 52px;
-    padding: 12px 4px;
+    padding: 4px;
     align-items: center;
 
     #user-icon-holder {
