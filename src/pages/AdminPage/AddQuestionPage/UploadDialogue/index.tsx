@@ -2,9 +2,9 @@
 import "./style.css";
 
 import { useEffect, useRef, useState } from "react";
+import { useAuth } from "@clerk/react";
 
 import type { ReviewQuestion } from "..";
-import { USER_SESSION_TOKEN_KEY } from "../../../../context/UserContext/Provider";
 
 import ReviewDialogue from "./ReviewDialogue";
 import SuccessDialogue from "./SuccessDialoge";
@@ -22,6 +22,8 @@ export default function UploadDialogue({
   uploadDialogue,
   setUploadDialogue,
 }: Props) {
+  const { getToken } = useAuth();
+
   const [loading, setLoading] = useState(false);
 
   const [success, setSuccess] = useState(false);
@@ -52,8 +54,10 @@ export default function UploadDialogue({
     setFailure(false);
   };
 
-  const handleUpload = () => {
+  const handleUpload = async () => {
     if (!question) return;
+
+    const token = await getToken();
 
     setLoading(true);
     setFailure(false);
@@ -63,7 +67,7 @@ export default function UploadDialogue({
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage.getItem(USER_SESSION_TOKEN_KEY)}`,
+        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({ question }),
     })
