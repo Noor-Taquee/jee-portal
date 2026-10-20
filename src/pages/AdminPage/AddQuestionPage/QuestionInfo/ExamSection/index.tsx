@@ -3,10 +3,9 @@
 import "./style.css";
 
 import { useEffect, useState } from "react";
+import { useAuth } from "@clerk/react";
 
-import { USER_SESSION_TOKEN_KEY } from "../../../../../context/UserContext/Provider";
 import type { ReviewQuestion, SetQuestion } from "../../index";
-
 import InputBox from "../../../../../components/InputBox";
 
 type Exam = {
@@ -27,6 +26,8 @@ interface Props {
 }
 
 export default function ExamSection({ question, setQuestion }: Props) {
+  const { getToken } = useAuth();
+
   const [searchText, setSearchText] = useState("");
 
   const [isLoading, setIsLoading] = useState(false);
@@ -57,12 +58,14 @@ export default function ExamSection({ question, setQuestion }: Props) {
 
     const timeoutId = window.setTimeout(async () => {
       try {
+        const token = await getToken();
+
         const response = await fetch(
           `/api/jee/searchExams?search=${encodeURIComponent(term)}`,
           {
             method: "GET",
             headers: {
-              Authorization: `Bearer ${localStorage.getItem(USER_SESSION_TOKEN_KEY)}`,
+              Authorization: `Bearer ${token}`,
             },
             signal: controller.signal,
           }
@@ -92,7 +95,7 @@ export default function ExamSection({ question, setQuestion }: Props) {
       window.clearTimeout(timeoutId);
       controller.abort();
     };
-  }, [searchText]);
+  }, [searchText, getToken]);
 
   const handleSearchChange = (value: string) => {
     setSelectedExam(null);
