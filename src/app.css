@@ -30,6 +30,10 @@
   width: 100%;
 
   overflow: auto;
+  scroll-behavior: smooth;
+  overscroll-behavior-y: contain;
+
+  padding: 24px 12px;
 
   display: flex;
   flex-direction: column;
