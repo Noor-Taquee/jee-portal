@@ -1,0 +1,36 @@
+.review-task {
+  width: 100%;
+
+  padding: 8px;
+
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  input[type="checkbox"] {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+
+    accent-color: var(--accent-1);
+  }
+
+  .task-info {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      font: var(--text-1);
+    }
+
+    p {
+      font: var(--text-2);
+    }
+
+    .lucide {
+      --size: 20px;
+    }
+  }
+}
