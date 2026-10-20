@@ -22,7 +22,7 @@
   }
   &.collapsed {
     width: 52px;
-    padding: 12px 4px;
+    padding: 4px;
     align-items: center;
 
     #user-icon-holder {
