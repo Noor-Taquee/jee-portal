@@ -1,6 +1,11 @@
 #navigation-bar {
-  height: 100%;
+  height: auto;
   width: fit-content;
+
+  --margin: 12px;
+  margin: var(--margin);
+
+  border-radius: 12px;
 
   display: flex;
   flex-direction: column;
