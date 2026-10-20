@@ -1,4 +1,4 @@
-import { useUser } from "../../hooks/useUser";
+import { useUser } from "@clerk/react";
 import { User2Icon } from "lucide-react";
 
 function trim(name: string) {
@@ -27,7 +27,7 @@ export default function Avatar() {
 
   return (
     <div id="user-icon-holder">
-      <span>{trim(user.name)}</span>
+      <span>{trim(user.fullName || "")}</span>
     </div>
   );
 }
