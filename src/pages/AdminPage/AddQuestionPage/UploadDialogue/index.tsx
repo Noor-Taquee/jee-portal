@@ -26,7 +26,9 @@ export default function UploadDialogue({
 
   const [success, setSuccess] = useState(false);
 
-  const [failure, setFailure] = useState<false | string>(false);
+  const [failure, setFailure] = useState<
+    false | { message: string; cause?: string }
+  >(false);
 
   const dialogRef = useRef<HTMLDialogElement>(null);
 
@@ -69,16 +71,20 @@ export default function UploadDialogue({
         const data: {
           success?: boolean;
           error?: string;
+          cause?: string;
         } = await response.json();
 
         if (!response.ok || !data.success) {
-          throw new Error(data.error);
+          throw new Error(data.error, { cause: data.cause });
         } else {
           setSuccess(true);
         }
       })
       .catch((error) => {
-        setFailure(error.message || "Couldn't upload question");
+        setFailure({
+          message: error.message || "Couldn't upload question",
+          cause: error.cause,
+        });
       })
       .finally(() => {
         setLoading(false);
@@ -103,7 +109,7 @@ export default function UploadDialogue({
       {success && <SuccessDialogue discard={discard} />}
       {failure && (
         <FailureDialogue
-          failureMessage={failure}
+          failure={failure}
           handleUpload={handleUpload}
           discard={discard}
         />
