@@ -25,7 +25,9 @@ export default function SettingsPopover() {
       <span className="divider"></span>
       <button
         className="popover-entry danger"
-        onClick={() => logout()}
+        onClick={() => {
+          logout();
+        }}
       >
         <span>Logout</span>
       </button>

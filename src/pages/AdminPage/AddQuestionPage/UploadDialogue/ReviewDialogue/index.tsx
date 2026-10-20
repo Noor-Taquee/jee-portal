@@ -34,11 +34,11 @@ export default function ReviewDialogue({ discard, handleUpload }: Props) {
               return { ...p, originality: true };
             });
           }}
-          onUncheck={() =>
+          onUncheck={() => {
             setReviewChecklist((p) => {
               return { ...p, originality: false };
-            })
-          }
+            });
+          }}
         />
 
         <Task

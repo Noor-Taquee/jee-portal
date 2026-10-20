@@ -4,9 +4,5 @@
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
   ],
-  "exclude": [
-      "node_modules",
-      "dist",
-      ".wrangler"
-    ]
+  "exclude": ["node_modules", "dist", ".wrangler"]
 }

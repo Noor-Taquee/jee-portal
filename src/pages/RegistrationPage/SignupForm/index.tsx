@@ -124,7 +124,9 @@ export default function SignupForm() {
           setUsernameError("Unable to register. Please try again.");
         }
       })
-      .finally(() => setLoading(false));
+      .finally(() => {
+        setLoading(false);
+      });
   }
 
   return (
@@ -219,7 +221,9 @@ export default function SignupForm() {
           <button
             type="button"
             className="in-input-btn"
-            onClick={() => setShowPassword((p) => !p)}
+            onClick={() => {
+              setShowPassword((p) => !p);
+            }}
           >
             {showPassword ? <EyeIcon /> : <EyeOffIcon />}
           </button>

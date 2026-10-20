@@ -1,4 +1,3 @@
-// oxlint-disable max-lines-per-function
 import "./style.css";
 
 import { useState } from "react";
@@ -26,7 +25,7 @@ export default function RegistrationPage() {
           `Logged in as ${user.name}. Logout first to create a new account.`,
         ]}
       >
-        <ActionBtn onClick={() => navigate("/home")}>
+        <ActionBtn onClick={() => void navigate("/home")}>
           <p>Back</p>
         </ActionBtn>
       </DialogueBox>
@@ -47,9 +46,9 @@ export default function RegistrationPage() {
         </p>
         <button
           className="change-method-button"
-          onClick={() =>
-            setMethod((p) => (p === "signup" ? "signin" : "signup"))
-          }
+          onClick={() => {
+            setMethod((p) => (p === "signup" ? "signin" : "signup"));
+          }}
         >
           <span>{method === "signin" ? "Create Account" : "Sign in"}</span>
           <ArrowRight />

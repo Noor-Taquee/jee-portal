@@ -1,4 +1,4 @@
-import { expect, test, vi } from "vitest";
+import { expect, test, vi } from "vite-plus/test";
 
 import { onRequestPost as login } from "./login";
 import { onRequestPost as logout } from "./logout";

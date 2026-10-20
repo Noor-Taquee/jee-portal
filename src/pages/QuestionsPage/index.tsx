@@ -87,7 +87,7 @@ export default function QuestionsPage() {
 
     // 2. Mark exam completed and navigate
     examSession.setCompletedAt(new Date());
-    navigate("/exam/result");
+    void navigate("/exam/result");
   }
 
   if (!examSession.examData || !examSession.startedAt) {
@@ -109,7 +109,7 @@ export default function QuestionsPage() {
           </p>
           <button
             onClick={() => {
-              navigate("/exam/login");
+              void navigate("/exam/login");
             }}
             className="action-btn"
           >

@@ -21,12 +21,14 @@ export default function ExamProvider({ children }: ExamProviderProps) {
   >(undefined);
 
   function loadPaper(path: string) {
-    getQuestions(path).then((data) => {
-      setStartedAt(undefined);
-      setCompletedAt(undefined);
-      setExamData(data);
-      setCandidateResponse(generateResponse(data.questions));
-    });
+    getQuestions(path)
+      .then((data) => {
+        setStartedAt(undefined);
+        setCompletedAt(undefined);
+        setExamData(data);
+        setCandidateResponse(generateResponse(data.questions));
+      })
+      .catch(() => {});
   }
 
   const value: ExamSession = {

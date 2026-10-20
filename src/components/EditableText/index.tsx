@@ -31,7 +31,7 @@ export default function EditableText({ text, onSave }: Props) {
         <button
           className="cta-1"
           onClick={() => {
-            if (editMode === true) {
+            if (editMode) {
               onSave(newText);
             }
             setEditMode((p) => !p);

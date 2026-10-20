@@ -13,7 +13,7 @@ import ExamProvider from "./context/ExamContext/ExamProvider";
 
 import App from "./App";
 
-const root = document.getElementById("root") as HTMLDivElement | null;
+const root = document.getElementById("root");
 
 if (!root) throw ReferenceError("Root not found!");
 

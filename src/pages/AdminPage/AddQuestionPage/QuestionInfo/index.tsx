@@ -58,7 +58,9 @@ export default function QuestionInfo({
       <button
         id="upload-button"
         className="cta-1 fill"
-        onClick={() => setUploadDialoge(true)}
+        onClick={() => {
+          setUploadDialoge(true);
+        }}
       >
         <CloudUploadIcon />
         <p>Upload</p>

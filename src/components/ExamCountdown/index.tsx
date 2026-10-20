@@ -45,7 +45,9 @@ export default function ExamCountdown() {
     calculateTimeLeft();
     const timer = setInterval(calculateTimeLeft, 1000);
 
-    return () => clearInterval(timer);
+    return () => {
+      clearInterval(timer);
+    };
   }, []);
 
   return (

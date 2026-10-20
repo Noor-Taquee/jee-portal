@@ -28,7 +28,7 @@ export default function Suggestions() {
   const [suggestions, setSuggestions] = useState<{ "2026": string[] }>();
 
   useEffect(() => {
-    getSuggestions().then((data) => {
+    void getSuggestions().then((data) => {
       setSuggestions(data);
       setIsLoading(false);
     });
@@ -48,7 +48,7 @@ export default function Suggestions() {
             key={data}
             onClick={() => {
               examSession.loadPaper(`2026/${data}`);
-              navigate("/exam/login");
+              void navigate("/exam/login");
             }}
           >
             <p>{format(data)}</p>
