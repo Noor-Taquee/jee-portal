@@ -1,6 +1,6 @@
 import "./style.css";
 
-import { useUser } from "../../hooks/useUser";
+import { useUser } from "@clerk/react";
 
 import type { ComponentPropsWithoutRef } from "react";
 
@@ -19,7 +19,7 @@ export default function AccountButton({ ...props }: Props) {
       {...props}
     >
       <Avatar />
-      <p>{user?.name}</p>
+      <p>{user.fullName || ""}</p>
     </button>
   );
 }
