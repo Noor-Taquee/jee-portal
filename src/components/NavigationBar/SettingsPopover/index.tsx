@@ -1,11 +1,11 @@
 import "./style.css";
 
-import { useUser } from "../../../hooks/useUser";
+import { useClerk } from "@clerk/react";
 
 import { ChevronRight } from "lucide-react";
 
 export default function SettingsPopover() {
-  const { logout } = useUser();
+  const { signOut } = useClerk();
 
   return (
     <div
@@ -26,7 +26,7 @@ export default function SettingsPopover() {
       <button
         className="popover-entry danger"
         onClick={() => {
-          logout();
+          signOut();
         }}
       >
         <span>Logout</span>
