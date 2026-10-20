@@ -1,0 +1,29 @@
+.cta-1 {
+  height: fit-content;
+  width: fit-content;
+
+  padding: 8px 12px;
+
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background-color: var(--accent-1);
+
+  p {
+    font: var(--text-1);
+    font-weight: 400;
+    color: var(--bg-p-1);
+  }
+  .lucide {
+    --size: 18px;
+    stroke: var(--bg-p-1);
+  }
+
+  &.fill {
+    width: 100%;
+  }
+}
