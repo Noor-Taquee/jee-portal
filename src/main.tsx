@@ -7,8 +7,8 @@ import { createRoot } from "react-dom/client";
 import { StrictMode } from "react";
 import { BrowserRouter } from "react-router-dom";
 
+import { ClerkProvider } from "@clerk/react";
 import SettingsProvider from "./context/SettingsContext/SettingsProvider";
-import UserProvider from "./context/UserContext/Provider";
 import ExamProvider from "./context/ExamContext/ExamProvider";
 
 import App from "./App";
@@ -23,11 +23,11 @@ createRoot(root).render(
       basename={import.meta.env.BASE_URL.replace(/\/$/u, "") || "/"}
     >
       <SettingsProvider>
-        <UserProvider>
+        <ClerkProvider>
           <ExamProvider>
             <App />
           </ExamProvider>
-        </UserProvider>
+        </ClerkProvider>
       </SettingsProvider>
     </BrowserRouter>
   </StrictMode>
