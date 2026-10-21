@@ -39,6 +39,7 @@
     "wrangler": "^4.149.0"
   },
   "dependencies": {
+    "@clerk/react": "^6.17.8",
     "@libsql/client": "^0.18.0",
     "framer-motion": "^14.1.0",
     "idb": "^8.0.4",
