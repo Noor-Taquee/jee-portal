@@ -40,18 +40,18 @@
   },
   "dependencies": {
     "@libsql/client": "^0.18.0",
-    "framer-motion": "^14.1.0",
+    "framer-motion": "^14.4.0",
     "idb": "^8.0.4",
     "katex": "^0.19.0",
-    "lucide-react": "^1.52.0",
-    "react": "^19.3.0",
-    "react-dom": "^19.3.0",
+    "lucide-react": "^1.59.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.18.4",
     "rehype-katex": "^7.0.1",
     "remark-gfm": "^4.0.1",
     "remark-math": "^6.0.0",
-    "zod": "^4.6.5"
+    "zod": "^4.6.7"
   },
   "allowScripts": {
     "esbuild@0.28.2": true,
