@@ -2,6 +2,7 @@
 
 import { D1Env } from "../../lib/d1";
 import { generateSession } from "../../lib/session";
+import { verifyPassword } from "../../lib/crypto";
 
 export const onRequestPost: PagesFunction<D1Env> = async (context) => {
   try {
@@ -33,8 +34,8 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
       );
     }
 
-    // Match password
-    const isValidPassword = password === user.password;
+    // Match password using the stored salt from the original hash
+    const isValidPassword = await verifyPassword(password, user.password);
 
     // Password didn't match
     if (!isValidPassword) {
