@@ -1,5 +1,6 @@
 import { expect, test, vi } from "vite-plus/test";
 
+import { hashPassword } from "../../lib/crypto";
 import { onRequestPost as login } from "./login";
 import { onRequestPost as logout } from "./logout";
 import { onRequestPost as register } from "./register";
@@ -39,7 +40,7 @@ function createContext(
     method?: string;
     body?: unknown;
     headers?: Record<string, string>;
-  } = {}
+  } = {},
 ) {
   const { method = "POST", body, headers = {} } = options;
   const request = new Request("https://example.test/api/auth", {
@@ -57,7 +58,7 @@ function createContext(
 test("register rejects missing details before touching the database", async () => {
   const { database } = createDatabase();
   const response = await register(
-    createContext(database, { body: { name: "Ada" } })
+    createContext(database, { body: { name: "Ada" } }),
   );
 
   expect(response.status).toBe(400);
@@ -69,7 +70,7 @@ test("register rejects non-student role assignment", async () => {
   const response = await register(
     createContext(database, {
       body: { name: "Ada", username: "ada", password: "secret", role: "admin" },
-    })
+    }),
   );
 
   expect(response.status).toBe(403);
@@ -81,7 +82,7 @@ test("register reports duplicate usernames", async () => {
   const response = await register(
     createContext(database, {
       body: { name: "Ada", username: "ada", password: "secret" },
-    })
+    }),
   );
 
   expect(response.status).toBe(409);
@@ -93,7 +94,7 @@ test("register creates a user and a session for the new account", async () => {
   const response = await register(
     createContext(database, {
       body: { name: "Ada", username: "ada", password: "secret" },
-    })
+    }),
   );
   const body = (await response.json()) as {
     success: boolean;
@@ -106,10 +107,33 @@ test("register creates a user and a session for the new account", async () => {
   expect(body.token).toBeTruthy();
   expect(body.user).toEqual({ name: "Ada", role: "student" });
   expect(writes.some((write) => /INSERT INTO users/i.test(write.query))).toBe(
-    true
+    true,
   );
   expect(
-    writes.some((write) => /INSERT INTO sessions/i.test(write.query))
+    writes.some((write) => /INSERT INTO sessions/i.test(write.query)),
+  ).toBe(true);
+});
+
+test("login accepts a stored salted password hash", async () => {
+  const storedPassword = await hashPassword("secret");
+  const { database, writes } = createDatabase({
+    firstResult: {
+      id: 1,
+      name: "Ada",
+      password: storedPassword,
+      role: "student",
+    },
+  });
+
+  const response = await login(
+    createContext(database, {
+      body: { username: "ada", password: "secret" },
+    }),
+  );
+
+  expect(response.status).toBe(200);
+  expect(
+    writes.some((write) => /INSERT INTO sessions/i.test(write.query)),
   ).toBe(true);
 });
 
@@ -120,7 +144,7 @@ test("login rejects invalid credentials", async () => {
   const response = await login(
     createContext(database, {
       body: { username: "ada", password: "wrong" },
-    })
+    }),
   );
 
   expect(response.status).toBe(401);
@@ -133,7 +157,7 @@ test("login creates a session after valid credentials", async () => {
   const response = await login(
     createContext(database, {
       body: { username: "ada", password: "secret" },
-    })
+    }),
   );
   const body = (await response.json()) as {
     success: boolean;
@@ -146,7 +170,7 @@ test("login creates a session after valid credentials", async () => {
   expect(body.token).toBeTruthy();
   expect(body.user).toEqual({ name: "Ada", role: "student" });
   expect(
-    writes.some((write) => /INSERT INTO sessions/i.test(write.query))
+    writes.some((write) => /INSERT INTO sessions/i.test(write.query)),
   ).toBe(true);
 });
 
@@ -164,7 +188,7 @@ test("logout clears the matching session", async () => {
   const response = await logout(
     createContext(database, {
       headers: { Authorization: "Bearer session-token" },
-    })
+    }),
   );
 
   expect(response.status).toBe(200);
@@ -230,7 +254,7 @@ test("session restore returns the validated user", async () => {
         "User-Agent":
           "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0 Safari/537.36",
       },
-    })
+    }),
   );
 
   expect(response.status).toBe(200);
