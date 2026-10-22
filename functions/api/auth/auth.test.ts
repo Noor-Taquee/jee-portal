@@ -1,5 +1,6 @@
 import { expect, test, vi } from "vite-plus/test";
 
+import { hashPassword } from "../../lib/crypto";
 import { onRequestPost as login } from "./login";
 import { onRequestPost as logout } from "./logout";
 import { onRequestPost as register } from "./register";
@@ -108,6 +109,29 @@ test("register creates a user and a session for the new account", async () => {
   expect(writes.some((write) => /INSERT INTO users/i.test(write.query))).toBe(
     true
   );
+  expect(
+    writes.some((write) => /INSERT INTO sessions/i.test(write.query))
+  ).toBe(true);
+});
+
+test("login accepts a stored salted password hash", async () => {
+  const storedPassword = await hashPassword("secret");
+  const { database, writes } = createDatabase({
+    firstResult: {
+      id: 1,
+      name: "Ada",
+      password: storedPassword,
+      role: "student",
+    },
+  });
+
+  const response = await login(
+    createContext(database, {
+      body: { username: "ada", password: "secret" },
+    })
+  );
+
+  expect(response.status).toBe(200);
   expect(
     writes.some((write) => /INSERT INTO sessions/i.test(write.query))
   ).toBe(true);

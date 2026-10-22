@@ -1,5 +1,6 @@
 // oxlint-disable max-lines-per-function
 
+import { hashPassword } from "../../lib/crypto";
 import { D1Env } from "../../lib/d1";
 import { generateSession } from "../../lib/session";
 
@@ -51,45 +52,38 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
       );
     }
 
+    // Hash passwords
+    const hashedPassword = await hashPassword(password);
+
     // Generate a session so users are logged in right away
     const session = generateSession(
       context.request.headers.get("user-agent") || ""
     );
 
     // Insert new user into database
-    const insertResult = await context.env.DB.prepare(
-      `
-          BEGIN;
+    const insertUser = context.env.DB.prepare(
+      `INSERT INTO users (name, username, password, role) VALUES (?, ?, ?, ?)`
+    ).bind(name, username, hashedPassword, role);
 
-          INSERT INTO users (name, username, password, role)
-          VALUES (?, ?, ?, ?);
+    // Insert session
+    const insertSession = context.env.DB.prepare(
+      `INSERT INTO sessions (user_id, session_token, created_at, expires_at, device, agent)
+       VALUES (last_insert_rowid(), ?, ?, ?, ?, ?)`
+    ).bind(
+      session.token,
+      session.createdAt,
+      session.expiresAt,
+      session.device,
+      session.agent
+    );
 
-          INSERT INTO sessions (
-            user_id, session_token, created_at, expires_at, device, agent
-          )
-          VALUES (
-            last_insert_rowid(),
-            ?, ?, ?, ?, ?
-          );
-
-          COMMIT;
-        `
-    )
-      .bind(
-        name,
-        username,
-        password,
-        role,
-        session.token,
-        session.createdAt,
-        session.expiresAt,
-        session.device,
-        session.agent
-      )
-      .run();
+    const insertResult = await context.env.DB.batch([
+      insertUser,
+      insertSession,
+    ]);
 
     // If insertion fails
-    if (!insertResult.success) {
+    if (insertResult.some((i) => !i.success)) {
       return Response.json(
         { success: false, error: "Failed to register user" },
         { status: 500 }
