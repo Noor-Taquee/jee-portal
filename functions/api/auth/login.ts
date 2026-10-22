@@ -15,13 +15,13 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
     if (!username || !password) {
       return Response.json(
         { success: false, error: "username and password are required" },
-        { status: 400 },
+        { status: 400 }
       );
     }
 
     // Search user
     const user = await context.env.DB.prepare(
-      "SELECT id, name, password, role FROM users WHERE username = ?",
+      "SELECT id, name, password, role FROM users WHERE username = ?"
     )
       .bind(username)
       .first<{ id: number; name: string; password: string; role: string }>();
@@ -30,7 +30,7 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
     if (!user) {
       return Response.json(
         { success: false, error: "Invalid username or password" },
-        { status: 401 },
+        { status: 401 }
       );
     }
 
@@ -41,20 +41,20 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
     if (!isValidPassword) {
       return Response.json(
         { success: false, error: "Invalid username or password" },
-        { status: 401 },
+        { status: 401 }
       );
     }
 
     // Generate a session
     const session = generateSession(
-      context.request.headers.get("user-agent") || "",
+      context.request.headers.get("user-agent") || ""
     );
 
     // Save session token in D1
     await context.env.DB.prepare(
       `INSERT INTO sessions
       (user_id, session_token, created_at, expires_at, device, agent)
-      VALUES (?, ?, ?, ?, ?, ?)`,
+      VALUES (?, ?, ?, ?, ?, ?)`
     )
       .bind(
         user.id,
@@ -62,7 +62,7 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
         session.createdAt,
         session.expiresAt,
         session.device,
-        session.agent,
+        session.agent
       )
       .run();
 
@@ -78,7 +78,7 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
   } catch (error: any) {
     return Response.json(
       { success: false, error: error.message },
-      { status: 500 },
+      { status: 500 }
     );
   }
 };

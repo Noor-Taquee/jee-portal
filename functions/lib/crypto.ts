@@ -7,7 +7,7 @@ export async function hashPassword(password: string): Promise<string> {
     encoder.encode(password),
     { name: "PBKDF2" },
     false,
-    ["deriveBits"],
+    ["deriveBits"]
   );
 
   const hashBits = await crypto.subtle.deriveBits(
@@ -18,7 +18,7 @@ export async function hashPassword(password: string): Promise<string> {
       hash: "SHA-256",
     },
     keyMaterial,
-    256,
+    256
   );
 
   // Convert salt and hash to hex strings for safe storage in SQLite/D1
@@ -45,7 +45,7 @@ function constantTimeEquals(a: string, b: string): boolean {
 
 export async function verifyPassword(
   password: string,
-  storedHash: string,
+  storedHash: string
 ): Promise<boolean> {
   const [saltHex, originalHashHex] = storedHash.split(":");
   if (!saltHex || !originalHashHex) return false;
@@ -61,7 +61,7 @@ export async function verifyPassword(
     encoder.encode(password),
     { name: "PBKDF2" },
     false,
-    ["deriveBits"],
+    ["deriveBits"]
   );
 
   const hashBits = await crypto.subtle.deriveBits(
@@ -72,7 +72,7 @@ export async function verifyPassword(
       hash: "SHA-256",
     },
     keyMaterial,
-    256,
+    256
   );
 
   const hashHex = Array.from(new Uint8Array(hashBits))

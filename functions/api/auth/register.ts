@@ -23,7 +23,7 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
     if (!username || !password || !name) {
       return Response.json(
         { success: false, error: "Details not provided" },
-        { status: 400 },
+        { status: 400 }
       );
     }
 
@@ -31,7 +31,7 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
     if (role !== "student") {
       return Response.json(
         { success: false, error: "Unauthorized role assignment" },
-        { status: 403 },
+        { status: 403 }
       );
     }
 
@@ -39,7 +39,7 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
 
     // Check if the username is already taken
     const existingUser = await context.env.DB.prepare(
-      "SELECT id FROM users WHERE username = ?",
+      "SELECT id FROM users WHERE username = ?"
     )
       .bind(username)
       .first<{ id: number }>();
@@ -48,7 +48,7 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
     if (existingUser) {
       return Response.json(
         { success: false, error: "Username is already taken" },
-        { status: 409 },
+        { status: 409 }
       );
     }
 
@@ -57,24 +57,24 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
 
     // Generate a session so users are logged in right away
     const session = generateSession(
-      context.request.headers.get("user-agent") || "",
+      context.request.headers.get("user-agent") || ""
     );
 
     // Insert new user into database
     const insertUser = context.env.DB.prepare(
-      `INSERT INTO users (name, username, password, role) VALUES (?, ?, ?, ?)`,
+      `INSERT INTO users (name, username, password, role) VALUES (?, ?, ?, ?)`
     ).bind(name, username, hashedPassword, role);
 
     // Insert session
     const insertSession = context.env.DB.prepare(
       `INSERT INTO sessions (user_id, session_token, created_at, expires_at, device, agent)
-       VALUES (last_insert_rowid(), ?, ?, ?, ?, ?)`,
+       VALUES (last_insert_rowid(), ?, ?, ?, ?, ?)`
     ).bind(
       session.token,
       session.createdAt,
       session.expiresAt,
       session.device,
-      session.agent,
+      session.agent
     );
 
     const insertResult = await context.env.DB.batch([
@@ -86,7 +86,7 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
     if (insertResult.some((i) => !i.success)) {
       return Response.json(
         { success: false, error: "Failed to register user" },
-        { status: 500 },
+        { status: 500 }
       );
     }
 
@@ -103,7 +103,7 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
   } catch (error: any) {
     return Response.json(
       { success: false, error: error.message },
-      { status: 500 },
+      { status: 500 }
     );
   }
 };
