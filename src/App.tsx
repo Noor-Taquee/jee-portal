@@ -2,32 +2,34 @@
 
 import "./app.css";
 
-import { Navigate, Route, Routes, useLocation } from "react-router-dom";
-import { useOrientation } from "./hooks/useOrientation.js";
-import { useSettings } from "./hooks/useSettings.js";
-import { useUser } from "./hooks/useUser.js";
+import { useOrientation } from "./hooks/useOrientation";
+import { useSettings } from "./hooks/useSettings";
+import { ClerkFailed, ClerkLoaded, ClerkLoading, useAuth } from "@clerk/react";
 
-import NavigationBar from "./components/NavigationBar/index.js";
-import RegistrationPage from "./pages/RegistrationPage/index.js";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
+import { Activity } from "react";
+import NavigationBar from "./components/NavigationBar";
+import RegistrationPage from "./pages/RegistrationPage";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import QuestionsPage from "./pages/QuestionsPage";
 import ResultPage from "./pages/ResultPage";
 import AdminPage from "./pages/AdminPage";
-import SessionRestoreScreen from "./components/SessionRestoreScreen/index.js";
+import SessionRestoreScreen from "./components/SessionRestoreScreen";
 
 export default function App() {
-  const { user, loadingSession } = useUser();
+  const { isSignedIn } = useAuth();
   const appSettings = useSettings();
   const orientation = useOrientation();
   const location = useLocation();
+
   const hideNavigation =
     [
       "/registration",
       "/exam/login",
       "/exam/questions",
       "/exam/result",
-    ].includes(location.pathname) || !user;
+    ].includes(location.pathname) || !isSignedIn;
 
   return (
     <div
@@ -36,64 +38,68 @@ export default function App() {
       data-orientation={orientation}
       className={appSettings.simpleMode ? "original-ui" : ""}
     >
-      {loadingSession ? (
+      <ClerkLoading>
         <SessionRestoreScreen />
-      ) : (
-        <>
-          {!hideNavigation && <NavigationBar />}
-          <div className="panel-container">
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <Navigate
-                    to="/home"
-                    replace
-                  />
-                }
-              />
+      </ClerkLoading>
 
-              <Route
-                path="/registration"
-                element={<RegistrationPage />}
-              />
+      <ClerkLoaded>
+        <Activity mode={hideNavigation ? "hidden" : "visible"}>
+          <NavigationBar />
+        </Activity>
+        <div className="panel-container">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Navigate
+                  to="/home"
+                  replace
+                />
+              }
+            />
 
-              <Route
-                path="/admin/*"
-                element={<AdminPage />}
-              />
+            <Route
+              path="/registration/*"
+              element={<RegistrationPage />}
+            />
 
-              <Route
-                path="/home"
-                element={<HomePage />}
-              />
+            <Route
+              path="/admin/*"
+              element={<AdminPage />}
+            />
 
-              <Route
-                path="/exam/login"
-                element={<LoginPage />}
-              />
-              <Route
-                path="/exam/questions"
-                element={<QuestionsPage />}
-              />
-              <Route
-                path="/exam/result"
-                element={<ResultPage />}
-              />
+            <Route
+              path="/home/*"
+              element={<HomePage />}
+            />
 
-              <Route
-                path="*"
-                element={
-                  <Navigate
-                    to="/home"
-                    replace
-                  />
-                }
-              />
-            </Routes>
-          </div>
-        </>
-      )}
+            <Route
+              path="/exam/login/*"
+              element={<LoginPage />}
+            />
+            <Route
+              path="/exam/questions/*"
+              element={<QuestionsPage />}
+            />
+            <Route
+              path="/exam/result/*"
+              element={<ResultPage />}
+            />
+
+            <Route
+              path="*"
+              element={
+                <Navigate
+                  to="/home"
+                  replace
+                />
+              }
+            />
+          </Routes>
+        </div>
+      </ClerkLoaded>
+
+      <ClerkFailed></ClerkFailed>
     </div>
   );
 }
