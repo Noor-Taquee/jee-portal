@@ -28,19 +28,14 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v7
 
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
+      - name: Setup Vite+
+        uses: voidzero-dev/setup-vp@v1.21.2
         with:
-          bun-version: latest
+          node-version: "24"
+          cache: true
 
-      - name: Install Project Dependencies
-        run: bun install --frozen-lockfile
-
-      - name: Format check
-        run: bun run format:check
-
-      - name: Lint check
-        run: bun run lint:check
+      - name: Check
+        run: vp check
 
       - name: Build check
-        run: bun run build
+        run: vp build
