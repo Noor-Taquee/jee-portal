@@ -8,11 +8,12 @@
   "type": "module",
   "main": "main.js",
   "scripts": {
+    "build": "vp build",
     "pages:dev": "wrangler pages dev --proxy 5173 -- vp dev",
-    "fmt:check": "vp fmt --check src/",
-    "fmt:fix": "vp fmt src/",
-    "lint:check": "vp lint",
-    "lint:fix": "vp lint --fix",
+    "fmt": "vp fmt src/",
+    "fmt:c": "vp fmt --check src/",
+    "lnt": "vp lint",
+    "lnt:f": "vp lint --fix",
     "test": "vp test run --reporter=verbose"
   },
   "repository": {
