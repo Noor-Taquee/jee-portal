@@ -11,7 +11,7 @@ interface Props {
   discard: () => void;
 }
 
-export default function ReviewDialogue({ discard, handleUpload }: Props) {
+export default function ReviewDialog({ discard, handleUpload }: Props) {
   const [reviewChecklist, setReviewChecklist] = useState({
     originality: false,
     correctness: false,
@@ -19,8 +19,8 @@ export default function ReviewDialogue({ discard, handleUpload }: Props) {
 
   return (
     <div
-      id="review-dialogue"
-      className="upload-dialogue"
+      id="review-dialog"
+      className="upload-dialog"
     >
       <h2 className="header">Upload</h2>
       <small>Review changes</small>

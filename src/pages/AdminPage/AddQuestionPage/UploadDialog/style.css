@@ -15,7 +15,7 @@
   flex-direction: column;
   gap: 24px;
 
-  .upload-dialogue {
+  .upload-dialog {
     min-width: 280px;
 
     display: flex;

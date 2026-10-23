@@ -5,7 +5,7 @@ import { useUser } from "../../hooks/useUser";
 import { useNavigate } from "react-router-dom";
 
 import { ArrowRight } from "lucide-react";
-import DialogueBox from "../../components/DialogueBox";
+import DialogBox from "../../components/DialogBox";
 import ActionBtn from "../../components/ActionBtn";
 import SignupForm from "./SignupForm";
 import SigninForm from "./SigninForm";
@@ -19,7 +19,7 @@ export default function RegistrationPage() {
 
   if (user) {
     return (
-      <DialogueBox
+      <DialogBox
         header="Already Logged In"
         texts={[
           `Logged in as ${user.name}. Logout first to create a new account.`,
@@ -28,7 +28,7 @@ export default function RegistrationPage() {
         <ActionBtn onClick={() => void navigate("/home")}>
           <p>Back</p>
         </ActionBtn>
-      </DialogueBox>
+      </DialogBox>
     );
   }
 

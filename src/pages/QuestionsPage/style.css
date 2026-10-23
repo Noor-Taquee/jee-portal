@@ -10,7 +10,7 @@
   flex-direction: column;
 }
 
-.dialogue-box {
+.dialog-box {
   height: 100%;
   width: 100%;
 
@@ -25,10 +25,10 @@
 
   background: radial-gradient(circle, var(--bg-p-2), var(--bg-p-1) 40%);
 
-  .dialogue-header {
+  .dialog-header {
     font: var(--header-1);
   }
-  .dialogue-text {
+  .dialog-text {
     font: var(--text-1);
   }
 }

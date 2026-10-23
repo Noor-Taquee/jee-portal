@@ -8,15 +8,15 @@ interface Props {
   discard: () => void;
 }
 
-export default function FailureDialogue({
+export default function FailureDialog({
   failure,
   handleUpload,
   discard,
 }: Props) {
   return (
     <div
-      id="failure-dialogue"
-      className="upload-dialogue"
+      id="failure-dialog"
+      className="upload-dialog"
     >
       <CircleXIcon />
 
