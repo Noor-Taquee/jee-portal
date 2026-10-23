@@ -3,6 +3,7 @@
   "name": "jee-portal",
   "main": "src/index.tsx",
   "compatibility_date": "2026-10-09",
+  "pages_build_output_dir": "dist",
   "d1_databases": [
     {
       "binding": "DB",
