@@ -8,14 +8,14 @@ import { Link } from "react-router-dom";
 import Header from "./Header";
 import LoginForm from "./LoginForm";
 import InstituteLogo from "../../components/InstituteLogo";
-import DialogueBox from "../../components/DialogueBox";
+import DialogBox from "../../components/DialogBox";
 
 export default function LoginPage() {
   const { user } = useUser();
 
   if (!user) {
     return (
-      <DialogueBox
+      <DialogBox
         header="No user was found"
         texts={["Create or login to your account first"]}
       >
@@ -33,7 +33,7 @@ export default function LoginPage() {
         >
           <p>Back</p>
         </Link>
-      </DialogueBox>
+      </DialogBox>
     );
   }
 

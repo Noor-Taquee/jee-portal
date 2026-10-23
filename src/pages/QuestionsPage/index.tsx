@@ -96,13 +96,13 @@ export default function QuestionsPage() {
         className="app-panel"
         id="questions-page"
       >
-        <div className="dialogue-box">
-          <p className="dialogue-header">
+        <div className="dialog-box">
+          <p className="dialog-header">
             {examSession.examData
               ? "Test has not started yet !"
               : "There is no test scheduled !"}
           </p>
-          <p className="dialogue-text">
+          <p className="dialog-text">
             {examSession.examData
               ? "Go to the login page to start the test"
               : "Go to the login page to schedule a test"}

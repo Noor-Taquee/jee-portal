@@ -5,11 +5,11 @@ interface Props {
   discard: () => void;
 }
 
-export default function SuccessDialogue({ discard }: Props) {
+export default function SuccessDialog({ discard }: Props) {
   return (
     <div
-      id="success-dialogue"
-      className="upload-dialogue"
+      id="success-dialog"
+      className="upload-dialog"
     >
       <CircleCheckIcon />
       <h2 className="header">Upload Successful</h2>

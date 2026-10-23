@@ -6,21 +6,21 @@ import { useEffect, useRef, useState } from "react";
 import type { ReviewQuestion } from "..";
 import { USER_SESSION_TOKEN_KEY } from "../../../../context/UserContext/Provider";
 
-import ReviewDialogue from "./ReviewDialogue";
-import SuccessDialogue from "./SuccessDialoge";
-import FailureDialogue from "./FailureDialogue";
-import LoadingDialogue from "./LoadingDialogue";
+import ReviewDialog from "./ReviewDialog";
+import SuccessDialog from "./SuccessDialog";
+import FailureDialog from "./FailureDialog";
+import LoadingDialog from "./LoadingDialog";
 
 interface Props {
   question: ReviewQuestion | null;
-  uploadDialogue: boolean;
-  setUploadDialogue: React.Dispatch<React.SetStateAction<boolean>>;
+  uploadDialog: boolean;
+  setUploadDialog: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default function UploadDialogue({
+export default function UploadDialog({
   question,
-  uploadDialogue,
-  setUploadDialogue,
+  uploadDialog: uploadDialog,
+  setUploadDialog: setUploadDialog,
 }: Props) {
   const [loading, setLoading] = useState(false);
 
@@ -36,17 +36,17 @@ export default function UploadDialogue({
     const el = dialogRef.current;
     if (!el) return;
 
-    if (uploadDialogue) {
+    if (uploadDialog) {
       if (!el.open) {
         el.showModal();
       }
     } else if (el.open) {
       el.close();
     }
-  }, [uploadDialogue]);
+  }, [uploadDialog]);
 
   const discard = () => {
-    setUploadDialogue(false);
+    setUploadDialog(false);
     setLoading(false);
     setSuccess(false);
     setFailure(false);
@@ -100,15 +100,15 @@ export default function UploadDialogue({
       }}
     >
       {!loading && !success && !failure && (
-        <ReviewDialogue
+        <ReviewDialog
           handleUpload={handleUpload}
           discard={discard}
         />
       )}
-      {loading && <LoadingDialogue />}
-      {success && <SuccessDialogue discard={discard} />}
+      {loading && <LoadingDialog />}
+      {success && <SuccessDialog discard={discard} />}
       {failure && (
-        <FailureDialogue
+        <FailureDialog
           failure={failure}
           handleUpload={handleUpload}
           discard={discard}

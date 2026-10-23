@@ -2,11 +2,11 @@ import "./style.css";
 
 import { LoaderIcon } from "lucide-react";
 
-export default function LoadingDialogue() {
+export default function LoadingDialog() {
   return (
     <div
-      id="loading-dialogue"
-      className="upload-dialogue"
+      id="loading-dialog"
+      className="upload-dialog"
     >
       <LoaderIcon className="spin" />
       <h2 className="header">Uploading</h2>
