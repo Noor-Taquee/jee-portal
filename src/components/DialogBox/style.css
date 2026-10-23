@@ -1,4 +1,4 @@
-#dialogue-box {
+#dialog-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,15 +7,15 @@
 
   background: radial-gradient(circle, var(--bg-p-2), var(--bg-p-1) 40%);
 
-  .dialogue-header {
+  .dialog-header {
     font: var(--header-1);
   }
-  .dialogue-text {
+  .dialog-text {
     font: var(--text-1);
   }
 }
 
-#dialogue-box-btns {
+#dialog-box-btns {
   margin-top: 16px;
   display: flex;
   align-items: center;
