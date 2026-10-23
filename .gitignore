@@ -7,11 +7,11 @@ node_modules/
 # build
 dist/
 
-# lock files
-bun.lock
-package-lock.json
+# configurations
+wrangler.json
 
 
 .wrangler/
+
 .dev.vars
 .vitest/
