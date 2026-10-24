@@ -123,6 +123,18 @@
   }
 
   &:hover {
-    background-color: var(--bg-p-2);
+    background-color: var(--bg-s-1);
+  }
+}
+
+.popover-entry.danger {
+  span {
+    color: var(--inc-color-1);
+  }
+  .lucide {
+    stroke: var(--inc-color-1);
+  }
+  &:hover {
+    background-color: var(--inc-color-2);
   }
 }
