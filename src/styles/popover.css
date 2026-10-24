@@ -45,12 +45,12 @@
   padding: 4px;
 
   border: var(--border-1);
-  border-radius: 12px;
+  border-radius: 14px;
 
   display: flex;
   flex-direction: column;
 
-  background-color: var(--bg-p-1);
+  background-color: var(--bg-h-1);
 
   .divider {
     flex-shrink: 0;
@@ -74,6 +74,12 @@
   transition:
     opacity 50ms ease-out,
     transform 50ms ease-out;
+
+  box-shadow: 0px 0px 6px 1px var(--shadow);
+}
+
+[data-orientation="landscape"] .popover-card:popover-open {
+  min-width: 200px;
 }
 
 .popover-entry {
