@@ -15,7 +15,7 @@ export default function NavigationHeader({
 }: NavigationHeaderProps) {
   return (
     <div id="navigation-header">
-      {expanded && <p className="header-text">JEE Portal</p>}
+      {expanded && <h4 className="header-text">JEE Portal</h4>}
       <ToggleButton
         title={expanded ? "collapse" : "Expand"}
         onClick={() => {
