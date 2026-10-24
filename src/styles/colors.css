@@ -38,6 +38,8 @@
 
   --accent-2: #ffdb0f;
 
+  --shadow: #1111;
+
   --border-1: 1px solid var(--bg-s-3);
 
   --na-color-1: #6f6f6f;
@@ -71,6 +73,8 @@
   --accent-bg: #6da7ec20;
 
   --accent-2: #ffdb0f;
+
+  --shadow: #1111;
 
   --border-1: 1px solid var(--bg-s-3);
 
