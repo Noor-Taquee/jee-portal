@@ -1,11 +1,6 @@
 #navigation-bar {
-  height: auto;
+  height: 100%;
   width: fit-content;
-
-  --margin: 12px;
-  margin: var(--margin);
-
-  border-radius: 12px;
 
   display: flex;
   flex-direction: column;
@@ -13,17 +8,22 @@
 
   background-color: var(--bg-p-2);
 
-  transition: width 100ms ease-out;
+  transition:
+    width 100ms ease-out,
+    background-color 100ms ease-out;
   will-change: width;
 
   &.expanded {
-    width: 220px;
+    width: 280px;
     padding: 12px;
+
+    border-right: var(--border-1);
   }
   &.collapsed {
     width: 52px;
-    padding: 4px;
     align-items: center;
+
+    background-color: transparent;
 
     #user-icon-holder {
       margin: auto auto 12px;
