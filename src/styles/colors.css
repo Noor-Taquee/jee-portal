@@ -1,3 +1,16 @@
+/*
+--color-x: for texts
+
+--bg-p-x: for common backgrounds.
+
+--bg-h-x: for highlited components.
+
+--bg-s-x: for components that need to be distinct from the background.
+
+--bg-accent-x: for accent colors.
+
+*/
+
 :root {
   --accent-color-1: #ffdb0f;
 
