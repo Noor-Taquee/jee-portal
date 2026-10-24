@@ -90,35 +90,35 @@
   width: 100%;
   min-width: 100px;
 
-  padding: 6px 8px;
+  padding: 6px 10px;
 
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  gap: 10px;
 
   p,
   span {
     font: var(--text-2);
+    font-weight: 400;
   }
+
   .lucide {
     --size: 18px;
-    stroke: var(--color-2);
+    stroke: var(--color-1);
+
+    &.next {
+      --size: 16px;
+      stroke: var(--color-2);
+      margin-left: auto;
+    }
+
     &.check {
       stroke: var(--accent-1);
       stroke-width: 2px;
-    }
-  }
-
-  &.danger {
-    span {
-      color: var(--inc-color-1);
-    }
-    &:hover {
-      background-color: var(--inc-color-2);
+      margin-left: auto;
     }
   }
 
