@@ -45,12 +45,12 @@
   padding: 4px;
 
   border: var(--border-1);
-  border-radius: 12px;
+  border-radius: 14px;
 
   display: flex;
   flex-direction: column;
 
-  background-color: var(--bg-p-1);
+  background-color: var(--bg-h-1);
 
   .divider {
     flex-shrink: 0;
@@ -59,7 +59,7 @@
 
     margin: 4px auto;
 
-    background-color: var(--bg-s-2);
+    background-color: var(--bg-s-3);
   }
 
   &::backdrop {
@@ -74,6 +74,12 @@
   transition:
     opacity 50ms ease-out,
     transform 50ms ease-out;
+
+  box-shadow: 0px 0px 6px 1px var(--shadow);
+}
+
+[data-orientation="landscape"] .popover-card:popover-open {
+  min-width: 200px;
 }
 
 .popover-entry {
@@ -84,39 +90,51 @@
   width: 100%;
   min-width: 100px;
 
-  padding: 6px 8px;
+  padding: 6px 10px;
 
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  gap: 10px;
 
   p,
   span {
     font: var(--text-2);
+    font-weight: 400;
   }
+
   .lucide {
     --size: 18px;
-    stroke: var(--color-2);
+    stroke: var(--color-1);
+
+    &.next {
+      --size: 16px;
+      stroke: var(--color-2);
+      margin-left: auto;
+    }
+
     &.check {
       stroke: var(--accent-1);
       stroke-width: 2px;
-    }
-  }
-
-  &.danger {
-    span {
-      color: var(--inc-color-1);
-    }
-    &:hover {
-      background-color: var(--inc-color-2);
+      margin-left: auto;
     }
   }
 
   &:hover {
-    background-color: var(--bg-p-2);
+    background-color: var(--bg-s-1);
+  }
+}
+
+.popover-entry.danger {
+  span {
+    color: var(--inc-color-1);
+  }
+  .lucide {
+    stroke: var(--inc-color-1);
+  }
+  &:hover {
+    background-color: var(--inc-color-2);
   }
 }
