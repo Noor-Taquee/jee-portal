@@ -29,7 +29,7 @@
 
   p.name {
     font: var(--text-2);
-    color: var(--color-2);
+    color: var(--color-1);
     font-weight: 400;
   }
 
