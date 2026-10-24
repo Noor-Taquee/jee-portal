@@ -1,10 +1,8 @@
 #navigation-header {
   width: 100%;
-  height: 60px;
+  height: fit-content;
 
   overflow: hidden;
-
-  margin: 0 0 24px;
 
   display: flex;
   align-items: center;
@@ -12,8 +10,8 @@
 
   > .header-text {
     overflow: hidden;
-    font: var(--header-2);
-    color: var(--accent-1);
+    font: 600 18px "Inter";
+    color: var(--color-1);
   }
 
   .toggle-button {
@@ -22,12 +20,15 @@
 
     background-color: transparent;
 
-    &:hover {
-      background-color: var(--bg-p-1);
+    .lucide {
+      --size: 16px;
+      stroke: var(--color-2);
     }
 
-    .lucide {
-      --size: 22px;
+    &:hover {
+      .lucide {
+        stroke: var(--color-1);
+      }
     }
   }
 }
