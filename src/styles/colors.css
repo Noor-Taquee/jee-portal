@@ -1,3 +1,16 @@
+/*
+--color-x: for texts
+
+--bg-p-x: for common backgrounds.
+
+--bg-h-x: for highlited components.
+
+--bg-s-x: for components that need to be distinct from the background.
+
+--bg-accent-x: for accent colors.
+
+*/
+
 :root {
   --accent-color-1: #ffdb0f;
 
@@ -7,20 +20,25 @@
 }
 
 [data-theme="light"] {
-  --color-1: #1f2328;
-  --color-2: #59636e;
+  --color-1: #0b0b0b;
+  --color-2: #52514e;
+  --color-3: #898781;
 
-  --bg-p-1: #ffffff;
-  --bg-p-2: #f6f8fa;
-  --bg-p-3: #eceef0;
+  --bg-p-1: #fcfcfb;
+  --bg-p-2: #fbfbf9;
 
-  --bg-s-1: #0969da20;
-  --bg-s-2: #e3e9ed;
+  --bg-h-1: #ffffff;
 
-  --accent-1: #0969da;
+  --bg-s-1: #edece8;
+  --bg-s-2: #f0efec;
+  --bg-s-3: #e2e2e1;
+
+  --accent-1: #295c9d;
+  --accent-bg: #295c9d20;
+
   --accent-2: #ffdb0f;
 
-  --border-1: 1px solid var(--bg-s-2);
+  --border-1: 1px solid var(--bg-s-3);
 
   --na-color-1: #6f6f6f;
   --na-color-2: #6f6f6f15;
@@ -36,20 +54,25 @@
 }
 
 [data-theme="dark"] {
-  --color-1: #e5eaf0;
-  --color-2: #8c939c;
+  --color-1: #f0efec;
+  --color-2: #c3c2b7;
+  --color-3: #898781;
 
-  --bg-p-1: #1b1b1b;
-  --bg-p-2: #131314;
-  --bg-p-3: #37393b;
+  --bg-p-1: #151515;
+  --bg-p-2: #111111;
 
-  --bg-s-1: #1f6feb20;
-  --bg-s-2: #3d444d;
+  --bg-h-1: #20201f;
 
-  --accent-1: #1f6feb;
+  --bg-s-1: #343434;
+  --bg-s-2: #232323;
+  --bg-s-3: #292929;
+
+  --accent-1: #6da7ec;
+  --accent-bg: #6da7ec20;
+
   --accent-2: #ffdb0f;
 
-  --border-1: 1px solid var(--bg-s-2);
+  --border-1: 1px solid var(--bg-s-3);
 
   --na-color-1: #a5a5a5;
   --na-color-2: #a5a5a515;
