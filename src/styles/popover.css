@@ -59,7 +59,7 @@
 
     margin: 4px auto;
 
-    background-color: var(--bg-s-2);
+    background-color: var(--bg-s-3);
   }
 
   &::backdrop {
