@@ -5,28 +5,73 @@
   height: fit-content;
 
   margin: auto auto 0;
-  padding: 12px;
+  padding: 4px 6px;
 
   border: none;
   border-radius: 8px;
 
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 
-  p {
+  div.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  div.name {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  p.name {
     font: var(--text-2);
+    color: var(--color-2);
     font-weight: 400;
   }
 
+  div.verification-badge {
+    aspect-ratio: 1 / 1;
+    height: 14px;
+
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    background-color: var(--color-2);
+
+    .lucide {
+      --size: 10px;
+      stroke-width: 2.8px;
+      stroke: var(--bg-s-1);
+    }
+  }
+
+  p.role {
+    font: var(--text-3);
+    text-transform: capitalize;
+    color: var(--color-2);
+  }
+
+  > .lucide {
+    --size: 18px;
+    stroke-width: 1.2px;
+    margin-left: auto;
+    stroke: var(--color-3);
+  }
+
   &:hover {
-    background-color: var(--bg-p-1);
+    background-color: var(--bg-s-2);
   }
 }
 
 #user-icon-holder {
   aspect-ratio: 1 / 1;
-  width: 24px;
+  width: 28px;
 
   overflow: hidden;
 
@@ -36,10 +81,11 @@
   display: grid;
   place-items: center;
 
-  background-color: var(--color-1);
+  background-color: var(--bg-s-3);
 
   > span {
-    color: var(--bg-p-1);
+    color: var(--color-1);
     font: var(--text-2);
+    font: 600 10px "Inter";
   }
 }

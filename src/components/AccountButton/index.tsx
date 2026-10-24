@@ -5,6 +5,7 @@ import { useUser } from "../../hooks/useUser";
 import type { ComponentPropsWithoutRef } from "react";
 
 import Avatar from "./Avatar";
+import { CheckIcon, ChevronDownIcon } from "lucide-react";
 
 type Props = ComponentPropsWithoutRef<"button">;
 
@@ -13,13 +14,26 @@ export default function AccountButton({ ...props }: Props) {
 
   if (!user) return <div></div>;
 
+  const verifiedUser = ["admin", "maintainer"].includes(user.role);
+
   return (
     <button
       id="account-button"
       {...props}
     >
       <Avatar />
-      <p>{user?.name}</p>
+      <div className="info">
+        <div className="name">
+          <p className="name">{user?.name}</p>
+          {verifiedUser && (
+            <div className="verification-badge">
+              <CheckIcon />
+            </div>
+          )}
+        </div>
+        <p className="role">{user?.role}</p>
+      </div>
+      <ChevronDownIcon />
     </button>
   );
 }
