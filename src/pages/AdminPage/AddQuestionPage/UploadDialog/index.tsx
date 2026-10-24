@@ -19,8 +19,8 @@ interface Props {
 
 export default function UploadDialog({
   question,
-  uploadDialog: uploadDialog,
-  setUploadDialog: setUploadDialog,
+  uploadDialog,
+  setUploadDialog,
 }: Props) {
   const [loading, setLoading] = useState(false);
 
@@ -93,7 +93,7 @@ export default function UploadDialog({
 
   return (
     <dialog
-      id="upload-popover"
+      id="upload-dialog"
       ref={dialogRef}
       onCancel={(e) => {
         e.preventDefault();
