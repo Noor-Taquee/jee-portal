@@ -40,7 +40,7 @@ jobs:
         run: bun run fmt:c
 
       - name: Lint check
-        run: bun run lint:check
+        run: bun run lnt
 
       - name: Build check
         run: bun run build
