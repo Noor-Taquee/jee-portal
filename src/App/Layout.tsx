@@ -61,6 +61,6 @@ export default function Layout() {
           }
         />
       </Routes>
-    </div>
+    </main>
   );
 }
