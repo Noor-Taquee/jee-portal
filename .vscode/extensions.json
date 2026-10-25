@@ -1,9 +1,3 @@
 {
-  "recommendations": [
-    // Linter
-    "dbaeumer.vscode-eslint",
-
-    // Code formatter
-    "esbenp.prettier-vscode"
-  ]
+  "recommendations": ["oxc.oxc-vscode"]
 }
