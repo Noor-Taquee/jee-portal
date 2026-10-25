@@ -47,5 +47,9 @@
       "fileMatch": ["*/.well-known/ai-catalog.json"],
       "url": "https://raw.githubusercontent.com/ards-project/ard-spec/main/spec/schemas/ai-catalog.schema.json"
     }
-  ]
+  ],
+
+  "files.associations": {
+    "llms.txt": "markdown"
+  }
 }

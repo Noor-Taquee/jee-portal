@@ -13,3 +13,5 @@
 *.json text eol=lf
 
 *.md text eol=lf
+
+llms.txt linguist-language=Markdown
