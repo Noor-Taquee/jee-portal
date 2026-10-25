@@ -11,7 +11,7 @@ import ResultPage from "../pages/ResultPage";
 /** Layout component for the main application structure */
 export default function Layout() {
   return (
-    <div className="panel-container">
+    <main id="panel-container">
       <Routes>
         <Route
           path="/"
@@ -61,6 +61,6 @@ export default function Layout() {
           }
         />
       </Routes>
-    </div>
+    </main>
   );
 }
