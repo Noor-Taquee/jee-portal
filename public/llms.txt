@@ -1,0 +1,31 @@
+# JEE & Board Examination PYQ Practice Portal
+
+> An interactive, web-based examination practice platform designed for students preparing for JEE Main, JEE Advanced, and AIEEE.
+
+## Key Features
+
+- **Real Exam Simulations**: Full-length previous year question papers (PYQs) with official exam interfaces and timed conditions.
+- **Chapter-Wise Practice**: Targeted topic-level question banks for focused revision across Physics, Chemistry, and Mathematics.
+- **Instant Evaluation**: Detailed solution breakdowns, subject-wise scoring, and accuracy analytics.
+- **Revision Tools**: Personal question bookmarking and flagged problem tracking for quick re-testing.
+
+## Platform Routes
+
+- [/](/): Homepage and student practice dashboard.
+- [/auth/login](/auth/login): Student authentication and account sign-in.
+- [/exam/login](/exam/login): Exam interface login imitation.
+- [/exam/questions](/exam/questions): Solve questions of the chosen year.
+- [/exam/result](/exam/result): Detailed results of the attempt.
+
+> All `/exam/*` routes are only accessible once a specific exam year/session is selected.
+
+## Exam Coverage
+
+- **JEE Main**: Full shift-wise papers and past year question sets.
+- **JEE Advanced**: Paper 1 & Paper 2 previous year questions.
+- **AIEEE**: Legacy AIEEE exam question archives.
+
+## Optional Resources
+
+- [Terms of Service](/legal/terms-of-service): Terms governing platform usage.
+- [Privacy Policy](/legal/privacy-policy): Data handling and student privacy policy.

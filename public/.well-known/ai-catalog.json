@@ -1,0 +1,19 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "JEE Portal",
+    "identifier": "did:web:jee-portal.pages.dev"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:jee-portal.pages.dev:tool:pyq-practice",
+      "displayName": "JEE Portal",
+      "type": "application/agent-skills+json",
+      "url": "https://jee-portal.pages.dev/llms.txt",
+      "representativeQueries": [
+        "solve JEE Main physics previous year questions",
+        "practice chapter-wise chemistry PYQs for class 12"
+      ]
+    }
+  ]
+}
