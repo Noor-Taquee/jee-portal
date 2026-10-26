@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 
 export type Topic = {
   id: number;
-  name: string;
-  subject: "Physics" | "Chemistry" | "Mathematics";
-  unit: string;
+  name?: string;
+  subject?: "Physics" | "Chemistry" | "Mathematics";
+  unit?: string;
 };
 
 export type Topics = Map<number, Topic>;

@@ -34,7 +34,12 @@ export default function TopicPickerPopover({
       Chemistry: chemistryTopics,
       Mathematics: mathsTopics,
     };
-    r[topic.subject].push(topic);
+    if (
+      topic.subject &&
+      ["Physics", "Chemistry", "Mathematics"].includes(topic.subject)
+    ) {
+      r[topic.subject].push(topic);
+    }
   }
 
   return (
