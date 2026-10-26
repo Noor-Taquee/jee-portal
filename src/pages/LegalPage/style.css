@@ -1,0 +1,62 @@
+#legal-page {
+  header {
+    margin: 16px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      font-size: 40px;
+      letter-spacing: 1.2px;
+      word-spacing: 4px;
+    }
+  }
+
+  section {
+    margin: 12px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #welcome-heading {
+    margin: 12px 0px;
+  }
+
+  h3 {
+    font-weight: 600;
+  }
+
+  p {
+    font: var(--text-1);
+    color: var(--color-1);
+
+    a {
+      font-weight: 500;
+      text-decoration: underline;
+    }
+  }
+
+  p.last-updated {
+    font: var(--text-2);
+    font-weight: 400;
+    color: var(--color-2);
+  }
+
+  ul {
+    margin: 0px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  li {
+    font: var(--text-1);
+  }
+
+  code {
+    background-color: var(--bg-s-2);
+    padding: 2px 4px;
+    border-radius: 3px;
+  }
+}
