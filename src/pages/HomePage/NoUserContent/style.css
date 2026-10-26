@@ -1,4 +1,11 @@
 #no-user-content {
+  height: 100%;
+  width: 100%;
+
+  padding-top: 24px;
+
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 

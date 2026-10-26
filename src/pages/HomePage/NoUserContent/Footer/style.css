@@ -1,0 +1,56 @@
+#app-footer {
+  width: 100%;
+  height: fit-content;
+
+  margin-top: auto;
+  padding: 32px;
+
+  border-top: var(--border-1);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+
+  background-color: var(--bg-s-1);
+}
+
+.link-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  h5 {
+    color: var(--color-3);
+  }
+
+  div {
+    display: flex;
+    gap: 24px;
+  }
+
+  a {
+    font: var(--text-2);
+    font-weight: 400;
+  }
+}
+
+.link-container:hover {
+  a:not(:hover) {
+    color: var(--color-3);
+  }
+}
+
+.copyright-div {
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    color: var(--color-2);
+  }
+
+  #copyright {
+    font: var(--text-2);
+    color: var(--color-2);
+    font-weight: 450;
+  }
+}
