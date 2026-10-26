@@ -1,5 +1,3 @@
-// oxlint-disable max-lines-per-function
-
 import type { OptionID } from "../../../../../core/question";
 
 import "./style.css";

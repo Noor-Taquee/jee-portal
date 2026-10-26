@@ -1,5 +1,3 @@
-// oxlint-disable max-lines-per-function
-
 import { hashPassword } from "../../lib/crypto";
 import { D1Env } from "../../lib/d1";
 import { generateSession } from "../../lib/session";

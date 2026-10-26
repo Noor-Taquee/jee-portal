@@ -1,5 +1,3 @@
-// oxlint-disable max-lines-per-function
-
 import "./style.css";
 
 import { useTopicsMap } from "../../../../../hooks/useTopicsMap";

@@ -1,5 +1,3 @@
-// oxlint-disable max-lines-per-function
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../../../hooks/useUser";

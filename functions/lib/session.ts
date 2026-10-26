@@ -1,5 +1,3 @@
-// oxlint-disable max-lines-per-function
-
 import { SessionsTableRow } from "./d1";
 
 /**

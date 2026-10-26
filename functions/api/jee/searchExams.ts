@@ -1,5 +1,3 @@
-// oxlint-disable max-lines-per-function
-
 import { verifyRequest } from "../../lib/auth";
 import { D1Env } from "../../lib/d1";
 import { getTursoClient, TursoEnv } from "../../lib/turso";

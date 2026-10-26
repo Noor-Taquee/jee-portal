@@ -1,4 +1,3 @@
-// oxlint-disable max-lines-per-function
 import type { ResponseData } from "./response";
 import type { ExamSession } from "../context/ExamContext";
 

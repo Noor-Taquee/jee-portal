@@ -1,4 +1,3 @@
-// oxlint-disable max-lines-per-function
 import "./style.css";
 
 import NumpadKey from "./NumpadKey";
