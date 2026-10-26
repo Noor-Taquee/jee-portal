@@ -27,5 +27,6 @@
 
 ## Optional Resources
 
+- [Disclaimer](/legal/disclaimer): Disclaimer.
 - [Terms of Service](/legal/terms-of-service): Terms governing platform usage.
 - [Privacy Policy](/legal/privacy-policy): Data handling and student privacy policy.
