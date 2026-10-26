@@ -7,12 +7,15 @@ export default function AppearancePopover() {
 
   return (
     <div
-      id="appearance-popover"
-      className="popover-card right down"
+      role="menu"
       popover="auto"
+      id="appearance-popover"
+      className="popover-card right down-level"
       style={{ positionAnchor: "--appearance-popover-anchor" }}
     >
       <button
+        name="light"
+        role="menuitem"
         className="popover-entry"
         onClick={() => {
           if (settings.theme !== "light") settings.changeTheme();
@@ -22,6 +25,8 @@ export default function AppearancePopover() {
         {settings.theme === "light" && <CheckIcon className="check" />}
       </button>
       <button
+        name="dark"
+        role="menuitem"
         className="popover-entry"
         onClick={() => {
           if (settings.theme !== "dark") settings.changeTheme();
