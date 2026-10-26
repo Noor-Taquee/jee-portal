@@ -1,5 +1,3 @@
-// oxlint-disable max-lines-per-function
-
 import "./style.css";
 
 import type { ReviewQuestion, SetQuestion } from "../index";
