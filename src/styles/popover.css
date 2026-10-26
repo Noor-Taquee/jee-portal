@@ -1,10 +1,14 @@
 .popover-card:popover-open {
+  --margin: 6px;
+
   position: fixed;
 
   &.up {
     top: auto;
     bottom: anchor(top);
+    margin-bottom: var(--margin);
   }
+
   &.up-level {
     top: auto;
     bottom: anchor(bottom);
@@ -13,7 +17,9 @@
   &.down {
     bottom: auto;
     top: anchor(bottom);
+    margin-top: var(--margin);
   }
+
   &.down-level {
     bottom: auto;
     top: anchor(top);
@@ -22,7 +28,9 @@
   &.left {
     left: auto;
     right: anchor(left);
+    margin-right: var(--margin);
   }
+
   &.left-level {
     left: auto;
     right: anchor(right);
@@ -31,7 +39,9 @@
   &.right {
     right: auto;
     left: anchor(right);
+    margin-left: var(--margin);
   }
+
   &.right-level {
     right: auto;
     left: anchor(right);
@@ -78,10 +88,6 @@
   box-shadow: 0px 0px 6px 1px var(--shadow);
 }
 
-[data-orientation="landscape"] .popover-card:popover-open {
-  min-width: 200px;
-}
-
 .popover-entry {
   cursor: pointer;
   touch-action: manipulation;
@@ -103,6 +109,7 @@
   span {
     font: var(--text-2);
     font-weight: 400;
+    margin-right: 28px;
   }
 
   .lucide {
@@ -131,9 +138,11 @@
   span {
     color: var(--inc-color-1);
   }
+
   .lucide {
     stroke: var(--inc-color-1);
   }
+
   &:hover {
     background-color: var(--inc-color-2);
   }
