@@ -2,7 +2,7 @@ import "./style.css";
 
 import { useUser } from "../../../hooks/useUser";
 
-import { ChevronRight, LogOutIcon, PaletteIcon } from "lucide-react";
+import { ChevronRight, InfoIcon, LogOutIcon, PaletteIcon } from "lucide-react";
 
 export default function SettingsPopover() {
   const { logout } = useUser();
@@ -10,7 +10,7 @@ export default function SettingsPopover() {
   return (
     <div
       id="settings-popover"
-      className="popover-card right up"
+      className="popover-card up"
       popover="auto"
       style={{ positionAnchor: "--settings-popover-anchor" }}
     >
@@ -21,6 +21,15 @@ export default function SettingsPopover() {
       >
         <PaletteIcon />
         <span>Appearance</span>
+        <ChevronRight className="next" />
+      </button>
+      <button
+        className="popover-entry"
+        popoverTarget="know-more-popover"
+        style={{ anchorName: "--know-more-popover-anschor" }}
+      >
+        <InfoIcon />
+        <span>Know more</span>
         <ChevronRight className="next" />
       </button>
       <span className="divider"></span>

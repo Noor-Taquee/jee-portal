@@ -9,6 +9,7 @@ import Avatar from "../AccountButton/Avatar";
 import SettingsPopover from "./SettingsPopover";
 import AppearancePopover from "./SettingsPopover/AppearancePopover";
 import ConditionalComponent from "../ConditionalComponent";
+import KnowMorePopover from "./SettingsPopover/KnowMorePopover";
 
 export default function NavigationBar() {
   const [expanded, setExpanded] = useState(true);
@@ -26,6 +27,7 @@ export default function NavigationBar() {
 
       <SettingsPopover />
       <AppearancePopover />
+      <KnowMorePopover />
 
       <ConditionalComponent
         show={expanded}
