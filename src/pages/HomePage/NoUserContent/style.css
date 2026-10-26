@@ -12,7 +12,7 @@
   #exam-countdown-box {
     zoom: 1.4;
 
-    >.header {
+    > .header {
       margin: 0 auto;
     }
   }

@@ -6,9 +6,7 @@ import Footer from "./Footer";
 
 export default function NoUserContent() {
   return (
-    <div
-      id="no-user-content"
-    >
+    <div id="no-user-content">
       <ExamCountdown />
       <RegisterButton />
       <Footer />
