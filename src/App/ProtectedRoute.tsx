@@ -7,15 +7,32 @@ interface ProtectedRouteProps {
   errorView?: React.ReactNode;
 }
 
-export default function ProtectedRoute({ requiredRole, errorView }: ProtectedRouteProps) {
+export default function ProtectedRoute({
+  requiredRole,
+  errorView,
+}: ProtectedRouteProps) {
   const { user } = useUser();
 
   if (!user) {
-    return errorView || <Navigate to="" replace />;
+    return (
+      errorView || (
+        <Navigate
+          to=""
+          replace
+        />
+      )
+    );
   }
 
   if (requiredRole === "admin" && user.role !== "admin") {
-    return errorView || <Navigate to="" replace />;
+    return (
+      errorView || (
+        <Navigate
+          to=""
+          replace
+        />
+      )
+    );
   }
 
   return <Outlet />;

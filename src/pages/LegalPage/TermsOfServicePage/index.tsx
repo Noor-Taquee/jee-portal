@@ -22,8 +22,14 @@ export default function TermsOfServicePage() {
           these Terms.
         </p>
         <p>
-          Please review our <a href="/legal/privacy-policy" target="_blank" >Privacy Policy</a>,
-          which describes how we collect, handle, and protect your personal
+          Please review our{" "}
+          <a
+            href="/legal/privacy-policy"
+            target="_blank"
+          >
+            Privacy Policy
+          </a>
+          , which describes how we collect, handle, and protect your personal
           information and practice metrics.
         </p>
       </section>

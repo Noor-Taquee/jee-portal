@@ -1,5 +1,4 @@
 #legal-page {
-
   header {
     margin: 16px auto;
     display: flex;
@@ -12,7 +11,6 @@
       word-spacing: 4px;
     }
   }
-
 
   section {
     margin: 12px 0px;

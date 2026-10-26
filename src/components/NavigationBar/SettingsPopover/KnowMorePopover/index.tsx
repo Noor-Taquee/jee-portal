@@ -3,7 +3,6 @@ import { useRef } from "react";
 import { ExternalLinkIcon } from "lucide-react";
 
 export default function KnowMorePopover() {
-
   const popoverRef = useRef<HTMLDivElement | null>(null);
 
   const handleNavigation = (path: string) => {

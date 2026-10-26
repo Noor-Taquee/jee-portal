@@ -17,7 +17,10 @@ export default function Layout() {
   return (
     <main id="panel-container">
       <Routes>
-        <Route index element={<HomePage />} />
+        <Route
+          index
+          element={<HomePage />}
+        />
 
         <Route
           path="/home/*"
@@ -55,9 +58,18 @@ export default function Layout() {
           path="/legal"
           element={<LegalPage />}
         >
-          <Route path="disclaimer" element={<DisclaimerPage />} />
-          <Route path="terms-of-service" element={<TermsOfServicePage />} />
-          <Route path="privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route
+            path="disclaimer"
+            element={<DisclaimerPage />}
+          />
+          <Route
+            path="terms-of-service"
+            element={<TermsOfServicePage />}
+          />
+          <Route
+            path="privacy-policy"
+            element={<PrivacyPolicyPage />}
+          />
         </Route>
 
         <Route
