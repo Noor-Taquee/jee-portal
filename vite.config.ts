@@ -25,6 +25,7 @@ export default defineConfig({
       "typescript/prefer-readonly-parameter-types": "off",
       "typescript/strict-boolean-expressions": "off",
       "vite-plus/prefer-vite-plus-imports": "error",
+      "max-lines-per-function": "off",
     },
     ignorePatterns: ["**/*.test.tsx", "**/*.test.ts"],
     options: {
