@@ -9,12 +9,15 @@ export default function SettingsPopover() {
 
   return (
     <div
+      role="menu"
+      popover="auto"
       id="settings-popover"
       className="popover-card up"
-      popover="auto"
       style={{ positionAnchor: "--settings-popover-anchor" }}
     >
       <button
+        name="appearance"
+        role="menuitem"
         className="popover-entry"
         popoverTarget="appearance-popover"
         style={{ anchorName: "--appearance-popover-anchor" }}
@@ -24,6 +27,8 @@ export default function SettingsPopover() {
         <ChevronRight className="next" />
       </button>
       <button
+        name="know-more"
+        role="menuitem"
         className="popover-entry"
         popoverTarget="know-more-popover"
         style={{ anchorName: "--know-more-popover-anschor" }}
@@ -34,6 +39,8 @@ export default function SettingsPopover() {
       </button>
       <span className="divider"></span>
       <button
+        name="logout"
+        role="menuitem"
         className="popover-entry danger"
         onClick={() => {
           logout();
