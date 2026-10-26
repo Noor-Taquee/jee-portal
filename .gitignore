@@ -13,5 +13,8 @@ wrangler.json
 
 .wrangler/
 
+# Evironment variables
+*.env
 .dev.vars
+
 .vitest/
