@@ -49,7 +49,7 @@ export default function DisclaimerPage() {
       <section aria-labelledby="font-license-heading">
         <h3 id="font-license-heading">4. Third-Party Fonts &amp; License</h3>
         <p>
-          This platform uses the Inter typeface, which is distributed under the {" "}
+          This platform uses the Inter typeface, which is distributed under the{" "}
           <a
             href="https://scripts.sil.org/OFL"
             target="_blank"
