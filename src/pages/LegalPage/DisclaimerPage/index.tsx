@@ -45,6 +45,22 @@ export default function DisclaimerPage() {
           answer key synchronization.
         </p>
       </section>
+
+      <section aria-labelledby="font-license-heading">
+        <h3 id="font-license-heading">4. Third-Party Fonts &amp; License</h3>
+        <p>
+          This platform uses the Inter typeface, which is distributed under the {" "}
+          <a
+            href="https://scripts.sil.org/OFL"
+            target="_blank"
+            rel="noreferrer"
+          >
+            SIL Open Font License 1.1
+          </a>
+          . The font is bundled locally with the application and is used in
+          accordance with that license.
+        </p>
+      </section>
     </div>
   );
 }
