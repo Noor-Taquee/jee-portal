@@ -39,7 +39,6 @@
 
   p.last-updated {
     font: var(--text-2);
-    font-weight: 400;
     color: var(--color-2);
   }
 

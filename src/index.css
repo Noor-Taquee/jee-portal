@@ -11,7 +11,7 @@
   --header-2: 400 22px "Inter";
 
   --text-1: 400 16px "Inter";
-  --text-2: 300 14px "Inter";
+  --text-2: 400 14px "Inter";
   --text-3: 400 10px "Inter";
 
   --large-icon: 33px;
@@ -26,6 +26,8 @@ body,
   width: 100%;
 
   background-color: #000;
+
+  font: "Inter";
 }
 
 * {
