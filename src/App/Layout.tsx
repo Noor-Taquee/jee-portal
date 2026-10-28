@@ -41,10 +41,7 @@ export default function Layout() {
             index
             element={<HomePage />}
           />
-          <Route
-            path="/home/*"
-            element={<HomePage />}
-          />
+
           <Route
             path="/registration/*"
             element={<RegistrationPage />}

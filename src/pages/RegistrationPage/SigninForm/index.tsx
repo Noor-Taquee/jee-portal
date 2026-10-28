@@ -76,7 +76,7 @@ export default function SigninForm() {
           },
           data.token
         );
-        void navigate("/home");
+        void navigate("");
       })
       .catch((error: unknown) => {
         if (

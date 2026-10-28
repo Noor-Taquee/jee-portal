@@ -83,7 +83,7 @@ test("sign in logs in and navigates after a successful response", async () => {
       { username: "student1", name: "Ada Lovelace", role: "student" },
       "session-token"
     );
-    expect(navigateMock).toHaveBeenCalledWith("/home");
+    expect(navigateMock).toHaveBeenCalledWith("");
   });
 });
 
@@ -136,7 +136,7 @@ test("sign up logs in and navigates after a successful response", async () => {
       { username: "ada123", name: "Ada Lovelace", role: "student" },
       "session-token"
     );
-    expect(navigateMock).toHaveBeenCalledWith("/home");
+    expect(navigateMock).toHaveBeenCalledWith("");
   });
 });
 
