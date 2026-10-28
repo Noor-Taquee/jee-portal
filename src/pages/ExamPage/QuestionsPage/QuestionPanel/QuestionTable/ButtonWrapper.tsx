@@ -1,0 +1,39 @@
+import { ChevronsLeft, ChevronsRight } from "lucide-react";
+import ActionBtn from "../../../../../components/ActionBtn";
+
+interface ButtonWrapperProps {
+  page: 1 | 2 | 3;
+  setPage: React.Dispatch<React.SetStateAction<1 | 2 | 3>>;
+}
+
+export default function ButtonWrapper({ page, setPage }: ButtonWrapperProps) {
+  return (
+    <div id="q-t-button-wrapper">
+      <ActionBtn
+        title="To previous pane"
+        onClick={() => {
+          if (page === 1) return;
+          const p = (page - 1) as 1 | 2 | 3;
+          setPage(p);
+        }}
+        disabled={page === 1}
+      >
+        <ChevronsLeft />
+        <p>{"Previous"}</p>
+      </ActionBtn>
+
+      <ActionBtn
+        title="To Next pane"
+        onClick={() => {
+          if (page === 3) return;
+          const p = (page + 1) as 1 | 2 | 3;
+          setPage(p);
+        }}
+        disabled={page === 3}
+      >
+        <ChevronsRight />
+        <p>{"Next"}</p>
+      </ActionBtn>
+    </div>
+  );
+}
