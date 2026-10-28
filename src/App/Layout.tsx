@@ -5,9 +5,12 @@ import ProtectedRoute from "./ProtectedRoute";
 import HomePage from "../pages/HomePage";
 
 const RegistrationPage = lazy(() => import("../pages/RegistrationPage"));
-const LoginPage = lazy(() => import("../pages/LoginPage"));
-const QuestionsPage = lazy(() => import("../pages/QuestionsPage"));
-const ResultPage = lazy(() => import("../pages/ResultPage"));
+
+const ExamPage = lazy(() => import("../pages/ExamPage"));
+const LoginPage = lazy(() => import("../pages/ExamPage/LoginPage"));
+const QuestionsPage = lazy(() => import("../pages/ExamPage/QuestionsPage"));
+const ResultPage = lazy(() => import("../pages/ExamPage/ResultPage"));
+
 const AdminPage = lazy(() => import("../pages/AdminPage"));
 const LegalPage = lazy(() => import("../pages/LegalPage"));
 const DisclaimerPage = lazy(() => import("../pages/LegalPage/DisclaimerPage"));
@@ -40,17 +43,22 @@ export default function Layout() {
 
           <Route element={<ProtectedRoute />}>
             <Route
-              path="/exam/login"
-              element={<LoginPage />}
-            />
-            <Route
-              path="/exam/questions"
-              element={<QuestionsPage />}
-            />
-            <Route
-              path="/exam/result"
-              element={<ResultPage />}
-            />
+              path="/exam"
+              element={<ExamPage />}
+            >
+              <Route
+                path="login"
+                element={<LoginPage />}
+              />
+              <Route
+                path="questions"
+                element={<QuestionsPage />}
+              />
+              <Route
+                path="result"
+                element={<ResultPage />}
+              />
+            </Route>
           </Route>
 
           <Route element={<ProtectedRoute requiredRole="admin" />}>
