@@ -2,7 +2,10 @@ import { lazy, Suspense } from "react";
 
 import { Route, Routes } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
-import HomePage from "../pages/HomePage";
+
+import PageLoader from "../components/PageLoader";
+
+const HomePage = lazy(() => import("../pages/HomePage"));
 
 const RegistrationPage = lazy(() => import("../pages/RegistrationPage"));
 
