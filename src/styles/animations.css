@@ -7,3 +7,37 @@
 .spin {
   animation: spin 750ms linear infinite;
 }
+
+.scanning-loader {
+  position: relative;
+  overflow: hidden;
+}
+
+.scanning-loader::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+
+  background: linear-gradient(
+    45deg,
+    transparent 20%,
+    var(--bg-s-3) 50%,
+    transparent 80%
+  );
+
+  transform: translateX(-100%);
+  animation: scan-move 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes scan-move {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
