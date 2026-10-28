@@ -25,6 +25,7 @@ const TermsOfServicePage = lazy(
 const PrivacyPolicyPage = lazy(
   () => import("../pages/LegalPage/PrivacyPolicyPage")
 );
+
 const PageNotFound404 = lazy(() => import("../pages/404"));
 
 /** Layout component for the main application structure */
