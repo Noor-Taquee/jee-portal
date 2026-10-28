@@ -1,8 +1,6 @@
 import "./index.css";
 import "./styles/colors.css";
 
-import "katex/dist/katex.min.css";
-
 import { createRoot } from "react-dom/client";
 import { StrictMode } from "react";
 import { BrowserRouter } from "react-router-dom";
