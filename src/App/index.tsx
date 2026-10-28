@@ -5,7 +5,7 @@ import { useOrientation } from "../hooks/useOrientation";
 import { useSettings } from "../hooks/useSettings";
 import { useUser } from "../hooks/useUser";
 
-import { nonNavRoutes } from "../components/NavigationBar/routes";
+import { NavRoutes } from "../components/NavigationBar/routes";
 
 import { Activity } from "react";
 import NavigationBar from "../components/NavigationBar/index";
@@ -19,9 +19,9 @@ export default function App() {
   const orientation = useOrientation();
   const location = useLocation();
 
-  const hideNavigation =
-    !user ||
-    nonNavRoutes.some((pattern) => {
+  const showNavigation =
+    user &&
+    NavRoutes.some((pattern) => {
       return matchPath({ path: pattern, end: true }, location.pathname);
     });
 
@@ -36,7 +36,7 @@ export default function App() {
         show={!loadingSession}
         fallback={<SessionRestoreScreen />}
       >
-        <Activity mode={hideNavigation ? "hidden" : "visible"}>
+        <Activity mode={showNavigation ? "visible" : "hidden"}>
           <NavigationBar />
         </Activity>
         <Layout />
