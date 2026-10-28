@@ -1,0 +1,30 @@
+#page-loader {
+  padding: 40px;
+
+  gap: 24px;
+
+  p.header {
+    flex-shrink: 0;
+    height: 36px;
+    width: 160px;
+
+    border-radius: 12px;
+  }
+
+  .box {
+    flex-shrink: 0;
+    height: 240px;
+    width: 100%;
+
+    border-radius: 24px;
+
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-s-2);
+  }
+
+  p {
+    font: var(--text-1);
+    background-color: var(--bg-s-2);
+  }
+}
