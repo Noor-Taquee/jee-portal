@@ -17,10 +17,7 @@
 
   background-color: var(--color-1);
 
-  box-shadow:
-    inset 0px 1px #ffffff80,
-    inset 0px -2px #00000030,
-    0px 1px 2px #00000030;
+  transition: background-color 150ms ease-in;
 
   p {
     font: var(--text-2);
@@ -33,5 +30,9 @@
 
   &.fill {
     width: 100%;
+  }
+
+  &:hover {
+    background-color: var(--color-2);
   }
 }
