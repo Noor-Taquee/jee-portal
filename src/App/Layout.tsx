@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
 
 import PageLoader from "../components/PageLoader";
+import PageNotFound404 from "../pages/404";
 
 const HomePage = lazy(() => import("../pages/HomePage"));
 
@@ -28,8 +29,6 @@ const TermsOfServicePage = lazy(
 const PrivacyPolicyPage = lazy(
   () => import("../pages/LegalPage/PrivacyPolicyPage")
 );
-
-const PageNotFound404 = lazy(() => import("../pages/404"));
 
 /** Layout component for the main application structure */
 export default function Layout() {
