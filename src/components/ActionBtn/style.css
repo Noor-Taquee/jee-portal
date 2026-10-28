@@ -48,7 +48,6 @@
     background-color: var(--accent-1);
     p {
       color: var(--bg-p-1);
-      font-weight: 400;
     }
   }
 }

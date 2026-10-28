@@ -25,10 +25,6 @@ table.vertical-table {
     tr {
       background-color: var(--bg-p-2);
     }
-
-    p {
-      font-weight: 400;
-    }
   }
 
   > tbody {
