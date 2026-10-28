@@ -55,9 +55,18 @@ export default function Layout() {
 
           <Route element={<ProtectedRoute requiredRole="admin" />}>
             <Route
-              path="/admin/*"
+              path="/admin"
               element={<AdminPage />}
-            />
+            >
+              <Route
+                index
+                element={<AdminContent />}
+              />
+              <Route
+                path="new/question"
+                element={<AddQuestionPage />}
+              />
+            </Route>
           </Route>
 
           <Route

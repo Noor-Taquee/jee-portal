@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { PlusIcon } from "lucide-react";
 
-export default function Content() {
+export default function AdminContent() {
   return (
     <div className="app-panel">
       <Link
