@@ -12,6 +12,11 @@ const QuestionsPage = lazy(() => import("../pages/ExamPage/QuestionsPage"));
 const ResultPage = lazy(() => import("../pages/ExamPage/ResultPage"));
 
 const AdminPage = lazy(() => import("../pages/AdminPage"));
+const AdminContent = lazy(() => import("../pages/AdminPage/AdminContent"));
+const AddQuestionPage = lazy(
+  () => import("../pages/AdminPage/AddQuestionPage")
+);
+
 const LegalPage = lazy(() => import("../pages/LegalPage"));
 const DisclaimerPage = lazy(() => import("../pages/LegalPage/DisclaimerPage"));
 const TermsOfServicePage = lazy(
