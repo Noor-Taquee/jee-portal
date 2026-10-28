@@ -35,7 +35,7 @@ const PageNotFound404 = lazy(() => import("../pages/404"));
 export default function Layout() {
   return (
     <main id="panel-container">
-      <Suspense>
+      <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route
             index
