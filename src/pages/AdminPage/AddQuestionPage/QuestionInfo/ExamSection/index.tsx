@@ -145,42 +145,48 @@ export default function ExamSection({ question, setQuestion }: Props) {
           <div
             id="exam-search-results"
             className="exam-search-results"
-            role="listbox"
           >
-            {searchText.trim().length < 2 && (
-              <p className="exam-search-message">Type at least 2 characters</p>
-            )}
-            {searchText.trim().length >= 2 && isLoading && (
-              <p className="exam-search-message">Searching...</p>
-            )}
-            {searchText.trim().length >= 2 && !isLoading && noMatches && (
-              <p className="exam-search-message">No matching exams</p>
-            )}
-            {searchText.trim().length >= 2 && !isLoading && searchFailed && (
-              <p className="exam-search-message">Could not search exams</p>
-            )}
-            {!isLoading &&
-              matches.map((exam) => (
-                <button
-                  type="button"
-                  className="exam-search-result"
-                  role="option"
-                  aria-selected={question.exam_id === exam.id}
-                  key={exam.id}
-                  onMouseDown={(event) => {
-                    event.preventDefault();
-                  }}
-                  onClick={() => {
-                    selectExam(exam);
-                  }}
-                >
-                  <p>{exam.name}</p>
-                  <small>
-                    {exam.exam_type}
-                    {exam.date ? ` · ${exam.date}` : ""}
-                  </small>
-                </button>
-              ))}
+            <div
+              className="exam-search-results-scroll"
+              role="listbox"
+            >
+              {searchText.trim().length < 2 && (
+                <p className="exam-search-message">
+                  Type at least 2 characters
+                </p>
+              )}
+              {searchText.trim().length >= 2 && isLoading && (
+                <p className="exam-search-message">Searching...</p>
+              )}
+              {searchText.trim().length >= 2 && !isLoading && noMatches && (
+                <p className="exam-search-message">No matching exams</p>
+              )}
+              {searchText.trim().length >= 2 && !isLoading && searchFailed && (
+                <p className="exam-search-message">Could not search exams</p>
+              )}
+              {!isLoading &&
+                matches.map((exam) => (
+                  <button
+                    type="button"
+                    className="exam-search-result"
+                    role="option"
+                    aria-selected={question.exam_id === exam.id}
+                    key={exam.id}
+                    onMouseDown={(event) => {
+                      event.preventDefault();
+                    }}
+                    onClick={() => {
+                      selectExam(exam);
+                    }}
+                  >
+                    <p>{exam.name}</p>
+                    <small>
+                      {exam.exam_type}
+                      {exam.date ? ` · ${exam.date}` : ""}
+                    </small>
+                  </button>
+                ))}
+            </div>
           </div>
         )}
       </div>
