@@ -5,16 +5,17 @@
   height: fit-content;
   width: fit-content;
 
-  padding: 10px 12px;
+  padding: 8px 12px;
 
-  border-radius: 10px;
+  border: none;
+  border-radius: 8px;
 
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
 
-  background-color: var(--accent-1);
+  background-color: var(--color-1);
 
   box-shadow:
     inset 0px 1px #ffffff80,
@@ -22,12 +23,11 @@
     0px 1px 2px #00000030;
 
   p {
-    font: var(--text-1);
-    font-weight: 400;
+    font: var(--text-2);
     color: var(--bg-p-1);
   }
   .lucide {
-    --size: 18px;
+    --size: 16px;
     stroke: var(--bg-p-1);
   }
 
