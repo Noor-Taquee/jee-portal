@@ -1,19 +1,5 @@
-import { Route, Routes } from "react-router-dom";
-import Content from "./Content";
-import AddQuestionPage from "./AddQuestionPage";
+import { Outlet } from "react-router-dom";
 
 export default function AdminPage() {
-  return (
-    <Routes>
-      <Route
-        path=""
-        element={<Content />}
-      />
-
-      <Route
-        path="new/question"
-        element={<AddQuestionPage />}
-      />
-    </Routes>
-  );
+  return <Outlet />;
 }

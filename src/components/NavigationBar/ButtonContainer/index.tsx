@@ -12,17 +12,17 @@ export default function ButtonContainer() {
     label: string,
     route: string,
     icon: () => React.ReactNode,
-  ][] = [["home", "home", () => <HomeIcon />]];
+  ][] = [["home", "", () => <HomeIcon />]];
 
   if (user?.role === "admin" || user?.role === "maintainer") {
-    navButtons.push(["admin", "admin", () => <ShieldCheckIcon />]);
+    navButtons.push(["admin", "/admin", () => <ShieldCheckIcon />]);
   }
 
   return (
     <div id="navigation-btn-div">
       {navButtons.map(([label, route, icon]) => (
         <NavLink
-          to={`/${route}`}
+          to={route}
           key={`nav-${label}`}
           className={({ isActive }) =>
             `navigation-button ${isActive ? "active" : ""}`

@@ -2,13 +2,24 @@ import { lazy, Suspense } from "react";
 
 import { Route, Routes } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
-import HomePage from "../pages/HomePage";
+
+import PageLoader from "../components/PageLoader";
+
+const HomePage = lazy(() => import("../pages/HomePage"));
 
 const RegistrationPage = lazy(() => import("../pages/RegistrationPage"));
-const LoginPage = lazy(() => import("../pages/LoginPage"));
-const QuestionsPage = lazy(() => import("../pages/QuestionsPage"));
-const ResultPage = lazy(() => import("../pages/ResultPage"));
+
+const ExamPage = lazy(() => import("../pages/ExamPage"));
+const LoginPage = lazy(() => import("../pages/ExamPage/LoginPage"));
+const QuestionsPage = lazy(() => import("../pages/ExamPage/QuestionsPage"));
+const ResultPage = lazy(() => import("../pages/ExamPage/ResultPage"));
+
 const AdminPage = lazy(() => import("../pages/AdminPage"));
+const AdminContent = lazy(() => import("../pages/AdminPage/AdminContent"));
+const AddQuestionPage = lazy(
+  () => import("../pages/AdminPage/AddQuestionPage")
+);
+
 const LegalPage = lazy(() => import("../pages/LegalPage"));
 const DisclaimerPage = lazy(() => import("../pages/LegalPage/DisclaimerPage"));
 const TermsOfServicePage = lazy(
@@ -17,6 +28,7 @@ const TermsOfServicePage = lazy(
 const PrivacyPolicyPage = lazy(
   () => import("../pages/LegalPage/PrivacyPolicyPage")
 );
+
 const PageNotFound404 = lazy(() => import("../pages/404"));
 
 /** Layout component for the main application structure */
@@ -29,10 +41,7 @@ export default function Layout() {
             index
             element={<HomePage />}
           />
-          <Route
-            path="/home/*"
-            element={<HomePage />}
-          />
+
           <Route
             path="/registration/*"
             element={<RegistrationPage />}
@@ -40,24 +49,38 @@ export default function Layout() {
 
           <Route element={<ProtectedRoute />}>
             <Route
-              path="/exam/login"
-              element={<LoginPage />}
-            />
-            <Route
-              path="/exam/questions"
-              element={<QuestionsPage />}
-            />
-            <Route
-              path="/exam/result"
-              element={<ResultPage />}
-            />
+              path="/exam"
+              element={<ExamPage />}
+            >
+              <Route
+                path="login"
+                element={<LoginPage />}
+              />
+              <Route
+                path="questions"
+                element={<QuestionsPage />}
+              />
+              <Route
+                path="result"
+                element={<ResultPage />}
+              />
+            </Route>
           </Route>
 
           <Route element={<ProtectedRoute requiredRole="admin" />}>
             <Route
-              path="/admin/*"
+              path="/admin"
               element={<AdminPage />}
-            />
+            >
+              <Route
+                index
+                element={<AdminContent />}
+              />
+              <Route
+                path="new/question"
+                element={<AddQuestionPage />}
+              />
+            </Route>
           </Route>
 
           <Route
