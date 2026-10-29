@@ -1,0 +1,8 @@
+#last-score-card {
+  #user-score {
+    font: var(--header-1);
+  }
+  #total-score {
+    font: var(--text-1);
+  }
+}
