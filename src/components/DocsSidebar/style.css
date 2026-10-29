@@ -1,0 +1,49 @@
+#docs-sidebar {
+  position: sticky;
+  top: 40px;
+  align-self: flex-start;
+
+  padding: 12px;
+
+  border-radius: 12px;
+
+  height: fit-content;
+
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+#docs-sidebar a {
+  padding: 8px 16px;
+
+  border-left: 2px solid var(--bg-s-2);
+
+  display: block;
+
+  p {
+    font: var(--text-1);
+    color: var(--color-2);
+    text-decoration: none;
+    transition: color 200ms ease;
+  }
+
+  &:hover {
+    border-left-color: var(--bg-s-3);
+  }
+
+  &.active {
+    border-left-color: var(--color-1);
+
+    p {
+      color: var(--color-1);
+    }
+  }
+}
