@@ -1,12 +1,10 @@
-# Allow all search crawlers to index public pages
 User-agent: *
 Allow: /
 Allow: /llms.txt
 Allow: /legal/
 
-# Block crawlers from indexing dynamic state & auth routes
+Disallow: /Admin/
 Disallow: /exam/
 Disallow: /registration/
 
-# Direct crawlers to your sitemap and AI documentation
 Sitemap: https://jee-portal.pages.dev/sitemap.xml
