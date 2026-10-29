@@ -69,7 +69,7 @@ export default function DocsSidebar({ headings: GivenHeadings }: Props) {
     scrollToHash();
 
     return () => window.removeEventListener("popstate", scrollToHash);
-  }, [headings]);
+  }, []);
 
   // 3. Smooth scroll handler
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
