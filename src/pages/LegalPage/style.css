@@ -1,6 +1,8 @@
 #legal-page {
+  padding: 0px;
+
   header {
-    margin: 16px auto;
+    margin: 66px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,7 +15,7 @@
   }
 
   section {
-    margin: 12px 0px;
+    margin: 44px 0px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -58,4 +60,25 @@
     padding: 2px 4px;
     border-radius: 3px;
   }
+}
+
+.docs-layout {
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+[data-orientation="portrait"] #docs-sidebar {
+  display: none;
+}
+
+.legal-article {
+  max-width: 500px;
 }
