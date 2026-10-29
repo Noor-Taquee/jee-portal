@@ -56,7 +56,8 @@ export default function DocsSidebar({ headings: GivenHeadings }: Props) {
 
   useEffect(() => {
     const scrollToHash = () => {
-      const id = decodeURIComponent(window.location.hash.slice(1)) || headings[0]?.id;
+      const id =
+        decodeURIComponent(window.location.hash.slice(1)) || headings[0]?.id;
       if (!id) return;
 
       document
