@@ -1,8 +1,0 @@
-#home-page {
-  padding: 0px;
-  background-color: var(--bg-p-1);
-
-  #register-button {
-    margin: 48px auto;
-  }
-}

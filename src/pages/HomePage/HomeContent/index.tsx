@@ -3,17 +3,16 @@ import "./style.css";
 import { useUser } from "../../../hooks/useUser";
 
 import Suggestions from "./Suggestions";
-import HistoryPanel from "./HistoryPanel";
 import AnalyticsPanel from "./AnalyticsPanel";
 import ExamCountdown from "../../../components/ExamCountdown";
 
-export default function Content() {
+export default function HomeContent() {
   const { user } = useUser();
 
   if (!user) return <div />;
 
   return (
-    <div className="content-div">
+    <div id="home-content">
       <div id="home-header">
         <div id="welcome-box">
           <p id="welcome-message">Welcome back, {user.name}</p>
@@ -25,7 +24,6 @@ export default function Content() {
       </div>
       <AnalyticsPanel />
       <div>
-        <HistoryPanel />
         <Suggestions />
       </div>
     </div>
