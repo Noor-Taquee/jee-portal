@@ -19,6 +19,7 @@ export default function DocsSidebar({ headings: GivenHeadings }: Props) {
 
   useEffect(() => {
     if (GivenHeadings) {
+      // oxlint-disable-next-line react/set-state-in-effect
       setHeadings(GivenHeadings);
       return;
     }
@@ -30,7 +31,7 @@ export default function DocsSidebar({ headings: GivenHeadings }: Props) {
       level: Number(elem.tagName.charAt(1)),
     }));
     setHeadings(items);
-  }, []);
+  }, [setHeadings, GivenHeadings]);
 
   useEffect(() => {
     const callback: IntersectionObserverCallback = (entries) => {
@@ -69,7 +70,7 @@ export default function DocsSidebar({ headings: GivenHeadings }: Props) {
     scrollToHash();
 
     return () => window.removeEventListener("popstate", scrollToHash);
-  }, []);
+  }, [headings]);
 
   // 3. Smooth scroll handler
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
