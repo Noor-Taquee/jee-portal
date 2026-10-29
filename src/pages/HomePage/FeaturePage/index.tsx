@@ -13,6 +13,7 @@ export default function FeaturePage() {
       <Link
         to={"/registration/signup"}
         className="cta-1"
+        id="register-button"
       >
         <p>Login</p>
         <LogInIcon />

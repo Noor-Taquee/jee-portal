@@ -19,5 +19,14 @@
 
   #register-button {
     margin: 48px auto;
+    padding: 10px 18px;
+
+    p {
+      font: var(--text-1);
+    }
+
+    .lucide {
+      --size: 18px;
+    }
   }
 }
