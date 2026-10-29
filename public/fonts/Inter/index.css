@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: 'Inter';
-  src: url('./files/inter-latin-500-normal.woff2') format('woff2');
+  src: url('./files/inter-latin-600-normal.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -22,8 +22,19 @@
 
 @font-face {
   font-family: 'Inter';
-  src: url('./files/inter-latin-600-normal.woff2') format('woff2');
-  font-weight: 600;
+  src: url('./files/inter-latin-700-normal.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  size-adjust: 100%;
+  ascent-override: 90%;
+  descent-override: 20%;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./files/inter-latin-900-normal.woff2') format('woff2');
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
   size-adjust: 100%;
