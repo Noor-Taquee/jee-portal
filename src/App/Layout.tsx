@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react";
 
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
 
 import PageLoader from "../components/PageLoader";
@@ -20,6 +20,10 @@ const AdminContent = lazy(() => import("../pages/AdminPage/AdminContent"));
 const AddQuestionPage = lazy(
   () => import("../pages/AdminPage/AddQuestionPage")
 );
+
+const SettingsPage = lazy(() => import("../pages/SettingsPage"));
+const AccountSettings = lazy(() => import("../pages/SettingsPage/AccountSettings"));
+const GeneralSettings = lazy(() => import("../pages/SettingsPage/GeneralSettings"));
 
 const LegalPage = lazy(() => import("../pages/LegalPage"));
 const DisclaimerPage = lazy(() => import("../pages/LegalPage/DisclaimerPage"));
@@ -78,6 +82,31 @@ export default function Layout() {
               <Route
                 path="new/question"
                 element={<AddQuestionPage />}
+              />
+            </Route>
+          </Route>
+
+          <Route element={<ProtectedRoute />}>
+            <Route
+              path="/settings"
+              element={<SettingsPage />}
+            >
+              <Route
+                index
+                element={
+                  <Navigate
+                    to={"general"}
+                    replace
+                  />
+                }
+              />
+              <Route
+                path="general"
+                element={<GeneralSettings />}
+              />
+              <Route
+                path="account"
+                element={<AccountSettings />}
               />
             </Route>
           </Route>
