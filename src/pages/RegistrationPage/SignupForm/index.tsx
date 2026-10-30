@@ -110,7 +110,7 @@ export default function SignupForm() {
           },
           data.token
         );
-        navigate("");
+        navigate("/");
       })
       .catch((error: unknown) => {
         if (
