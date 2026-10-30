@@ -22,8 +22,12 @@ const AddQuestionPage = lazy(
 );
 
 const SettingsPage = lazy(() => import("../pages/SettingsPage"));
-const AccountSettings = lazy(() => import("../pages/SettingsPage/AccountSettings"));
-const GeneralSettings = lazy(() => import("../pages/SettingsPage/GeneralSettings"));
+const AccountSettings = lazy(
+  () => import("../pages/SettingsPage/AccountSettings")
+);
+const GeneralSettings = lazy(
+  () => import("../pages/SettingsPage/GeneralSettings")
+);
 
 const LegalPage = lazy(() => import("../pages/LegalPage"));
 const DisclaimerPage = lazy(() => import("../pages/LegalPage/DisclaimerPage"));
