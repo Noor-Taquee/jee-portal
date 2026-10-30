@@ -17,6 +17,7 @@ export default function SettingsPopover() {
     >
       <button
         name="appearance"
+        aria-label="Appearance"
         role="menuitem"
         className="popover-entry"
         popoverTarget="appearance-popover"
@@ -28,6 +29,7 @@ export default function SettingsPopover() {
       </button>
       <button
         name="know-more"
+        aria-label="Know more"
         role="menuitem"
         className="popover-entry"
         popoverTarget="know-more-popover"
@@ -40,6 +42,7 @@ export default function SettingsPopover() {
       <span className="divider"></span>
       <button
         name="logout"
+        aria-label="Logout"
         role="menuitem"
         className="popover-entry danger"
         onClick={() => {
