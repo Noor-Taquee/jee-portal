@@ -2,9 +2,17 @@ import "./style.css";
 
 import { useUser } from "../../../hooks/useUser";
 
-import { ChevronRight, InfoIcon, LogOutIcon, PaletteIcon } from "lucide-react";
+import {
+  ChevronRight,
+  InfoIcon,
+  LogOutIcon,
+  PaletteIcon,
+  SettingsIcon,
+} from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function SettingsPopover() {
+  const navigate = useNavigate();
   const { logout } = useUser();
 
   return (
@@ -15,6 +23,18 @@ export default function SettingsPopover() {
       className="popover-card up"
       style={{ positionAnchor: "--settings-popover-anchor" }}
     >
+      <button
+        name="settings"
+        aria-label="Settings"
+        role="menuitem"
+        className="popover-entry"
+        onClick={() => {
+          navigate("/settings");
+        }}
+      >
+        <SettingsIcon />
+        <span>Settings</span>
+      </button>
       <button
         name="appearance"
         aria-label="Appearance"
