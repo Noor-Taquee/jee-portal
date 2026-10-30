@@ -14,7 +14,7 @@
   will-change: width;
 
   &.expanded {
-    width: 280px;
+    min-width: 230px;
     padding: 12px;
 
     border-right: var(--border-1);
