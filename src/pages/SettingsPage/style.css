@@ -1,0 +1,14 @@
+#settings-page {
+  padding: 0;
+  flex-direction: row;
+}
+
+#settings-container {
+  flex-grow: 1;
+  padding: 24px;
+
+  h1 {
+    font-size: 28px;
+    font-weight: 300;
+  }
+}
