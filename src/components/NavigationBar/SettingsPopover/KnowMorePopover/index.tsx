@@ -1,7 +1,11 @@
-import { ExternalLinkIcon } from "lucide-react";
+import { useClosePopover } from "../../../../hooks/useClosePopover";
+
 import { Link } from "react-router-dom";
+import { ExternalLinkIcon } from "lucide-react";
 
 export default function KnowMorePopover() {
+  useClosePopover("know-more-popover");
+
   return (
     <div
       role="menu"
