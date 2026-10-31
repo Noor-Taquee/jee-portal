@@ -1,4 +1,4 @@
-import ThemeSection from "./ThemeSection";
+import AppearanceSettings from "./AppearanceSettings";
 
 export default function GeneralSettings() {
   return (
@@ -8,7 +8,7 @@ export default function GeneralSettings() {
     >
       <h1>General</h1>
 
-      <ThemeSection />
+      <AppearanceSettings />
     </div>
   );
 }
