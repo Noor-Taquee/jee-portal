@@ -8,10 +8,10 @@ export default function ThemeSection() {
 
   return (
     <section className="settings-section value-based">
-      <div>
+      <div className="settings-property">
         <p>Theme</p>
       </div>
-      <div>
+      <div className="settings-value">
         <button
           role="combobox"
           aria-haspopup="menu"
