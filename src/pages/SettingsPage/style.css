@@ -12,3 +12,99 @@
     font-weight: 300;
   }
 }
+
+.settings-panel {
+  height: 100%;
+  width: 100%;
+
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.settings-category {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  h2 {
+    margin: 12px 0px;
+
+    font: var(--text-1);
+    font-weight: 500;
+    text-align: start;
+  }
+
+  section:not(:last-child) {
+    border-bottom: var(--border-1);
+  }
+}
+
+.settings-section {
+  width: 100%;
+  padding: 12px;
+
+  display: flex;
+
+  &.value-based {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.settings-property {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  p {
+    font: var(--text-1);
+  }
+
+  caption {
+    font: var(--text-2);
+    color: var(--color-2);
+  }
+}
+
+.settings-value-input {
+  padding: 8px 10px;
+
+  border-radius: 10px;
+  border: var(--border-1);
+  background-color: var(--bg-h-1);
+
+  font: var(--text-1);
+}
+
+button.settings-value-input {
+  cursor: pointer;
+  touch-action: manipulation;
+
+  display: flex;
+  align-items: center;
+
+  p {
+    text-transform: capitalize;
+    font: var(--text-1);
+    margin-right: 28px;
+  }
+
+  .lucide {
+    --size: 16px;
+  }
+}
+
+.settings-value-input {
+  padding: 8px 10px;
+
+  border-radius: 10px;
+  border: var(--border-1);
+  background-color: var(--bg-h-1);
+
+  font: var(--text-1);
+}
