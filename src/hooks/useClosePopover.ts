@@ -7,7 +7,7 @@ export function useClosePopover(id: string) {
 
     const clickables = popover.querySelectorAll<
       HTMLButtonElement | HTMLAnchorElement
-    >("button:not(&.linked), a");
+    >("button:not(.linked), a");
 
     const clickHandler = () => {
       if (typeof popover.hidePopover === "function") {
