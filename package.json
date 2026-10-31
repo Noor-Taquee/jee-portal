@@ -10,8 +10,8 @@
   "scripts": {
     "build": "vp build",
     "pages:dev": "wrangler pages dev --proxy 5173 -- vp dev",
-    "fmt": "vp fmt src/",
-    "fmt:c": "vp fmt --check src/",
+    "fmt": "vp fmt",
+    "fmt:c": "vp fmt --check",
     "lnt": "vp lint",
     "lnt:f": "vp lint --fix",
     "test": "vp test run --reporter=verbose"
