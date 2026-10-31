@@ -15,8 +15,8 @@ export default function Footer() {
 
       <div>
         <div className="link-container">
-          <h5>Terms and Policies</h5>
-          <div>
+          <strong>Terms and Policies</strong>
+          <div className="link-scroll">
             <Link
               to="/legal/disclaimer"
               target="_blank"
