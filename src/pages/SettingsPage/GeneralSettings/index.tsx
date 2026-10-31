@@ -1,3 +1,5 @@
+import ThemeSection from "./ThemeSection";
+
 export default function GeneralSettings() {
   return (
     <div
@@ -5,6 +7,8 @@ export default function GeneralSettings() {
       className="settings-panel"
     >
       <h1>General</h1>
+
+      <ThemeSection />
     </div>
   );
 }
