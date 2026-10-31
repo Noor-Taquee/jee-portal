@@ -44,7 +44,7 @@
 
   &.right-level {
     right: auto;
-    left: anchor(right);
+    left: anchor(left);
   }
 
   height: fit-content;
