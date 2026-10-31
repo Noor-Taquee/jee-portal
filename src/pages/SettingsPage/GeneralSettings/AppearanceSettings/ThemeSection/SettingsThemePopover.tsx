@@ -1,5 +1,5 @@
-import { useSettings } from "../../../../hooks/useSettings";
-import { useClosePopover } from "../../../../hooks/useClosePopover";
+import { useSettings } from "../../../../../hooks/useSettings";
+import { useClosePopover } from "../../../../../hooks/useClosePopover";
 
 import { CheckIcon } from "lucide-react";
 

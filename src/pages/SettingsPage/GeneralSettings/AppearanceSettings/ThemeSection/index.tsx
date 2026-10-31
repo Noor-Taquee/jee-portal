@@ -1,5 +1,6 @@
 import { ChevronDownIcon } from "lucide-react";
-import { useSettings } from "../../../../hooks/useSettings";
+import { useSettings } from "../../../../../hooks/useSettings";
+
 import SettingsThemePopover from "./SettingsThemePopover";
 
 export default function ThemeSection() {
@@ -14,7 +15,7 @@ export default function ThemeSection() {
         <button
           role="combobox"
           aria-haspopup="menu"
-          className="select-button"
+          className="settings-value-input"
           popoverTarget="settings-theme-popover"
           style={{ anchorName: "--settings-theme-popover-anchor" }}
         >
