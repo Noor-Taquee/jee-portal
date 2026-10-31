@@ -1,6 +1,6 @@
-import { ChevronDownIcon } from "lucide-react";
 import { useSettings } from "../../../../../hooks/useSettings";
 
+import { ChevronDownIcon } from "lucide-react";
 import SettingsThemePopover from "./SettingsThemePopover";
 
 export default function ThemeSection() {
