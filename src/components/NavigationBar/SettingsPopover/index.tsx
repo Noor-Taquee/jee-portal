@@ -1,7 +1,9 @@
 import "./style.css";
 
 import { useUser } from "../../../hooks/useUser";
+import { useClosePopover } from "../../../hooks/useClosePopover";
 
+import { Link } from "react-router-dom";
 import {
   ChevronRight,
   InfoIcon,
@@ -9,9 +11,10 @@ import {
   PaletteIcon,
   SettingsIcon,
 } from "lucide-react";
-import { Link } from "react-router-dom";
 
 export default function SettingsPopover() {
+  useClosePopover("settings-popover");
+
   const { logout } = useUser();
 
   return (
@@ -19,7 +22,7 @@ export default function SettingsPopover() {
       role="menu"
       popover="auto"
       id="settings-popover"
-      className="popover-card up"
+      className="popover-card up right-level"
       style={{ positionAnchor: "--settings-popover-anchor" }}
     >
       <Link
@@ -35,7 +38,7 @@ export default function SettingsPopover() {
         name="appearance"
         aria-label="Appearance"
         role="menuitem"
-        className="popover-entry"
+        className="popover-entry linked"
         popoverTarget="appearance-popover"
         style={{ anchorName: "--appearance-popover-anchor" }}
       >
@@ -47,7 +50,7 @@ export default function SettingsPopover() {
         name="know-more"
         aria-label="Know more"
         role="menuitem"
-        className="popover-entry"
+        className="popover-entry linked"
         popoverTarget="know-more-popover"
         style={{ anchorName: "--know-more-popover-anschor" }}
       >
