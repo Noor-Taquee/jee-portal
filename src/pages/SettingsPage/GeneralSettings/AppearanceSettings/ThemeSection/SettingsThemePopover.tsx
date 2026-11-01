@@ -19,7 +19,7 @@ export default function SettingsThemePopover() {
         aria-label="Light"
         role="menuitemradio"
         aria-checked={settings.theme === "light" ? "true" : "false"}
-        className="popover-entry linked"
+        className="popover-entry"
         onClick={() => {
           if (settings.theme !== "light") {
             settings.changeTheme();
@@ -33,7 +33,7 @@ export default function SettingsThemePopover() {
         aria-label="Dark"
         role="menuitemradio"
         aria-checked={settings.theme === "dark" ? "true" : "false"}
-        className="popover-entry linked"
+        className="popover-entry"
         onClick={() => {
           if (settings.theme !== "dark") {
             settings.changeTheme();
