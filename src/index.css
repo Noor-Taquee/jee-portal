@@ -60,6 +60,7 @@ h6 {
 
 button {
   border: none;
+  border-radius: 4px;
   background-color: transparent;
 
   &:focus-visible {
@@ -77,7 +78,14 @@ button {
 }
 
 a {
+  border: none;
+  border-radius: 4px;
   text-decoration: none;
+
+  &:focus-visible {
+    outline: 2px solid var(--accent-1);
+    outline-offset: 2px;
+  }
 }
 
 .disabled {
