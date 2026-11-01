@@ -10,7 +10,7 @@ export default function UserNotFound({ username }: Props) {
       {username && username.length > 0 ? (
         <>
           <p>
-            Could not find any user with the username <span>'{username}'</span>
+            Could not find any user with the username <span>{username}</span>
           </p>
           <p>Try searching a different username</p>
         </>

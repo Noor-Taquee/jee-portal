@@ -33,7 +33,7 @@ export default function ProfilePage() {
 
         const data = await response.json();
         setSearchUser(data.user);
-      } catch (error) {
+      } catch {
         setSearchUser(null);
       } finally {
         setLoading(false);
