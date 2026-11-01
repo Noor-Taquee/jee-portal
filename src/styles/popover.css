@@ -107,8 +107,9 @@
 
   p,
   span {
-    font: var(--text-2);
     margin-right: 28px;
+    font: var(--text-2);
+    text-align: start;
   }
 
   .lucide {
