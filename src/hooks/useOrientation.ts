@@ -2,6 +2,10 @@ import { useEffect, useState } from "react";
 
 type Orientation = "portrait" | "landscape";
 
+function checkOrientation(): Orientation {
+  return window.innerHeight > window.innerWidth ? "portrait" : "landscape";
+}
+
 /**
  * Hook for device orientation
  * | horizontal | vertical|
@@ -9,21 +13,20 @@ type Orientation = "portrait" | "landscape";
  * | landscape | portrait |
  */
 export function useOrientation() {
-  const [orientation, setOrientation] = useState<Orientation>("portrait");
+  const [orientation, setOrientation] =
+    useState<Orientation>(checkOrientation());
 
   useEffect(() => {
-    function checkOrientation() {
-      setOrientation(
-        window.innerHeight > window.innerWidth ? "portrait" : "landscape"
-      );
+    function updateOrientation() {
+      setOrientation(checkOrientation());
     }
 
-    window.addEventListener("load", checkOrientation);
-    window.addEventListener("resize", checkOrientation);
+    window.addEventListener("load", updateOrientation);
+    window.addEventListener("resize", updateOrientation);
 
     return () => {
-      window.removeEventListener("load", checkOrientation);
-      window.removeEventListener("resize", checkOrientation);
+      window.removeEventListener("load", updateOrientation);
+      window.removeEventListener("resize", updateOrientation);
     };
   }, []);
 
