@@ -69,6 +69,8 @@
 }
 
 #user-icon-holder {
+  flex-shrink: 0;
+
   aspect-ratio: 1 / 1;
   width: 28px;
 

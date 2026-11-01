@@ -39,4 +39,16 @@ main#panel-container {
   flex-direction: column;
 
   background-color: var(--bg-p-1);
+
+  header {
+    padding: 0px 8px 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    h1 {
+      font: var(--header-1);
+    }
+  }
 }

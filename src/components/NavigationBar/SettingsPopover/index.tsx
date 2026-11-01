@@ -10,12 +10,13 @@ import {
   LogOutIcon,
   PaletteIcon,
   SettingsIcon,
+  UserCircle2Icon,
 } from "lucide-react";
 
 export default function SettingsPopover() {
   useClosePopover("settings-popover");
 
-  const { logout } = useUser();
+  const { user, logout } = useUser();
 
   return (
     <div
@@ -25,6 +26,16 @@ export default function SettingsPopover() {
       className="popover-card up right-level"
       style={{ positionAnchor: "--settings-popover-anchor" }}
     >
+      <Link
+        aria-label="Profile"
+        role="menuitem"
+        className="popover-entry"
+        to={`/user/${user?.username}`}
+      >
+        <UserCircle2Icon />
+        <span>Profile</span>
+      </Link>
+      <span className="divider" />
       <Link
         aria-label="Settings"
         role="menuitem"

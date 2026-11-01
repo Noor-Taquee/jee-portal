@@ -10,6 +10,8 @@ const HomePage = lazy(() => import("../pages/HomePage"));
 
 const RegistrationPage = lazy(() => import("../pages/RegistrationPage"));
 
+const ProfilePage = lazy(() => import("../pages/ProfilePage"));
+
 const ExamPage = lazy(() => import("../pages/ExamPage"));
 const LoginPage = lazy(() => import("../pages/ExamPage/LoginPage"));
 const QuestionsPage = lazy(() => import("../pages/ExamPage/QuestionsPage"));
@@ -52,6 +54,11 @@ export default function Layout() {
           <Route
             path="/registration/*"
             element={<RegistrationPage />}
+          />
+
+          <Route
+            path="/user/:username"
+            element={<ProfilePage />}
           />
 
           <Route element={<ProtectedRoute />}>
