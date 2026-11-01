@@ -1,6 +1,3 @@
-import { useUser } from "../../hooks/useUser";
-import { User2Icon } from "lucide-react";
-
 function trim(name: string) {
   const ps = name.split(" ");
 
@@ -15,19 +12,14 @@ function trim(name: string) {
   return (f_letter || "") + (l_letter || "");
 }
 
-export default function Avatar() {
-  const { user } = useUser();
+interface Props {
+  name: string;
+}
 
-  if (!user)
-    return (
-      <div id="user-icon-holder">
-        <User2Icon />
-      </div>
-    );
-
+export default function Avatar({ name }: Props) {
   return (
     <div id="user-icon-holder">
-      <span>{trim(user.name)}</span>
+      <span>{trim(name)}</span>
     </div>
   );
 }

@@ -21,7 +21,7 @@ export default function AccountButton({ ...props }: Props) {
       id="account-button"
       {...props}
     >
-      <Avatar />
+      <Avatar name={user.name} />
       <div className="info">
         <div className="name">
           <p className="name">{user?.name}</p>
