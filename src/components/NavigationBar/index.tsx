@@ -1,6 +1,7 @@
 import "./style.css";
 
 import { useState } from "react";
+import { useUser } from "../../hooks/useUser";
 
 import ButtonContainer from "./ButtonContainer";
 import NavigationHeader from "./NavigationHeader";
@@ -12,7 +13,10 @@ import ConditionalComponent from "../ConditionalComponent";
 import KnowMorePopover from "./SettingsPopover/KnowMorePopover";
 
 export default function NavigationBar() {
+  const { user } = useUser();
   const [expanded, setExpanded] = useState(true);
+
+  if (!user) return;
 
   return (
     <nav
@@ -31,7 +35,7 @@ export default function NavigationBar() {
 
       <ConditionalComponent
         show={expanded}
-        fallback={<Avatar />}
+        fallback={<Avatar name={user.name} />}
       >
         <AccountButton
           popoverTarget="settings-popover"
