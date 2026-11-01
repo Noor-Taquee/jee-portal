@@ -2,9 +2,9 @@
   "@context": "https://ietf.org/id/draft-bu-dawn-ard-discovery",
   "entries": [
     {
-      "identifier": "urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6",
+      "identifier": "urn:air:jee-portal.pages.dev:app:practice-engine",
       "displayName": "JEE Portal Exam & Question Practice Engine",
-      "mediaType": "application/json",
+      "type": "application/json",
       "url": "https://jee-portal.pages.dev/",
       "representativeQueries": [
         "Find previous year JEE Main online shift questions",
