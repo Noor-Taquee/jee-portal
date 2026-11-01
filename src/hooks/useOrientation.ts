@@ -13,7 +13,8 @@ function checkOrientation(): Orientation {
  * | landscape | portrait |
  */
 export function useOrientation() {
-  const [orientation, setOrientation] = useState<Orientation>(checkOrientation());
+  const [orientation, setOrientation] =
+    useState<Orientation>(checkOrientation());
 
   useEffect(() => {
     function updateOrientation() {
