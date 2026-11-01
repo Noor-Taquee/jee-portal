@@ -1,0 +1,4 @@
+Do Not Track Policy
+http://www.w3.org/2011/tracking-protection/drafts/tracking-dnt.html
+
+This domain does not track users across third-party websites.
