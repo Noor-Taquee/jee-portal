@@ -32,6 +32,7 @@
   p {
     font: var(--text-1);
     color: var(--color-1);
+    line-height: 1.618;
 
     a {
       font-weight: 500;
@@ -53,6 +54,8 @@
 
   li {
     font: var(--text-1);
+    color: var(--color-1);
+    line-height: 1.618;
   }
 
   code {
