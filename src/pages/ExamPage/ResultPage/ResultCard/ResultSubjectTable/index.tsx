@@ -73,7 +73,9 @@ export default function ResultSubjectTable({ marks }: ResultSubjectTableProps) {
             <p>{m}.00%</p>
           </td>
         </tr>
-        <tr className="footer">
+      </tbody>
+      <tfoot>
+        <tr>
           <td className="subject-col">
             <p>Total</p>
           </td>
@@ -87,7 +89,7 @@ export default function ResultSubjectTable({ marks }: ResultSubjectTableProps) {
             <p>{(totalMarks / 3).toFixed(2)}%</p>
           </td>
         </tr>
-      </tbody>
+      </tfoot>
     </table>
   );
 }
