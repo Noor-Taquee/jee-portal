@@ -1,7 +1,13 @@
 import { useClosePopover } from "../../../../hooks/useClosePopover";
 
 import { Link } from "react-router-dom";
-import { ExternalLinkIcon } from "lucide-react";
+import {
+  ExternalLinkIcon,
+  HistoryIcon,
+  InfoIcon,
+  ScaleIcon,
+  ShieldCheckIcon,
+} from "lucide-react";
 
 export default function KnowMorePopover() {
   useClosePopover("know-more-popover");
@@ -21,6 +27,7 @@ export default function KnowMorePopover() {
         to="/legal/terms-of-service"
         target="_blank"
       >
+        <ScaleIcon />
         <p>Terms of service</p>
         <ExternalLinkIcon className="next" />
       </Link>
@@ -31,6 +38,7 @@ export default function KnowMorePopover() {
         to="/legal/disclaimer"
         target="_blank"
       >
+        <InfoIcon />
         <p>Disclaimer</p>
         <ExternalLinkIcon className="next" />
       </Link>
@@ -41,8 +49,19 @@ export default function KnowMorePopover() {
         to="/legal/privacy-policy"
         target="_blank"
       >
+        <ShieldCheckIcon />
         <p>Privacy Policy</p>
         <ExternalLinkIcon className="next" />
+      </Link>
+      <span className="divider" />
+      <Link
+        aria-label="Changelog"
+        role="menuitem"
+        className="popover-entry"
+        to="/changelog"
+      >
+        <HistoryIcon />
+        <p>Changelog</p>
       </Link>
     </div>
   );

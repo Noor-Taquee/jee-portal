@@ -1,0 +1,60 @@
+#changelog-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 32px;
+
+  .changelog-error {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+#changelog-article {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  color: var(--color-1);
+  line-height: 1.618;
+
+  h1 {
+    color: var(--color-2);
+    font-size: 32px;
+  }
+
+  h2 {
+    margin-top: 16px;
+    color: var(--color-2);
+    font-size: 24px;
+  }
+
+  h3 {
+    margin-top: 8px;
+    color: var(--color-2);
+    font-size: 18px;
+  }
+
+  ul {
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: var(--accent-1);
+    }
+  }
+
+  strong {
+    color: var(--color-2);
+  }
+}

@@ -8,6 +8,8 @@ import PageNotFound404 from "../pages/404";
 
 const HomePage = lazy(() => import("../pages/HomePage"));
 
+const ChangelogPage = lazy(() => import("../pages/ChangelogPage"));
+
 const RegistrationPage = lazy(() => import("../pages/RegistrationPage"));
 
 const ProfilePage = lazy(() => import("../pages/ProfilePage"));
@@ -49,6 +51,11 @@ export default function Layout() {
           <Route
             index
             element={<HomePage />}
+          />
+
+          <Route
+            path="/changelog"
+            element={<ChangelogPage />}
           />
 
           <Route
