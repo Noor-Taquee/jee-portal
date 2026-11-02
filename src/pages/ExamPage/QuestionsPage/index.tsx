@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useExamSession } from "../../../hooks/useExamSession";
 
+import { Helmet } from "react-helmet-async";
 import QuestionPanel from "./QuestionPanel";
 import Header from "./Header";
 
@@ -95,6 +96,14 @@ export default function QuestionsPage() {
         className="app-panel"
         id="questions-page"
       >
+        <Helmet>
+          <meta
+            name="robots"
+            content="noindex, nofollow"
+          />
+          <title>Exam - Questions</title>
+        </Helmet>
+
         <div className="dialog-box">
           <p className="dialog-header">
             {examSession.examData
@@ -124,6 +133,14 @@ export default function QuestionsPage() {
       className="app-panel"
       id="questions-page"
     >
+      <Helmet>
+        <meta
+          name="robots"
+          content="noindex, nofollow"
+        />
+        <title>Exam - Questions</title>
+      </Helmet>
+
       <Header submitExam={submitExam} />
       <QuestionPanel
         questionNo={questionNo}

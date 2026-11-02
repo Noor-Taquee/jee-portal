@@ -2,6 +2,7 @@ import "./style.css";
 
 import { useState } from "react";
 
+import { Helmet } from "react-helmet-async";
 import QuestionContainer from "./QuestionContainer";
 import QuestionInfo from "./QuestionInfo";
 import UploadDialog from "./UploadDialog";
@@ -50,6 +51,14 @@ export default function AddQuestionPage() {
       className="app-panel"
       id="add-question-page"
     >
+      <Helmet>
+        <meta
+          name="robots"
+          content="noindex, nofollow"
+        />
+        <title>Add Questions</title>
+      </Helmet>
+
       <QuestionContainer
         question={question}
         setQuestion={setQuestion}

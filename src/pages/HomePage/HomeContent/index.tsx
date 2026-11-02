@@ -2,6 +2,7 @@ import "./style.css";
 
 import { useUser } from "../../../hooks/useUser";
 
+import { Helmet } from "react-helmet-async";
 import Suggestions from "./Suggestions";
 import AnalyticsPanel from "./AnalyticsPanel";
 import ExamCountdown from "../../../components/ExamCountdown";
@@ -13,6 +14,10 @@ export default function HomeContent() {
 
   return (
     <div id="home-content">
+      <Helmet>
+        <title>Dashboard</title>
+      </Helmet>
+
       <div id="home-header">
         <div id="welcome-box">
           <p id="welcome-message">Welcome back, {user.name}</p>

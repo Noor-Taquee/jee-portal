@@ -1,6 +1,7 @@
 import "./style.css";
 
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { ArrowUpRight, BookOpen, CheckCircle2, Timer } from "lucide-react";
 import ExamCountdown from "../../../components/ExamCountdown";
 import Footer from "./Footer";
@@ -8,6 +9,38 @@ import Footer from "./Footer";
 export default function FeaturePage() {
   return (
     <div id="feature-page">
+      <Helmet>
+        <link
+          rel="canonical"
+          href="https://jee-portal.pages.dev"
+        />
+        <meta
+          name="description"
+          content="Practice for JEE Main and Advanced with interactive mock exams, previous-year questions, and performance tracking on JEE Portal."
+        />
+        <title>JEE Portal - Interactive Exam Practice Platform</title>
+        <meta
+          property="og:title"
+          content="JEE Portal - Interactive Exam Practice Platform"
+        />
+        <meta
+          property="og:description"
+          content="Practice for JEE Main and Advanced with interactive mock exams, previous-year questions, and performance tracking on JEE Portal."
+        />
+        <meta
+          property="og:url"
+          content="https://jee-portal.pages.dev"
+        />
+        <meta
+          name="twitter:title"
+          content="JEE Portal - Interactive Exam Practice Platform"
+        />
+        <meta
+          name="twitter:description"
+          content="Practice for JEE Main and Advanced with interactive mock exams, previous-year questions, and performance tracking on JEE Portal."
+        />
+      </Helmet>
+
       <header
         className="feature-nav"
         aria-label="Main"
