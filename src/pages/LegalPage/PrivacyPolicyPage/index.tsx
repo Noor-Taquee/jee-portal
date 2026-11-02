@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import DocsSidebar from "../../../components/DocsSidebar";
 
 export default function PrivacyPolicyPage() {
@@ -6,6 +7,38 @@ export default function PrivacyPolicyPage() {
       id="privacy-policy-page"
       className="app-panel"
     >
+      <Helmet>
+        <link
+          rel="canonical"
+          href="https://jee-portal.pages.dev/legal/privacy-policy"
+        />
+        <title>Privacy Policy</title>
+        <meta
+          name="description"
+          content="Read how JEE Portal collects, uses, and protects account and usage information."
+        />
+        <meta
+          property="og:title"
+          content="Privacy Policy | JEE Portal"
+        />
+        <meta
+          property="og:description"
+          content="Read how JEE Portal collects, uses, and protects account and usage information."
+        />
+        <meta
+          property="og:url"
+          content="https://jee-portal.pages.dev/legal/privacy-policy"
+        />
+        <meta
+          name="twitter:title"
+          content="Privacy Policy | JEE Portal"
+        />
+        <meta
+          name="twitter:description"
+          content="Read how JEE Portal collects, uses, and protects account and usage information."
+        />
+      </Helmet>
+
       <header className="page-header">
         <h1>Privacy Policy</h1>
         <p className="last-updated">Last modified: October 2026</p>

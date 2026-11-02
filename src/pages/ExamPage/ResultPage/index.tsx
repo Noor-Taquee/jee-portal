@@ -6,6 +6,7 @@ import { useExamSession } from "../../../hooks/useExamSession";
 
 import { getResult } from "../../../core/result";
 
+import { Helmet } from "react-helmet-async";
 import ResultCard from "./ResultCard";
 import ResultQuestionTable from "./ResultQuestionTable";
 
@@ -30,6 +31,14 @@ export default function ResultPage() {
       className="app-panel"
       id="result-page"
     >
+      <Helmet>
+        <meta
+          name="robots"
+          content="noindex, nofollow"
+        />
+        <title>Exam - Result</title>
+      </Helmet>
+
       <ResultCard testResult={testResult} />
       <ResultQuestionTable testResult={testResult} />
     </div>

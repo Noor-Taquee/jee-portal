@@ -7,6 +7,7 @@ import Header from "./Header";
 import LoginForm from "./LoginForm";
 import InstituteLogo from "../../../components/InstituteLogo";
 import DialogBox from "../../../components/DialogBox";
+import { Helmet } from "react-helmet-async";
 
 export default function LoginPage() {
   const { user } = useUser();
@@ -40,6 +41,14 @@ export default function LoginPage() {
       className="app-panel"
       id="login-page"
     >
+      <Helmet>
+        <meta
+          name="robots"
+          content="noindex, nofollow"
+        />
+        <title>Exam - login</title>
+      </Helmet>
+
       <InstituteLogo />
 
       <Header />
