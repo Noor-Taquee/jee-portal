@@ -1,24 +1,33 @@
 import { hashPassword } from "../../lib/crypto";
 import { D1Env } from "../../lib/d1";
 import { generateSession } from "../../lib/session";
+import { checkPassword, checkUsername } from "../../lib/userdata";
 
 export const onRequestPost: PagesFunction<D1Env> = async (context) => {
   try {
     // Extract user data
     const {
-      name,
-      username,
-      password,
+      name: rawName,
+      username: rawUsername,
+      password: rawPassword,
       role = "student",
     } = await context.request.json<{
-      name?: string;
-      username?: string;
-      password?: string;
-      role?: string;
+      name?: unknown;
+      username?: unknown;
+      password?: unknown;
+      role?: unknown;
     }>();
 
     // If details are not provided
-    if (!username || !password || !name) {
+    if (
+      !rawUsername ||
+      typeof rawUsername !== "string" ||
+      !rawPassword ||
+      typeof rawPassword !== "string" ||
+      !rawName ||
+      typeof rawName !== "string" ||
+      typeof role !== "string"
+    ) {
       return Response.json(
         { success: false, error: "Details not provided" },
         { status: 400 }
@@ -33,7 +42,33 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
       );
     }
 
-    // TODO: Validate user data
+    // check name
+    const name = rawName.trim();
+    if (name.length < 1) {
+      return Response.json(
+        { success: false, error: "Name is required" },
+        { status: 400 }
+      );
+    }
+
+    // check username
+    const username = rawUsername.trim().toLowerCase();
+    const usernameResult = checkUsername(username);
+    if (!usernameResult.success) {
+      return Response.json(
+        { success: false, error: usernameResult.error },
+        { status: 400 }
+      );
+    }
+
+    // check password
+    const passwordResult = checkPassword(rawPassword);
+    if (!passwordResult.success) {
+      return Response.json(
+        { success: false, error: passwordResult.error },
+        { status: 400 }
+      );
+    }
 
     // Check if the username is already taken
     const existingUser = await context.env.DB.prepare(
@@ -50,8 +85,8 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
       );
     }
 
-    // Hash passwords
-    const hashedPassword = await hashPassword(password);
+    // Hash password
+    const hashedPassword = await hashPassword(rawPassword);
 
     // Generate a session so users are logged in right away
     const session = generateSession(
@@ -98,9 +133,9 @@ export const onRequestPost: PagesFunction<D1Env> = async (context) => {
         role: role,
       },
     });
-  } catch (error: any) {
+  } catch {
     return Response.json(
-      { success: false, error: error.message },
+      { success: false, error: "Failed to register user" },
       { status: 500 }
     );
   }
