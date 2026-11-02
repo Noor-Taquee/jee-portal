@@ -20,10 +20,11 @@ export default function QuestionBox({
   onClick,
   ariaHidden,
 }: QuestionBoxProps) {
-  number = String(number).length === 1 ? `0${number}` : number;
+  number = String(number).length === 1 ? `0${number}` : `${number}`;
 
   return (
     <button
+      aria-label={number}
       className={`question-box ${className}`}
       onClick={onClick}
       aria-hidden={ariaHidden ? "true" : "false"}
