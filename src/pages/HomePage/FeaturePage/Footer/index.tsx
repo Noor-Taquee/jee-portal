@@ -41,6 +41,13 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      <div className="link-container">
+        <strong>Updates</strong>
+        <div className="link-scroll">
+          <Link to="/changelog">Changelog</Link>
+        </div>
+      </div>
     </footer>
   );
 }
