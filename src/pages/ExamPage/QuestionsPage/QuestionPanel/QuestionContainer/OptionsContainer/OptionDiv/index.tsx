@@ -27,7 +27,7 @@ export default function OptionDiv({
         onClick={() => {
           setOption(option.id);
         }}
-      ></div>
+      ></button>
       <TextRenderer content={option.content} />
     </div>
   );
