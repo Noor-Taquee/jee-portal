@@ -16,8 +16,13 @@ export default function OptionDiv({
   setOption,
 }: OptionDivProps) {
   return (
-    <div className="option-div">
-      <div
+    <div
+      role="menu"
+      className="option-div"
+    >
+      <button
+        role="menuitemradio"
+        aria-checked={selected ? "true" : "false"}
         className={`option-radio ${selected ? "selected" : ""}`}
         onClick={() => {
           setOption(option.id);
