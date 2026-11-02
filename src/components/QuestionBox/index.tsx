@@ -27,6 +27,7 @@ export default function QuestionBox({
       className={`question-box ${className}`}
       onClick={onClick}
       aria-hidden={ariaHidden ? "true" : "false"}
+      inert={ariaHidden ?? false}
     >
       {className === "ans-marked-for-review" && <SquareText />}
       <p>{number}</p>
