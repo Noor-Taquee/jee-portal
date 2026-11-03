@@ -1,4 +1,4 @@
-import Avatar from "../../../../components/AccountButton/Avatar";
+import Avatar from "../../../../components/Avatar";
 
 interface Props {
   user: {

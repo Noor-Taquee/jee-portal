@@ -11,7 +11,10 @@
   width: 100%;
   height: fit-content;
 
+  padding: 8px;
+
   border: none;
+  border-radius: 8px;
 
   display: flex;
   align-items: center;
@@ -44,10 +47,6 @@
 }
 
 .expanded .navigation-button {
-  padding: 8px;
-
-  border-radius: 8px;
-
   gap: 10px;
 
   p {
@@ -58,7 +57,6 @@
 
 .collapsed .navigation-button {
   width: fit-content;
-  padding: 8px;
 
   border-radius: 8px;
 

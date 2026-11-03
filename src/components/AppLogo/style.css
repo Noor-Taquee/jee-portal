@@ -1,0 +1,14 @@
+.app-mark {
+  --size: 18px;
+
+  flex-shrink: 0;
+  aspect-ratio: 1 / 1;
+  width: var(--size);
+
+  display: inline-block;
+
+  background-color: var(--color-1);
+
+  mask: url("/icons/mark.svg") center / contain no-repeat;
+  -webkit-mask: url("/icons/mark.svg") center / contain no-repeat;
+}

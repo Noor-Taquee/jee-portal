@@ -32,8 +32,16 @@ export default function FeaturePage() {
           content="https://jee-portal.pages.dev"
         />
         <meta
+          property="og:image"
+          content="https://jee-portal.pages.dev/icons/icon-512.png"
+        />
+        <meta
           name="twitter:title"
           content="JEE Portal - Interactive Exam Practice Platform"
+        />
+        <meta
+          name="twitter:image"
+          content="https://jee-portal.pages.dev/icons/icon-512.png"
         />
         <meta
           name="twitter:description"
@@ -49,7 +57,10 @@ export default function FeaturePage() {
           className="feature-brand"
           to="/"
         >
-          <span className="brand-mark">J</span>
+          <span
+            className="app-mark brand-mark"
+            aria-hidden="true"
+          />
           <span>JEE Portal</span>
         </Link>
         <span className="exam-label">

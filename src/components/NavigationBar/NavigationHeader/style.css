@@ -2,26 +2,45 @@
   width: 100%;
   height: fit-content;
 
-  overflow: hidden;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  > .header-text {
+  > .navigation-brand {
+    flex-shrink: 0;
+    min-width: 0;
     overflow: hidden;
-    font: 600 18px "Inter";
-    color: var(--color-1);
+
+    padding: 8px;
+
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+
+    > .app-mark {
+      --size: 16px;
+    }
+
+    > .header-text {
+      overflow: hidden;
+      font: 600 18px "Inter";
+      color: var(--color-1);
+    }
   }
 
   .toggle-button {
+    cursor: pointer;
+
+    height: 35px;
+    width: 35px;
+
     border: none;
     border-radius: 50%;
 
     background-color: transparent;
 
     .lucide {
-      --size: 16px;
+      --size: 18px;
       stroke: var(--color-2);
     }
 
@@ -30,5 +49,13 @@
         stroke: var(--color-1);
       }
     }
+  }
+}
+
+.collapsed #navigation-header {
+  justify-content: center;
+
+  .toggle-button {
+    flex-shrink: 0;
   }
 }
