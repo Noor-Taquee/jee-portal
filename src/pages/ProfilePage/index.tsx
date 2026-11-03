@@ -2,7 +2,6 @@ import "./style.css";
 
 import { useEffect, useState } from "react";
 
-import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
 import ConditionalComponent from "../../components/ConditionalComponent";
 import PageLoader from "../../components/PageLoader";
@@ -51,53 +50,6 @@ export default function ProfilePage() {
       id="profile-page"
       className="app-panel"
     >
-      <Helmet>
-        {searchedUser?.visibility === "public" ? (
-          <link
-            rel="canonical"
-            href={`https://jee-portal.pages.dev/user/${encodeURIComponent(searchedUser.username)}`}
-          />
-        ) : (
-          <meta
-            name="robots"
-            content="noindex, nofollow"
-          />
-        )}
-        <title>
-          {username
-            ? `${username} - Profile | JEE Portal`
-            : "Profile | JEE Portal"}
-        </title>
-        {searchedUser?.visibility === "public" && (
-          <>
-            <meta
-              name="description"
-              content={`View ${searchedUser.name}'s JEE Portal profile.`}
-            />
-            <meta
-              property="og:title"
-              content={`${searchedUser.username} - Profile | JEE Portal`}
-            />
-            <meta
-              property="og:description"
-              content={`View ${searchedUser.name}'s JEE Portal profile.`}
-            />
-            <meta
-              property="og:url"
-              content={`https://jee-portal.pages.dev/user/${encodeURIComponent(searchedUser.username)}`}
-            />
-            <meta
-              name="twitter:title"
-              content={`${searchedUser.username} - Profile | JEE Portal`}
-            />
-            <meta
-              name="twitter:description"
-              content={`View ${searchedUser.name}'s JEE Portal profile.`}
-            />
-          </>
-        )}
-      </Helmet>
-
       <ConditionalComponent
         show={!loading}
         fallback={<PageLoader />}
