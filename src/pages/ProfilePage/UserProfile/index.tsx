@@ -1,6 +1,7 @@
 import "./style.css";
 
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { ArrowLeftIcon, VerifiedIcon } from "lucide-react";
 import UserInfo from "./UserInfo";
 
@@ -16,6 +17,46 @@ interface Props {
 export default function UserProfile({ user }: Props) {
   return (
     <div id="user-profile">
+      <Helmet>
+        <link
+          rel="canonical"
+          href={`https://jee-portal.pages.dev/user/${encodeURIComponent(user.username)}`}
+        />
+        <title>
+          {user.name
+            ? `${user.name} - ${user.username}`
+            : "Profile | JEE Portal"}
+        </title>
+        {user?.visibility === "public" && (
+          <>
+            <meta
+              name="description"
+              content={`View ${user.name}'s JEE Portal profile.`}
+            />
+            <meta
+              property="og:title"
+              content={`${user.username} - Profile | JEE Portal`}
+            />
+            <meta
+              property="og:description"
+              content={`View ${user.name}'s JEE Portal profile.`}
+            />
+            <meta
+              property="og:url"
+              content={`https://jee-portal.pages.dev/user/${encodeURIComponent(user.username)}`}
+            />
+            <meta
+              name="twitter:title"
+              content={`${user.username} - Profile | JEE Portal`}
+            />
+            <meta
+              name="twitter:description"
+              content={`View ${user.name}'s JEE Portal profile.`}
+            />
+          </>
+        )}
+      </Helmet>
+
       <header>
         <Link to="/">
           <ArrowLeftIcon />
@@ -26,7 +67,6 @@ export default function UserProfile({ user }: Props) {
         </h1>
       </header>
       <UserInfo user={user} />
-      <div></div>
     </div>
   );
 }
