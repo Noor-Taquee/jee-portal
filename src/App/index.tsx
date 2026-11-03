@@ -44,7 +44,10 @@ export default function App() {
         show={!loadingSession}
         fallback={<SessionRestoreScreen />}
       >
-        <NavVisibilityProvider>
+        <NavVisibilityProvider
+          pathname={location.pathname}
+          isMobile={orientation === "portrait"}
+        >
           <AppContent showNavigation={Boolean(showNavigation)} />
         </NavVisibilityProvider>
       </ConditionalComponent>
