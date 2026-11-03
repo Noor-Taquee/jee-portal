@@ -1,52 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-  <!-- Main Landing / Home Panel -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jee-portal.pages.dev</loc>
-    <lastmod>2026-10-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+    <loc>https://jee-portal.pages.dev/</loc>
+    <lastmod>2026-11-03T19:40:29+00:00</lastmod>
+    <priority>1.0000</priority>
   </url>
-
-  <url>
-    <loc>https://jee-portal.pages.dev/changelog</loc>
-    <lastmod>2026-11-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Legal Pages -->
-  <url>
-    <loc>https://jee-portal.pages.dev/legal/terms-of-service</loc>
-    <lastmod>2026-10-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://jee-portal.pages.dev/legal/privacy-policy</loc>
-    <lastmod>2026-10-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
   <url>
     <loc>https://jee-portal.pages.dev/legal/disclaimer</loc>
-    <lastmod>2026-10-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2026-11-03T19:40:29+00:00</lastmod>
+    <priority>0.6400</priority>
   </url>
-
-  <!-- AI Discovery Specs -->
   <url>
-    <loc>https://jee-portal.pages.dev/llms.txt</loc>
-    <lastmod>2026-10-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://jee-portal.pages.dev/legal/terms-of-service</loc>
+    <lastmod>2026-11-03T19:40:29+00:00</lastmod>
+    <priority>0.6400</priority>
   </url>
-
+  <url>
+    <loc>https://jee-portal.pages.dev/legal/privacy-policy</loc>
+    <lastmod>2026-11-03T19:40:29+00:00</lastmod>
+    <priority>0.6400</priority>
+  </url>
+  <url>
+    <loc>https://jee-portal.pages.dev/changelog</loc>
+    <lastmod>2026-11-03T19:40:29+00:00</lastmod>
+    <priority>0.6400</priority>
+  </url>
 </urlset>
