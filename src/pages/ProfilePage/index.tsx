@@ -52,17 +52,14 @@ export default function ProfilePage() {
       className="app-panel"
     >
       <Helmet>
-        {searchedUser?.visibility === "public" ? (
-          <link
-            rel="canonical"
-            href={`https://jee-portal.pages.dev/user/${encodeURIComponent(searchedUser.username)}`}
-          />
-        ) : (
-          <meta
-            name="robots"
-            content="noindex, nofollow"
-          />
-        )}
+        <link
+          rel="canonical"
+          href={`https://jee-portal.pages.dev/user/${encodeURIComponent(searchedUser.username)}`}
+        />
+        <meta
+          name="robots"
+          content="noindex, nofollow"
+        />
         <title>
           {username
             ? `${username} - Profile | JEE Portal`
