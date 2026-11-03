@@ -5,11 +5,9 @@ import { useUser } from "../../hooks/useUser";
 
 import ButtonContainer from "./ButtonContainer";
 import NavigationHeader from "./NavigationHeader";
-import AccountButton from "../AccountButton";
-import Avatar from "../AccountButton/Avatar";
+import AccountButton from "./AccountButton";
 import SettingsPopover from "./SettingsPopover";
 import AppearancePopover from "./SettingsPopover/AppearancePopover";
-import ConditionalComponent from "../ConditionalComponent";
 import KnowMorePopover from "./SettingsPopover/KnowMorePopover";
 
 export default function NavigationBar() {
@@ -33,15 +31,7 @@ export default function NavigationBar() {
       <AppearancePopover />
       <KnowMorePopover />
 
-      <ConditionalComponent
-        show={expanded}
-        fallback={<Avatar name={user.name} />}
-      >
-        <AccountButton
-          popoverTarget="settings-popover"
-          style={{ anchorName: "--settings-popover-anchor" }}
-        />
-      </ConditionalComponent>
+      <AccountButton expanded={expanded} />
     </nav>
   );
 }

@@ -1,3 +1,5 @@
+import "./style.css";
+
 function trim(name: string) {
   const ps = name.split(" ");
 

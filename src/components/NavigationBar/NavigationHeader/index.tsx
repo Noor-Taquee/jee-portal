@@ -1,8 +1,9 @@
 import "./style.css";
 
-import { PanelLeftCloseIcon, PanelLeftOpenIcon } from "lucide-react";
+import { Activity } from "react";
 
-import ToggleButton from "../../ToggleButton";
+import AppLogo from "../../AppLogo";
+import CloseButton from "./CloseButton";
 
 interface NavigationHeaderProps {
   expanded: boolean;
@@ -15,15 +16,16 @@ export default function NavigationHeader({
 }: NavigationHeaderProps) {
   return (
     <div id="navigation-header">
-      {expanded && <h4 className="header-text">JEE Portal</h4>}
-      <ToggleButton
-        title={expanded ? "collapse" : "Expand"}
-        onClick={() => {
-          setExpanded((p) => !p);
-        }}
-      >
-        {expanded ? <PanelLeftCloseIcon /> : <PanelLeftOpenIcon />}
-      </ToggleButton>
+      <Activity mode={expanded ? "visible" : "hidden"}>
+        <div className="navigation-brand">
+          <AppLogo />
+          <h4 className="header-text">JEE Portal</h4>
+        </div>
+      </Activity>
+      <CloseButton
+        expanded={expanded}
+        setExpanded={setExpanded}
+      />
     </div>
   );
 }

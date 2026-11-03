@@ -32,13 +32,6 @@
 .brand-mark {
   width: 32px;
   height: 32px;
-
-  display: grid;
-  place-items: center;
-  border-radius: 6px;
-  background: var(--color-1);
-  color: var(--bg-p-1);
-  font: 700 17px "Inter";
 }
 
 .exam-label,
