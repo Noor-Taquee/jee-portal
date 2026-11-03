@@ -9,10 +9,8 @@ export default function UserNotFound({ username }: Props) {
   return (
     <div id="user-not-found-div">
       <Helmet>
-        <title>
-          User not found
-        </title>
-    </Helmet>
+        <title>User not found</title>
+      </Helmet>
 
       {username && username.length > 0 ? (
         <>
