@@ -4,11 +4,13 @@ import { matchPath, useLocation } from "react-router-dom";
 import { useOrientation } from "../hooks/useOrientation";
 import { useSettings } from "../hooks/useSettings";
 import { useUser } from "../hooks/useUser";
+import NavVisibilityProvider from "../context/NavVisibilityContext/Provider";
 
 import { NavRoutes } from "../components/NavigationBar/routes";
 
 import { Activity } from "react";
 import NavigationBar from "../components/NavigationBar/index";
+import ShowNavButton from "../components/NavigationBar/ShowNavButton";
 import SessionRestoreScreen from "../components/SessionRestoreScreen/index";
 import Layout from "./Layout";
 import ConditionalComponent from "../components/ConditionalComponent";
@@ -36,10 +38,15 @@ export default function App() {
         show={!loadingSession}
         fallback={<SessionRestoreScreen />}
       >
-        <Activity mode={showNavigation ? "visible" : "hidden"}>
-          <NavigationBar />
-        </Activity>
-        <Layout />
+        <NavVisibilityProvider>
+          <Activity mode={showNavigation ? "visible" : "hidden"}>
+            <NavigationBar />
+          </Activity>
+          <div id="app-main-content">
+            <ShowNavButton enabled={Boolean(showNavigation)} />
+            <Layout />
+          </div>
+        </NavVisibilityProvider>
       </ConditionalComponent>
     </div>
   );

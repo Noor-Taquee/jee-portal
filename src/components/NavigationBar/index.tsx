@@ -1,7 +1,7 @@
 import "./style.css";
 
-import { useState } from "react";
 import { useUser } from "../../hooks/useUser";
+import useNavVisibility from "../../hooks/useNavVisibility";
 
 import ButtonContainer from "./ButtonContainer";
 import NavigationHeader from "./NavigationHeader";
@@ -12,26 +12,22 @@ import KnowMorePopover from "./SettingsPopover/KnowMorePopover";
 
 export default function NavigationBar() {
   const { user } = useUser();
-  const [expanded, setExpanded] = useState(true);
+  const { visible } = useNavVisibility();
 
-  if (!user) return;
+  if (!user || !visible) return;
 
   return (
     <nav
       id="navigation-bar"
-      className={expanded ? "expanded" : "collapsed"}
     >
-      <NavigationHeader
-        expanded={expanded}
-        setExpanded={setExpanded}
-      />
+      <NavigationHeader />
       <ButtonContainer />
 
       <SettingsPopover />
       <AppearancePopover />
       <KnowMorePopover />
 
-      <AccountButton expanded={expanded} />
+      <AccountButton />
     </nav>
   );
 }

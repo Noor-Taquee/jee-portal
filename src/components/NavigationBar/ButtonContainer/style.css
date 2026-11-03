@@ -18,10 +18,13 @@
 
   display: flex;
   align-items: center;
+  gap: 10px;
 
   background-color: transparent;
 
   p {
+    font: var(--text-2);
+    text-transform: capitalize;
     color: var(--color-2);
   }
   .lucide {
@@ -43,30 +46,5 @@
     .lucide {
       stroke: var(--color-1);
     }
-  }
-}
-
-.expanded .navigation-button {
-  gap: 10px;
-
-  p {
-    font: var(--text-2);
-    text-transform: capitalize;
-  }
-}
-
-.collapsed .navigation-button {
-  width: fit-content;
-
-  border-radius: 8px;
-
-  flex-direction: column;
-
-  .lucide {
-    --size: 20px;
-  }
-
-  p {
-    display: none;
   }
 }
