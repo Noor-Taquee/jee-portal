@@ -71,5 +71,7 @@ nav#settings-nav {
 
 [data-orientation="portrait"] .back-button {
   width: fit-content;
-  p {display: none;}
+  p {
+    display: none;
+  }
 }
