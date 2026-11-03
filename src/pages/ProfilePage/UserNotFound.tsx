@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 interface Props {
@@ -7,6 +8,12 @@ interface Props {
 export default function UserNotFound({ username }: Props) {
   return (
     <div id="user-not-found-div">
+      <Helmet>
+        <title>
+          User not found
+        </title>
+    </Helmet>
+
       {username && username.length > 0 ? (
         <>
           <p>
