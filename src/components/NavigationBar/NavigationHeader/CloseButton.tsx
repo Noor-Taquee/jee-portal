@@ -1,34 +1,19 @@
-import { useState } from "react";
+import { PanelLeftCloseIcon } from "lucide-react";
+import useNavVisibility from "../../../hooks/useNavVisibility";
 
-import { PanelLeftCloseIcon, PanelLeftOpenIcon } from "lucide-react";
-import ConditionalComponent from "../../ConditionalComponent";
-import AppLogo from "../../AppLogo";
-
-interface Props {
-  expanded: boolean;
-  setExpanded: React.Dispatch<React.SetStateAction<Props["expanded"]>>;
-}
-
-export default function CloseButton({ expanded, setExpanded }: Props) {
-  const [hover, setHover] = useState(false);
+export default function CloseButton() {
+  const { setVisible } = useNavVisibility();
 
   return (
     <button
-      name="toggle-nav-bar-size"
+      type="button"
+      name="hide-navigation"
+      aria-label="Hide navigation"
       className="toggle-button"
-      title={expanded ? "collapse" : "Expand"}
-      onClick={() => {
-        setExpanded((p) => !p);
-      }}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
+      title="Hide navigation"
+      onClick={() => setVisible(false)}
     >
-      <ConditionalComponent
-        show={!expanded}
-        fallback={<PanelLeftCloseIcon />}
-      >
-        {hover ? <PanelLeftOpenIcon /> : <AppLogo />}
-      </ConditionalComponent>
+      <PanelLeftCloseIcon />
     </button>
   );
 }

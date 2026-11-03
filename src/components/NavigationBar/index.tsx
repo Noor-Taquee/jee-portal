@@ -1,6 +1,6 @@
 import "./style.css";
 
-import { useState } from "react";
+import { m } from "framer-motion";
 import { useUser } from "../../hooks/useUser";
 
 import ButtonContainer from "./ButtonContainer";
@@ -12,26 +12,25 @@ import KnowMorePopover from "./SettingsPopover/KnowMorePopover";
 
 export default function NavigationBar() {
   const { user } = useUser();
-  const [expanded, setExpanded] = useState(true);
 
-  if (!user) return;
+  if (!user) return null;
 
   return (
-    <nav
+    <m.nav
       id="navigation-bar"
-      className={expanded ? "expanded" : "collapsed"}
+      initial={{ x: "-100%", opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: "-100%", opacity: 0 }}
+      transition={{ duration: 0.18, ease: "easeOut" }}
     >
-      <NavigationHeader
-        expanded={expanded}
-        setExpanded={setExpanded}
-      />
+      <NavigationHeader />
       <ButtonContainer />
 
       <SettingsPopover />
       <AppearancePopover />
       <KnowMorePopover />
 
-      <AccountButton expanded={expanded} />
-    </nav>
+      <AccountButton />
+    </m.nav>
   );
 }

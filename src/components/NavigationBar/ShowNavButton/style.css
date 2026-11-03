@@ -1,0 +1,28 @@
+.show-nav-button {
+  cursor: pointer;
+  margin: 8px;
+  flex-shrink: 0;
+  height: 35px;
+  width: 35px;
+
+  border: none;
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background-color: transparent;
+
+  .lucide {
+    --size: 18px;
+    stroke: var(--color-2);
+  }
+
+  &:hover {
+    background-color: var(--bg-s-2);
+
+    .lucide {
+      stroke: var(--color-1);
+    }
+  }
+}
