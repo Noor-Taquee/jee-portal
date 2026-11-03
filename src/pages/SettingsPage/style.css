@@ -1,5 +1,8 @@
 #settings-page {
   padding: 0;
+}
+
+[data-orientation="landscape"] #settings-page {
   flex-direction: row;
 }
 
@@ -10,6 +13,14 @@
   h1 {
     font-size: 28px;
     font-weight: 300;
+  }
+}
+
+[data-orientation="portrait"] #settings-container {
+  padding: 12px;
+
+  h1 {
+    display: none;
   }
 }
 
