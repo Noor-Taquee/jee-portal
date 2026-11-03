@@ -12,9 +12,31 @@ nav#settings-nav {
   background-color: var(--bg-p-2);
 
   h3 {
-    margin: 20px 0px 12px;
     font-weight: 500;
   }
+}
+
+[data-orientation="portrait"] nav#settings-nav {
+  height: fit-content;
+
+  h3 {
+    font-weight: 500;
+  }
+
+  #navigation-btn-div {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.panel-name-container {
+  width: 100%;
+
+  margin-bottom: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .back-button {
@@ -39,4 +61,15 @@ nav#settings-nav {
   &:hover {
     background-color: var(--bg-s-2);
   }
+}
+
+[data-orientation="portrait"] .panel-name-container {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+[data-orientation="portrait"] .back-button {
+  width: fit-content;
+  p {display: none;}
 }
