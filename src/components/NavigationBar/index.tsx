@@ -1,7 +1,7 @@
 import "./style.css";
 
+import { m } from "framer-motion";
 import { useUser } from "../../hooks/useUser";
-import useNavVisibility from "../../hooks/useNavVisibility";
 
 import ButtonContainer from "./ButtonContainer";
 import NavigationHeader from "./NavigationHeader";
@@ -12,13 +12,16 @@ import KnowMorePopover from "./SettingsPopover/KnowMorePopover";
 
 export default function NavigationBar() {
   const { user } = useUser();
-  const { visible } = useNavVisibility();
 
-  if (!user || !visible) return;
+  if (!user) return null;
 
   return (
-    <nav
+    <m.nav
       id="navigation-bar"
+      initial={{ x: "-100%", opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: "-100%", opacity: 0 }}
+      transition={{ duration: 0.18, ease: "easeOut" }}
     >
       <NavigationHeader />
       <ButtonContainer />
@@ -28,6 +31,6 @@ export default function NavigationBar() {
       <KnowMorePopover />
 
       <AccountButton />
-    </nav>
+    </m.nav>
   );
 }

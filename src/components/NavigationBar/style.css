@@ -12,11 +12,6 @@
   gap: 6px;
 
   background-color: var(--bg-p-2);
-
-  transition:
-    width 100ms ease-out,
-    background-color 100ms ease-out;
-  will-change: width;
 }
 
 [data-orientation="portrait"] #navigation-bar {
