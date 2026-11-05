@@ -4,7 +4,10 @@
 @import "./styles/popover.css";
 
 @import "./styles/table.css";
+
 @import "./styles/button.css";
+@import "./styles/button/toggle-button.css";
+@import "./styles/button/select-button.css";
 
 :root {
   --header-1: 400 26px "Inter";

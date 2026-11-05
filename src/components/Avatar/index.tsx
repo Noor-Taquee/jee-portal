@@ -20,7 +20,10 @@ interface Props {
 
 export default function Avatar({ name }: Props) {
   return (
-    <div id="user-icon-holder">
+    <div
+      id="user-icon-holder"
+      className="avatar"
+    >
       <span>{trim(name)}</span>
     </div>
   );

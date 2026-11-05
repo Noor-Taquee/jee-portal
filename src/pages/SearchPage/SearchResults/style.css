@@ -1,0 +1,25 @@
+.error-states {
+  height: 100%;
+  width: 100%;
+
+  padding-top: 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  div.icon-holder {
+    aspect-ratio: 1 / 1;
+    padding: 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: var(--inc-color-2);
+
+    .lucide {
+      stroke: var(--inc-color-1);
+    }
+  }
+}
