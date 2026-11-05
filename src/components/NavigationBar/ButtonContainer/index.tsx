@@ -2,8 +2,8 @@ import "./style.css";
 
 import { useUser } from "../../../hooks/useUser";
 
-import { HomeIcon, ShieldCheckIcon } from "lucide-react";
 import { NavLink } from "react-router-dom";
+import { HomeIcon, SearchIcon, ShieldCheckIcon } from "lucide-react";
 
 export default function ButtonContainer() {
   const { user } = useUser();
@@ -12,7 +12,10 @@ export default function ButtonContainer() {
     label: string,
     route: string,
     icon: () => React.ReactNode,
-  ][] = [["home", "", () => <HomeIcon />]];
+  ][] = [
+    ["home", "", () => <HomeIcon />],
+    ["search", "/search", () => <SearchIcon />],
+  ];
 
   if (user?.role === "admin" || user?.role === "maintainer") {
     navButtons.push(["admin", "/admin", () => <ShieldCheckIcon />]);
