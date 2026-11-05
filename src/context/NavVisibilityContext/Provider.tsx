@@ -13,7 +13,7 @@ export default function NavVisibilityProvider({
   pathname,
   isMobile,
 }: NavVisibilityProviderProps) {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(!isMobile);
   const [previousPathname, setPreviousPathname] = useState(pathname);
 
   useEffect(() => {

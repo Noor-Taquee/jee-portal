@@ -53,16 +53,21 @@ main#panel-container {
   flex-direction: column;
 
   background-color: var(--bg-p-1);
+}
 
-  header {
-    padding: 0px 8px 12px;
+header.panel-header {
+  padding: 12px 12px 24px;
 
-    display: flex;
-    align-items: center;
-    gap: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
 
-    h1 {
-      font: var(--header-1);
-    }
+  h1 {
+    font: var(--header-1);
   }
+}
+
+[data-orientation="portrait"] header.panel-header {
+  padding: 0px 8px 12px;
 }

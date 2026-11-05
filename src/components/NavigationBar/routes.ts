@@ -1,2 +1,2 @@
 /** Routes that should display the navigation bar */
-export const NavRoutes = ["", "/admin/*", "/changelog"];
+export const NavRoutes = ["", "/search", "/admin/*", "/changelog"];
