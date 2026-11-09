@@ -13,13 +13,15 @@ interface TextRendererProps {
 
 /** Renders Question using `ReactMarkdown` */
 export default function TextRenderer({ content }: TextRendererProps) {
+  const formattedContent = content.replace(/\\n/gu, "\n") ?? "";
+
   return (
     <div className="rendered-content">
       <ReactMarkdown
         remarkPlugins={[remarkMath, remarkGfm]}
         rehypePlugins={[rehypeKatex]}
       >
-        {content}
+        {formattedContent}
       </ReactMarkdown>
     </div>
   );
