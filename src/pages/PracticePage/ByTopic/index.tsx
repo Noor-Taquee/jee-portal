@@ -7,7 +7,7 @@ import {
 } from "../../../hooks/useTopicsMap";
 
 import { Helmet } from "react-helmet-async";
-import { ChevronDownIcon } from "lucide-react";
+import { ChevronsUpDownIcon } from "lucide-react";
 import ConditionalComponent from "../../../components/ConditionalComponent";
 import PageLoader from "../../../components/PageLoader";
 import TopicCard from "./TopicCard";
@@ -32,7 +32,7 @@ export default function ByTopic() {
         <h1>Topics</h1>
         <button className="select-button">
           <p>All</p>
-          <ChevronDownIcon />
+          <ChevronsUpDownIcon />
         </button>
       </header>
 
