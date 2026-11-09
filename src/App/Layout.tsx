@@ -8,6 +8,14 @@ import PageNotFound404 from "../pages/404";
 
 const HomePage = lazy(() => import("../pages/HomePage"));
 
+const PracticePage = lazy(() => import("../pages/PracticePage"));
+const ByTopic = lazy(() => import("../pages/PracticePage/ByTopic"));
+const TopicQuestions = lazy(
+  () => import("../pages/PracticePage/TopicQuestions")
+);
+
+const QuestionPage = lazy(() => import("../pages/QuestionPage"));
+
 const ChangelogPage = lazy(() => import("../pages/ChangelogPage"));
 
 const RegistrationPage = lazy(() => import("../pages/RegistrationPage"));
@@ -53,6 +61,42 @@ export default function Layout() {
           <Route
             index
             element={<HomePage />}
+          />
+
+          <Route
+            path="/practice"
+            element={<PracticePage />}
+          >
+            <Route
+              index
+              element={
+                <Navigate
+                  to={"topics"}
+                  replace
+                />
+              }
+            />
+            <Route
+              path="topics"
+              element={<ByTopic />}
+            />
+            <Route
+              path="topics/:topic"
+              element={<TopicQuestions />}
+            />
+            <Route
+              path="exams"
+              element={<div></div>}
+            />
+            <Route
+              path="exams/:examId"
+              element={<div></div>}
+            />
+          </Route>
+
+          <Route
+            path="/question/:questionId"
+            element={<QuestionPage />}
           />
 
           <Route

@@ -2,8 +2,8 @@ import "./style.css";
 
 import { useUser } from "../../../hooks/useUser";
 
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import Suggestions from "./Suggestions";
 import AnalyticsPanel from "./AnalyticsPanel";
 import ExamCountdown from "../../../components/ExamCountdown";
 
@@ -29,7 +29,12 @@ export default function HomeContent() {
       </div>
       <AnalyticsPanel />
       <div>
-        <Suggestions />
+        <Link
+          className="cta-1"
+          to={"/practice"}
+        >
+          <p>Start practicing</p>
+        </Link>
       </div>
     </div>
   );

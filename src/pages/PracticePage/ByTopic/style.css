@@ -1,0 +1,44 @@
+#topics-section {
+  display: flex;
+  flex-direction: column;
+
+  header {
+    h2 {
+      font: var(--text-1);
+    }
+  }
+}
+
+.subject-section {
+  width: 100%;
+
+  margin: 12px 0px;
+  padding: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  > div {
+    display: flex;
+    gap: 8px;
+  }
+
+  > strong {
+    font: var(--header-2);
+  }
+}
+
+.unit-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    padding: 0px 16px;
+  }
+}
