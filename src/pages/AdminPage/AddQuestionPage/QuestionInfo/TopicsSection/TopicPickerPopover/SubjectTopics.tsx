@@ -3,15 +3,15 @@ import type { Topic } from "../../../../../../hooks/useTopicsMap";
 interface Props {
   subjectName: string;
   subjectTopics: Topic[];
-  topics: number[];
-  setTopics: React.Dispatch<React.SetStateAction<number[]>>;
+  selectedTopics: number[];
+  setSelectedTopics: React.Dispatch<React.SetStateAction<number[]>>;
 }
 
 export default function SubjectTopics({
   subjectName,
   subjectTopics,
-  topics,
-  setTopics,
+  selectedTopics: topics,
+  setSelectedTopics: setTopics,
 }: Props) {
   return (
     <div className="subject-container">
