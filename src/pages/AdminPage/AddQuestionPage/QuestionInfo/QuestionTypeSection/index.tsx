@@ -1,5 +1,3 @@
-import "./style.css";
-
 import type { ReviewQuestion, SetQuestion } from "../../index";
 
 import { ChevronsUpDownIcon } from "lucide-react";
