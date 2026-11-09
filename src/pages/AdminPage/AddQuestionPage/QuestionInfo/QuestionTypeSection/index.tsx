@@ -18,7 +18,7 @@ export default function QuestionTypeSection({ question, setQuestion }: Props) {
     >
       <h4 className="section-header">Question Type</h4>
       <button
-        className="type-holder"
+        className="select-button"
         popoverTarget="review-question-type-popover"
         style={{ anchorName: "--review-question-popover-anchor" }}
       >
