@@ -13,7 +13,10 @@ export default function HomeContent() {
   if (!user) return <div />;
 
   return (
-    <div id="home-content">
+    <div
+      className="app-panel"
+      id="home-content"
+    >
       <Helmet>
         <title>Dashboard</title>
       </Helmet>
