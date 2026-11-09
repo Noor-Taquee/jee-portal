@@ -69,7 +69,8 @@ export default function TopicPickerPopover({
 
       <div className="footer">
         <p>
-          {selectedTopics.length} {selectedTopics.length === 1 ? "Topic" : "Topics"} Selected
+          {selectedTopics.length}{" "}
+          {selectedTopics.length === 1 ? "Topic" : "Topics"} Selected
         </p>
         <button
           onClick={() => {
