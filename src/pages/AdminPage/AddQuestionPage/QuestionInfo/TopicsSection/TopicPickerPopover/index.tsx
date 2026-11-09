@@ -8,25 +8,25 @@ import type { ReviewQuestion, SetQuestion } from "../../../index";
 import SubjectTopics from "./SubjectTopics";
 
 interface Props {
-  topicMap: Topics | undefined;
+  topics: Topics | undefined;
   question: ReviewQuestion;
   setQuestion: SetQuestion;
 }
 
 export default function TopicPickerPopover({
-  topicMap,
+  topics,
   question,
   setQuestion,
 }: Props) {
-  const [topics, setTopics] = useState(question.topics);
+  const [selectedTopics, setSelectedTopics] = useState(question.topics);
 
   const physicsTopics: Topic[] = [];
   const chemistryTopics: Topic[] = [];
   const mathsTopics: Topic[] = [];
 
-  if (!topicMap) return <div></div>;
+  if (!topics) return <div></div>;
 
-  for (const topic of topicMap.values()) {
+  for (const topic of topics.values()) {
     const r = {
       Physics: physicsTopics,
       Chemistry: chemistryTopics,
@@ -50,32 +50,32 @@ export default function TopicPickerPopover({
         <SubjectTopics
           subjectName="Physics"
           subjectTopics={physicsTopics}
-          topics={topics}
-          setTopics={setTopics}
+          selectedTopics={selectedTopics}
+          setSelectedTopics={setSelectedTopics}
         />
         <SubjectTopics
           subjectName="Chemistry"
           subjectTopics={chemistryTopics}
-          topics={topics}
-          setTopics={setTopics}
+          selectedTopics={selectedTopics}
+          setSelectedTopics={setSelectedTopics}
         />
         <SubjectTopics
           subjectName="Mathematics"
           subjectTopics={mathsTopics}
-          topics={topics}
-          setTopics={setTopics}
+          selectedTopics={selectedTopics}
+          setSelectedTopics={setSelectedTopics}
         />
       </div>
 
       <div className="footer">
         <p>
-          {topics.length} {topics.length === 1 ? "Topic" : "Topics"} Selected
+          {selectedTopics.length} {selectedTopics.length === 1 ? "Topic" : "Topics"} Selected
         </p>
         <button
           onClick={() => {
             setQuestion({
               ...question,
-              topics: topics,
+              topics: selectedTopics,
             });
           }}
           className="cta-1"
