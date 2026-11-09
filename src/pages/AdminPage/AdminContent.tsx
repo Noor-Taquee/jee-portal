@@ -13,6 +13,10 @@ export default function AdminContent() {
         <title>Admin</title>
       </Helmet>
 
+      <header>
+        <h1>Admin</h1>
+      </header>
+
       <Link
         to={"/admin/new/question"}
         className="cta-1"
