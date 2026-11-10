@@ -9,10 +9,11 @@ interface Props {
 const SessionTable = ({ sessions }: Props) => {
   const [selectedSession, setSelectedSession] = useState<string | null>(null);
 
-
   return (
     <>
-      {selectedSession && <SessionLogoutPopover sessionToken={selectedSession} />}
+      {selectedSession && (
+        <SessionLogoutPopover sessionToken={selectedSession} />
+      )}
       <table id="sessions-table">
         <thead>
           <tr>
@@ -47,7 +48,9 @@ const SessionTable = ({ sessions }: Props) => {
                   aria-label="logout"
                   className="select-button"
                   popoverTarget="session-logout-popover"
-                  onClick={() => { setSelectedSession(session.session_token) }}
+                  onClick={() => {
+                    setSelectedSession(session.session_token);
+                  }}
                 >
                   <p>logout</p>
                 </button>
@@ -58,6 +61,6 @@ const SessionTable = ({ sessions }: Props) => {
       </table>
     </>
   );
-}
+};
 
 export default SessionTable;

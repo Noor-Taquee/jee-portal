@@ -21,19 +21,22 @@ const SessionLogoutPopover = ({ sessionToken }: Props) => {
       const response = await fetch("/api/auth/logout", {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${sessionToken}`
-        }
+          Authorization: `Bearer ${sessionToken}`,
+        },
       });
-      const data = await response.json() as unknown as {
+      const data = (await response.json()) as unknown as {
         success?: boolean;
         error?: string;
-      }
+      };
 
       if (!response.ok || !data || !data.success) {
         throw new Error(data.error ?? "Unable to logout the session");
       }
 
-      if (popoverRef.current && typeof popoverRef.current.hidePopover === "function") {
+      if (
+        popoverRef.current &&
+        typeof popoverRef.current.hidePopover === "function"
+      ) {
         popoverRef.current.hidePopover();
       }
     } catch (err) {
@@ -41,8 +44,7 @@ const SessionLogoutPopover = ({ sessionToken }: Props) => {
         setMessage(err.message);
       }
       setMessage("Unable to logout the session");
-    }
-    finally {
+    } finally {
       setLoading(false);
     }
   }
@@ -70,12 +72,11 @@ const SessionLogoutPopover = ({ sessionToken }: Props) => {
           className="cta-1"
           onClick={revokeSession}
         >
-          {loading ? <Loader2Icon className="spin" />  : <p>Logout</p>}
+          {loading ? <Loader2Icon className="spin" /> : <p>Logout</p>}
         </button>
       </div>
     </div>
   );
-}
-
+};
 
 export default SessionLogoutPopover;
