@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import SecuritySettings from "./SecuritySettings";
 
 export default function AccountSettings() {
   return (
@@ -15,6 +16,8 @@ export default function AccountSettings() {
       </Helmet>
 
       <h1>Account</h1>
+
+      <SecuritySettings />
     </div>
   );
 }
