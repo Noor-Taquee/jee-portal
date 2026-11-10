@@ -16,7 +16,7 @@ export const onRequestGet: PagesFunction<D1Env> = async (context) => {
 
     // fetch sessions from database
     const { results: sessions } = await context.env.DB.prepare(
-      `SELECT device, agent, created_at, expires_at FROM sessions WHERE user_id = ?`
+      `SELECT session_token, device, agent, created_at, expires_at FROM sessions WHERE user_id = ?`
     )
       .bind(res.user.id)
       .all<SessionsTableRow>();
@@ -24,9 +24,7 @@ export const onRequestGet: PagesFunction<D1Env> = async (context) => {
     // Return success along sessions
     return Response.json({
       success: true,
-      result: {
-        sessions: sessions,
-      }
+      result: sessions,
     });
   } catch {
     return Response.json(
