@@ -5,7 +5,10 @@ import { useCallback, useEffect, useRef, useState } from "react";
  * @param path path to the endpoint
  * @returns
  */
-export function useFetch<T>(path: string): {
+export function useFetch<T>(
+  path: string,
+  init?: RequestInit
+): {
   loading: boolean;
   result: T | null;
   error: string;
@@ -16,6 +19,11 @@ export function useFetch<T>(path: string): {
   const [result, setResult] = useState<T | null>(null);
 
   const abortControllerRef = useRef<AbortController | null>(null);
+
+  const initRef = useRef(init);
+  useEffect(() => {
+    initRef.current = init;
+  });
 
   const getData = useCallback(async () => {
     if (abortControllerRef.current) {
@@ -30,7 +38,10 @@ export function useFetch<T>(path: string): {
     setError("");
 
     try {
-      const response = await fetch(path, { signal: controller.signal });
+      const response = await fetch(path, {
+        ...initRef.current,
+        signal: controller.signal,
+      });
       const data = (await response.json()) as {
         success?: boolean;
         result?: T;
