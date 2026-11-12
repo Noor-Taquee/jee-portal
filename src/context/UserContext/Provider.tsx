@@ -36,7 +36,7 @@ export default function UserProvider({ children }: UserProviderProps) {
         }).catch(() => {});
       }
     }
-  }
+  };
 
   const login = useCallback((newUser: User, sessionToken: string) => {
     localStorage.setItem(USER_NAME_KEY, newUser.username);
