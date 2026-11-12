@@ -15,6 +15,8 @@ interface Props {
 }
 
 export default function UserProfile({ user }: Props) {
+  const verifiedUser = ["admn", "maintainr"].includes(user.role);
+
   return (
     <div id="user-profile">
       <Helmet>
