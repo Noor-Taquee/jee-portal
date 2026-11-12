@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { UserContext, type User } from ".";
@@ -21,6 +21,28 @@ export default function UserProvider({ children }: UserProviderProps) {
   );
 
   const [user, setUser] = useState<User | null>(null);
+
+  const logout = (save = false) => {
+    setUser(null);
+
+    if (!save) {
+      const sessionToken = localStorage.getItem(USER_SESSION_TOKEN_KEY);
+      localStorage.removeItem(USER_NAME_KEY);
+      localStorage.removeItem(USER_SESSION_TOKEN_KEY);
+      if (sessionToken) {
+        void fetch("/api/auth/logout", {
+          method: "POST",
+          headers: { Authorization: `Bearer ${sessionToken}` },
+        }).catch(() => {});
+      }
+    }
+  }
+
+  const login = useCallback((newUser: User, sessionToken: string) => {
+    localStorage.setItem(USER_NAME_KEY, newUser.username);
+    localStorage.setItem(USER_SESSION_TOKEN_KEY, sessionToken);
+    setUser(newUser);
+  }, []);
 
   useEffect(() => {
     if (!loadingSession) return;
@@ -56,29 +78,7 @@ export default function UserProvider({ children }: UserProviderProps) {
       .finally(() => {
         setLoadingSession(false);
       });
-  }, [loadingSession, navigate]);
-
-  function logout(save = false) {
-    setUser(null);
-
-    if (!save) {
-      const sessionToken = localStorage.getItem(USER_SESSION_TOKEN_KEY);
-      localStorage.removeItem(USER_NAME_KEY);
-      localStorage.removeItem(USER_SESSION_TOKEN_KEY);
-      if (sessionToken) {
-        void fetch("/api/auth/logout", {
-          method: "POST",
-          headers: { Authorization: `Bearer ${sessionToken}` },
-        }).catch(() => {});
-      }
-    }
-  }
-
-  function login(newUser: User, sessionToken: string) {
-    localStorage.setItem(USER_NAME_KEY, newUser.username);
-    localStorage.setItem(USER_SESSION_TOKEN_KEY, sessionToken);
-    setUser(newUser);
-  }
+  }, [loadingSession, navigate, login]);
 
   const value = {
     user: user,
