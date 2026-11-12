@@ -64,10 +64,16 @@ header.panel-header {
   gap: 16px;
 
   h1 {
-    font: var(--header-1);
+    font: var(--header-2);
   }
 }
 
 [data-orientation="portrait"] header.panel-header {
   padding: 0px 8px 12px;
+}
+
+.panel-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
