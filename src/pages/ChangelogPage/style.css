@@ -1,6 +1,4 @@
 #changelog-page {
-  max-width: 900px;
-  margin: 0 auto;
   padding: 48px 32px;
 
   .changelog-error {
@@ -12,6 +10,10 @@
 }
 
 #changelog-article {
+  max-width: 600px;
+
+  margin: 0 auto;
+
   display: flex;
   flex-direction: column;
   gap: 20px;
