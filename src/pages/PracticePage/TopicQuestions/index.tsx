@@ -1,8 +1,11 @@
+import "./style.css";
+
 import { useFetch } from "../../../hooks/useFetch";
 import { useParams } from "react-router-dom";
 import ConditionalComponent from "../../../components/ConditionalComponent";
 import PageLoader from "../../../components/PageLoader";
 import QuestionCard from "../../../components/QuestionCard";
+import TopicHeader from "./TopicHeader";
 
 type TopicSearchQuestion = {
   id: number;
@@ -40,14 +43,15 @@ export default function TopicQuestions() {
       id="topic-questions-page"
       className="app-panel"
     >
-      {loading ? (
+      {loading || !result ? (
         <PageLoader />
       ) : (
         <ConditionalComponent
           show={!error}
           fallback={<ErrorPage retry={retry} />}
         >
-          {result?.questions.map((question) => (
+          <TopicHeader topic={result.topic} />
+          {result.questions.map((question) => (
             <QuestionCard
               question={question}
               key={question.id}
