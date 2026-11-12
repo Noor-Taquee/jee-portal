@@ -59,14 +59,16 @@ export default function UserProfile({ user }: Props) {
         )}
       </Helmet>
 
-      <header>
-        <Link to="/">
-          <ArrowLeftIcon />
-        </Link>
-        <h1>
-          {user.username}
-          <VerifiedIcon id="verified-profile-icon" />
-        </h1>
+      <header className="panel-header">
+        <div className="panel-name">
+          <Link to="/">
+            <ArrowLeftIcon />
+          </Link>
+          <h1>
+            {user.username}
+            {verifiedUser && <VerifiedIcon id="verified-profile-icon" />}
+          </h1>
+        </div>
       </header>
       <UserInfo user={user} />
     </div>
