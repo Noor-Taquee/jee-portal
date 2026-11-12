@@ -41,10 +41,10 @@ export default function DocsSidebar({ headings: GivenHeadings }: Props) {
         setActiveIds((prevActiveIds) => {
           if (entry.isIntersecting) {
             if (prevActiveIds.includes(id)) return prevActiveIds;
-            return [ ...prevActiveIds, id];
+            return [...prevActiveIds, id];
           }
 
-          return prevActiveIds.filter(item => item !== id);
+          return prevActiveIds.filter((item) => item !== id);
         });
       });
     };
