@@ -25,6 +25,7 @@
   padding: 8px 16px;
 
   border-left: 2px solid var(--bg-s-2);
+  border-radius: 0px;
 
   display: block;
 
@@ -41,6 +42,8 @@
 
   &.active {
     border-left-color: var(--color-1);
+
+    background-color: var(--bg-s-2);
 
     p {
       color: var(--color-1);

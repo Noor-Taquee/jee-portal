@@ -15,7 +15,7 @@ interface Props {
 
 export default function DocsSidebar({ headings: GivenHeadings }: Props) {
   const [headings, setHeadings] = useState<TOCItem[]>([]);
-  const [activeId, setActiveId] = useState<string>("");
+  const [activeIds, setActiveIds] = useState<string[]>([]);
 
   useEffect(() => {
     if (GivenHeadings) {
@@ -36,15 +36,22 @@ export default function DocsSidebar({ headings: GivenHeadings }: Props) {
   useEffect(() => {
     const callback: IntersectionObserverCallback = (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveId(entry.target.id);
-        }
+        const id = entry.target.id;
+
+        setActiveIds((prevActiveIds) => {
+          if (entry.isIntersecting) {
+            if (prevActiveIds.includes(id)) return prevActiveIds;
+            return [...prevActiveIds, id];
+          }
+
+          return prevActiveIds.filter((item) => item !== id);
+        });
       });
     };
 
     const observer = new IntersectionObserver(callback, {
-      rootMargin: "-20% 0% -35% 0%",
-      threshold: 1.0,
+      rootMargin: "0px 0px 0px 0px",
+      threshold: 0,
     });
 
     headings.forEach((heading) => {
@@ -89,7 +96,7 @@ export default function DocsSidebar({ headings: GivenHeadings }: Props) {
           <Link
             key={heading.id}
             onClick={(e) => handleClick(e, heading.id)}
-            className={`${activeId === heading.id ? "active" : ""} level-${heading.level}`}
+            className={`${activeIds.includes(heading.id) ? "active" : ""} level-${heading.level}`}
             to={{ hash: heading.id }}
           >
             <p>{heading.text}</p>
