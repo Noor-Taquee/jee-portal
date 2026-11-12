@@ -1,3 +1,7 @@
 .rendered-content {
   font-family: "Katex_Main";
+
+  p {
+    font-size: var(--text-size);
+  }
 }
