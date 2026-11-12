@@ -25,6 +25,7 @@
   padding: 8px 16px;
 
   border-left: 2px solid var(--bg-s-2);
+  border-radius: 0px;
 
   display: block;
 
