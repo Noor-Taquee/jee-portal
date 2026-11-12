@@ -1,5 +1,5 @@
-import { D1Env } from "../lib/d1";
-import { UsersTableRow } from "../lib/d1";
+import { D1Env } from "../../../lib/d1";
+import { UsersTableRow } from "../../../lib/d1";
 
 export const onRequestGet: PagesFunction<D1Env> = async (context) => {
   const search = new URL(context.request.url).searchParams
@@ -7,7 +7,10 @@ export const onRequestGet: PagesFunction<D1Env> = async (context) => {
     ?.trim();
 
   if (!search) {
-    return Response.json({ success: true, users: [] });
+    return Response.json({
+      success: true,
+      result: [],
+    });
   }
 
   try {
@@ -30,11 +33,15 @@ export const onRequestGet: PagesFunction<D1Env> = async (context) => {
 
     return Response.json({
       success: true,
-      users: result.results,
+      result: result.results,
     });
   } catch {
     return Response.json(
-      { success: false, users: [], error: "Unable to search users" },
+      {
+        success: false,
+        result: [],
+        error: "Unable to search users",
+      },
       { status: 500 }
     );
   }
