@@ -29,20 +29,20 @@ export default function UserSearchResults({ query }: Props) {
     const fetchUsers = async () => {
       try {
         const response = await fetch(
-          `/api/searchUsers?search=${encodeURIComponent(query)}`,
+          `/api/search/user/byAll?search=${encodeURIComponent(query)}`,
           { signal: controller.signal }
         );
 
         const data = (await response.json()) as {
           success: boolean;
-          users?: SearchUser[];
+          result?: SearchUser[];
         };
 
         if (!response.ok || !data.success) {
           throw new Error("Unable to search users");
         }
 
-        setUsers(data.users ?? []);
+        setUsers(data.result ?? []);
         setStatus("success");
       } catch {
         if (!controller.signal.aborted) setStatus("error");
