@@ -1,6 +1,6 @@
 import "./style.css";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useExamSession } from "../../../hooks/useExamSession";
 
@@ -14,15 +14,28 @@ export default function QuestionsPage() {
 
   const [questionNo, setQuestionNo] = useState<number>(1);
 
-  const questionTimeRef = useRef(new Date());
+  const questionTimeRef = useRef<Date | null>(null);
+
+  useEffect(() => {
+    if (!questionTimeRef.current) {
+      questionTimeRef.current = new Date();
+    }
+  }, []);
+
+  function calculateElapsedTime() {
+    if (!questionTimeRef.current) return 0;
+
+    const now = new Date();
+    const eleapsedTime = Math.round(
+      (now.getTime() - questionTimeRef.current.getTime()) / 1000
+    );
+    return eleapsedTime;
+  }
 
   function changeQuestionNumber(nextQuestionNo: number) {
     if (nextQuestionNo === questionNo) return;
 
-    const now = new Date();
-    const elapsedTime = Math.round(
-      (now.getTime() - questionTimeRef.current.getTime()) / 1000
-    );
+    const elapsedTime = calculateElapsedTime();
 
     examSession.setCandidateResponse((prevMap) => {
       if (!prevMap) return prevMap;
@@ -56,16 +69,13 @@ export default function QuestionsPage() {
       return newMap;
     });
 
-    questionTimeRef.current = now;
+    questionTimeRef.current = new Date();
 
     setQuestionNo(nextQuestionNo);
   }
 
   function submitExam() {
-    const now = Date.now();
-    const elapsedTime = Math.round(
-      (now - questionTimeRef.current.getTime()) / 1000
-    );
+    const elapsedTime = calculateElapsedTime();
 
     // 1. Flush elapsed time for the current active question
     if (elapsedTime > 0) {

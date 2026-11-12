@@ -1,0 +1,61 @@
+table#sessions-table {
+  width: 100%;
+
+  border: var(--border-1);
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+
+  thead,
+  tbody {
+    width: 100%;
+    padding: 0px 12px;
+  }
+
+  thead tr {
+    border: none;
+  }
+
+  tr {
+    flex-shrink: 0;
+    min-width: 100%;
+
+    padding: 0px 8px;
+
+    border-top: 0.5px solid var(--bg-s-2);
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  background-color: var(--bg-h-1);
+
+  td,
+  th {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+
+    p {
+      font: var(--text-2);
+    }
+
+    &.device {
+      width: 220px;
+    }
+    &.created-at {
+      width: 220px;
+    }
+    &.expires-at {
+      width: 220px;
+    }
+  }
+
+  th {
+    p {
+      font-weight: 600;
+      color: var(--color-2);
+    }
+  }
+}
