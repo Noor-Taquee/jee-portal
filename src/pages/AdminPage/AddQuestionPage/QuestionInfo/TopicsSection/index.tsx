@@ -13,7 +13,7 @@ interface Props {
 }
 
 export default function TopicsSection({ question, setQuestion }: Props) {
-  const { topicMap, loading } = useTopicsMap();
+  const { topics, loading } = useTopicsMap();
 
   return (
     <div
@@ -25,7 +25,7 @@ export default function TopicsSection({ question, setQuestion }: Props) {
         id="topic-holder"
         style={{ anchorName: "--review-topic-picker-popover-anchor" }}
       >
-        {(loading || !topicMap) && (
+        {(loading || !topics) && (
           <>
             <p className="topic-pill loading"></p>
             <p className="topic-pill loading"></p>
@@ -37,7 +37,7 @@ export default function TopicsSection({ question, setQuestion }: Props) {
               className="topic-pill"
               key={`${topic}-${index}`}
             >
-              {topicMap?.get(topic)?.name || "unknown"}
+              {topics?.get(topic)?.name || "unknown"}
             </p>
           ))}
         {!loading && (
@@ -50,7 +50,7 @@ export default function TopicsSection({ question, setQuestion }: Props) {
           </button>
         )}
         <TopicPickerPopover
-          topicMap={topicMap}
+          topics={topics}
           question={question}
           setQuestion={setQuestion}
         />

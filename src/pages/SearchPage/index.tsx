@@ -1,7 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 
 import { Helmet } from "react-helmet-async";
-import { ChevronDownIcon } from "lucide-react";
+import { ChevronsUpDownIcon } from "lucide-react";
 import SearchBar from "./SearchBar";
 import SearchFilterPopover from "./SearchFilterPopover";
 import SearchResult from "./SearchResults";
@@ -28,7 +28,7 @@ export default function SearchPage() {
           style={{ anchorName: "--search-filter-popover-anchor" }}
         >
           <p>{searchType}</p>
-          <ChevronDownIcon />
+          <ChevronsUpDownIcon />
         </button>
         <SearchFilterPopover />
       </header>

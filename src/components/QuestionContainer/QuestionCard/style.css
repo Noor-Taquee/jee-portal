@@ -1,0 +1,11 @@
+#question-card {
+  width: 100%;
+
+  padding: 12px 12px 12px 0;
+
+  display: flex;
+
+  p {
+    font-size: var(--text-size);
+  }
+}

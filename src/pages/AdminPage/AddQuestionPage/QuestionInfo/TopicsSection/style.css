@@ -53,10 +53,10 @@
     .lucide {
       --size: 16px;
       stroke: var(--bg-p-1);
-      stroke-width: 2px;
+      stroke-width: 2.5px;
     }
 
-    background-color: var(--accent-1);
+    background-color: var(--color-1);
     p {
       font: var(--text-2);
       color: var(--bg-p-1);
