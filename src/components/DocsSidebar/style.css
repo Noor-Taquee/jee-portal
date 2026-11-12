@@ -43,6 +43,8 @@
   &.active {
     border-left-color: var(--color-1);
 
+    background-color: var(--bg-s-2);
+
     p {
       color: var(--color-1);
     }
