@@ -8,6 +8,7 @@
 
 #settings-container {
   flex-grow: 1;
+  overflow: hidden;
 
   h1 {
     font-size: 28px;
