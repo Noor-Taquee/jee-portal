@@ -13,7 +13,7 @@ export const onRequestGet: PagesFunction<D1Env> = async (context) => {
       result: {
         user: null,
         visible: false,
-      }
+      },
     });
   }
 
@@ -22,7 +22,9 @@ export const onRequestGet: PagesFunction<D1Env> = async (context) => {
       `SELECT username, name, role, visibility FROM users WHERE username = ?`
     )
       .bind(search)
-      .first<Pick<UsersTableRow, "id" | "username" | "name" | "role" | "visibility">>();
+      .first<
+        Pick<UsersTableRow, "id" | "username" | "name" | "role" | "visibility">
+      >();
 
     if (!searchedUser) {
       return Response.json(
@@ -56,7 +58,7 @@ export const onRequestGet: PagesFunction<D1Env> = async (context) => {
           result: {
             user: publicUser,
             visible: false,
-          }
+          },
         });
       }
 
@@ -66,7 +68,7 @@ export const onRequestGet: PagesFunction<D1Env> = async (context) => {
           result: {
             user: publicUser,
             visible: false,
-          }
+          },
         });
       }
     }
@@ -86,7 +88,7 @@ export const onRequestGet: PagesFunction<D1Env> = async (context) => {
           user: null,
           visible: false,
         },
-        error: "Unable to search users"
+        error: "Unable to search users",
       },
       { status: 500 }
     );

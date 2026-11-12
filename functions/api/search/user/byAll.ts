@@ -9,7 +9,7 @@ export const onRequestGet: PagesFunction<D1Env> = async (context) => {
   if (!search) {
     return Response.json({
       success: true,
-      result: []
+      result: [],
     });
   }
 
@@ -40,7 +40,7 @@ export const onRequestGet: PagesFunction<D1Env> = async (context) => {
       {
         success: false,
         result: [],
-        error: "Unable to search users"
+        error: "Unable to search users",
       },
       { status: 500 }
     );
