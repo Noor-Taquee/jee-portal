@@ -14,7 +14,9 @@ const TopicHeader = ({ topic }: Props) => {
   return (
     <>
       <Helmet>
-        <title>{topic.name} | {topic.subject}</title>
+        <title>
+          {topic.name} | {topic.subject}
+        </title>
         <link
           rel="canonical"
           href={`https://jee-portal.pages.dev/topic/${encodeURIComponent(topic.id)}`}
@@ -27,13 +29,15 @@ const TopicHeader = ({ topic }: Props) => {
           <div>
             <p>{topic.name}</p>
             <div>
-              <small>{topic.unit}, {topic.subject}</small>
+              <small>
+                {topic.unit}, {topic.subject}
+              </small>
             </div>
           </div>
         </div>
       </header>
     </>
   );
-}
+};
 
 export default TopicHeader;

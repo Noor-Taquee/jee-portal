@@ -43,13 +43,13 @@ export default function TopicQuestions() {
       id="topic-questions-page"
       className="app-panel"
     >
-      {(loading || !result) ? (
+      {loading || !result ? (
         <PageLoader />
       ) : (
         <ConditionalComponent
           show={!error}
           fallback={<ErrorPage retry={retry} />}
-          >
+        >
           <TopicHeader topic={result.topic} />
           {result.questions.map((question) => (
             <QuestionCard
