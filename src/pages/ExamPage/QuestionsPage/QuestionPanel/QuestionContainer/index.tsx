@@ -1,7 +1,6 @@
 import "./style.css";
 
 import { useState } from "react";
-import { useSettings } from "../../../../../hooks/useSettings";
 import { useExamSession } from "../../../../../hooks/useExamSession";
 
 import type { OptionID, QuestionData } from "../../../../../core/question";
@@ -24,7 +23,6 @@ export default function QuestionContainer({
   setQuestionNo,
   question,
 }: Props) {
-  const appSettings = useSettings();
   const examSession = useExamSession();
 
   const [answer, setAnswer] = useState<string | string[] | null>(
@@ -36,12 +34,7 @@ export default function QuestionContainer({
   if (!question) return <div id="question-container"></div>;
 
   return (
-    <div
-      id="question-container"
-      style={
-        { "--text-size": `${appSettings.textSize}px` } as React.CSSProperties
-      }
-    >
+    <div id="question-container">
       <Header question={question} />
       <div id="question-area">
         <QuestionCard
