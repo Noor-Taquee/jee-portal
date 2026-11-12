@@ -12,17 +12,19 @@ type SearchedUser = {
   name: string;
   role: string;
   visibility: "none" | "users" | "public";
-}
+};
 
 type Result = {
   user?: SearchedUser;
   visible: boolean;
-}
+};
 
 export default function ProfilePage() {
   const { username } = useParams<{ username: string }>();
 
-  const response = useFetch<Result>(`/api/search/user/byUsername?search=${username}`);
+  const response = useFetch<Result>(
+    `/api/search/user/byUsername?search=${username}`
+  );
 
   return (
     <div
