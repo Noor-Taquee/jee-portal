@@ -1,5 +1,11 @@
 #add-question-page {
-  padding: 12px;
-  flex-direction: row;
-  gap: 16px;
+  > .container {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 16px;
+  }
 }

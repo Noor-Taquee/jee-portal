@@ -59,15 +59,21 @@ export default function UploadQuestionPage() {
         <title>Add Questions</title>
       </Helmet>
 
-      <QuestionContainer
-        question={question}
-        setQuestion={setQuestion}
-      />
-      <QuestionInfo
-        question={question}
-        setQuestion={setQuestion}
-        setUploadDialoge={setUploadDialog}
-      />
+      <header className="panel-header">
+        <h1>Upload Question</h1>
+      </header>
+
+      <div className="container">
+        <QuestionContainer
+          question={question}
+          setQuestion={setQuestion}
+        />
+        <QuestionInfo
+          question={question}
+          setQuestion={setQuestion}
+          setUploadDialoge={setUploadDialog}
+        />
+      </div>
 
       <UploadDialog
         question={question}
