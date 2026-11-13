@@ -17,8 +17,6 @@
 }
 
 [data-orientation="portrait"] #settings-container {
-  padding: 12px;
-
   h1 {
     display: none;
   }
@@ -34,6 +32,10 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+[data-orientation="portrait"] .settings-panel {
+  padding: 8px;
 }
 
 .settings-category {
@@ -71,6 +73,9 @@
     justify-content: space-between;
     align-items: center;
   }
+}
+[data-orientation="portrait"] .settings-section {
+  padding: 8px;
 }
 
 .settings-property {
