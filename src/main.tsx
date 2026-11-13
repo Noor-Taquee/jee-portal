@@ -23,7 +23,7 @@ createRoot(root).render(
       <HelmetProvider>
         <SettingsProvider>
           <UserProvider>
-              <App />
+            <App />
           </UserProvider>
         </SettingsProvider>
       </HelmetProvider>
