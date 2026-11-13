@@ -58,7 +58,7 @@ export default function UploadDialog({
     setFailure(false);
     setSuccess(false);
 
-    fetch("/api/jee/uploadQuestion", {
+    fetch("/api/jee/upload/question", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
