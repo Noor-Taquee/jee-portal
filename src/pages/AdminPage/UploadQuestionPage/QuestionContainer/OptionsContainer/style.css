@@ -10,11 +10,10 @@
 }
 
 .review-option-div {
-  padding: 12px;
+  padding: 8px;
 
-  border-radius: 14px;
+  border: var(--border-1);
+  border-radius: 16px;
 
   display: flex;
-
-  background-color: var(--bg-p-2);
 }
