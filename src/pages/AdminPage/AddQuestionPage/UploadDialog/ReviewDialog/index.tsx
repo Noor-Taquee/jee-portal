@@ -27,6 +27,7 @@ export default function ReviewDialog({ discard, handleUpload }: Props) {
         <Task
           header="Originality"
           description="The question is original and not a duplicate of an existing question."
+          checked={reviewChecklist.originality}
           onCheck={() => {
             setReviewChecklist((p) => {
               return { ...p, originality: true };
@@ -42,6 +43,7 @@ export default function ReviewDialog({ discard, handleUpload }: Props) {
         <Task
           header="Correctness"
           description="The question is factually accurate and well-structured."
+          checked={reviewChecklist.correctness}
           onCheck={() => {
             setReviewChecklist((p) => {
               return { ...p, correctness: true };
