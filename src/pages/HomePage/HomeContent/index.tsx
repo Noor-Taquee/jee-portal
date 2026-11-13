@@ -15,13 +15,13 @@ export default function HomeContent() {
   return (
     <div
       className="app-panel"
-      id="home-content"
+      id="home-page"
     >
       <Helmet>
         <title>Dashboard</title>
       </Helmet>
 
-      <div id="home-header">
+      <header className="panel-header">
         <div id="welcome-box">
           <p id="welcome-message">Welcome back, {user.name}</p>
           <p id="welcome-text">
@@ -29,7 +29,7 @@ export default function HomeContent() {
           </p>
         </div>
         <ExamCountdown />
-      </div>
+      </header>
       <AnalyticsPanel />
       <div>
         <Link
