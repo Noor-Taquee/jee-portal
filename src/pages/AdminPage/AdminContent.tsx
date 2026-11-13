@@ -4,7 +4,10 @@ import { PlusIcon } from "lucide-react";
 
 export default function AdminContent() {
   return (
-    <div className="app-panel">
+    <div
+      id="admin-page"
+      className="app-panel"
+    >
       <Helmet>
         <meta
           name="robots"
@@ -13,7 +16,7 @@ export default function AdminContent() {
         <title>Admin</title>
       </Helmet>
 
-      <header>
+      <header className="panel-header">
         <h1>Admin</h1>
       </header>
 
