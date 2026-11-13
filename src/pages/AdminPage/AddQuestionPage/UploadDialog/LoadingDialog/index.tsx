@@ -8,7 +8,7 @@ export default function LoadingDialog() {
       id="loading-dialog"
       className="upload-dialog"
     >
-      <LoaderIcon className="spin" />
+      <LoaderIcon className="head-icon spin" />
       <h2 className="header">Uploading</h2>
     </div>
   );

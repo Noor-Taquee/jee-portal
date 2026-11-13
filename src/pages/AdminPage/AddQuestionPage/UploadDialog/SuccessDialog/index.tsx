@@ -11,7 +11,8 @@ export default function SuccessDialog({ discard }: Props) {
       id="success-dialog"
       className="upload-dialog"
     >
-      <CircleCheckIcon />
+      <CircleCheckIcon className="head-icon" />
+
       <h2 className="header">Upload Successful</h2>
       <small>The question has been successfully uploaded.</small>
 

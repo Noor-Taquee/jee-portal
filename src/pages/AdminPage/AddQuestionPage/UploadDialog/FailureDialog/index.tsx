@@ -18,7 +18,7 @@ export default function FailureDialog({
       id="failure-dialog"
       className="upload-dialog"
     >
-      <CircleXIcon />
+      <CircleXIcon className="head-icon" />
 
       <h2 className="header">Upload Failed</h2>
       <small>{failure.message}</small>
