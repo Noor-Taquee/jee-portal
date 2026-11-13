@@ -31,8 +31,8 @@ const ResultPage = lazy(() => import("../pages/ExamPage/ResultPage"));
 
 const AdminPage = lazy(() => import("../pages/AdminPage"));
 const AdminContent = lazy(() => import("../pages/AdminPage/AdminContent"));
-const AddQuestionPage = lazy(
-  () => import("../pages/AdminPage/AddQuestionPage")
+const UploadQuestionPage = lazy(
+  () => import("../pages/AdminPage/UploadQuestionPage")
 );
 
 const SettingsPage = lazy(() => import("../pages/SettingsPage"));
@@ -150,7 +150,7 @@ export default function Layout() {
               />
               <Route
                 path="new/question"
-                element={<AddQuestionPage />}
+                element={<UploadQuestionPage />}
               />
             </Route>
           </Route>

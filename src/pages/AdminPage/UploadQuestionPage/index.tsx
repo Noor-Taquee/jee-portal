@@ -33,7 +33,7 @@ export type SetQuestion = React.Dispatch<
   React.SetStateAction<ReviewQuestion | null>
 >;
 
-export default function AddQuestionPage() {
+export default function UploadQuestionPage() {
   const [uploadDialog, setUploadDialog] = useState(false);
 
   const [question, setQuestion] = useState<ReviewQuestion | null>({
