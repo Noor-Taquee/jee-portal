@@ -24,10 +24,10 @@ const SearchPage = lazy(() => import("../pages/SearchPage"));
 
 const ProfilePage = lazy(() => import("../pages/ProfilePage"));
 
-const ExamPage = lazy(() => import("../pages/ExamPage"));
-const LoginPage = lazy(() => import("../pages/ExamPage/LoginPage"));
-const QuestionsPage = lazy(() => import("../pages/ExamPage/QuestionsPage"));
-const ResultPage = lazy(() => import("../pages/ExamPage/ResultPage"));
+const MockPage = lazy(() => import("../pages/MockPage"));
+const StartPage = lazy(() => import("../pages/MockPage/StartPage"));
+const QuestionsPage = lazy(() => import("../pages/MockPage/QuestionsPage"));
+const ResultPage = lazy(() => import("../pages/MockPage/ResultPage"));
 
 const AdminPage = lazy(() => import("../pages/AdminPage"));
 const AdminContent = lazy(() => import("../pages/AdminPage/AdminContent"));
@@ -121,12 +121,12 @@ export default function Layout() {
 
           <Route element={<ProtectedRoute />}>
             <Route
-              path="/exam"
-              element={<ExamPage />}
+              path="/mock/:ExamId"
+              element={<MockPage />}
             >
               <Route
-                path="login"
-                element={<LoginPage />}
+                path="start"
+                element={<StartPage />}
               />
               <Route
                 path="questions"

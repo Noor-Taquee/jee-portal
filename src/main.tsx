@@ -8,7 +8,6 @@ import { HelmetProvider } from "react-helmet-async";
 
 import SettingsProvider from "./context/SettingsContext/SettingsProvider";
 import UserProvider from "./context/UserContext/Provider";
-import ExamProvider from "./context/ExamContext/ExamProvider";
 
 import App from "./App";
 
@@ -24,9 +23,7 @@ createRoot(root).render(
       <HelmetProvider>
         <SettingsProvider>
           <UserProvider>
-            <ExamProvider>
-              <App />
-            </ExamProvider>
+            <App />
           </UserProvider>
         </SettingsProvider>
       </HelmetProvider>

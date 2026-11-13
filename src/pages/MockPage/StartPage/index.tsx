@@ -9,7 +9,7 @@ import InstituteLogo from "../../../components/InstituteLogo";
 import DialogBox from "../../../components/DialogBox";
 import { Helmet } from "react-helmet-async";
 
-export default function LoginPage() {
+export default function StartPage() {
   const { user } = useUser();
 
   if (!user) {
