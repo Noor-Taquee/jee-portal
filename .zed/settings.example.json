@@ -1,4 +1,5 @@
 {
+  "format_on_save": "off",
   "prettier": {
     "allowed": false
   },
@@ -14,6 +15,34 @@
           ]
         }
       }
+    },
+    "oxfmt": {}
+  },
+  "languages": {
+    "JSONC": {
+      "prettier": {
+        "allowed": false
+      }
+    },
+    "JSON": {
+      "prettier": {
+        "allowed": false
+      }
+    },
+    "HTML": {
+      "prettier": {
+        "allowed": false
+      },
+      "language_servers": ["!tailwindcss-language-server", "..."]
+    },
+    "TSX": {
+      "prettier": {
+        "allowed": false
+      },
+      "language_servers": ["!tailwindcss-language-server", "..."]
+    },
+    "CSS": {
+      "language_servers": ["!tailwindcss-language-server", "..."]
     }
   },
   "file_types": {
