@@ -15,7 +15,9 @@ import TopicCard from "./TopicCard";
 import SubjectPickerPopover from "./SubectPickerPopover";
 
 export default function ByTopic() {
-  const [filter, setFilter] = useState<"all" | "Physics" | "Chemistry" | "Mathematics">("all");
+  const [filter, setFilter] = useState<
+    "all" | "Physics" | "Chemistry" | "Mathematics"
+  >("all");
   const { topics } = useTopicsMap(true);
 
   const filteredTopics = topics?.filter((subject) => {

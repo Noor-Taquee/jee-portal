@@ -3,7 +3,7 @@ import { useClosePopover } from "../../../../hooks/useClosePopover";
 
 interface Props {
   filter: "all" | "Physics" | "Chemistry" | "Mathematics";
-  setFilter: React.Dispatch<React.SetStateAction<Props["filter"]>>
+  setFilter: React.Dispatch<React.SetStateAction<Props["filter"]>>;
 }
 
 const SubjectPickerPopover = ({ filter, setFilter }: Props) => {
@@ -71,7 +71,6 @@ const SubjectPickerPopover = ({ filter, setFilter }: Props) => {
       </button>
     </div>
   );
-}
-
+};
 
 export default SubjectPickerPopover;
