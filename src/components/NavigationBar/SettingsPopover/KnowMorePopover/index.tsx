@@ -53,7 +53,7 @@ export default function KnowMorePopover() {
         <p>Privacy Policy</p>
         <ExternalLinkIcon className="next" />
       </Link>
-      <span className="divider" />
+      <hr className="divider" />
       <Link
         aria-label="Changelog"
         role="menuitem"
