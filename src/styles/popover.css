@@ -65,7 +65,9 @@
   .divider {
     flex-shrink: 0;
     width: 90%;
-    height: 1.5px;
+    height: 1px;
+
+    border: none;
 
     margin: 4px auto;
 
