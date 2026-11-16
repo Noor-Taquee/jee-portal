@@ -35,7 +35,7 @@ export default function SettingsPopover() {
         <UserCircle2Icon />
         <span>Profile</span>
       </Link>
-      <span className="divider" />
+      <hr className="divider" />
       <Link
         aria-label="Settings"
         role="menuitem"
@@ -69,7 +69,7 @@ export default function SettingsPopover() {
         <span>Know more</span>
         <ChevronRight className="next" />
       </button>
-      <span className="divider"></span>
+      <hr className="divider" />
       <button
         name="logout"
         aria-label="Logout"
