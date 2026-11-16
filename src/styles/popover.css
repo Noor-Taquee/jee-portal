@@ -62,7 +62,7 @@
 
   background-color: var(--bg-h-1);
 
-  .divider {
+  hr.divider {
     flex-shrink: 0;
     width: 90%;
     height: 1px;
