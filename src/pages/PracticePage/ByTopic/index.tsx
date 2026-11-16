@@ -1,5 +1,6 @@
 import "./style.css";
 
+import { useState } from "react";
 import {
   useTopicsMap,
   type TopicSubject,
@@ -11,9 +12,15 @@ import { ChevronsUpDownIcon } from "lucide-react";
 import ConditionalComponent from "../../../components/ConditionalComponent";
 import PageLoader from "../../../components/PageLoader";
 import TopicCard from "./TopicCard";
+import SubjectPickerPopover from "./SubectPickerPopover";
 
 export default function ByTopic() {
+  const [filter, setFilter] = useState<"all" | "Physics" | "Chemistry" | "Mathematics">("all");
   const { topics } = useTopicsMap(true);
+
+  const filteredTopics = topics?.filter((subject) => {
+    return filter === "all" || subject.name === filter;
+  });
 
   return (
     <div
@@ -30,17 +37,26 @@ export default function ByTopic() {
 
       <header className="panel-header">
         <h1>Topics</h1>
-        <button className="select-button">
-          <p>All</p>
+        <button
+          className="select-button"
+          popoverTarget="byTopic-subject-picker-popover"
+          style={{ anchorName: "--byTopic-subject-picker-popover-anchor" }}
+        >
+          <p>{filter}</p>
           <ChevronsUpDownIcon />
         </button>
+
+        <SubjectPickerPopover
+          filter={filter}
+          setFilter={setFilter}
+        />
       </header>
 
       <ConditionalComponent
         show={Boolean(topics)}
         fallback={<PageLoader />}
       >
-        {topics?.map((subject) => (
+        {filteredTopics?.map((subject) => (
           <SubjectSection
             subject={subject}
             key={subject.name}
@@ -55,7 +71,7 @@ function SubjectSection({ subject }: { subject: TopicSubject }) {
   return (
     <section className="subject-section">
       <strong>{subject.name}</strong>
-      <div>
+      <div className="scroll">
         {subject.units.map((unit) => (
           <UnitSection
             unit={unit}
