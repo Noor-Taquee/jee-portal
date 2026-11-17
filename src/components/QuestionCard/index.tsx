@@ -2,6 +2,7 @@ import "./style.css";
 
 import TextRenderer from "../TextRenderer";
 import { useNavigate } from "react-router-dom";
+import { parseType } from "../../utils/parseQuestion";
 
 interface Props {
   question: {
@@ -23,10 +24,14 @@ export default function QuestionCard({ question }: Props) {
 
   const exam = question.exams[0];
 
+  const questionType = parseType(question.type);
+
   if (!exam) return;
 
   return (
     <article
+      tabIndex={0}
+      role="link"
       className="question-search-card"
       onClick={() => {
         navigate(`/question/${question.id}`);
@@ -38,8 +43,7 @@ export default function QuestionCard({ question }: Props) {
           <p className="exam">{exam.name}</p>
         </div>
         <p className="type">
-          {question.type === 1 && "MCQ (Single Correct Answer)"}
-          {question.type === 6 && "Numerical Value Question"}
+          {questionType && questionType.name}
           <span className="attempts">
             · {question.attempts_count}{" "}
             {question.attempts_count === 1 ? "attempt" : "attempts"}
