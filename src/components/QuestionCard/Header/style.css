@@ -51,4 +51,32 @@
     font: var(--text-2);
     color: var(--color-2);
   }
+
+
+  .question-actions {
+    cursor: pointer;
+    touch-action: manipulation;
+
+    aspect-ratio: 1 / 1;
+    width: fit-content;
+
+    padding: 8px;
+
+    border: none;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--bg-s-2);
+    }
+
+    > .lucide {
+      --size: 18px;
+      stroke: var(--color-2);
+    }
+  }
 }
