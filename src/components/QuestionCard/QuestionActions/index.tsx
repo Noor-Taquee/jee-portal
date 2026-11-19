@@ -1,5 +1,10 @@
 import type { SearchQuestion } from "..";
-import { BugIcon, SigmaIcon, TextInitialIcon } from "lucide-react";
+import {
+  BugIcon,
+  SigmaIcon,
+  Share2Icon,
+  TextInitialIcon
+} from "lucide-react";
 import { useClosePopover } from "../../../hooks/useClosePopover";
 
 interface Props {
@@ -10,6 +15,12 @@ interface Props {
 
 const QuestionActions = ({ question, rawText ,setRawText }: Props) => {
   useClosePopover(`--question-${question.id}-actions-popover`);
+
+  const shareData: ShareData = {
+    title: "Share the question",
+    text: "Check out this amazing question!",
+    url: `${window.location.origin}/question/${question.id}`,
+  };
 
   return (
     <div
@@ -30,6 +41,29 @@ const QuestionActions = ({ question, rawText ,setRawText }: Props) => {
       >
         {rawText ? <SigmaIcon /> : <TextInitialIcon />}
         <p>Show {rawText ? "formatted" : "raw"} text</p>
+      </button>
+
+      <button
+        aria-label="Share"
+        className="popover-entry"
+        onClick={async (e) => {
+          e.stopPropagation();
+
+          function copyToClipboard(content: string) {
+            navigator.clipboard.writeText(content);
+          }
+
+          if (navigator.canShare(shareData)) {
+            try {
+              await navigator.share(shareData);
+            } catch {
+              copyToClipboard(shareData.url ?? "");
+            }
+          }
+        }}
+      >
+        <Share2Icon />
+        <p>Share</p>
       </button>
 
       <hr className="divider" />
