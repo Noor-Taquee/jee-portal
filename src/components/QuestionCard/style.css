@@ -11,13 +11,12 @@
   flex-direction: column;
   gap: 16px;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     background-color: var(--bg-h-1);
   }
 
   &:focus-visible {
     outline: 2px solid var(--accent-1);
-    background-color: var(--bg-h-1);
   }
-
 }
