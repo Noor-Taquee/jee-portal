@@ -7,10 +7,11 @@ import QuestionActions from "../QuestionActions";
 
 interface Props {
   question: SearchQuestion;
+  rawText: boolean;
   setRawText: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Header = ({ question, setRawText }: Props) => {
+const Header = ({ question, rawText, setRawText }: Props) => {
 
   const exam = question.exams[0];
   const questionType = parseType(question.type);
@@ -41,6 +42,7 @@ const Header = ({ question, setRawText }: Props) => {
 
       <QuestionActions
         question={question}
+        rawText={rawText}
         setRawText={setRawText}
       />
     </header>
