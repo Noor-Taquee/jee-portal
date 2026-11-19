@@ -42,6 +42,7 @@ export default function QuestionCard({ question }: Props) {
     >
       <Header
         question={question}
+        rawText={rawText}
         setRawText={setRawText}
       />
 
