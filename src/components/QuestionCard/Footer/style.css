@@ -1,0 +1,50 @@
+.question-search-card {
+  > header {
+    width: 100%;
+
+    display: flex;
+    gap: 12px;
+  }
+
+  div.question-number {
+    aspect-ratio: 1 / 1;
+    width: fit-content;
+
+    padding: 6px;
+
+    border: none;
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    background-color: var(--color-2);
+
+    p {
+      font: var(--text-2);
+      color: var(--bg-p-1);
+    }
+  }
+
+  .question-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  strong.exam {
+    width: fit-content;
+    max-width: 100%;
+    overflow: hidden;
+
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  p.type {
+    font: var(--text-2);
+    color: var(--color-2);
+  }
+}
