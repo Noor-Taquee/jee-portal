@@ -1,3 +1,5 @@
+import "./style.css";
+
 import type { SearchQuestion } from "..";
 import {
   ArrowRightIcon,
