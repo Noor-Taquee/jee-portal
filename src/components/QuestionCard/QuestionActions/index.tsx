@@ -1,23 +1,14 @@
-import { BugIcon } from "lucide-react";
+import type { SearchQuestion } from "..";
+import { BugIcon, SigmaIcon, TextInitialIcon } from "lucide-react";
 import { useClosePopover } from "../../../hooks/useClosePopover";
 
 interface Props {
-  question: {
-    id: number;
-    type: number;
-    question_text: string;
-    attempts_count: number;
-    exams: {
-      id: number;
-      name: string;
-      exam_type: string;
-      date: string;
-    }[];
-  };
+  question: SearchQuestion;
+  rawText: boolean;
   setRawText: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const QuestionActions = ({ question, setRawText }: Props) => {
+const QuestionActions = ({ question, rawText ,setRawText }: Props) => {
   useClosePopover(`--question-${question.id}-actions-popover`);
 
   return (
@@ -30,13 +21,6 @@ const QuestionActions = ({ question, setRawText }: Props) => {
       }}
     >
       <button
-        aria-label="Report"
-        className="popover-entry"
-      >
-        <BugIcon />
-        <p>Report</p>
-      </button>
-      <button
         aria-label="Show Raw Text"
         className="popover-entry"
         onClick={(e) => {
@@ -44,9 +28,20 @@ const QuestionActions = ({ question, setRawText }: Props) => {
           setRawText(p => !p);
         }}
       >
-        <BugIcon />
-        <p>Show Raw Text</p>
+        {rawText ? <SigmaIcon /> : <TextInitialIcon />}
+        <p>Show {rawText ? "formatted" : "raw"} text</p>
       </button>
+
+      <hr className="divider" />
+
+      <button
+        aria-label="Report"
+        className="popover-entry"
+      >
+        <BugIcon />
+        <p>Report</p>
+      </button>
+
     </div>
   );
 };
