@@ -1,29 +1,27 @@
 import "./style.css";
 
+import { useState } from "react";
 import TextRenderer from "../TextRenderer";
 import { useNavigate } from "react-router-dom";
-import { parseType } from "../../utils/parseQuestion";
-import {
-  EllipsisVerticalIcon,
-  TextPenIcon,
-  Share2Icon,
-} from "lucide-react";
-import QuestionActions from "./QuestionActions";
-import { useState } from "react";
+
+import Footer from "./Footer";
+import Header from "./Header";
+
+export type SearchQuestion = {
+  id: number;
+  type: number;
+  question_text: string;
+  attempts_count: number;
+  exams: {
+    id: number;
+    name: string;
+    exam_type: string;
+    date: string;
+  }[];
+}
 
 interface Props {
-  question: {
-    id: number;
-    type: number;
-    question_text: string;
-    attempts_count: number;
-    exams: {
-      id: number;
-      name: string;
-      exam_type: string;
-      date: string;
-    }[];
-  };
+  question: SearchQuestion;
 }
 
 export default function QuestionCard({ question }: Props) {
@@ -31,17 +29,8 @@ export default function QuestionCard({ question }: Props) {
 
   const navigate = useNavigate();
 
-  const exam = question.exams[0];
 
-  const questionType = parseType(question.type);
 
-  const shareData: ShareData = {
-    title: "Share the question",
-    text: "Check out this amazing question!",
-    url: `${window.location.origin}/question/${question.id}`,
-  };
-
-  if (!exam) return;
 
   return (
     <article
@@ -52,32 +41,10 @@ export default function QuestionCard({ question }: Props) {
         navigate(`/question/${question.id}`);
       }}
     >
-      <header>
-        <div className="question-number">
-          <p className="question-id">{question.id}</p>
-        </div>
-
-        <div className="question-info">
-          <strong className="exam">{exam.name}</strong>
-          <p className="type">{questionType && questionType.name}</p>
-        </div>
-
-        <button
-          popoverTarget={`--question-${question.id}-actions-popover`}
-          style={{
-            anchorName: `--question-${question.id}-actions-popover-anchor`,
-          }}
-          className="question-actions"
-          onClick={(e) => e.stopPropagation()}
-        >
-          <EllipsisVerticalIcon />
-        </button>
-
-        <QuestionActions
-          question={question}
-          setRawText={setRawText}
-        />
-      </header>
+      <Header
+        question={question}
+        setRawText={setRawText}
+      />
 
       <div>
         {rawText ? (
@@ -87,39 +54,7 @@ export default function QuestionCard({ question }: Props) {
         )}
       </div>
 
-      <footer>
-        <div className="question-stats">
-          <strong>{question.attempts_count}</strong>
-          <TextPenIcon />
-        </div>
-        <button
-          title="Share"
-          className="select-button"
-          onClick={async (e) => {
-            e.stopPropagation();
-
-            function copyToClipboard(content: string) {
-              navigator.clipboard.writeText(content);
-            }
-
-            if (navigator.canShare(shareData)) {
-              try {
-                await navigator.share(shareData);
-              } catch {
-                copyToClipboard(shareData.url ?? "");
-              }
-            }
-          }}
-        >
-          <Share2Icon />
-          <p>Share</p>
-        </button>
-        <button
-          className="cta-1"
-        >
-          <p>Solve</p>
-        </button>
-      </footer>
+      <Footer question={question} />
     </article>
   );
 }
