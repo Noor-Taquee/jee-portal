@@ -52,7 +52,6 @@
     color: var(--color-2);
   }
 
-
   .question-actions {
     cursor: pointer;
     touch-action: manipulation;

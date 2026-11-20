@@ -1,10 +1,5 @@
 import type { SearchQuestion } from "..";
-import {
-  BugIcon,
-  SigmaIcon,
-  Share2Icon,
-  TextInitialIcon
-} from "lucide-react";
+import { BugIcon, SigmaIcon, Share2Icon, TextInitialIcon } from "lucide-react";
 import { useClosePopover } from "../../../hooks/useClosePopover";
 
 interface Props {
@@ -13,7 +8,7 @@ interface Props {
   setRawText: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const QuestionActions = ({ question, rawText ,setRawText }: Props) => {
+const QuestionActions = ({ question, rawText, setRawText }: Props) => {
   useClosePopover(`--question-${question.id}-actions-popover`);
 
   const shareData: ShareData = {
@@ -36,7 +31,7 @@ const QuestionActions = ({ question, rawText ,setRawText }: Props) => {
         className="popover-entry"
         onClick={(e) => {
           e.stopPropagation();
-          setRawText(p => !p);
+          setRawText((p) => !p);
         }}
       >
         {rawText ? <SigmaIcon /> : <TextInitialIcon />}
@@ -71,11 +66,11 @@ const QuestionActions = ({ question, rawText ,setRawText }: Props) => {
       <button
         aria-label="Report"
         className="popover-entry"
+        onClick={(e) => e.stopPropagation()}
       >
         <BugIcon />
         <p>Report</p>
       </button>
-
     </div>
   );
 };

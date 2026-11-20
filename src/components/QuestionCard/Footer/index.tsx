@@ -15,6 +15,6 @@ const Footer = ({ question }: Props) => {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

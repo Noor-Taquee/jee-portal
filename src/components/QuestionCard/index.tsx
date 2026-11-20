@@ -17,7 +17,7 @@ export type SearchQuestion = {
     exam_type: string;
     date: string;
   }[];
-}
+};
 
 interface Props {
   question: SearchQuestion;
@@ -27,9 +27,6 @@ export default function QuestionCard({ question }: Props) {
   const [rawText, setRawText] = useState(false);
 
   const navigate = useNavigate();
-
-
-
 
   return (
     <article

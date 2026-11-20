@@ -12,7 +12,6 @@ interface Props {
 }
 
 const Header = ({ question, rawText, setRawText }: Props) => {
-
   const exam = question.exams[0];
   const questionType = parseType(question.type);
 
@@ -47,6 +46,6 @@ const Header = ({ question, rawText, setRawText }: Props) => {
       />
     </header>
   );
-}
+};
 
 export default Header;
