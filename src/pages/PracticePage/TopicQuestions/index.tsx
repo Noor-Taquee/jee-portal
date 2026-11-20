@@ -51,12 +51,17 @@ export default function TopicQuestions() {
           fallback={<ErrorPage retry={retry} />}
         >
           <TopicHeader topic={result.topic} />
-          {result.questions.map((question) => (
-            <QuestionCard
-              question={question}
-              key={question.id}
-            />
-          ))}
+          <div className="question-list">
+            {result.questions.map((question, i) => (
+              <>
+                {i !== 0 && <hr key={`hr-${question.id}`} />}
+                <QuestionCard
+                  question={question}
+                  key={question.id}
+                />
+              </>
+            ))}
+          </div>
         </ConditionalComponent>
       )}
     </div>
