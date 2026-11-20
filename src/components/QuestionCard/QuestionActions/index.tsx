@@ -1,5 +1,11 @@
 import type { SearchQuestion } from "..";
-import { BugIcon, SigmaIcon, Share2Icon, TextInitialIcon } from "lucide-react";
+import {
+  BugIcon,
+  SigmaIcon,
+  Share2Icon,
+  TextInitialIcon,
+  BookmarkPlusIcon,
+} from "lucide-react";
 import { useClosePopover } from "../../../hooks/useClosePopover";
 
 interface Props {
@@ -26,51 +32,77 @@ const QuestionActions = ({ question, rawText, setRawText }: Props) => {
         positionAnchor: `--question-${question.id}-actions-popover-anchor`,
       }}
     >
-      <button
-        aria-label="Show Raw Text"
-        className="popover-entry"
-        onClick={(e) => {
-          e.stopPropagation();
-          setRawText((p) => !p);
-        }}
-      >
-        {rawText ? <SigmaIcon /> : <TextInitialIcon />}
-        <p>Show {rawText ? "formatted" : "raw"} text</p>
-      </button>
+      <div className="horizontal-container">
+        <button
+          aria-label="Share"
+          className="popover-entry"
+          onClick={async (e) => {
+            e.stopPropagation();
 
-      <button
-        aria-label="Share"
-        className="popover-entry"
-        onClick={async (e) => {
-          e.stopPropagation();
-
-          function copyToClipboard(content: string) {
-            navigator.clipboard.writeText(content);
-          }
-
-          if (navigator.canShare(shareData)) {
-            try {
-              await navigator.share(shareData);
-            } catch {
-              copyToClipboard(shareData.url ?? "");
+            function copyToClipboard(content: string) {
+              navigator.clipboard.writeText(content);
             }
-          }
-        }}
-      >
-        <Share2Icon />
-        <p>Share</p>
-      </button>
 
-      <hr className="divider" />
+            if (navigator.canShare(shareData)) {
+              try {
+                await navigator.share(shareData);
+              } catch {
+                copyToClipboard(shareData.url ?? "");
+              }
+            }
+          }}
+        >
+          <Share2Icon />
+          <p>Share</p>
+        </button>
+        <button
+          aria-label="Share"
+          className="popover-entry"
+          onClick={async (e) => {
+            e.stopPropagation();
 
-      <button
-        aria-label="Report"
-        className="popover-entry"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <BugIcon />
-        <p>Report</p>
-      </button>
+            function copyToClipboard(content: string) {
+              navigator.clipboard.writeText(content);
+            }
+
+            if (navigator.canShare(shareData)) {
+              try {
+                await navigator.share(shareData);
+              } catch {
+                copyToClipboard(shareData.url ?? "");
+              }
+            }
+          }}
+        >
+          <BookmarkPlusIcon />
+          <p>Save</p>
+        </button>
+      </div>
+
+      <div className="vertical-container">
+        <button
+          aria-label="Show Raw Text"
+          className="popover-entry"
+          onClick={(e) => {
+            e.stopPropagation();
+            setRawText((p) => !p);
+          }}
+        >
+          {rawText ? <SigmaIcon /> : <TextInitialIcon />}
+          <p>Show {rawText ? "formatted" : "raw"} text</p>
+        </button>
+
+        <hr className="divider" />
+
+        <button
+          aria-label="Report"
+          className="popover-entry"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <BugIcon />
+          <p>Report</p>
+        </button>
+      </div>
     </div>
   );
 };
