@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export function useClosePopover(id: string) {
+export function useAutoClosePopover(id: string) {
   useEffect(() => {
     const popover = document.getElementById(id);
     if (!popover) return;

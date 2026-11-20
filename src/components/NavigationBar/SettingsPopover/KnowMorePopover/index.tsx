@@ -1,4 +1,4 @@
-import { useClosePopover } from "../../../../hooks/useClosePopover";
+import { useAutoClosePopover } from "../../../../hooks/useAutoClosePopover";
 
 import { Link } from "react-router-dom";
 import {
@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 
 export default function KnowMorePopover() {
-  useClosePopover("know-more-popover");
+  useAutoClosePopover("know-more-popover");
 
   return (
     <div

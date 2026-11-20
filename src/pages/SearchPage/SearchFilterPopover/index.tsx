@@ -1,9 +1,9 @@
 import { BookSearchIcon, CheckIcon, UserSearchIcon } from "lucide-react";
-import { useClosePopover } from "../../../hooks/useClosePopover";
+import { useAutoClosePopover } from "../../../hooks/useAutoClosePopover";
 import { useSearchParams } from "react-router-dom";
 
 export default function SearchFilterPopover() {
-  useClosePopover("search-filter-popover");
+  useAutoClosePopover("search-filter-popover");
 
   const [searchParams, setSearchParams] = useSearchParams();
   const selectedType =

@@ -1,11 +1,11 @@
 import { useSettings } from "../../../../../hooks/useSettings";
-import { useClosePopover } from "../../../../../hooks/useClosePopover";
+import { useAutoClosePopover } from "../../../../../hooks/useAutoClosePopover";
 
 import { CheckIcon } from "lucide-react";
 
 export default function SettingsThemePopover() {
   const settings = useSettings();
-  useClosePopover("settings-theme-popover");
+  useAutoClosePopover("settings-theme-popover");
 
   return (
     <div
