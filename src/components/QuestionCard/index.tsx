@@ -1,55 +1,57 @@
 import "./style.css";
 
-import TextRenderer from "../TextRenderer";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import TextRenderer from "../TextRenderer";
+import Footer from "./Footer";
+import Header from "./Header";
+
+export type SearchQuestion = {
+  id: number;
+  type: number;
+  question_text: string;
+  attempts_count: number;
+  exams: {
+    id: number;
+    name: string;
+    exam_type: string;
+    date: string;
+  }[];
+};
 
 interface Props {
-  question: {
-    id: number;
-    type: number;
-    question_text: string;
-    attempts_count: number;
-    exams: {
-      id: number;
-      name: string;
-      exam_type: string;
-      date: string;
-    }[];
-  };
+  question: SearchQuestion;
 }
 
 export default function QuestionCard({ question }: Props) {
+  const [rawText, setRawText] = useState(false);
+
   const navigate = useNavigate();
-
-  const exam = question.exams[0];
-
-  if (!exam) return;
 
   return (
     <article
+      tabIndex={0}
+      role="link"
       className="question-search-card"
       onClick={() => {
         navigate(`/question/${question.id}`);
       }}
     >
-      <header>
-        <div className="exam-info">
-          <p className="question-id">{question.id}</p>
-          <p className="exam">{exam.name}</p>
-        </div>
-        <p className="type">
-          {question.type === 1 && "MCQ (Single Correct Answer)"}
-          {question.type === 6 && "Numerical Value Question"}
-          <span className="attempts">
-            · {question.attempts_count}{" "}
-            {question.attempts_count === 1 ? "attempt" : "attempts"}
-          </span>
-        </p>
-      </header>
+      <Header
+        question={question}
+        rawText={rawText}
+        setRawText={setRawText}
+      />
 
       <div>
-        <TextRenderer content={question.question_text} />
+        {rawText ? (
+          <p>{question.question_text}</p>
+        ) : (
+          <TextRenderer content={question.question_text} />
+        )}
       </div>
+
+      <Footer question={question} />
     </article>
   );
 }

@@ -1,0 +1,34 @@
+.question-search-card {
+  > footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    > .cta-1 {
+      margin-left: auto;
+    }
+  }
+
+  .question-stats {
+    width: fit-content;
+
+    padding: 6px;
+
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+
+    > .lucide {
+      --size: 16px;
+      stroke: var(--color-2);
+    }
+  }
+
+  p.attempts {
+    word-spacing: 5px;
+
+    span {
+      font: var(--text-2);
+    }
+  }
+}
