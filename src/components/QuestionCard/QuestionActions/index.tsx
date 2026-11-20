@@ -92,7 +92,7 @@ const QuestionActions = ({ question, rawText, setRawText }: Props) => {
           <p>Show {rawText ? "formatted" : "raw"} text</p>
         </button>
 
-        <hr className="divider" />
+        <hr />
 
         <button
           aria-label="Report"
