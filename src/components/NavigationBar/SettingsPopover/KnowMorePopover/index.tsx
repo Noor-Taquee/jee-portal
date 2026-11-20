@@ -20,6 +20,7 @@ export default function KnowMorePopover() {
       className="popover-card bottom right up-level"
       style={{ positionAnchor: "--know-more-popover-anschor" }}
     >
+      <div className="vertical-container">
       <Link
         aria-label="Terms of Service"
         role="menuitem"
@@ -62,7 +63,8 @@ export default function KnowMorePopover() {
       >
         <HistoryIcon />
         <p>Changelog</p>
-      </Link>
+        </Link>
+      </div>
     </div>
   );
 }
