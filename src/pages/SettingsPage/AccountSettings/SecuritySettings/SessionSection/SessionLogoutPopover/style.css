@@ -1,0 +1,30 @@
+#session-logout-popover:popover-open {
+  flex-shrink: 0;
+
+  margin: auto;
+  padding: 16px;
+
+  border: var(--border-1);
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &::backdrop {
+    background-color: #00000015;
+    transition: background-color 900ms linear;
+  }
+
+  message {
+    font: var(---text-1);
+    margin: 12px;
+  }
+
+  div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+}

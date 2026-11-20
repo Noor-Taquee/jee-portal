@@ -16,7 +16,8 @@ table.vertical-table {
     font: var(--text-2);
   }
 
-  > thead {
+  > thead,
+  > tfoot {
     width: 100%;
 
     display: flex;
@@ -34,11 +35,6 @@ table.vertical-table {
     width: 100%;
 
     overflow: auto;
-
-    ::-webkit-scrollbar {
-      position: absolute;
-      -webkit-appearance: none;
-    }
   }
 
   tr {
@@ -49,6 +45,7 @@ table.vertical-table {
     display: flex;
     align-items: stretch;
   }
+
   tr td,
   tr th {
     &:first-child {

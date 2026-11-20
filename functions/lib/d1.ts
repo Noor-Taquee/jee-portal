@@ -8,6 +8,7 @@ export type UsersTableRow = {
   username: string;
   password: string;
   role: "admin" | "student" | "maintainer";
+  visibility: "all" | "users" | "none";
 };
 
 export type SessionsTableRow = {

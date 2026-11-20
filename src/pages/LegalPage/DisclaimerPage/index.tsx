@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import DocsSidebar from "../../../components/DocsSidebar";
 
 export default function DisclaimerPage() {
@@ -6,6 +7,38 @@ export default function DisclaimerPage() {
       id="disclaimer-page"
       className="app-panel"
     >
+      <Helmet>
+        <link
+          rel="canonical"
+          href="https://jee-portal.pages.dev/legal/disclaimer"
+        />
+        <title>Disclaimer</title>
+        <meta
+          name="description"
+          content="Review JEE Portal's educational disclaimer and copyright notice."
+        />
+        <meta
+          property="og:title"
+          content="Disclaimer | JEE Portal"
+        />
+        <meta
+          property="og:description"
+          content="Review JEE Portal's educational disclaimer and copyright notice."
+        />
+        <meta
+          property="og:url"
+          content="https://jee-portal.pages.dev/legal/disclaimer"
+        />
+        <meta
+          name="twitter:title"
+          content="Disclaimer | JEE Portal"
+        />
+        <meta
+          name="twitter:description"
+          content="Review JEE Portal's educational disclaimer and copyright notice."
+        />
+      </Helmet>
+
       <header className="page-header">
         <h1>Educational Disclaimer &amp; Copyright Notice</h1>
         <p className="last-updated">Last modified: October 2026</p>

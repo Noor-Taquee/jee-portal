@@ -1,0 +1,20 @@
+.topic-card {
+  padding: 0px;
+
+  &::marker {
+    color: var(--color-1);
+    margin-right: -6px;
+  }
+
+  a {
+    height: fit-content;
+  }
+
+  &:hover,
+  a:focus {
+    p,
+    &::marker {
+      color: var(--accent-1);
+    }
+  }
+}

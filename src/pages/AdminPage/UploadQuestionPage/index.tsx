@@ -1,0 +1,85 @@
+import "./style.css";
+
+import { useState } from "react";
+
+import { Helmet } from "react-helmet-async";
+import QuestionContainer from "./QuestionContainer";
+import QuestionInfo from "./QuestionInfo";
+import UploadDialog from "./UploadDialog";
+
+export type ReviewQuestion = {
+  /**
+   * | id |        name     |
+   * |:---|:----------------|
+   * | 1  | Multiple Choice |
+   * | 6  |    Numerical    |
+   */
+  type: 1 | 6;
+
+  question_text: string;
+
+  options: null | [string, string, string, string];
+
+  correct_answer: number | "A" | "B" | "C" | "D";
+
+  numerical_tolerance: number;
+
+  topics: number[];
+
+  exam_id: number | null;
+};
+
+export type SetQuestion = React.Dispatch<
+  React.SetStateAction<ReviewQuestion | null>
+>;
+
+export default function UploadQuestionPage() {
+  const [uploadDialog, setUploadDialog] = useState(false);
+
+  const [question, setQuestion] = useState<ReviewQuestion | null>({
+    type: 1,
+    question_text: "Question ...",
+    options: ["Option 1", "Option 2", "Option 3", "Option 4"],
+    correct_answer: "A",
+    numerical_tolerance: 0,
+    topics: [],
+    exam_id: null,
+  });
+
+  return (
+    <div
+      className="app-panel"
+      id="add-question-page"
+    >
+      <Helmet>
+        <meta
+          name="robots"
+          content="noindex, nofollow"
+        />
+        <title>Add Questions</title>
+      </Helmet>
+
+      <header className="panel-header">
+        <h1>Upload Question</h1>
+      </header>
+
+      <div className="container">
+        <QuestionContainer
+          question={question}
+          setQuestion={setQuestion}
+        />
+        <QuestionInfo
+          question={question}
+          setQuestion={setQuestion}
+          setUploadDialoge={setUploadDialog}
+        />
+      </div>
+
+      <UploadDialog
+        question={question}
+        uploadDialog={uploadDialog}
+        setUploadDialog={setUploadDialog}
+      />
+    </div>
+  );
+}

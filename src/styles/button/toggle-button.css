@@ -1,0 +1,31 @@
+.toggle-button {
+  cursor: pointer;
+  touch-action: manipulation;
+
+  --size: 42px;
+  aspect-ratio: 1 / 1;
+  width: var(--size);
+
+  border: var(--border-1);
+  border-radius: calc(var(--size) / 2);
+
+  background-color: var(--bg-p-2);
+
+  display: grid;
+  place-items: center;
+
+  &.uncolored {
+    border: none;
+    background-color: transparent;
+  }
+
+  .lucide {
+    --size: 22px;
+    color: var(--color-1);
+  }
+}
+
+.toggle-2 {
+  cursor: pointer;
+  touch-action: manipulation;
+}

@@ -1,0 +1,19 @@
+#user-not-found-div {
+  margin: 24px auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  > p {
+    font: var(--text-1);
+    span {
+      font-weight: 600;
+    }
+  }
+
+  .cta-1 {
+    margin: 16px 0px;
+  }
+}

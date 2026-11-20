@@ -1,0 +1,22 @@
+#user-icon-holder {
+  flex-shrink: 0;
+
+  aspect-ratio: 1 / 1;
+  width: 28px;
+
+  overflow: hidden;
+
+  border: none;
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background-color: var(--bg-s-3);
+
+  > span {
+    color: var(--color-1);
+    font: var(--text-2);
+    font: 600 10px "Inter";
+  }
+}

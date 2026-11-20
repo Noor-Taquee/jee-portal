@@ -1,8 +1,11 @@
 import "./style.css";
 
+import { CheckIcon } from "lucide-react";
+
 interface Props {
   header: string;
   description: string;
+  checked: boolean;
   onCheck: () => void;
   onUncheck: () => void;
 }
@@ -10,23 +13,31 @@ interface Props {
 export default function Task({
   header,
   description,
+  checked,
   onCheck,
   onUncheck,
 }: Props) {
   return (
-    <div className="review-task">
-      <input
-        type="checkbox"
-        onChange={(e) => {
-          if (e.target.checked) {
-            onCheck();
-          } else {
+    <div
+      role="menuitemcheckbox"
+      className="review-task"
+    >
+      <button
+        className={`checkbox ${checked ? "checked" : ""}`}
+        role="checkbox"
+        aria-checked={checked}
+        onClick={() => {
+          if (checked) {
             onUncheck();
+          } else {
+            onCheck();
           }
         }}
-      />
+      >
+        <CheckIcon />
+      </button>
       <div className="task-info">
-        <h3>{header}</h3>
+        <strong>{header}</strong>
         <p>{description}</p>
       </div>
     </div>

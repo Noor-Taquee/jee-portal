@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="512" height="512">
+  <title>JEE Portal</title>
+  <rect width="100" height="100" rx="22" fill="#295c9d" />
+  <g transform="translate(50 50) scale(1.12) translate(-50 -50)">
+    <path d="M24 82V50A26 26 0 0 1 76 50V82" fill="none" stroke="#fcfcfb" stroke-width="10" />
+    <path d="M38.6 82V54A11.4 11.4 0 0 1 61.4 54V82Z" fill="#fcfcfb" />
+  </g>
+</svg>

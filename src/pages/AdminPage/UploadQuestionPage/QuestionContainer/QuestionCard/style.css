@@ -1,0 +1,8 @@
+#review-question-card {
+  width: 100%;
+
+  padding: 8px;
+
+  border: var(--border-1);
+  border-radius: 16px;
+}

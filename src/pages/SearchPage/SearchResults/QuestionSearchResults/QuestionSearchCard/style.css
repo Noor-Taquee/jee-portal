@@ -1,0 +1,51 @@
+.question-search-card {
+  cursor: pointer;
+  touch-action: manipulation;
+
+  padding: 12px;
+
+  &:hover {
+    background-color: var(--bg-h-1);
+  }
+
+  header {
+    width: 100%;
+
+    margin: 8px 0px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .exam-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .question-id {
+    font: var(--text-2);
+  }
+
+  .exam {
+    width: fit-content;
+    padding: 2px 4px;
+
+    border: none;
+    border-radius: 4px;
+
+    font: var(--text-2);
+    background-color: var(--bg-s-1);
+  }
+
+  .type {
+    font: var(--text-2);
+    color: var(--color-2);
+  }
+
+  .attempts {
+    margin-left: 6px;
+    color: var(--color-2);
+  }
+}

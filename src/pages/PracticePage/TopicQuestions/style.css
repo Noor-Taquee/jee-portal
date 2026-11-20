@@ -1,0 +1,36 @@
+.topic-header {
+  --height: 62px;
+  --pad: 6px;
+  height: var(--height);
+  width: fit-content;
+
+  padding: var(--pad);
+
+  border: none;
+  border-radius: calc(var(--height) / 2);
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  background-color: var(--color-2);
+
+  > div {
+    margin: 0px 16px 0px 8px;
+  }
+
+  p {
+    font: var(--header-2);
+    color: var(--bg-s-1);
+  }
+
+  small {
+    font: var(--text-3);
+    color: var(--bg-s-1);
+  }
+
+  .lucide {
+    --size: calc(var(--height) - 2 * var(--pad));
+    stroke: var(--bg-p-1);
+  }
+}

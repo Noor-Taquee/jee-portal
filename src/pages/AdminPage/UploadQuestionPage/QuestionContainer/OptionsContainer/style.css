@@ -1,0 +1,19 @@
+#review-option-container {
+  width: 100%;
+
+  margin-top: 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.review-option-div {
+  padding: 8px;
+
+  border: var(--border-1);
+  border-radius: 16px;
+
+  display: flex;
+}

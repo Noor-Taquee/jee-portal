@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import DocsSidebar from "../../../components/DocsSidebar";
 
 export default function TermsOfServicePage() {
@@ -6,6 +7,38 @@ export default function TermsOfServicePage() {
       id="terms-of-service-page"
       className="app-panel"
     >
+      <Helmet>
+        <link
+          rel="canonical"
+          href="https://jee-portal.pages.dev/legal/terms-of-service"
+        />
+        <title>Terms of Service</title>
+        <meta
+          name="description"
+          content="Read the terms that apply when using JEE Portal's exam practice and account features."
+        />
+        <meta
+          property="og:title"
+          content="Terms of Service | JEE Portal"
+        />
+        <meta
+          property="og:description"
+          content="Read the terms that apply when using JEE Portal's exam practice and account features."
+        />
+        <meta
+          property="og:url"
+          content="https://jee-portal.pages.dev/legal/terms-of-service"
+        />
+        <meta
+          name="twitter:title"
+          content="Terms of Service | JEE Portal"
+        />
+        <meta
+          name="twitter:description"
+          content="Read the terms that apply when using JEE Portal's exam practice and account features."
+        />
+      </Helmet>
+
       <header className="page-header">
         <h1>Terms of Service</h1>
         <p className="last-updated">Last modified: October 2026</p>

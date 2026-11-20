@@ -8,17 +8,31 @@ import PageNotFound404 from "../pages/404";
 
 const HomePage = lazy(() => import("../pages/HomePage"));
 
+const PracticePage = lazy(() => import("../pages/PracticePage"));
+const ByTopic = lazy(() => import("../pages/PracticePage/ByTopic"));
+const TopicQuestions = lazy(
+  () => import("../pages/PracticePage/TopicQuestions")
+);
+
+const QuestionPage = lazy(() => import("../pages/QuestionPage"));
+
+const ChangelogPage = lazy(() => import("../pages/ChangelogPage"));
+
 const RegistrationPage = lazy(() => import("../pages/RegistrationPage"));
 
-const ExamPage = lazy(() => import("../pages/ExamPage"));
-const LoginPage = lazy(() => import("../pages/ExamPage/LoginPage"));
-const QuestionsPage = lazy(() => import("../pages/ExamPage/QuestionsPage"));
-const ResultPage = lazy(() => import("../pages/ExamPage/ResultPage"));
+const SearchPage = lazy(() => import("../pages/SearchPage"));
+
+const ProfilePage = lazy(() => import("../pages/ProfilePage"));
+
+const MockPage = lazy(() => import("../pages/MockPage"));
+const StartPage = lazy(() => import("../pages/MockPage/StartPage"));
+const QuestionsPage = lazy(() => import("../pages/MockPage/QuestionsPage"));
+const ResultPage = lazy(() => import("../pages/MockPage/ResultPage"));
 
 const AdminPage = lazy(() => import("../pages/AdminPage"));
 const AdminContent = lazy(() => import("../pages/AdminPage/AdminContent"));
-const AddQuestionPage = lazy(
-  () => import("../pages/AdminPage/AddQuestionPage")
+const UploadQuestionPage = lazy(
+  () => import("../pages/AdminPage/UploadQuestionPage")
 );
 
 const SettingsPage = lazy(() => import("../pages/SettingsPage"));
@@ -50,18 +64,69 @@ export default function Layout() {
           />
 
           <Route
+            path="/practice"
+            element={<PracticePage />}
+          >
+            <Route
+              index
+              element={
+                <Navigate
+                  to={"topics"}
+                  replace
+                />
+              }
+            />
+            <Route
+              path="topics"
+              element={<ByTopic />}
+            />
+            <Route
+              path="topics/:topic"
+              element={<TopicQuestions />}
+            />
+            <Route
+              path="exams"
+              element={<div></div>}
+            />
+            <Route
+              path="exams/:examId"
+              element={<div></div>}
+            />
+          </Route>
+
+          <Route
+            path="/question/:questionId"
+            element={<QuestionPage />}
+          />
+
+          <Route
+            path="/changelog"
+            element={<ChangelogPage />}
+          />
+
+          <Route
             path="/registration/*"
             element={<RegistrationPage />}
           />
 
+          <Route
+            path="/search"
+            element={<SearchPage />}
+          />
+
+          <Route
+            path="/user/:username"
+            element={<ProfilePage />}
+          />
+
           <Route element={<ProtectedRoute />}>
             <Route
-              path="/exam"
-              element={<ExamPage />}
+              path="/mock/:ExamId"
+              element={<MockPage />}
             >
               <Route
-                path="login"
-                element={<LoginPage />}
+                path="start"
+                element={<StartPage />}
               />
               <Route
                 path="questions"
@@ -85,7 +150,7 @@ export default function Layout() {
               />
               <Route
                 path="new/question"
-                element={<AddQuestionPage />}
+                element={<UploadQuestionPage />}
               />
             </Route>
           </Route>

@@ -25,7 +25,7 @@ export default function RegistrationPage() {
           `Logged in as ${user.name}. Logout first to create a new account.`,
         ]}
       >
-        <ActionBtn onClick={() => void navigate("")}>
+        <ActionBtn onClick={() => void navigate("/")}>
           <p>Back</p>
         </ActionBtn>
       </DialogBox>

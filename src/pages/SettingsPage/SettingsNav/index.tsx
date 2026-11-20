@@ -11,14 +11,16 @@ export default function SettingsNav() {
       className="expanded"
       aria-labelledby="Settings Navigation"
     >
-      <Link
-        to={"/"}
-        className="back-button"
-      >
-        <ArrowLeftIcon />
-        <p>Back to app</p>
-      </Link>
-      <h3>Settings</h3>
+      <div className="panel-name-container">
+        <Link
+          to={"/"}
+          className="back-button"
+        >
+          <ArrowLeftIcon />
+          <p>Back to app</p>
+        </Link>
+        <h3>Settings</h3>
+      </div>
       <ButtonContainer />
     </nav>
   );

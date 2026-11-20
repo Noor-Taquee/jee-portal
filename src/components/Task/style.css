@@ -9,20 +9,43 @@
   align-items: center;
   gap: 8px;
 
-  input[type="checkbox"] {
+  button.checkbox {
+    cursor: pointer;
+    touch-action: manipulation;
+
     flex-shrink: 0;
     width: 20px;
     height: 20px;
 
-    accent-color: var(--accent-1);
+    border: 2px solid var(--color-2);
+
+    display: grid;
+    place-items: center;
+
+    &.checked {
+      border-color: var(--color-1);
+      background-color: var(--color-1);
+
+      .lucide {
+        transform: scale(1);
+      }
+    }
+
+    .lucide {
+      --size: 16px;
+      stroke: var(--bg-p-1);
+      transform: scale(0);
+      transition: transform 100ms ease-out;
+    }
   }
 
   .task-info {
     display: flex;
     flex-direction: column;
 
-    h3 {
+    strong {
       font: var(--text-1);
+      font-weight: 600;
     }
 
     p {

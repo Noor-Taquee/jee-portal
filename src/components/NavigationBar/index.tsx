@@ -1,43 +1,36 @@
 import "./style.css";
 
-import { useState } from "react";
+import { m } from "framer-motion";
+import { useUser } from "../../hooks/useUser";
 
 import ButtonContainer from "./ButtonContainer";
 import NavigationHeader from "./NavigationHeader";
-import AccountButton from "../AccountButton";
-import Avatar from "../AccountButton/Avatar";
+import AccountButton from "./AccountButton";
 import SettingsPopover from "./SettingsPopover";
 import AppearancePopover from "./SettingsPopover/AppearancePopover";
-import ConditionalComponent from "../ConditionalComponent";
 import KnowMorePopover from "./SettingsPopover/KnowMorePopover";
 
 export default function NavigationBar() {
-  const [expanded, setExpanded] = useState(true);
+  const { user } = useUser();
+
+  if (!user) return null;
 
   return (
-    <nav
+    <m.nav
       id="navigation-bar"
-      className={expanded ? "expanded" : "collapsed"}
+      initial={{ x: "-100%", opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: "-100%", opacity: 0 }}
+      transition={{ duration: 0.18, ease: "easeOut" }}
     >
-      <NavigationHeader
-        expanded={expanded}
-        setExpanded={setExpanded}
-      />
+      <NavigationHeader />
       <ButtonContainer />
 
       <SettingsPopover />
       <AppearancePopover />
       <KnowMorePopover />
 
-      <ConditionalComponent
-        show={expanded}
-        fallback={<Avatar />}
-      >
-        <AccountButton
-          popoverTarget="settings-popover"
-          style={{ anchorName: "--settings-popover-anchor" }}
-        />
-      </ConditionalComponent>
-    </nav>
+      <AccountButton />
+    </m.nav>
   );
 }

@@ -4,10 +4,10 @@ import "./styles/colors.css";
 import { createRoot } from "react-dom/client";
 import { StrictMode } from "react";
 import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 
 import SettingsProvider from "./context/SettingsContext/SettingsProvider";
 import UserProvider from "./context/UserContext/Provider";
-import ExamProvider from "./context/ExamContext/ExamProvider";
 
 import App from "./App";
 
@@ -20,13 +20,13 @@ createRoot(root).render(
     <BrowserRouter
       basename={import.meta.env.BASE_URL.replace(/\/$/u, "") || "/"}
     >
-      <SettingsProvider>
-        <UserProvider>
-          <ExamProvider>
+      <HelmetProvider>
+        <SettingsProvider>
+          <UserProvider>
             <App />
-          </ExamProvider>
-        </UserProvider>
-      </SettingsProvider>
+          </UserProvider>
+        </SettingsProvider>
+      </HelmetProvider>
     </BrowserRouter>
   </StrictMode>
 );

@@ -11,8 +11,22 @@
   background-color: var(--bg-p-1);
 }
 
+#app-main-content {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+
+  display: flex;
+}
+
+[data-orientation="portrait"] #app-main-content {
+  flex-direction: column;
+}
+
 main#panel-container {
-  height: 100%;
+  flex: 1;
+  min-height: 0;
   width: 100%;
 
   overflow: hidden;
@@ -33,10 +47,33 @@ main#panel-container {
   scroll-behavior: smooth;
   overscroll-behavior-y: contain;
 
-  padding: 24px 12px;
+  padding: 12px 16px 24px;
 
   display: flex;
   flex-direction: column;
 
   background-color: var(--bg-p-1);
+}
+
+header.panel-header {
+  padding: 12px 0px 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+
+  h1 {
+    font: var(--header-2);
+  }
+}
+
+[data-orientation="portrait"] header.panel-header {
+  padding: 0px 0px 12px;
+}
+
+.panel-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }

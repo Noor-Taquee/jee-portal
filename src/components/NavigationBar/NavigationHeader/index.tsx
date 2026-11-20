@@ -1,29 +1,16 @@
 import "./style.css";
 
-import { PanelLeftCloseIcon, PanelLeftOpenIcon } from "lucide-react";
+import AppLogo from "../../AppLogo";
+import CloseButton from "./CloseButton";
 
-import ToggleButton from "../../ToggleButton";
-
-interface NavigationHeaderProps {
-  expanded: boolean;
-  setExpanded: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-export default function NavigationHeader({
-  expanded,
-  setExpanded,
-}: NavigationHeaderProps) {
+export default function NavigationHeader() {
   return (
     <div id="navigation-header">
-      {expanded && <h4 className="header-text">JEE Portal</h4>}
-      <ToggleButton
-        title={expanded ? "collapse" : "Expand"}
-        onClick={() => {
-          setExpanded((p) => !p);
-        }}
-      >
-        {expanded ? <PanelLeftCloseIcon /> : <PanelLeftOpenIcon />}
-      </ToggleButton>
+      <div className="navigation-brand">
+        <AppLogo />
+        <h4 className="header-text">JEE Portal</h4>
+      </div>
+      <CloseButton />
     </div>
   );
 }

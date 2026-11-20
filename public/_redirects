@@ -1,0 +1,2 @@
+# Password manager standard redirect
+/.well-known/change-password    /settings/account    302

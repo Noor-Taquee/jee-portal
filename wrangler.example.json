@@ -8,5 +8,11 @@
       "database_name": "jee-portal-db",
       "database_id": "12bc244b-7ac1-4803-a341-5e7200ff1ab1"
     }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "KV",
+      "id": "9033a604b67548e5a015a31a6c560d5c"
+    }
   ]
 }

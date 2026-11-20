@@ -1,0 +1,38 @@
+.cta-1 {
+  cursor: pointer;
+  touch-action: manipulation;
+
+  height: fit-content;
+  width: fit-content;
+
+  padding: 8px 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background-color: var(--color-1);
+
+  transition: background-color 150ms ease-in;
+
+  p {
+    font: var(--text-2);
+    color: var(--bg-p-1);
+  }
+  .lucide {
+    --size: 16px;
+    stroke: var(--bg-p-1);
+  }
+
+  &.fill {
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: var(--color-2);
+  }
+}

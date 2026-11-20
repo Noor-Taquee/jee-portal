@@ -1,0 +1,44 @@
+.user-search-card {
+  cursor: pointer;
+  touch-action: manipulation;
+
+  width: 100%;
+  height: fit-content;
+
+  padding: 12px;
+
+  border: none;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  &:hover {
+    background-color: var(--bg-s-2);
+  }
+
+  div.info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .avatar {
+    zoom: 2;
+  }
+
+  p.full-name {
+    margin: 4px 0px;
+    font: var(--text-1);
+  }
+
+  p.username {
+    font: var(--text-2);
+  }
+
+  .user-role {
+    margin: 0px 4px;
+    font: var(--text-3);
+    text-transform: capitalize;
+  }
+}

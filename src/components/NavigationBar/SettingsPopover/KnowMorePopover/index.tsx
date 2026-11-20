@@ -1,20 +1,16 @@
-import { useRef } from "react";
+import { useClosePopover } from "../../../../hooks/useClosePopover";
 
-import { ExternalLinkIcon } from "lucide-react";
+import { Link } from "react-router-dom";
+import {
+  ExternalLinkIcon,
+  HistoryIcon,
+  InfoIcon,
+  ScaleIcon,
+  ShieldCheckIcon,
+} from "lucide-react";
 
 export default function KnowMorePopover() {
-  const popoverRef = useRef<HTMLDivElement | null>(null);
-
-  const handleNavigation = (path: string) => {
-    if (
-      popoverRef.current &&
-      typeof popoverRef.current.hidePopover === "function"
-    ) {
-      popoverRef.current.hidePopover();
-    }
-
-    window.open(path, "_blank", "noopener,noreferrer");
-  };
+  useClosePopover("know-more-popover");
 
   return (
     <div
@@ -22,36 +18,53 @@ export default function KnowMorePopover() {
       popover="auto"
       id="know-more-popover"
       className="popover-card bottom right up-level"
-      ref={popoverRef}
       style={{ positionAnchor: "--know-more-popover-anschor" }}
     >
-      <button
-        name="terms-of-service"
-        role="menuitem"
-        className="popover-entry"
-        onClick={() => handleNavigation("/legal/terms-of-service")}
-      >
-        <p>Terms of service</p>
-        <ExternalLinkIcon className="next" />
-      </button>
-      <button
-        name="disclaimer"
-        role="menuitem"
-        className="popover-entry"
-        onClick={() => handleNavigation("/legal/disclaimer")}
-      >
-        <p>Disclaimer</p>
-        <ExternalLinkIcon className="next" />
-      </button>
-      <button
-        name="privacy-policy"
-        role="menuitem"
-        className="popover-entry"
-        onClick={() => handleNavigation("/legal/privacy-policy")}
-      >
-        <p>Privacy Policy</p>
-        <ExternalLinkIcon className="next" />
-      </button>
+      <div className="vertical-container">
+        <Link
+          aria-label="Terms of Service"
+          role="menuitem"
+          className="popover-entry"
+          to="/legal/terms-of-service"
+          target="_blank"
+        >
+          <ScaleIcon />
+          <p>Terms of service</p>
+          <ExternalLinkIcon className="next" />
+        </Link>
+        <Link
+          aria-label="disclaimer"
+          role="menuitem"
+          className="popover-entry"
+          to="/legal/disclaimer"
+          target="_blank"
+        >
+          <InfoIcon />
+          <p>Disclaimer</p>
+          <ExternalLinkIcon className="next" />
+        </Link>
+        <Link
+          aria-label="privacy-policy"
+          role="menuitem"
+          className="popover-entry"
+          to="/legal/privacy-policy"
+          target="_blank"
+        >
+          <ShieldCheckIcon />
+          <p>Privacy Policy</p>
+          <ExternalLinkIcon className="next" />
+        </Link>
+        <hr className="divider" />
+        <Link
+          aria-label="Changelog"
+          role="menuitem"
+          className="popover-entry"
+          to="/changelog"
+        >
+          <HistoryIcon />
+          <p>Changelog</p>
+        </Link>
+      </div>
     </div>
   );
 }

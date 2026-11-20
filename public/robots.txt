@@ -3,7 +3,7 @@ Allow: /
 Allow: /llms.txt
 Allow: /legal/
 
-Disallow: /Admin/
+Disallow: /admin/
 Disallow: /exam/
 Disallow: /registration/
 
