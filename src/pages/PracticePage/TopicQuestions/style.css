@@ -34,3 +34,15 @@
     stroke: var(--bg-p-1);
   }
 }
+
+.question-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  > hr {
+    height: 1px;
+    border: none;
+    background-color: var(--bg-s-3);
+  }
+}
