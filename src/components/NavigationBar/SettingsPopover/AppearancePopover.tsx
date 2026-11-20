@@ -15,6 +15,7 @@ export default function AppearancePopover() {
       className="popover-card right down-level"
       style={{ positionAnchor: "--appearance-popover-anchor" }}
     >
+      <div className="vertical-container">
       <button
         name="light"
         role="menuitem"
@@ -36,7 +37,8 @@ export default function AppearancePopover() {
       >
         <span>Dark</span>
         {settings.theme === "dark" && <CheckIcon className="check" />}
-      </button>
+        </button>
+      </div>
     </div>
   );
 }
