@@ -26,62 +26,64 @@ export default function SettingsPopover() {
       className="popover-card up right-level"
       style={{ positionAnchor: "--settings-popover-anchor" }}
     >
-      <Link
-        aria-label="Profile"
-        role="menuitem"
-        className="popover-entry"
-        to={`/user/${user?.username}`}
-      >
-        <UserCircle2Icon />
-        <span>Profile</span>
-      </Link>
-      <hr className="divider" />
-      <Link
-        aria-label="Settings"
-        role="menuitem"
-        className="popover-entry"
-        to="/settings"
-      >
-        <SettingsIcon />
-        <span>Settings</span>
-      </Link>
-      <button
-        name="appearance"
-        aria-label="Appearance"
-        role="menuitem"
-        className="popover-entry linked"
-        popoverTarget="appearance-popover"
-        style={{ anchorName: "--appearance-popover-anchor" }}
-      >
-        <PaletteIcon />
-        <span>Appearance</span>
-        <ChevronRight className="next" />
-      </button>
-      <button
-        name="know-more"
-        aria-label="Know more"
-        role="menuitem"
-        className="popover-entry linked"
-        popoverTarget="know-more-popover"
-        style={{ anchorName: "--know-more-popover-anschor" }}
-      >
-        <InfoIcon />
-        <span>Know more</span>
-        <ChevronRight className="next" />
-      </button>
-      <hr className="divider" />
-      <button
-        name="logout"
-        aria-label="Logout"
-        role="menuitem"
-        className="popover-entry danger"
-        onClick={() => {
-          logout();
-        }}
-      >
-        <LogOutIcon />
-        <span>Logout</span>
-      </button>
+      <div className="vertical-container">
+        <Link
+          aria-label="Profile"
+          role="menuitem"
+          className="popover-entry"
+          to={`/user/${user?.username}`}
+        >
+          <UserCircle2Icon />
+          <span>Profile</span>
+        </Link>
+        <hr className="divider" />
+        <Link
+          aria-label="Settings"
+          role="menuitem"
+          className="popover-entry"
+          to="/settings"
+        >
+          <SettingsIcon />
+          <span>Settings</span>
+        </Link>
+        <button
+          name="appearance"
+          aria-label="Appearance"
+          role="menuitem"
+          className="popover-entry linked"
+          popoverTarget="appearance-popover"
+          style={{ anchorName: "--appearance-popover-anchor" }}
+        >
+          <PaletteIcon />
+          <span>Appearance</span>
+          <ChevronRight className="next" />
+        </button>
+        <button
+          name="know-more"
+          aria-label="Know more"
+          role="menuitem"
+          className="popover-entry linked"
+          popoverTarget="know-more-popover"
+          style={{ anchorName: "--know-more-popover-anschor" }}
+        >
+          <InfoIcon />
+          <span>Know more</span>
+          <ChevronRight className="next" />
+        </button>
+        <hr className="divider" />
+        <button
+          name="logout"
+          aria-label="Logout"
+          role="menuitem"
+          className="popover-entry danger"
+          onClick={() => {
+            logout();
+          }}
+        >
+          <LogOutIcon />
+          <span>Logout</span>
+        </button>
+      </div>
     </div>
   );
 }
