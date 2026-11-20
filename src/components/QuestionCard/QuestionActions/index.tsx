@@ -6,7 +6,7 @@ import {
   TextInitialIcon,
   BookmarkPlusIcon,
 } from "lucide-react";
-import { useClosePopover } from "../../../hooks/useClosePopover";
+import { useAutoClosePopover } from "../../../hooks/useAutoClosePopover";
 
 interface Props {
   question: SearchQuestion;
@@ -15,7 +15,7 @@ interface Props {
 }
 
 const QuestionActions = ({ question, rawText, setRawText }: Props) => {
-  useClosePopover(`--question-${question.id}-actions-popover`);
+  useAutoClosePopover(`--question-${question.id}-actions-popover`);
 
   const shareData: ShareData = {
     title: "Share the question",

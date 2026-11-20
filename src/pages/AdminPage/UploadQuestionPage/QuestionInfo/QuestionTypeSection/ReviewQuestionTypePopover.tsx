@@ -1,5 +1,5 @@
-import { useClosePopover } from "../../../../../hooks/useClosePopover";
 import type { ReviewQuestion, SetQuestion } from "../../index";
+import { useAutoClosePopover } from "../../../../../hooks/useAutoClosePopover";
 import { CheckIcon } from "lucide-react";
 
 interface Props {
@@ -11,7 +11,7 @@ export default function ReviewQuestionTypePopover({
   question,
   setQuestion,
 }: Props) {
-  useClosePopover("review-question-type-popover");
+  useAutoClosePopover("review-question-type-popover");
 
   return (
     <div
