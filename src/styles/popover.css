@@ -50,8 +50,6 @@
   height: fit-content;
   width: fit-content;
 
-  padding: 4px;
-
   border: var(--border-1);
   border-radius: 14px;
 
@@ -135,6 +133,8 @@
 .popover-card > .vertical-container {
   min-width: 100px;
 
+  padding: 4px;
+
   display: flex;
   flex-direction: column;
 
@@ -163,6 +163,8 @@
 }
 
 .popover-card > .horizontal-container {
+  padding: 4px;
+
   display: flex;
   align-items: stretch;
   gap: 2px;
