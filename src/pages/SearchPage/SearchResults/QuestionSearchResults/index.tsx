@@ -1,5 +1,5 @@
 import PageLoader from "../../../../components/PageLoader";
-import QuestionSearchCard from "./QuestionSearchCard";
+import QuestionSearchCard from "../../../../components/QuestionCard";
 import "./style.css";
 
 import { useEffect, useState } from "react";
@@ -69,7 +69,7 @@ export default function QuestionSearchResults({ query }: Props) {
     <div id="question-search-results">
       {questions.map((question) => (
         <QuestionSearchCard
-          searchQuestion={question}
+          question={question}
           key={question.id}
         />
       ))}
