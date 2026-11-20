@@ -1,8 +1,8 @@
-import PageLoader from "../../../../components/PageLoader";
-import QuestionSearchCard from "../../../../components/QuestionCard";
 import "./style.css";
 
 import { useEffect, useState } from "react";
+import PageLoader from "../../../../components/PageLoader";
+import QuestionSearchCard from "../../../../components/QuestionCard";
 
 type SearchQuestion = {
   id: number;
