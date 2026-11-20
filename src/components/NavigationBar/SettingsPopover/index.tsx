@@ -1,7 +1,7 @@
 import "./style.css";
 
 import { useUser } from "../../../hooks/useUser";
-import { useClosePopover } from "../../../hooks/useClosePopover";
+import { useAutoClosePopover } from "../../../hooks/useAutoClosePopover";
 
 import { Link } from "react-router-dom";
 import {
@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 export default function SettingsPopover() {
-  useClosePopover("settings-popover");
+  useAutoClosePopover("settings-popover");
 
   const { user, logout } = useUser();
 
