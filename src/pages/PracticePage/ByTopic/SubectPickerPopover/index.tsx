@@ -1,5 +1,5 @@
 import { CheckIcon } from "lucide-react";
-import { useClosePopover } from "../../../../hooks/useClosePopover";
+import { useAutoClosePopover } from "../../../../hooks/useAutoClosePopover";
 
 interface Props {
   filter: "all" | "Physics" | "Chemistry" | "Mathematics";
@@ -7,7 +7,7 @@ interface Props {
 }
 
 const SubjectPickerPopover = ({ filter, setFilter }: Props) => {
-  useClosePopover("byTopic-subject-picker-popover");
+  useAutoClosePopover("byTopic-subject-picker-popover");
 
   return (
     <div
