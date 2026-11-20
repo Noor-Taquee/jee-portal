@@ -26,6 +26,7 @@ export default function SettingsPopover() {
       className="popover-card up right-level"
       style={{ positionAnchor: "--settings-popover-anchor" }}
     >
+      <div className="vertical-container">
       <Link
         aria-label="Profile"
         role="menuitem"
@@ -81,7 +82,8 @@ export default function SettingsPopover() {
       >
         <LogOutIcon />
         <span>Logout</span>
-      </button>
+        </button>
+      </div>
     </div>
   );
 }
