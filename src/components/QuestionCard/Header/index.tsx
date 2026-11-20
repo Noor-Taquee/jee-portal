@@ -15,8 +15,6 @@ const Header = ({ question, rawText, setRawText }: Props) => {
   const exam = question.exams[0];
   const questionType = parseType(question.type);
 
-  if (!exam) return;
-
   return (
     <header>
       <div className="question-number">
@@ -24,7 +22,7 @@ const Header = ({ question, rawText, setRawText }: Props) => {
       </div>
 
       <div className="question-info">
-        <strong className="exam">{exam.name}</strong>
+        <strong className="exam">{exam?.name ?? "Unknown"}</strong>
         <p className="type">{questionType && questionType.name}</p>
       </div>
 
