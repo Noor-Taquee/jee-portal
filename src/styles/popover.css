@@ -62,7 +62,8 @@
 
   background-color: var(--bg-h-1);
 
-  > hr, .divider {
+  > hr,
+  .divider {
     flex-shrink: 0;
     width: 90%;
     height: 1px;
@@ -131,7 +132,6 @@
       background-color: var(--inc-color-2);
     }
   }
-
 }
 
 .popover-card > .vertical-container {
@@ -164,7 +164,6 @@
   }
 }
 
-
 .popover-card > .horizontal-container {
   display: flex;
   align-items: stretch;
@@ -178,7 +177,8 @@
     flex-direction: column;
     justify-content: center;
 
-    p,span {
+    p,
+    span {
       margin: 0px;
       text-align: center;
     }
