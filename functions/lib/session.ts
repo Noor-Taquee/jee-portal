@@ -144,8 +144,6 @@ export async function validateAndRefreshSession(
   currentTime = new Date().getTime(),
   timeMargin = SESSION_IDLE_TTL
 ): Promise<{ user_id: number } | null> {
-  const { device, agent } = parseUserAgent(userAgent);
-
   // Search token
   const session = await database
     .prepare("SELECT * FROM sessions WHERE session_token = ?")
@@ -154,9 +152,6 @@ export async function validateAndRefreshSession(
 
   // Check if the session does not exist
   if (!session) return null;
-
-  // Check if the environment is different
-  if (device !== session.device || agent !== session.agent) return null;
 
   const createdAt = session.created_at;
   const expiresAt = session.expires_at;
