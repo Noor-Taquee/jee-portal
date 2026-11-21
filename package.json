@@ -37,8 +37,8 @@
     "jsdom": "^31.0.1",
     "oxc-transform-react": "^0.158.0",
     "typescript": "^7.0.2",
-    "vite": "npm:@voidzero-dev/vite-plus-core@1.6.0",
-    "vite-plus": "1.6.0",
+    "vite": "npm:@voidzero-dev/vite-plus-core@8.3.8000",
+    "vite-plus": "1.7.0",
     "wrangler": "^4.162.0"
   },
   "dependencies": {
@@ -62,6 +62,6 @@
     "workerd@1.20261006.1": true
   },
   "overrides": {
-    "vite": "npm:@voidzero-dev/vite-plus-core@1.6.0"
+    "vite": "npm:@voidzero-dev/vite-plus-core@8.3.8000"
   }
 }
