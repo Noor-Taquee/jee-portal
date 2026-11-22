@@ -1,6 +1,6 @@
 @import "./styles/animations.css";
 
-@import "./styles/popover.css";
+@import "./styles/popover/popover.css";
 
 @import "./styles/table.css";
 
