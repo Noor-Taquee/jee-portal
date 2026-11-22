@@ -1,0 +1,108 @@
+.popover-card > .vertical-container {
+  min-width: 100px;
+
+  padding: 4px;
+
+  display: flex;
+  flex-direction: column;
+
+  .popover-entry {
+    padding: 8px 10px;
+
+    p,
+    span {
+      margin-right: 28px;
+      text-align: start;
+    }
+  }
+
+  .lucide {
+    &.next {
+      --size: 16px;
+      stroke: var(--color-2);
+      margin-left: auto;
+    }
+    &.check {
+      stroke: var(--accent-1);
+      stroke-width: 2px;
+      margin-left: auto;
+    }
+  }
+
+  > hr {
+    flex-shrink: 0;
+    width: 100%;
+    height: 1px;
+
+    border: none;
+
+    margin: 4px 0px;
+
+    background-color: var(--bg-s-3);
+  }
+}
+
+.popover-card > .horizontal-container {
+  padding: 4px;
+
+  display: flex;
+  align-items: stretch;
+  gap: 2px;
+
+  .popover-entry {
+    flex-grow: 1;
+
+    padding: 12px 0px;
+
+    flex-direction: column;
+    justify-content: center;
+
+    p,
+    span {
+      text-align: center;
+    }
+  }
+}
+
+.popover-entry {
+  cursor: pointer;
+  touch-action: manipulation;
+
+  height: fit-content;
+  width: 100%;
+
+  border: none;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  p,
+  span {
+    font: var(--text-2);
+  }
+
+  .lucide {
+    --size: 18px;
+    stroke: var(--color-1);
+  }
+
+  &:hover {
+    background-color: var(--bg-s-1);
+  }
+
+  &.danger {
+    span {
+      color: var(--inc-color-1);
+    }
+
+    .lucide {
+      stroke: var(--inc-color-1);
+    }
+
+    &:hover {
+      background-color: var(--inc-color-2);
+    }
+  }
+}
