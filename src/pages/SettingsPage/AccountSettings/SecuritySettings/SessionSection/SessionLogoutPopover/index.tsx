@@ -54,6 +54,7 @@ const SessionLogoutPopover = ({ sessionToken }: Props) => {
       ref={popoverRef}
       role="alert"
       popover="auto"
+      className="popover-card"
       id="session-logout-popover"
     >
       <p className="message">{message}</p>
