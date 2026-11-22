@@ -22,7 +22,6 @@
   }
 }
 
-
 .popover-card#session-logout-popover::backdrop {
   background-color: #00000015;
   transition:

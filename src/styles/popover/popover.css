@@ -72,11 +72,11 @@
   transform: translate(var(--x), var(--y)) scale(0.9);
 
   transition:
-      opacity 150ms ease-out,
-      filter 150ms ease-out,
-      transform 150ms ease-out,
-      display 150ms allow-discrete,
-      overlay 150ms allow-discrete;
+    opacity 150ms ease-out,
+    filter 150ms ease-out,
+    transform 150ms ease-out,
+    display 150ms allow-discrete,
+    overlay 150ms allow-discrete;
 }
 
 .popover-card:popover-open {
