@@ -1,24 +1,17 @@
-#session-logout-popover:popover-open {
+#session-logout-popover {
   flex-shrink: 0;
 
   margin: auto;
   padding: 16px;
 
-  border: var(--border-1);
-  border-radius: 12px;
-
   display: flex;
   flex-direction: column;
   gap: 24px;
 
-  &::backdrop {
-    background-color: #00000015;
-    transition: background-color 900ms linear;
-  }
+  background-color: var(--bg-h-1);
 
-  message {
+  .message {
     font: var(---text-1);
-    margin: 12px;
   }
 
   div {
@@ -27,4 +20,16 @@
     justify-content: flex-end;
     gap: 12px;
   }
+}
+
+.popover-card#session-logout-popover::backdrop {
+  background-color: #00000015;
+  transition:
+    background-color 0.4s ease,
+    display 0.4s allow-discrete,
+    overlay 0.4s allow-discrete;
+}
+
+#session-logout-popover:popover-open {
+  display: flex;
 }
