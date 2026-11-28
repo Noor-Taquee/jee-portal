@@ -1,0 +1,13 @@
+#account-deletion-disclaimer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  > ul {
+    padding: 10px 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+}
