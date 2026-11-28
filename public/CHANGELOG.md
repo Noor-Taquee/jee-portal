@@ -5,7 +5,7 @@ This patch fixes the popover closing animation.
 ## Bug fixes
 
 - Fixed the popover closing animation issue where the contents of the
-popover got rearranged on closing. ([PR #441](https://github.com/Noor-Taquee/jee-portal/pull/441) by @Noor-Taquee).
+  popover got rearranged on closing. ([PR #441](https://github.com/Noor-Taquee/jee-portal/pull/441) by @Noor-Taquee).
 
 **Full Changelog**: https://github.com/Noor-Taquee/jee-portal/compare/v0.5.0...v0.5.1
 
